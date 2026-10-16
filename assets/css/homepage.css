@@ -5,7 +5,12 @@ html {
 .ravirao-homepage {
   --rr-page-gutter: clamp(1rem, 2.4vw, 2rem);
   --rr-section-space: clamp(2.2rem, 5.2vw, 4rem);
-  --rr-section-soft: linear-gradient(135deg, #eaf1fb 0%, #f7f9fd 52%, #e7effa 100%);
+  --rr-section-soft: linear-gradient(
+    120deg,
+    rgba(var(--rr-blue-rgb), 0.15) 0%,
+    rgba(var(--rr-coral-rgb), 0.1) 52%,
+    rgba(var(--rr-blue-rgb), 0.13) 100%
+  );
   --rr-radius: 1.1rem;
   --rr-shadow: 0 0.8rem 2rem rgba(var(--rr-blue-rgb), 0.1);
   --rr-text-xs: clamp(0.75rem, 0.85vw, 0.875rem);
