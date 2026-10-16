@@ -760,13 +760,9 @@ html {
 /* LeadConnector enquiry form */
 .business-enquiry-form {
   width: 100%;
-  max-width: 32rem;
+  max-width: none;
   margin: 0;
   overflow: hidden;
-  border: 1px solid rgba(var(--rr-blue-rgb), 0.16);
-  border-radius: 0.75rem;
-  background: var(--rr-white);
-  box-shadow: var(--rr-shadow);
 }
 
 .business-enquiry-form iframe {
@@ -782,11 +778,15 @@ html {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   align-items: start;
   gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  border: 1px solid rgba(var(--rr-blue-rgb), 0.1);
+  border-radius: var(--rr-radius);
+  background: var(--rr-white);
+  box-shadow: var(--rr-shadow);
 }
 
 .business-enquiry-copy {
   max-width: 32rem;
-  padding-top: 1rem;
 }
 
 .business-enquiry-copy h3 {

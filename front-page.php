@@ -500,7 +500,7 @@ get_header();
 <!-- Media mentions and public features -->
 
 
-<section class="business-enquiry-section rr-section" id="business-enquiry" aria-labelledby="business-enquiry-heading">
+<section class="business-enquiry-section rr-section rr-section--soft" id="business-enquiry" aria-labelledby="business-enquiry-heading">
   <div class="rr-section-heading" data-reveal>
     <h2 class="vaastu-heading-main rr-section-title" id="business-enquiry-heading">Let’s Discuss Your Project</h2>
     <p class="rr-section-tagline">Tell us about your space and the guidance you’re looking for. We’ll help you find the right next step.</p>
@@ -512,7 +512,7 @@ get_header();
       <p>Whether you’re planning a new project or reviewing an existing workplace, share your goals and our team will guide you toward the appropriate consultation.</p>
       <a class="business-enquiry-direct-contact" href="tel:+919099608886">Prefer to speak? Call +91-9099608886</a>
     </div>
-    <div class="business-enquiry-form rr-card" data-reveal="scale">
+    <div class="business-enquiry-form" data-reveal="scale">
       <iframe
         src="https://api.leadconnectorhq.com/widget/form/hkAoJptF0VSu3fKDMUKU"
         id="inline-hkAoJptF0VSu3fKDMUKU"
