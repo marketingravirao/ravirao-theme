@@ -18,6 +18,13 @@
             const shouldShowHeader = window.scrollY >= window.innerHeight * 0.2;
             const isFixed = headerGroup.classList.contains('is-fixed');
 
+            if (isFixed && window.scrollY <= 1) {
+                headerGroup.classList.remove('is-fixed', 'is-animated', 'is-visible', 'is-hiding');
+                headerGroup.style.height = '';
+                scrollFrame = null;
+                return;
+            }
+
             if (shouldShowHeader && !isFixed) {
                 headerGroup.style.height = `${siteHeader.offsetHeight}px`;
                 headerGroup.classList.add('is-fixed');
