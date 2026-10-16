@@ -8,8 +8,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <a class="skip-link screen-reader-text" href="#main-content"><?php esc_html_e('Skip to content', 'ravirao-theme'); ?></a>
-<div class="site-header-group">
-<div class="site-header-group-inner">
 <div class="top-header-branded">
   <div class="header-left">
     <div class="header-contact">
@@ -51,6 +49,7 @@
     </a>
   </div>
 </div>
+<div class="site-header-group">
 <header class="site-header">
   <div class="container header-inner">
     <div class="site-brand">
@@ -67,6 +66,5 @@
     </nav>
   </div>
 </header>
-</div>
 </div>
 <main id="main-content" class="site-main">

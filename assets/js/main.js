@@ -2,14 +2,51 @@
     'use strict';
 
     const headerGroup = document.querySelector('.site-header-group');
+    const siteHeader = headerGroup?.querySelector('.site-header');
 
-    if (headerGroup) {
+    if (headerGroup && siteHeader) {
         let scrollFrame = null;
 
+        const finishHeaderTransition = () => {
+            if (window.scrollY < window.innerHeight * 0.2) {
+                headerGroup.classList.remove('is-fixed', 'is-animated', 'is-visible', 'is-hiding');
+                headerGroup.style.height = '';
+            }
+        };
+
         const updateHeaderVisibility = () => {
-            headerGroup.classList.toggle('is-visible', window.scrollY >= window.innerHeight * 0.2);
+            const shouldShowHeader = window.scrollY >= window.innerHeight * 0.2;
+            const isFixed = headerGroup.classList.contains('is-fixed');
+
+            if (shouldShowHeader && !isFixed) {
+                headerGroup.style.height = `${siteHeader.offsetHeight}px`;
+                headerGroup.classList.add('is-fixed');
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY >= window.innerHeight * 0.2) {
+                        headerGroup.classList.add('is-animated', 'is-visible');
+                    } else {
+                        finishHeaderTransition();
+                    }
+                });
+            } else if (shouldShowHeader) {
+                headerGroup.classList.remove('is-hiding');
+                headerGroup.classList.add('is-visible');
+            } else if (isFixed && headerGroup.classList.contains('is-visible')) {
+                headerGroup.classList.remove('is-visible');
+                headerGroup.classList.add('is-hiding');
+                window.setTimeout(finishHeaderTransition, 550);
+            } else if (isFixed && !headerGroup.classList.contains('is-hiding')) {
+                finishHeaderTransition();
+            }
+
             scrollFrame = null;
         };
+
+        siteHeader.addEventListener('transitionend', event => {
+            if (event.target === siteHeader && event.propertyName === 'transform') {
+                finishHeaderTransition();
+            }
+        });
 
         window.addEventListener('scroll', () => {
             if (scrollFrame === null) {
@@ -17,7 +54,12 @@
             }
         }, { passive: true });
 
-        window.addEventListener('resize', updateHeaderVisibility);
+        window.addEventListener('resize', () => {
+            if (headerGroup.classList.contains('is-fixed')) {
+                headerGroup.style.height = `${siteHeader.offsetHeight}px`;
+            }
+            updateHeaderVisibility();
+        });
         updateHeaderVisibility();
     }
 
