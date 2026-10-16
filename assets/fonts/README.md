@@ -1,8 +1,6 @@
-Place your locally licensed Nunito Sans variable font files here:
+The theme loads its Satoshi variable font files from `satoshi/TTF/`:
 
-- NunitoSans-Variable.woff2 (normal, weights 200–1000)
-- NunitoSans-Italic-Variable.woff2 (italic, weights 200–1000)
+- `Satoshi-Variable.ttf` (normal, weights 300–900)
+- `Satoshi-VariableItalic.ttf` (italic, weights 300–900)
 
-The @font-face rules in assets/css/base.css use these exact filenames.
-If your downloads have different filenames, rename them or adjust the URLs and weight ranges.
-Font binaries are intentionally not included.
+The `@font-face` rules in `assets/css/base.css` reference these files.

@@ -7,10 +7,10 @@ if (!defined('ABSPATH')) { exit; }
 get_header();
 ?>
 <div class="ravirao-homepage">
-<!-- Responsive Hero Slider Section - Fixed Overflow Issue, Brand Colors, Montserrat -->
+<!-- Responsive hero slider -->
 
 
-<div class="hero-slider-section" id="heroSlider">
+<div class="hero-slider-section" id="heroSlider" role="region" aria-roledescription="carousel" aria-label="Corporate Vaastu highlights">
   <div class="hero-slide active">
     <img class="hero-slide-bg" src="https://staging.ravirao.com/wp-content/uploads/2025/07/2B2A4121-scaled.jpg" alt="Corporate Vaastu Hero 1">
     <div class="hero-slide-content">
@@ -39,7 +39,7 @@ get_header();
       <div class="hero-subtitle">The Go-To Vaastu Expert for India’s Leading Corporations</div>
     </div>
   </div>
-  <div class="hero-slider-dots"></div>
+  <div class="hero-slider-dots" aria-label="Choose a slide"></div>
 </div>
 
 
@@ -62,7 +62,7 @@ get_header();
   </div>
 </div>
 
-<!-- Industries Dr. Ravi Rao Serves - Premium Carousel (Montserrat, Modern, Responsive) -->
+<!-- Industries Dr. Ravi Rao serves -->
 
 <section class="industry-section-premium">
   <div class="industry-heading-bar">
@@ -72,27 +72,27 @@ get_header();
   <div class="infinite-industry-carousel">
     <div class="carousel-track">
       <!-- Repeat icons & names for seamless loop -->
-      <div class="industry-card"><span class="industry-icon">🏭</span> <span class="industry-name">Manufacturing</span></div>
-      <div class="industry-card"><span class="industry-icon">🏢</span> <span class="industry-name">Corporate Office</span></div>
-      <div class="industry-card"><span class="industry-icon">🏥</span> <span class="industry-name">Healthcare</span></div>
-      <div class="industry-card"><span class="industry-icon">💻</span> <span class="industry-name">IT / Digital</span></div>
-      <div class="industry-card"><span class="industry-icon">🏦</span> <span class="industry-name">Finance</span></div>
-      <div class="industry-card"><span class="industry-icon">🏨</span> <span class="industry-name">Hospitality</span></div>
-      <div class="industry-card"><span class="industry-icon">🛒</span> <span class="industry-name">Retail</span></div>
-      <div class="industry-card"><span class="industry-icon">🎬</span> <span class="industry-name">Entertainment</span></div>
-      <div class="industry-card"><span class="industry-icon">🧪</span> <span class="industry-name">Pharma</span></div>
-      <div class="industry-card"><span class="industry-icon">🏬</span> <span class="industry-name">Logistics</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V5l6 3v13H3Z"/><path d="M7 17h2m3 0h2m3 0h2"/></svg></span> <span class="industry-name">Manufacturing</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V4h16v17M8 8h2m4 0h2M8 12h2m4 0h2M8 16h2m4 0h2M10 21v-3h4v3"/></svg></span> <span class="industry-name">Corporate Office</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V8h18v13M7 8V4h10v4M7 12h2m3 0h2m3 0h1m-11 4h2m3 0h2m3 0h1"/></svg></span> <span class="industry-name">Healthcare</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span> <span class="industry-name">IT / Digital</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-7h6v7M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Finance</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M8 9h2m4 0h2m-8 4h2m4 0h2m-8 4h2m4 0h2"/></svg></span> <span class="industry-name">Hospitality</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16l-1 16H5L4 5Zm-2 0h20M9 9h6m-6 4h6"/></svg></span> <span class="industry-name">Retail</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/></svg></span> <span class="industry-name">Entertainment</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3m-7 12h12"/></svg></span> <span class="industry-name">Pharma</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Logistics</span></div>
       <!-- Repeat for infinite loop -->
-      <div class="industry-card"><span class="industry-icon">🏭</span> <span class="industry-name">Manufacturing</span></div>
-      <div class="industry-card"><span class="industry-icon">🏢</span> <span class="industry-name">Corporate Office</span></div>
-      <div class="industry-card"><span class="industry-icon">🏥</span> <span class="industry-name">Healthcare</span></div>
-      <div class="industry-card"><span class="industry-icon">💻</span> <span class="industry-name">IT / Digital</span></div>
-      <div class="industry-card"><span class="industry-icon">🏦</span> <span class="industry-name">Finance</span></div>
-      <div class="industry-card"><span class="industry-icon">🏨</span> <span class="industry-name">Hospitality</span></div>
-      <div class="industry-card"><span class="industry-icon">🛒</span> <span class="industry-name">Retail</span></div>
-      <div class="industry-card"><span class="industry-icon">🎬</span> <span class="industry-name">Entertainment</span></div>
-      <div class="industry-card"><span class="industry-icon">🧪</span> <span class="industry-name">Pharma</span></div>
-      <div class="industry-card"><span class="industry-icon">🏬</span> <span class="industry-name">Logistics</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V5l6 3v13H3Z"/><path d="M7 17h2m3 0h2m3 0h2"/></svg></span> <span class="industry-name">Manufacturing</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V4h16v17M8 8h2m4 0h2M8 12h2m4 0h2M8 16h2m4 0h2M10 21v-3h4v3"/></svg></span> <span class="industry-name">Corporate Office</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V8h18v13M7 8V4h10v4M7 12h2m3 0h2m3 0h1m-11 4h2m3 0h2m3 0h1"/></svg></span> <span class="industry-name">Healthcare</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span> <span class="industry-name">IT / Digital</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-7h6v7M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Finance</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M8 9h2m4 0h2m-8 4h2m4 0h2m-8 4h2m4 0h2"/></svg></span> <span class="industry-name">Hospitality</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16l-1 16H5L4 5Zm-2 0h20M9 9h6m-6 4h6"/></svg></span> <span class="industry-name">Retail</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/></svg></span> <span class="industry-name">Entertainment</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3m-7 12h12"/></svg></span> <span class="industry-name">Pharma</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Logistics</span></div>
     </div>
   </div>
 </section>
@@ -100,10 +100,10 @@ get_header();
 
 
 
-<!-- End Industries Dr. Ravi Rao Serves - Premium Infinite Carousel (Montserrat Font) -->
+<!-- End industries carousel -->
 
 
-<!-- Vaastu Across Industries - 4 Category Cards (Full Width, No Gap, Montserrat, Same Tablet Layout, NO LINKS) -->
+<!-- Vaastu across industries -->
 
 
 
@@ -113,28 +113,28 @@ get_header();
     <!-- Manufacturing & Industrial Plants -->
     <div class="vaastu-industry-card-outer">
       <div class="vaastu-industry-card" tabindex="0">
-        <span class="vaastu-industry-icon">🏭</span>
+        <span class="vaastu-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V5l6 3v13H3Z"/><path d="M7 17h2m3 0h2m3 0h2"/></svg></span>
         <div class="vaastu-industry-title">Manufacturing &<br>Industrial Plants</div>
       </div>
     </div>
     <!-- Corporate Offices & IT Companies -->
     <div class="vaastu-industry-card-outer">
       <div class="vaastu-industry-card" tabindex="0">
-        <span class="vaastu-industry-icon">💻</span>
+        <span class="vaastu-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span>
         <div class="vaastu-industry-title">Corporate Offices<br>& IT Companies</div>
       </div>
     </div>
     <!-- Real Estate & Construction -->
     <div class="vaastu-industry-card-outer">
       <div class="vaastu-industry-card" tabindex="0">
-        <span class="vaastu-industry-icon">🏢</span>
+        <span class="vaastu-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V4h16v17M8 8h2m4 0h2M8 12h2m4 0h2M8 16h2m4 0h2M10 21v-3h4v3"/></svg></span>
         <div class="vaastu-industry-title">Real Estate<br>& Construction</div>
       </div>
     </div>
     <!-- Hospitality & Retail -->
     <div class="vaastu-industry-card-outer">
       <div class="vaastu-industry-card" tabindex="0">
-        <span class="vaastu-industry-icon">🏨</span>
+        <span class="vaastu-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M8 9h2m4 0h2m-8 4h2m4 0h2m-8 4h2m4 0h2"/></svg></span>
         <div class="vaastu-industry-title">Hospitality &<br>Retail</div>
       </div>
     </div>
@@ -142,7 +142,7 @@ get_header();
 </div>
 
 
-<!-- Modern Muhurtha Horizontal Section (Dual Image Hover, No Button, Montserrat Font, Updated Image) -->
+<!-- Muhurtha feature -->
 <div class="muhurtha-section-brand">
   <h2 class="muhurtha-section-heading">Explore the Full Muhurat Calendar</h2>
   <div class="muhurtha-img-cta-wrap">
@@ -164,7 +164,7 @@ get_header();
 
 
 
-<!-- Vaastu Services Cards Section (Branded, Montserrat, 1080x1080 Images, Highlighted Text Box) -->
+<!-- Vaastu services -->
 <div class="vaastu-services-section">
   <div class="vaastu-services-wrapper">
     <a href="https://staging.ravirao.com/new-astro-guidance-page/" class="vaastu-service-card" target="_blank">
@@ -221,7 +221,7 @@ get_header();
 <!-- End Infinite Logo Carousel -->
 
 
-<!-- Handdrawn Layout Inspired Testimonial Cards, Montserrat Font Only, No Client Images, Correct Quotes -->
+<!-- Testimonials -->
 <div class="testimonials-section-handdrawn">
   <div class="testimonial-section-main-heading">What Industry Leaders Say About Dr. Rao’s Vaastu Expertise</div>
   <div class="testimonials-cards-handdrawn">
@@ -271,7 +271,7 @@ get_header();
 
 
 
-<!-- Infinite Five Elements Carousel (Montserrat, Premium Logo Animation, Clean Background) -->
+<!-- Five elements carousel -->
 <div class="five-elements-carousel-section">
   <div class="five-elements-carousel-heading">
     The Five Elements of Vaastu Shastra
@@ -280,44 +280,44 @@ get_header();
     <div class="elements-carousel-track">
       <!-- Repeat sequence for seamless infinite scroll -->
       <div class="element-item earth">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-31.png" alt="Earth">
+        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M8 25c5-3 9 3 15 0s10-3 17 0M11 32c5-2 9 2 13 0s8-2 13 0"/><path class="element-icon-accent" d="m20 8 4 5 5-2"/></svg>
         <span>Earth<br><span class="element-sanskrit">(Prithvi)</span></span>
       </div>
       <div class="element-item space">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-32.png" alt="Space">
+        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><ellipse cx="24" cy="24" rx="21" ry="8" transform="rotate(-28 24 24)"/><circle class="element-icon-accent" cx="36" cy="13" r="2"/></svg>
         <span>Space<br><span class="element-sanskrit">(Akash)</span></span>
       </div>
       <div class="element-item air">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-33.png" alt="Air">
+        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 17h23a5 5 0 1 0-5-5M5 24h32a5 5 0 1 1-5 5M9 31h15a5 5 0 1 0-5 5"/><path class="element-icon-accent" d="M8 17h5m-7 7h7m-4 7h5"/></svg>
         <span>Air<br><span class="element-sanskrit">(Vayu)</span></span>
       </div>
       <div class="element-item fire">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-39.png" alt="Fire">
+        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5c2 9-6 10-4 18 2-2 4-4 5-7 8 7 12 13 8 21-2 4-6 6-11 6-8 0-14-5-14-13 0-6 4-12 10-17 0 6 2 8 4 9 3-6 3-11 2-17Z"/><path class="element-icon-accent" d="M22 37c-3-4 1-8 4-11 4 5 5 9 2 12"/></svg>
         <span>Fire<br><span class="element-sanskrit">(Agni)</span></span>
       </div>
       <div class="element-item water">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-40.png" alt="Water">
+        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5S11 20 11 29a13 13 0 0 0 26 0C37 20 24 5 24 5Z"/><path class="element-icon-accent" d="M17 31c2 3 4 4 7 4m7-8a8 8 0 0 1 1 3"/></svg>
         <span>Water<br><span class="element-sanskrit">(Jal)</span></span>
       </div>
       <!-- Repeat for infinite loop -->
       <div class="element-item earth">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-31.png" alt="Earth">
+        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M8 25c5-3 9 3 15 0s10-3 17 0M11 32c5-2 9 2 13 0s8-2 13 0"/><path class="element-icon-accent" d="m20 8 4 5 5-2"/></svg>
         <span>Earth<br><span class="element-sanskrit">(Prithvi)</span></span>
       </div>
       <div class="element-item space">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-32.png" alt="Space">
+        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><ellipse cx="24" cy="24" rx="21" ry="8" transform="rotate(-28 24 24)"/><circle class="element-icon-accent" cx="36" cy="13" r="2"/></svg>
         <span>Space<br><span class="element-sanskrit">(Akash)</span></span>
       </div>
       <div class="element-item air">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-33.png" alt="Air">
+        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 17h23a5 5 0 1 0-5-5M5 24h32a5 5 0 1 1-5 5M9 31h15a5 5 0 1 0-5 5"/><path class="element-icon-accent" d="M8 17h5m-7 7h7m-4 7h5"/></svg>
         <span>Air<br><span class="element-sanskrit">(Vayu)</span></span>
       </div>
       <div class="element-item fire">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-39.png" alt="Fire">
+        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5c2 9-6 10-4 18 2-2 4-4 5-7 8 7 12 13 8 21-2 4-6 6-11 6-8 0-14-5-14-13 0-6 4-12 10-17 0 6 2 8 4 9 3-6 3-11 2-17Z"/><path class="element-icon-accent" d="M22 37c-3-4 1-8 4-11 4 5 5 9 2 12"/></svg>
         <span>Fire<br><span class="element-sanskrit">(Agni)</span></span>
       </div>
       <div class="element-item water">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-40.png" alt="Water">
+        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5S11 20 11 29a13 13 0 0 0 26 0C37 20 24 5 24 5Z"/><path class="element-icon-accent" d="M17 31c2 3 4 4 7 4m7-8a8 8 0 0 1 1 3"/></svg>
         <span>Water<br><span class="element-sanskrit">(Jal)</span></span>
       </div>
     </div>
@@ -329,7 +329,7 @@ get_header();
 
 
 
-<!-- Vaastu Panchmahabhootas Modern Section (Branded, Montserrat, Brand Guidelines, RGBA Colors) --> 
+<!-- Vaastu Panchmahabhootas -->
 <section class="vaastu-panchmaha-section">
   <div class="vaastu-panchmaha-heading-wrap">
     <h1 class="vaastu-panchmaha-heading">
@@ -351,9 +351,9 @@ get_header();
 
 
 
-<!-- END Vaastu Panchmahabhootas Modern Section (Branded, Montserrat, Brand Guidelines, RGBA Colors) -->
+<!-- End Vaastu Panchmahabhootas -->
 
-<!-- Improved Heading Section: Media Mentions & Public Features: Dr. Ravi Rao (Montserrat) -->
+<!-- Media mentions and public features -->
 
 
 <section class="vaastu-heading-section">
@@ -423,7 +423,7 @@ get_header();
 <!-- END Modern Travel Calendar Section -->
 
 
-<!-- Improved Heading Section: Media Mentions & Public Features: Dr. Ravi Rao (Montserrat) -->
+<!-- Media mentions and public features -->
 
 
 <section class="vaastu-heading-section">
@@ -436,7 +436,6 @@ get_header();
 <section class="business-enquiry-form" aria-label="Business enquiry form">
   <iframe
     src="https://api.leadconnectorhq.com/widget/form/hkAoJptF0VSu3fKDMUKU"
-    style="width:100%;height:459px;border:none;border-radius:3px"
     id="inline-hkAoJptF0VSu3fKDMUKU"
     data-layout="{'id':'INLINE'}"
     data-trigger-type="alwaysShow"
@@ -453,7 +452,7 @@ get_header();
   </iframe>
 </section>
 
-<!-- Modern Footer (Branded, Montserrat, Design Kept Same, Links Clickable) -->
+<!-- Branded footer -->
 <footer class="main-footer-branded-v2">
   <div class="footer-content-v2">
     <div class="footer-col-v2 about">
@@ -528,6 +527,6 @@ get_header();
 
 
 
-<!-- END Modern Footer (Branded Colors, Montserrat, Refined) -->
+<!-- End branded footer -->
 </div>
 <?php get_footer(); ?>

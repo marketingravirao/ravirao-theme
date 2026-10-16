@@ -8,11 +8,22 @@
         return;
     }
 
+    function closeSubmenus() {
+        navigation.querySelectorAll('.submenu-toggle').forEach(submenuButton => {
+            submenuButton.setAttribute('aria-expanded', 'false');
+            submenuButton.closest('li').classList.remove('submenu-open');
+        });
+    }
+
     button.addEventListener('click', () => {
         const isOpen = button.getAttribute('aria-expanded') === 'true';
 
         button.setAttribute('aria-expanded', String(!isOpen));
         navigation.classList.toggle('is-open', !isOpen);
+
+        if (isOpen) {
+            closeSubmenus();
+        }
     });
 
     navigation.querySelectorAll('li.menu-item-has-children').forEach((item, index) => {
@@ -54,7 +65,8 @@
         }
 
         if (event.key === 'Escape') {
-            const openSubmenuButton = navigation.querySelector('.submenu-toggle[aria-expanded="true"]');
+            const openSubmenuButtons = navigation.querySelectorAll('.submenu-toggle[aria-expanded="true"]');
+            const openSubmenuButton = openSubmenuButtons[openSubmenuButtons.length - 1];
 
             if (openSubmenuButton) {
                 openSubmenuButton.setAttribute('aria-expanded', 'false');
@@ -65,13 +77,22 @@
     });
 
     navigation.addEventListener('click', (event) => {
-        if (event.target.closest('.submenu-toggle')) {
+        if (!(event.target instanceof Element) || event.target.closest('.submenu-toggle')) {
             return;
         }
 
-        if (event.target.closest('a') && window.matchMedia('(max-width: 768px)').matches) {
+        if (event.target.closest('a') && window.matchMedia('(max-width: 900px)').matches) {
             button.setAttribute('aria-expanded', 'false');
             navigation.classList.remove('is-open');
+            closeSubmenus();
+        }
+    });
+
+    window.matchMedia('(min-width: 901px)').addEventListener('change', event => {
+        if (event.matches) {
+            button.setAttribute('aria-expanded', 'false');
+            navigation.classList.remove('is-open');
+            closeSubmenus();
         }
     });
 })();

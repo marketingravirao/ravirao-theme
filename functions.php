@@ -43,17 +43,22 @@ add_action('wp_enqueue_scripts', function () {
     ravirao_theme_script('ravirao-theme-main', '/assets/js/main.js');
 
     if (is_front_page() || is_page_template('front-page.php')) {
-        wp_enqueue_style(
-            'ravirao-homepage-fonts',
-            'https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap'
+        ravirao_theme_style('ravirao-theme-homepage', '/assets/css/homepage.css', ['ravirao-theme-base']);
+        wp_enqueue_script(
+            'ravirao-gsap',
+            'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js',
+            [],
+            '3.13.0',
+            true
         );
-        wp_enqueue_style(
-            'ravirao-homepage-fonts-regular',
-            'https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap',
-            ['ravirao-homepage-fonts']
+        wp_enqueue_script(
+            'ravirao-scrolltrigger',
+            'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js',
+            ['ravirao-gsap'],
+            '3.13.0',
+            true
         );
-        ravirao_theme_style('ravirao-theme-homepage', '/assets/css/homepage.css', ['ravirao-homepage-fonts-regular']);
-        ravirao_theme_script('ravirao-theme-homepage', '/assets/js/homepage.js');
+        ravirao_theme_script('ravirao-theme-homepage', '/assets/js/homepage.js', ['ravirao-scrolltrigger']);
         wp_enqueue_script(
             'leadconnector-form-embed',
             'https://link.msgsndr.com/js/form_embed.js',

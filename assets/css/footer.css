@@ -1,7 +1,8 @@
 .site-footer {
     padding: 1.5rem 0;
-    border-top: 1px solid #e7e9ec;
-    color: #4d5865;
+    border-top: 1px solid rgba(54, 99, 171, 0.18);
+    background: #3663ab;
+    color: #fff;
 }
 
 .footer-inner {
@@ -26,6 +27,12 @@
 }
 
 .site-footer a {
+    color: #fff;
     font-size: 0.875rem;
     text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    color: #fe4a39;
 }
