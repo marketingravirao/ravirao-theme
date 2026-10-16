@@ -1,0 +1,7 @@
+.ravirao-theme-blank-page {
+    margin: 0;
+}
+
+.ravirao-theme-blank-page #main-content {
+    min-height: 100vh;
+}

@@ -1,0 +1,1016 @@
+/* Local font: add NunitoSans-Variable.woff2 to assets/fonts/. */
+/* Satoshi - Normal */
+@font-face {
+    font-family: "Satoshi";
+    src: url("../fonts/satoshi/TTF/Satoshi-Variable.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+}
+
+/* Satoshi - Italic */
+@font-face {
+    font-family: "Satoshi";
+    src: url("../fonts/satoshi/TTF/Satoshi-VariableItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 300 900;
+    font-display: swap;
+}
+
+:root {
+    --content-width: 1140px;
+    --text-color: #17212b;
+    --background-color: #ffffff;
+    --accent-color: #2458a6;
+    --font-body: "Satoshi", sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+}
+
+*{
+	font-family: var(--font-body) !important;
+}
+
+.fa, .fas {
+    font-family: 'Font Awesome 5 Free' !important;
+    font-weight: 900;
+}
+
+button{
+	outline:none !important;
+}
+
+.dashicons, .dashicons-before:before {
+    font-family: dashicons !important;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    vertical-align: top;
+    text-align: center;
+    transition: color .1s ease-in;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 70%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    line-height: var(--line-height-base);
+}
+
+/* Type scale: responsive, with explicit sizes for common text elements. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+table,
+address {
+    font-size: 1rem;
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+li,
+dt,
+dd,
+td,
+th,
+label,
+input,
+select,
+textarea,
+button {
+    font-size: 1rem;
+}
+
+small,
+figcaption,
+caption {
+    font-size: 0.875rem;
+}
+
+sub,
+sup {
+    font-size: 0.75em;
+}
+
+code,
+pre,
+kbd,
+samp {
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 0.9375em;
+}
+
+pre {
+    overflow-x: auto;
+}
+
+a {
+    color: var(--accent-color);
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    line-height: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: min(calc(100% - 2rem), var(--content-width));
+    margin-inline: auto;
+}
+
+.content-wrap {
+    padding-block: 3rem;
+}
+
+.entry {
+    margin-bottom: 2.5rem;
+}
+
+.entry-title {
+    line-height: 1.2;
+}
+
+.entry-title a {
+    text-decoration: none;
+}
+
+.site-main {
+    min-height: 50vh;
+}
+
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.screen-reader-text:focus {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 9999;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0.7rem 1rem;
+    clip: auto;
+    color: #000000;
+    background: #ffffff;
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+div.calendar-section{
+	max-width:unset;
+}
+
+.mc-main.my-calendar .nextmonth .mc-date-container, .mc-main.my-calendar .nextmonth article{
+	display:none;
+}
+
+div.mc-main.my-calendar .weekend .mc-date{
+	background:none;
+}
+
+div.mc-main .current-day:not(.day .current-day, .list .current-day){
+	outline:none;
+}
+
+div.mc-main.my-calendar .current-day .mc-date {
+    background: none;
+    display: flex;
+    justify-content: end;
+}
+
+.mc-main.my-calendar .current-day .mc-date span {
+    background: #bd7;
+    padding: 5px 12px;
+    border-radius: 7px;
+    line-height: 1;
+}
+
+body.home div.mc-main.my-calendar .list-event .details,body.home div.mc-main.my-calendar td{
+	border-color:#bbb;
+	padding: 2px 15px !important;
+}
+
+div.mc-main.my-calendar .my-calendar-header {
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+nav.my-calendar-navigation .my-calendar-nav ul{
+	gap:25px;
+	justify-content:center;
+	align-items:center;	
+}
+
+div.mc-main .my-calendar-navigation button{
+	border:none;
+	outline:none;
+	line-height:1;
+}
+
+div.mc-main .my-calendar-navigation .my-calendar-today button{
+    padding: 7px 10px !important;
+    font-weight: 600;
+    border: 1px solid #333 !important;
+    border-radius: 16px;
+	outline:none;
+}
+
+div.mc-main .my-calendar-navigation .my-calendar-today button span{
+	display:none;
+}
+
+div.mc-main .my-calendar-navigation button:hover{
+	color:#000;
+	outline:none;
+	border-color:transparent;
+}
+
+.muhurat-moreinfo{
+	display:none;
+}
+
+/* Active calendar navigation */
+div.mc-main .my-calendar-navigation[aria-label="Calendar (bottom)"] .mc-active,
+div.mc-main .my-calendar-navigation[aria-label="Calendar (bottom)"] li.current .mc-navigation-button {
+    position: relative;
+    color: #c62828;
+    background: #fff1f0;
+    border: 1px solid #f5c7c4;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: 0 1px 3px rgba(198, 40, 40, 0.06);
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+	outline:none;
+	cursor:pointer;
+}
+
+/* Active hover */
+div.mc-main .my-calendar-navigation[aria-label="Calendar (bottom)"] .mc-active:hover,
+div.mc-main .my-calendar-navigation[aria-label="Calendar (bottom)"] li.current .mc-navigation-button:hover {
+    color: #b71c1c;
+    border-color: #e9aaa6;
+}
+
+
+div.mc-main .my-calendar-navigation .no-icon{
+	    border: 1px solid #000;
+}
+
+.mc_bottomnav.my-calendar-footer{
+	margin-top:25px !important;
+}
+
+div.mc-main .event-title button{
+	padding:7px 12px;
+}
+
+.mc-main .event-title button div{
+	line-height:1;
+}
+
+.mc-main td h3.event-title div img{
+	max-width:21px;
+}
+.mc-main .event-times-table {
+    width: 100%;
+    border: 1px solid #b3b3b3;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.mc-main .event-times-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 5px 7px;
+}
+
+.mc-main .event-times-row + .event-times-row {
+    border-top: 1px solid #b3b3b3;
+}
+
+.mc-main .event-times-row:nth-child(even) {
+    background: #f8fafc;
+}
+
+.mc-main .event-times-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.mc-main .event-times-info img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.mc-main .event-times-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.mc-main .event-times-value {
+    font-size: 12px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: #0f172a;
+    white-space: nowrap;
+}
+
+div.mc-main .event-title button{
+	cursor:pointer;
+}
+
+div.mc-main.my-calendar .list-event .details{
+	padding:20px 35px;
+}
+
+/* body.page-id-6851 .mc-main .uses-modal{
+	display: block !important;
+} */
+
+div.mc-main.my-calendar .list-event .details, .mc-main.my-calendar td{
+	border-color:#c3c3c3 !important;
+}
+
+/* Popup background and main wrapper */
+#modal_muhurat_details .modal-body {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px #3663ab22;
+  padding: 32px 28px;
+  max-width: 510px;
+  margin: 0 auto;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+#modal_muhurat_details .innerwrapper {
+  width: 100%;
+}
+
+/* Panchang Title */
+.pop-title.panchang {
+  color: #3663ab;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.pop-title.panchang img {
+  height: 32px;
+  margin-left: 8px;
+}
+
+/* Panchang Details Table */
+.table.panchang-details {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #eaf3fa;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.table.panchang-details td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #d5e3f7;
+  font-size: 1.08rem;
+  color: #264a7b;
+}
+
+.table.panchang-details tr:last-child td {
+  border-bottom: none;
+}
+
+.table-label {
+  font-weight: 600;
+  background: #3663ab14;
+  width: 40%;
+}
+
+/* Section Headings */
+.pop-title.occasion {
+  color: #fe4a39;
+  font-size: 1.14rem;
+  font-weight: 600;
+  margin: 22px 0 10px 0;
+  letter-spacing: 0.2px;
+}
+
+/* Description and Speciality text */
+.muhurat-details-wrapper p {
+  color: #264a7b;
+  font-size: 1.04rem;
+  margin-bottom: 0;
+}
+
+/* Occasions Icon Grid */
+.muhurat-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+  margin: 16px 0 24px;
+  padding: 0;
+  list-style: none;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.muhurat-details li {
+  flex: 0 1 58px;
+  text-align: center;
+}
+
+.muhurat-details img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #f6faff;
+  box-shadow: 0 2px 8px #3663ab18;
+  transition: transform 0.15s;
+}
+
+.muhurat-details img:hover {
+  transform: scale(1.23) rotate(-4deg);
+  box-shadow: 0 0 18px #fe4a3942;
+}
+
+.muhurat-moreinfo{
+	display:none;
+}
+
+.muhurat-description{
+	margin-top:25px;
+}
+
+/* Footnote */
+.foot-note-wrapper p {
+  font-size: 0.98rem;
+  color: #3663ab;
+  opacity: 0.7;
+  background: #eaf3fa;
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+/* Print Button */
+.print-btn {
+  text-align: right;
+  margin-top: 16px;
+}
+
+.print-btn button {
+  background: #3663ab;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  padding: 8px 22px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  box-shadow: 0 2px 10px #3663ab28;
+  cursor: pointer;
+  transition: background 0.18s;
+  outline: none;
+}
+
+.print-btn button:hover {
+  background: #fe4a39;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #modal_muhurat_details .modal-body {
+    padding: 18px 4vw;
+    max-width: 98vw;
+  }
+  .pop-title.panchang { font-size: 1.2rem; }
+  .table.panchang-details td { padding: 7px 6px; font-size: 0.98rem; }
+  .muhurat-details img { width: 38px; height: 38px; }
+}
+
+body.page-id-6851 .event-title-container {
+    visibility: hidden;
+}
+
+body.page-id-6851 .event-title-container:has(> .event-times-table) {
+    visibility: visible;
+}
+
+body.page-id-6851 .muhurat-popup .muhurat-date-time,
+body.page-id-6851 .muhurat-popup 	h2{
+	display:none;
+}
+
+.my-calendar-modal__content .muhurat-details-wrapper .muhurat-details li.muhurat {
+    position: relative;
+}
+
+.my-calendar-modal__content .muhurat-details-wrapper .muhurat-details li.muhurat::before {
+    content: "\f00c";
+    position: absolute;
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+    color: green;
+    right: 0;
+    top: -6px;
+    font-size: 18px;
+    z-index: 999;
+}
+
+/* Day view event card */
+body.page-id-6851 .mc-main .list-details {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 12px 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Hide duplicate event title */
+body.page-id-6851 .mc-main .list-details > .event-title {
+    display: none;
+}
+
+/* Date section */
+body.page-id-6851 .mc-main .list-details .time-block {
+    display: flex;
+    align-items: center;
+    padding: 0 0 12px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+body.page-id-6851 .mc-main .list-details .time-block p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Remove default list styles */
+body.page-id-6851 .mc-main .list-details .muhurat-fc-title ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Sunrise, Sunset and Moonrise cards */
+body.page-id-6851 .mc-main .list-details .muhurat-fc-title li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 150px;
+    min-width: 0;
+    padding: 12px 14px;
+    margin: 0;
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Icons */
+body.page-id-6851 .mc-main .list-details .muhurat-fc-title li img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+/* Different accent colors */
+body.page-id-6851 .mc-main .list-details li.sunrise {
+    border-left: 3px solid #f59e0b;
+}
+
+body.page-id-6851 .mc-main .list-details li.sunset {
+    border-left: 3px solid #f97316;
+}
+
+body.page-id-6851 .mc-main .list-details li.moonrise {
+    border-left: 3px solid #6366f1;
+}
+
+/* Description */
+body.page-id-6851 .mc-main .list-details .shortdesc {
+    margin: 0;
+    padding: 0;
+}
+
+/* More link */
+body.page-id-6851 .mc-main .list-details .sharing {
+    margin-top: 16px;
+}
+
+body.page-id-6851 .mc-main .list-details .sharing p {
+    margin: 0;
+}
+
+body.page-id-6851 .mc-main .list-details .mc-details a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 18px;
+    background: #3663ab;
+    color: #fff;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+body.page-id-6851 .mc-main .list-details .mc-details a:hover {
+    background: #274c86;
+    color: #fff;
+}
+
+body.page-id-6851 .mc_bottomnav.my-calendar-footer{
+	background:none;
+}
+
+body.page-id-6851 .mc_bottomnav.my-calendar-footer ul{
+	display:none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    body.page-id-6851 .mc-main .list-details {
+        padding: 14px;
+    }
+
+    body.page-id-6851 .mc-main .list-details .muhurat-fc-title ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    body.page-id-6851 .mc-main .list-details .muhurat-fc-title li {
+        flex: 0 1 auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+	
+	body.page-id-6851 .event-title-container:has(> .event-times-table){
+		width:100%;
+	}
+	
+	#mc-modal.my-calendar-modal {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 98%;
+}
+}
+
+dialog.my-calendar-modal div.mc-modal-title-container{
+	z-index:9999;
+}
+
+.mc-main div.uses-modal[id^="mc_list_"]{
+	display:block !important;
+}
+
+
+/* Single event page only */
+body.page-id-6851 .mc-main .single-event,
+body:has(.mc-main .single-event) .mc-main .single-event {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+/* Hide duplicate event title and short description */
+.mc-main .single-event > header,
+.mc-main .single-event .shortdesc {
+    display: none;
+}
+
+/* Event date */
+.mc-main .single-event .time-block {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* Main Panchang card */
+.mc-main .single-event #modal_muhurat_details {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mc-main .single-event #modal_muhurat_details .modal-body,
+.mc-main .single-event #modal_muhurat_details .innerwrapper {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.mc-main .single-event #modal_muhurat_details .innerwrapper {
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e5eaf2;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(20, 50, 90, .07);
+}
+
+/* Panchang heading */
+.mc-main .single-event .pop-title.panchang {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 0 20px;
+    color: #3663ab;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.mc-main .single-event .pop-title.panchang img {
+    width: 110px;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Panchang table */
+.mc-main .single-event .panchang-details {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 0 24px;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+.mc-main .single-event .panchang-details td {
+    padding: 13px 15px;
+    border: 1px solid #dbe5f0;
+    vertical-align: middle;
+    line-height: 1.5;
+    color: #334155;
+}
+
+.mc-main .single-event .panchang-details tr:nth-child(odd) {
+    background: #f3f7fc;
+}
+
+.mc-main .single-event .panchang-details tr:nth-child(even) {
+    background: #fff;
+}
+
+.mc-main .single-event .panchang-details .table-label {
+    width: 36%;
+    font-weight: 700;
+    color: #3663ab;
+}
+
+/* Text sections */
+.mc-main .single-event .muhurat-details-wrapper {
+    margin: 22px 0;
+}
+
+.mc-main .single-event .pop-title.occasion {
+    margin: 0 0 10px;
+    color: #fe4a39;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.mc-main .single-event .muhurat-details-wrapper p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+/* Occasion icon grid */
+.mc-main .single-event ul.muhurat-details {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    padding: 0;
+    margin: 16px 0 0;
+    list-style: none;
+}
+
+.mc-main .single-event ul.muhurat-details li {
+    display: block;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mc-main .single-event ul.muhurat-details li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    padding: 12px;
+    background: #f4f8ff;
+    border: 1px solid #e2eaf7;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: background .2s, border-color .2s;
+}
+
+.mc-main .single-event ul.muhurat-details li a:hover {
+    background: #e9f1ff;
+    border-color: #3663ab;
+}
+
+.mc-main .single-event ul.muhurat-details img {
+    display: block;
+    width: 100%;
+    max-width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Footnote */
+.mc-main .single-event .foot-note-wrapper {
+    margin-top: 22px;
+    padding: 12px 15px;
+    background: #f1f6fc;
+    border-radius: 8px;
+}
+
+.mc-main .single-event .foot-note-wrapper p {
+    margin: 0;
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* Print and calendar links */
+.mc-main .single-event .print-btn {
+    margin: 20px 0;
+    text-align: right;
+}
+
+.mc-main .single-event .view-full {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .mc-main .single-event #modal_muhurat_details .innerwrapper {
+        padding: 16px;
+    }
+
+    .mc-main .single-event .panchang-details {
+        font-size: 12px;
+    }
+
+    .mc-main .single-event .panchang-details td {
+        padding: 10px;
+    }
+
+    .mc-main .single-event ul.muhurat-details {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .mc-main .single-event ul.muhurat-details li a {
+        padding: 8px;
+    }
+
+    .mc-main .single-event ul.muhurat-details img {
+        height: 38px;
+    }
+}
