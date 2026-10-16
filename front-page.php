@@ -70,12 +70,14 @@ get_header();
       <div class="rr-section-heading">
         <h2 class="rr-section-title rr-section-title--start">Dr. Ravi Rao</h2>
       </div>
+      <p class="ravi-credentials">Over 30 years of experience in Vaastu and astrology</p>
       <p>
-        Dr. Ravi Rao, world-renowned vaastu consultant, is known for giving his clients simple yet effective solutions. With over 30 years of vast experience and extensive research, Dr. Rao blends various branches of astrology and vaastu to offer strategies for growth and prosperity.<br><br>
-        A man of few words, Dr. Rao is consultant and advisor to many leading industrialists, both in India and abroad. His scientific and logical approach to problem-solving has earned him acceptance worldwide. Globally traveled, Dr. Rao has also authored a book on mundane astrology, serving as a reference for predicting world events.<br><br>
-        Dr. Rao believes that humans are a unit of nature and our lives are always closely associated with it. While we may control our homes and workspaces to suit our lifestyles, to truly energize ourselves, these spaces must follow nature’s principles.
+        Dr. Ravi Rao advises organizations and individuals on practical Vaastu solutions. Drawing on decades of experience and research, he blends astrology and Vaastu to help clients make informed decisions about their spaces.
       </p>
-      <a class="rr-button know-more-btn-modern" href="https://staging.ravirao.com/new-about-dr-ravi-rao/">Know More</a>
+      <p>
+        His clients include industrialists in India and abroad. His scientific, logical approach focuses on understanding each client’s needs and aligning their surroundings with the principles of nature.
+      </p>
+      <a class="rr-button know-more-btn-modern" href="https://staging.ravirao.com/new-about-dr-ravi-rao/">Know More About Dr. Rao</a>
     </div>
   </div>
 </div>
@@ -86,8 +88,8 @@ get_header();
     <span>of experience</span>
   </div>
   <div class="homepage-proof-item">
-    <strong>Fortune 500</strong>
-    <span>business guidance</span>
+    <strong>Corporate</strong>
+    <span>Vaastu guidance</span>
   </div>
   <div class="homepage-proof-item">
     <strong>India &amp; abroad</strong>
@@ -102,25 +104,25 @@ get_header();
     <p class="rr-section-tagline">Explore practical guidance for your business, property or personal goals.</p>
   </div>
   <div class="vaastu-services-wrapper rr-container" data-reveal-group>
-    <a href="https://staging.ravirao.com/new-astro-guidance-page/" class="vaastu-service-card rr-card" target="_blank">
+    <a href="https://staging.ravirao.com/new-astro-guidance-page/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-4.jpg" alt="Astro Guidance" />
       <div class="vaastu-card-title-highlight"><span>Astro Guidance</span></div>
       <p>Personal astrology and Vaastu guidance for important life and business decisions.</p>
       <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
     </a>
-    <a href="https://staging.ravirao.com/new-corporate-astro-vaastu/" class="vaastu-service-card rr-card" target="_blank">
+    <a href="https://staging.ravirao.com/new-corporate-astro-vaastu/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/IMG_9336-scaled.jpg" alt="Corporate Astro Vaastu" />
       <div class="vaastu-card-title-highlight"><span>Corporate Astro Vaastu</span></div>
       <p>Strategic spatial guidance for offices, organizations and leadership teams.</p>
       <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
     </a>
-    <a href="https://staging.ravirao.com/new-industrial-vaastu/" class="vaastu-service-card rr-card" target="_blank">
+    <a href="https://staging.ravirao.com/new-industrial-vaastu/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/WhatsApp-Image-2024-03-22-at-4.17.01-PM-e1751958980581.jpeg" alt="Industrial Vaastu" />
       <div class="vaastu-card-title-highlight"><span>Industrial Vaastu</span></div>
       <p>Vaastu guidance for factories, industrial plants and operational spaces.</p>
       <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
     </a>
-    <a href="https://staging.ravirao.com/new-commercial-vaastu/" class="vaastu-service-card rr-card" target="_blank">
+    <a href="https://staging.ravirao.com/new-commercial-vaastu/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/2B2A9000-scaled.jpg" alt="Commercial Vaastu" />
       <div class="vaastu-card-title-highlight"><span>Commercial Vaastu</span></div>
       <p>Thoughtful spatial recommendations for commercial and customer-facing properties.</p>
@@ -144,15 +146,15 @@ get_header();
     <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="Sintex" />
     <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="Somany" />
     <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="Vadilal" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="Adani" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="Arvind" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/CERA-logo.png" alt="CERA" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Havmor-logo.png" alt="Havmor" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/RKumar-logo.png" alt="R Kumar" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Shobha-logo.png" alt="Shobha Asar" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="Sintex" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="Somany" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="Vadilal" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="" aria-hidden="true" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="" aria-hidden="true" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/CERA-logo.png" alt="" aria-hidden="true" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Havmor-logo.png" alt="" aria-hidden="true" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/RKumar-logo.png" alt="" aria-hidden="true" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Shobha-logo.png" alt="" aria-hidden="true" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="" aria-hidden="true" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="" aria-hidden="true" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="" aria-hidden="true" />
   </div>
 </div>
 
@@ -162,7 +164,8 @@ get_header();
 
 <div class="vaastu-industries-animated-section rr-section rr-section--soft">
   <div class="rr-section-heading">
-    <h2 class="rr-section-title">Trusted Advisor to Fortune&nbsp;500 Leaders Worldwide</h2>
+    <h2 class="rr-section-title">Corporate Vaastu for Complex Business Environments</h2>
+    <p class="rr-section-tagline">Focused guidance for the spaces where organizations work, build and serve their customers.</p>
   </div>
   <div class="vaastu-industries-animated-grid rr-container" data-reveal-group>
     <!-- Manufacturing & Industrial Plants -->
@@ -193,7 +196,10 @@ get_header();
         <div class="vaastu-industry-title">Hospitality &<br>Retail</div>
       </div>
     </div>
-  </div>
+    </div>
+    <div class="vaastu-industries-cta">
+      <a class="rr-button" href="#business-enquiry">Discuss Your Business Space</a>
+    </div>
 </div>
 
 
@@ -248,7 +254,7 @@ get_header();
       </div>
       <!-- Button removed completely -->
     </div>
-    <a href="https://staging.ravirao.com/new-muhurat/" class="rr-button muhurtha-cta-btn" data-tooltip="View Calendar – Auspicious Dates Inside!" target="_blank">
+    <a href="https://staging.ravirao.com/new-muhurat/" class="rr-button muhurtha-cta-btn" data-tooltip="View Calendar – Auspicious Dates Inside!" target="_blank" rel="noopener noreferrer">
       Click Here to View Full Calendar
     </a>
   </div>
@@ -264,7 +270,7 @@ get_header();
   </div>
   <div class="testimonials-cards-handdrawn rr-container" data-reveal-group>
     <!-- Testimonial 1 -->
-    <div class="testimonial-card-sketch testimonial-card-sketch--featured rr-card">
+    <div class="testimonial-card-sketch rr-card">
       <div class="testimonial-card-heading highlight">Results After Vaastu Correction</div>
       <div class="testimonial-card-quote-block">
         <span class="testimonial-card-text">“Before coming into contact with Dr. Rao our office had few clients and lesser inquiries. After we changed our office as per Dr. Rao’s instructions, we started getting more clients and lots of phone inquiries.”</span>
@@ -353,20 +359,17 @@ get_header();
 <!-- Vaastu Panchmahabhootas -->
 <section class="vaastu-panchmaha-section rr-section" data-reveal="scale">
   <div class="rr-section-heading vaastu-panchmaha-heading-wrap">
-    <h2 class="vaastu-panchmaha-heading rr-section-title">
-      <span class="vaastu-heading-highlight">Vaastu : Panchmahabhootas</span>
-    </h2>
+    <h2 class="vaastu-panchmaha-heading rr-section-title">Vaastu and the Five Elements</h2>
   </div>
   <div class="vaastu-panchmaha-content">
+    <h3>Connecting people, spaces and nature</h3>
     <p>
-      Humans are an integral part of nature. Our lives are always closely linked with the natural world. Even though we design our homes and workplaces for our comfort, these spaces must follow nature’s principles to truly energize us.
+      Our lives are closely linked with the natural world. Vaastu Shastra considers how the spaces we create can work in harmony with nature’s principles.
     </p>
     <p>
-      Vaastu Shastra blends human energy with the energies of nature by aligning our surroundings with the eight directions and the five great elements—<span class="vaastu-highlight">Agni (Fire), Vayu (Air), Jal (Water), Prithvi (Earth), and Akash (Space)</span>. By balancing these elements, Vaastu Shastra helps bring our spaces—and our lives—into harmony with nature. The result is a boost in positive energy, health, harmony, and prosperity.
+      It considers the eight directions and five elements: <strong>Agni (Fire), Vayu (Air), Jal (Water), Prithvi (Earth) and Akash (Space).</strong> These ideas offer a framework for thinking about balance, wellbeing and how a space supports the people who use it.
     </p>
-    <blockquote>
-      Vaastu Shastra is the science that connects us with the energy of nature, bringing immense benefits to our personal and professional lives.
-    </blockquote>
+    <p class="vaastu-panchmaha-takeaway">A nature-connected approach to creating more harmonious homes and workplaces.</p>
   </div>
 </section>
 
@@ -434,42 +437,42 @@ get_header();
     <!-- Blog Card 1 -->
     <div class="vaastu-blog-card rr-card">
       <div class="vaastu-blog-date">July 3, 2024</div>
-      <div class="vaastu-blog-title">From Soil to Soul: The Untold Power of Bhoomi Poojan in Vastu Shastra</div>
-      <div class="vaastu-blog-desc">
+      <h3 class="vaastu-blog-title">From Soil to Soul: The Untold Power of Bhoomi Poojan in Vastu Shastra</h3>
+      <p class="vaastu-blog-desc">
         Discover why Bhoomi Poojan is the spiritual foundation of every auspicious construction and how it connects the energies of land, cosmos, and you.
-      </div>
+      </p>
       <div class="vaastu-blog-footer">
         <div class="vaastu-blog-author">Dr. Ravi Rao</div>
-        <a class="vaastu-blog-link" href="https://staging.ravirao.com/from-soil-to-soul-the-untold-power-of-bhoomi-poojan-in-vastu-shastra/" target="_blank">Read More</a>
+        <a class="vaastu-blog-link" href="https://staging.ravirao.com/from-soil-to-soul-the-untold-power-of-bhoomi-poojan-in-vastu-shastra/" target="_blank" rel="noopener noreferrer">Read More</a>
       </div>
     </div>
     <!-- Blog Card 2 -->
     <div class="vaastu-blog-card rr-card">
       <div class="vaastu-blog-date">July 2, 2024</div>
-      <div class="vaastu-blog-title">Not Your Home? Not a Problem: Vastu Hacks for Rented Spaces That Actually Work</div>
-      <div class="vaastu-blog-desc">
+      <h3 class="vaastu-blog-title">Not Your Home? Not a Problem: Vastu Hacks for Rented Spaces That Actually Work</h3>
+      <p class="vaastu-blog-desc">
         Practical and effective Vastu tips for tenants—bring harmony and success even when you can't renovate your space completely.
-      </div>
+      </p>
       <div class="vaastu-blog-footer">
         <div class="vaastu-blog-author">Dr. Ravi Rao</div>
-        <a class="vaastu-blog-link" href="https://staging.ravirao.com/not-your-home-not-a-problem-vastu-hacks-for-rented-spaces-that-actually-work/" target="_blank">Read More</a>
+        <a class="vaastu-blog-link" href="https://staging.ravirao.com/not-your-home-not-a-problem-vastu-hacks-for-rented-spaces-that-actually-work/" target="_blank" rel="noopener noreferrer">Read More</a>
       </div>
     </div>
     <!-- Blog Card 3 -->
     <div class="vaastu-blog-card rr-card">
       <div class="vaastu-blog-date">July 1, 2024</div>
-      <div class="vaastu-blog-title">Hidden Wealth: How Vastu-Compliant Storage Can Boost Factory Output and Harmony</div>
-      <div class="vaastu-blog-desc">
+      <h3 class="vaastu-blog-title">Hidden Wealth: How Vastu-Compliant Storage Can Boost Factory Output and Harmony</h3>
+      <p class="vaastu-blog-desc">
         Unlock the secrets of storage placement as per Vastu—improve productivity, cash flow, and relationships at your workplace or factory.
-      </div>
+      </p>
       <div class="vaastu-blog-footer">
         <div class="vaastu-blog-author">Dr. Ravi Rao</div>
-        <a class="vaastu-blog-link" href="https://staging.ravirao.com/hidden-wealth-how-vastu-compliant-storage-can-boost-factory-output-and-harmony/" target="_blank">Read More</a>
+        <a class="vaastu-blog-link" href="https://staging.ravirao.com/hidden-wealth-how-vastu-compliant-storage-can-boost-factory-output-and-harmony/" target="_blank" rel="noopener noreferrer">Read More</a>
       </div>
     </div>
   </div>
   <div class="vaastu-blogs-more">
-    <a class="rr-button vaastu-blogs-more-btn" href="https://staging.ravirao.com/category/vaastu/" target="_blank">Read More Blogs</a>
+    <a class="rr-button vaastu-blogs-more-btn" href="https://staging.ravirao.com/category/vaastu/" target="_blank" rel="noopener noreferrer">Explore More Vaastu Blogs</a>
   </div>
 </div>
 
@@ -487,6 +490,7 @@ get_header();
         <?php echo do_shortcode('[my_calendar category="3,1,2" above="nav" below="key" time="month" weekends="true" day="1" format="calendar"]'); ?>
       </div>
     </details>
+    <a class="calendar-schedule-link" href="#business-enquiry">Ask about travel availability</a>
   </div>
 </section>
 
@@ -499,25 +503,37 @@ get_header();
 <section class="business-enquiry-section rr-section" id="business-enquiry" aria-labelledby="business-enquiry-heading">
   <div class="rr-section-heading" data-reveal>
     <h2 class="vaastu-heading-main rr-section-title" id="business-enquiry-heading">Let’s Discuss Your Project</h2>
-    <p class="rr-section-tagline">Share a few details about your space or business and what guidance you’re looking for.</p>
+    <p class="rr-section-tagline">Tell us about your space and the guidance you’re looking for. We’ll help you find the right next step.</p>
   </div>
-  <div class="business-enquiry-form rr-card" data-reveal="scale">
-    <iframe
-      src="https://api.leadconnectorhq.com/widget/form/hkAoJptF0VSu3fKDMUKU"
-      id="inline-hkAoJptF0VSu3fKDMUKU"
-      data-layout="{'id':'INLINE'}"
-      data-trigger-type="alwaysShow"
-      data-trigger-value=""
-      data-activation-type="alwaysActivated"
-      data-activation-value=""
-      data-deactivation-type="neverDeactivate"
-      data-deactivation-value=""
-      data-form-name="RR website form"
-      data-height="459"
-      data-layout-iframe-id="inline-hkAoJptF0VSu3fKDMUKU"
-      data-form-id="hkAoJptF0VSu3fKDMUKU"
-      title="RR website form">
-    </iframe>
+  <div class="business-enquiry-layout rr-container">
+    <div class="business-enquiry-copy" data-reveal="left">
+      <p class="business-enquiry-eyebrow">Start a conversation</p>
+      <h3>Thoughtful guidance begins with understanding your space.</h3>
+      <p>Whether you’re planning a new project or reviewing an existing workplace, share your goals and our team will guide you toward the appropriate consultation.</p>
+      <a class="business-enquiry-direct-contact" href="tel:+919099608886">Prefer to speak? Call +91-9099608886</a>
+    </div>
+    <div class="business-enquiry-form rr-card" data-reveal="scale">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/hkAoJptF0VSu3fKDMUKU"
+        id="inline-hkAoJptF0VSu3fKDMUKU"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="RR website form"
+        data-height="459"
+        data-layout-iframe-id="inline-hkAoJptF0VSu3fKDMUKU"
+        data-form-id="hkAoJptF0VSu3fKDMUKU"
+        title="RR website form">
+      </iframe>
+      <?php $privacy_policy_url = get_privacy_policy_url(); ?>
+      <?php if ($privacy_policy_url) : ?>
+        <p class="business-enquiry-privacy">Your details are handled according to our <a href="<?php echo esc_url($privacy_policy_url); ?>">privacy policy</a>.</p>
+      <?php endif; ?>
+    </div>
   </div>
 </section>
 
@@ -526,7 +542,7 @@ get_header();
   <div class="footer-content-v2">
     <div class="footer-col-v2 about">
       <div class="footer-heading-v2"><span class="footer-bar-v2"></span> <span>About</span></div>
-      <p>Dr. Ravi Rao is an established and renowned astrologer & vaastu consultant who has a history of over 25 years of successful practice behind him. He specializes in corporate Astro-Vaastu analysis, Vaastu for industries, and holistic guidance for organizations and individuals.</p>
+      <p>Dr. Ravi Rao is an established astrologer and Vaastu consultant with over 30 years of experience. He specializes in corporate Astro-Vaastu analysis, Vaastu for industries, and holistic guidance for organizations and individuals.</p>
     </div>
     <div class="footer-col-v2 links">
       <div class="footer-heading-v2"><span class="footer-bar-v2"></span> <span>Links</span></div>
@@ -551,12 +567,12 @@ get_header();
           <a href="mailto:office@staging.ravirao.com">office@staging.ravirao.com</a>
         </address>
         <ul class="footer-social-links-v2">
-          <li><a href="https://www.facebook.com/DrRaviRaoOfficial/" target="_blank" aria-label="Facebook">
+          <li><a href="https://www.facebook.com/DrRaviRaoOfficial/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="#3663ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
             </svg> Facebook</a>
           </li>
-          <li><a href="https://x.com/DrRaviRao" target="_blank" aria-label="X">
+          <li><a href="https://x.com/DrRaviRao" target="_blank" rel="noopener noreferrer" aria-label="X">
             <!-- X (Twitter) Official SVG -->
             <svg width="25" height="25" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="1200" height="1227" rx="220" fill="#fff" />
@@ -564,20 +580,20 @@ get_header();
               <path d="M601 682.8 451.2 834.4H359.6L601 620.7l241.4 213.7H748.8L601 682.8ZM601 544.1 750.8 392.5h91.6L601 606.2 359.6 392.5h92.6L601 544.1Z" fill="#fe4a39"/>
             </svg> X (Twitter)</a>
           </li>
-          <li><a href="https://www.instagram.com/drravirao/" target="_blank" aria-label="Instagram">
+          <li><a href="https://www.instagram.com/drravirao/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="#3663ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
               <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
             </svg> Instagram</a>
           </li>
-          <li><a href="https://www.youtube.com/@DrRaoOfficialVaastuInsights" target="_blank" aria-label="YouTube">
+          <li><a href="https://www.youtube.com/@DrRaoOfficialVaastuInsights" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="#3663ab" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="5" width="20" height="14" rx="5" ry="5"/>
               <polygon points="10 9 15 12 10 15 10 9" fill="#fe4a39"/>
             </svg> YouTube</a>
           </li>
-          <li><a href="https://www.linkedin.com/in/dr-ravi-rao-a883021a8/" target="_blank" aria-label="LinkedIn">
+          <li><a href="https://www.linkedin.com/in/dr-ravi-rao-a883021a8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <!-- Modern LinkedIn SVG -->
             <svg width="25" height="25" viewBox="0 0 32 32" fill="none">
               <rect width="32" height="32" rx="7" fill="#fff"/>

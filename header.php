@@ -63,6 +63,7 @@
     </button>
     <nav id="primary-navigation" class="primary-navigation" aria-label="<?php esc_attr_e('Main navigation', 'ravirao-theme'); ?>">
       <?php wp_nav_menu(['theme_location' => 'primary', 'container' => false, 'fallback_cb' => false]); ?>
+      <a class="header-consultation-cta" href="<?php echo esc_url(home_url('/#business-enquiry')); ?>">Request a Consultation</a>
     </nav>
   </div>
 </header>
