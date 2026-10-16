@@ -45,13 +45,13 @@ get_header();
 
 
 
-<div class="ravi-section-modern">
-  <div class="ravi-content-wrapper-modern">
-    <div class="ravi-photo-modern">
+<div class="ravi-section-modern rr-section rr-section--soft">
+  <div class="ravi-content-wrapper-modern rr-container">
+    <div class="ravi-photo-modern rr-card" data-reveal="right">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/55-scaled-e1751979726799.jpg" alt="Dr. Ravi Rao">
     </div>
-    <div class="ravi-details-modern">
-      <h2>Dr. Ravi Rao</h2>
+    <div class="ravi-details-modern" data-reveal="left">
+      <h2 class="rr-section-title rr-section-title--start">Dr. Ravi Rao</h2>
       <p>
         Dr. Ravi Rao, world-renowned vaastu consultant, is known for giving his clients simple yet effective solutions. With over 30 years of vast experience and extensive research, Dr. Rao blends various branches of astrology and vaastu to offer strategies for growth and prosperity.<br><br>
         A man of few words, Dr. Rao is consultant and advisor to many leading industrialists, both in India and abroad. His scientific and logical approach to problem-solving has earned him acceptance worldwide. Globally traveled, Dr. Rao has also authored a book on mundane astrology, serving as a reference for predicting world events.<br><br>
@@ -64,9 +64,9 @@ get_header();
 
 <!-- Industries Dr. Ravi Rao serves -->
 
-<section class="industry-section-premium">
+<section class="industry-section-premium rr-section">
   <div class="industry-heading-bar">
-    <span class="industry-heading-text">Industries Thriving with Vaastu Guidance</span>
+    <span class="industry-heading-text rr-section-title" data-reveal>Industries Thriving with Vaastu Guidance</span>
   </div>
   <div class="industry-glow-bg"></div>
   <div class="infinite-industry-carousel">
@@ -107,33 +107,33 @@ get_header();
 
 
 
-<div class="vaastu-industries-animated-section">
-  <h2>Trusted Advisor to Fortune&nbsp;500 Leaders Worldwide</h2>
-  <div class="vaastu-industries-animated-grid">
+<div class="vaastu-industries-animated-section rr-section rr-section--soft">
+  <h2 class="rr-section-title">Trusted Advisor to Fortune&nbsp;500 Leaders Worldwide</h2>
+  <div class="vaastu-industries-animated-grid rr-container" data-reveal-group>
     <!-- Manufacturing & Industrial Plants -->
     <div class="vaastu-industry-card-outer">
-      <div class="vaastu-industry-card" tabindex="0">
+      <div class="vaastu-industry-card rr-card" tabindex="0">
         <span class="vaastu-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V5l6 3v13H3Z"/><path d="M7 17h2m3 0h2m3 0h2"/></svg></span>
         <div class="vaastu-industry-title">Manufacturing &<br>Industrial Plants</div>
       </div>
     </div>
     <!-- Corporate Offices & IT Companies -->
     <div class="vaastu-industry-card-outer">
-      <div class="vaastu-industry-card" tabindex="0">
+      <div class="vaastu-industry-card rr-card" tabindex="0">
         <span class="vaastu-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span>
         <div class="vaastu-industry-title">Corporate Offices<br>& IT Companies</div>
       </div>
     </div>
     <!-- Real Estate & Construction -->
     <div class="vaastu-industry-card-outer">
-      <div class="vaastu-industry-card" tabindex="0">
+      <div class="vaastu-industry-card rr-card" tabindex="0">
         <span class="vaastu-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V4h16v17M8 8h2m4 0h2M8 12h2m4 0h2M8 16h2m4 0h2M10 21v-3h4v3"/></svg></span>
         <div class="vaastu-industry-title">Real Estate<br>& Construction</div>
       </div>
     </div>
     <!-- Hospitality & Retail -->
     <div class="vaastu-industry-card-outer">
-      <div class="vaastu-industry-card" tabindex="0">
+      <div class="vaastu-industry-card rr-card" tabindex="0">
         <span class="vaastu-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M8 9h2m4 0h2m-8 4h2m4 0h2m-8 4h2m4 0h2"/></svg></span>
         <div class="vaastu-industry-title">Hospitality &<br>Retail</div>
       </div>
@@ -143,11 +143,11 @@ get_header();
 
 
 <!-- Muhurtha feature -->
-<div class="muhurtha-section-brand">
-  <h2 class="muhurtha-section-heading">Explore the Full Muhurat Calendar</h2>
-  <div class="muhurtha-img-cta-wrap">
+<div class="muhurtha-section-brand rr-section">
+  <h2 class="muhurtha-section-heading rr-section-title" data-reveal>Explore the Full Muhurat Calendar</h2>
+  <div class="muhurtha-img-cta-wrap" data-reveal="scale">
     <div class="muhurtha-img-link">
-      <div class="muhurtha-img-container">
+      <div class="muhurtha-img-container rr-card">
         <!-- Main Image (Default) -->
         <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/DSCF9710-scaled.jpg" alt="Muhurtha Symbols" class="muhurtha-img-main" />
         <!-- Hover Image (Shows on Hover) -->
@@ -165,21 +165,21 @@ get_header();
 
 
 <!-- Vaastu services -->
-<div class="vaastu-services-section">
-  <div class="vaastu-services-wrapper">
-    <a href="https://staging.ravirao.com/new-astro-guidance-page/" class="vaastu-service-card" target="_blank">
+<div class="vaastu-services-section rr-section rr-section--soft">
+  <div class="vaastu-services-wrapper rr-container" data-reveal-group>
+    <a href="https://staging.ravirao.com/new-astro-guidance-page/" class="vaastu-service-card rr-card" target="_blank">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-4.jpg" alt="Astro Guidance" />
       <div class="vaastu-card-title-highlight"><span>Astro Guidance</span></div>
     </a>
-    <a href="https://staging.ravirao.com/new-corporate-astro-vaastu/" class="vaastu-service-card" target="_blank">
+    <a href="https://staging.ravirao.com/new-corporate-astro-vaastu/" class="vaastu-service-card rr-card" target="_blank">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/IMG_9336-scaled.jpg" alt="Corporate Astro Vaastu" />
       <div class="vaastu-card-title-highlight"><span>Corporate Astro Vaastu</span></div>
     </a>
-    <a href="https://staging.ravirao.com/new-industrial-vaastu/" class="vaastu-service-card" target="_blank">
+    <a href="https://staging.ravirao.com/new-industrial-vaastu/" class="vaastu-service-card rr-card" target="_blank">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/WhatsApp-Image-2024-03-22-at-4.17.01-PM-e1751958980581.jpeg" alt="Industrial Vaastu" />
       <div class="vaastu-card-title-highlight"><span>Industrial Vaastu</span></div>
     </a>
-    <a href="https://staging.ravirao.com/new-commercial-vaastu/" class="vaastu-service-card" target="_blank">
+    <a href="https://staging.ravirao.com/new-commercial-vaastu/" class="vaastu-service-card rr-card" target="_blank">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/2B2A9000-scaled.jpg" alt="Commercial Vaastu" />
       <div class="vaastu-card-title-highlight"><span>Commercial Vaastu</span></div>
     </a>
@@ -222,11 +222,11 @@ get_header();
 
 
 <!-- Testimonials -->
-<div class="testimonials-section-handdrawn">
-  <div class="testimonial-section-main-heading">What Industry Leaders Say About Dr. Rao’s Vaastu Expertise</div>
-  <div class="testimonials-cards-handdrawn">
+<div class="testimonials-section-handdrawn rr-section rr-section--soft">
+  <h2 class="testimonial-section-main-heading rr-section-title">What Industry Leaders Say About Dr. Rao’s Vaastu Expertise</h2>
+  <div class="testimonials-cards-handdrawn rr-container" data-reveal-group>
     <!-- Testimonial 1 -->
-    <div class="testimonial-card-sketch">
+    <div class="testimonial-card-sketch rr-card">
       <div class="testimonial-card-heading highlight">Results After Vaastu Correction</div>
       <div class="testimonial-card-quote-block">
         <span class="testimonial-card-text">“Before coming into contact with Dr. Rao our office had few clients and lesser inquiries. After we changed our office as per Dr. Rao’s instructions, we started getting more clients and lots of phone inquiries.”</span>
@@ -240,7 +240,7 @@ get_header();
     </div>
 
     <!-- Testimonial 2 -->
-    <div class="testimonial-card-sketch">
+    <div class="testimonial-card-sketch rr-card">
       <div class="testimonial-card-heading highlight">Business Growth Through Branding</div>
       <div class="testimonial-card-quote-block">
         <span class="testimonial-card-text">“When Dr. Rao saw our logo he felt there was a serious mismatch between our line of business and the colors and balance within the logo. After we adopted his suggestions, this change became very significant to our business fortunes.”</span>
@@ -254,7 +254,7 @@ get_header();
     </div>
 
     <!-- Testimonial 3 -->
-    <div class="testimonial-card-sketch">
+    <div class="testimonial-card-sketch rr-card">
       <div class="testimonial-card-heading highlight">Expert Guidance & Clarity</div>
       <div class="testimonial-card-quote-block">
         <span class="testimonial-card-text">“The best part of Dr. Rao, if I may say so, is three characteristics. The first is clarity in explaining Vaastu, the second is his convincing ability, and finally, his patient listening to our expectations.”</span>
@@ -272,57 +272,40 @@ get_header();
 
 
 <!-- Five elements carousel -->
-<div class="five-elements-carousel-section">
-  <div class="five-elements-carousel-heading">
+<section class="five-elements-carousel-section rr-section rr-section--soft" aria-labelledby="five-elements-heading">
+  <h2 id="five-elements-heading" class="five-elements-carousel-heading rr-section-title" data-reveal>
     The Five Elements of Vaastu Shastra
-  </div>
-  <div class="infinite-elements-carousel">
-    <div class="elements-carousel-track">
-      <!-- Repeat sequence for seamless infinite scroll -->
-      <div class="element-item earth">
+  </h2>
+  <div class="infinite-elements-carousel rr-container">
+    <div class="elements-carousel-track" data-reveal-group>
+      <article class="element-item rr-card earth">
         <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M8 25c5-3 9 3 15 0s10-3 17 0M11 32c5-2 9 2 13 0s8-2 13 0"/><path class="element-icon-accent" d="m20 8 4 5 5-2"/></svg>
-        <span>Earth<br><span class="element-sanskrit">(Prithvi)</span></span>
-      </div>
-      <div class="element-item space">
+        <h3>Earth <span class="element-sanskrit">Prithvi</span></h3>
+        <p>Stability, strength and a grounded foundation.</p>
+      </article>
+      <article class="element-item rr-card space">
         <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><ellipse cx="24" cy="24" rx="21" ry="8" transform="rotate(-28 24 24)"/><circle class="element-icon-accent" cx="36" cy="13" r="2"/></svg>
-        <span>Space<br><span class="element-sanskrit">(Akash)</span></span>
-      </div>
-      <div class="element-item air">
+        <h3>Space <span class="element-sanskrit">Akash</span></h3>
+        <p>Openness that allows energy to flow freely.</p>
+      </article>
+      <article class="element-item rr-card air">
         <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 17h23a5 5 0 1 0-5-5M5 24h32a5 5 0 1 1-5 5M9 31h15a5 5 0 1 0-5 5"/><path class="element-icon-accent" d="M8 17h5m-7 7h7m-4 7h5"/></svg>
-        <span>Air<br><span class="element-sanskrit">(Vayu)</span></span>
-      </div>
-      <div class="element-item fire">
+        <h3>Air <span class="element-sanskrit">Vayu</span></h3>
+        <p>Movement and circulation through your space.</p>
+      </article>
+      <article class="element-item rr-card fire">
         <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5c2 9-6 10-4 18 2-2 4-4 5-7 8 7 12 13 8 21-2 4-6 6-11 6-8 0-14-5-14-13 0-6 4-12 10-17 0 6 2 8 4 9 3-6 3-11 2-17Z"/><path class="element-icon-accent" d="M22 37c-3-4 1-8 4-11 4 5 5 9 2 12"/></svg>
-        <span>Fire<br><span class="element-sanskrit">(Agni)</span></span>
-      </div>
-      <div class="element-item water">
+        <h3>Fire <span class="element-sanskrit">Agni</span></h3>
+        <p>Transformation, warmth and purposeful energy.</p>
+      </article>
+      <article class="element-item rr-card water">
         <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5S11 20 11 29a13 13 0 0 0 26 0C37 20 24 5 24 5Z"/><path class="element-icon-accent" d="M17 31c2 3 4 4 7 4m7-8a8 8 0 0 1 1 3"/></svg>
-        <span>Water<br><span class="element-sanskrit">(Jal)</span></span>
-      </div>
-      <!-- Repeat for infinite loop -->
-      <div class="element-item earth">
-        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M8 25c5-3 9 3 15 0s10-3 17 0M11 32c5-2 9 2 13 0s8-2 13 0"/><path class="element-icon-accent" d="m20 8 4 5 5-2"/></svg>
-        <span>Earth<br><span class="element-sanskrit">(Prithvi)</span></span>
-      </div>
-      <div class="element-item space">
-        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><ellipse cx="24" cy="24" rx="21" ry="8" transform="rotate(-28 24 24)"/><circle class="element-icon-accent" cx="36" cy="13" r="2"/></svg>
-        <span>Space<br><span class="element-sanskrit">(Akash)</span></span>
-      </div>
-      <div class="element-item air">
-        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 17h23a5 5 0 1 0-5-5M5 24h32a5 5 0 1 1-5 5M9 31h15a5 5 0 1 0-5 5"/><path class="element-icon-accent" d="M8 17h5m-7 7h7m-4 7h5"/></svg>
-        <span>Air<br><span class="element-sanskrit">(Vayu)</span></span>
-      </div>
-      <div class="element-item fire">
-        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5c2 9-6 10-4 18 2-2 4-4 5-7 8 7 12 13 8 21-2 4-6 6-11 6-8 0-14-5-14-13 0-6 4-12 10-17 0 6 2 8 4 9 3-6 3-11 2-17Z"/><path class="element-icon-accent" d="M22 37c-3-4 1-8 4-11 4 5 5 9 2 12"/></svg>
-        <span>Fire<br><span class="element-sanskrit">(Agni)</span></span>
-      </div>
-      <div class="element-item water">
-        <svg class="element-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5S11 20 11 29a13 13 0 0 0 26 0C37 20 24 5 24 5Z"/><path class="element-icon-accent" d="M17 31c2 3 4 4 7 4m7-8a8 8 0 0 1 1 3"/></svg>
-        <span>Water<br><span class="element-sanskrit">(Jal)</span></span>
-      </div>
+        <h3>Water <span class="element-sanskrit">Jal</span></h3>
+        <p>Adaptability, wellbeing and natural flow.</p>
+      </article>
     </div>
   </div>
-</div>
+</section>
 
 
 
@@ -330,11 +313,11 @@ get_header();
 
 
 <!-- Vaastu Panchmahabhootas -->
-<section class="vaastu-panchmaha-section">
+<section class="vaastu-panchmaha-section rr-section rr-card" data-reveal="scale">
   <div class="vaastu-panchmaha-heading-wrap">
-    <h1 class="vaastu-panchmaha-heading">
+    <h2 class="vaastu-panchmaha-heading rr-section-title">
       <span class="vaastu-heading-highlight">Vaastu : Panchmahabhootas</span>
-    </h1>
+    </h2>
   </div>
   <div class="vaastu-panchmaha-content">
     <p>
@@ -356,21 +339,20 @@ get_header();
 <!-- Media mentions and public features -->
 
 
-<section class="vaastu-heading-section">
-  <h2 class="vaastu-heading-main">
+<section class="vaastu-heading-section rr-section">
+  <h2 class="vaastu-heading-main rr-section-title" data-reveal>
     Featured in the Media: Dr. Ravi Rao’s Journey
   </h2>
-  <span class="vaastu-heading-bar"></span>
 </section>
 
 
 
 
-<div class="vaastu-blogs-section">
-  <div class="vaastu-blogs-title">Dr. Ravi Rao Blogs</div>
-  <div class="vaastu-blogs-cards">
+<div class="vaastu-blogs-section rr-section rr-section--soft">
+  <h2 class="vaastu-blogs-title rr-section-title" data-reveal>Dr. Ravi Rao Blogs</h2>
+  <div class="vaastu-blogs-cards rr-container" data-reveal-group>
     <!-- Blog Card 1 -->
-    <div class="vaastu-blog-card">
+    <div class="vaastu-blog-card rr-card">
       <div class="vaastu-blog-date">July 3, 2024</div>
       <div class="vaastu-blog-title">From Soil to Soul: The Untold Power of Bhoomi Poojan in Vastu Shastra</div>
       <div class="vaastu-blog-desc">
@@ -382,7 +364,7 @@ get_header();
       </div>
     </div>
     <!-- Blog Card 2 -->
-    <div class="vaastu-blog-card">
+    <div class="vaastu-blog-card rr-card">
       <div class="vaastu-blog-date">July 2, 2024</div>
       <div class="vaastu-blog-title">Not Your Home? Not a Problem: Vastu Hacks for Rented Spaces That Actually Work</div>
       <div class="vaastu-blog-desc">
@@ -394,7 +376,7 @@ get_header();
       </div>
     </div>
     <!-- Blog Card 3 -->
-    <div class="vaastu-blog-card">
+    <div class="vaastu-blog-card rr-card">
       <div class="vaastu-blog-date">July 1, 2024</div>
       <div class="vaastu-blog-title">Hidden Wealth: How Vastu-Compliant Storage Can Boost Factory Output and Harmony</div>
       <div class="vaastu-blog-desc">
@@ -413,8 +395,8 @@ get_header();
 
 
 <!-- Modern Travel Calendar Section (Branded) -->
-<div class="calendar-section">
-  <h2 class="calendar-title">Travel Calendar Of Dr. Ravi Rao</h2>
+<div class="calendar-section rr-section rr-card rr-container" data-reveal="scale">
+  <h2 class="calendar-title rr-section-title">Travel Calendar Of Dr. Ravi Rao</h2>
   <div class="calendar-shortcode-wrap">
     <?php echo do_shortcode('[my_calendar category="3,1,2" above="nav" below="key" time="month" weekends="true" day="1" format="calendar"]'); ?>
   </div>
@@ -426,14 +408,13 @@ get_header();
 <!-- Media mentions and public features -->
 
 
-<section class="vaastu-heading-section">
-  <h2 class="vaastu-heading-main">
+<section class="vaastu-heading-section rr-section">
+  <h2 class="vaastu-heading-main rr-section-title" data-reveal>
     Business Enquiry
   </h2>
-  <span class="vaastu-heading-bar"></span>
 </section>
 
-<section class="business-enquiry-form" aria-label="Business enquiry form">
+<section class="business-enquiry-form rr-card" aria-label="Business enquiry form" data-reveal="scale">
   <iframe
     src="https://api.leadconnectorhq.com/widget/form/hkAoJptF0VSu3fKDMUKU"
     id="inline-hkAoJptF0VSu3fKDMUKU"

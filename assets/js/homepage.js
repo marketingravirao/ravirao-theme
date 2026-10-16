@@ -95,7 +95,7 @@
     heading.dataset.wordsReady = 'true';
   });
 
-  page.querySelectorAll('.industry-section-premium .carousel-track, .infinite-logo-carousel .carousel-track, .elements-carousel-track')
+  page.querySelectorAll('.industry-section-premium .carousel-track, .infinite-logo-carousel .carousel-track')
     .forEach((track) => {
       track.addEventListener('mouseenter', () => {
         track.style.animationPlayState = 'paused';
@@ -126,39 +126,56 @@
 
   gsap.registerPlugin(window.ScrollTrigger);
 
-  const animatedItems = page.querySelectorAll([
-    '.ravi-content-wrapper-modern',
-    '.industry-heading-bar',
-    '.vaastu-industry-card-outer',
-    '.muhurtha-section-heading',
-    '.vaastu-service-card',
-    '.testimonial-section-main-heading',
-    '.testimonial-card-sketch',
-    '.five-elements-carousel-heading',
-    '.vaastu-panchmaha-section',
-    '.vaastu-heading-section',
-    '.vaastu-blogs-title',
-    '.vaastu-blog-card',
-    '.business-enquiry-form'
-  ].join(','));
+  const revealFrom = (direction) => {
+    if (direction === 'left') return { x: -52, y: 0, autoAlpha: 0 };
+    if (direction === 'right') return { x: 52, y: 0, autoAlpha: 0 };
+    if (direction === 'scale') return { x: 0, y: 24, scale: 0.94, autoAlpha: 0 };
+    return { x: 0, y: 42, autoAlpha: 0 };
+  };
 
-  window.ScrollTrigger.batch(animatedItems, {
-    start: 'top 88%',
-    once: true,
-    onEnter: (batch) => {
-      gsap.fromTo(
-        batch,
-        { y: 34, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.75,
-          stagger: 0.1,
-          ease: 'power3.out',
-          clearProps: 'transform,opacity'
+  page.querySelectorAll('[data-reveal]').forEach((item) => {
+    gsap.fromTo(
+      item,
+      revealFrom(item.dataset.reveal),
+      {
+        x: 0,
+        y: 0,
+        scale: 1,
+        autoAlpha: 1,
+        duration: 0.9,
+        ease: 'power3.out',
+        clearProps: 'transform,opacity,visibility',
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 86%',
+          once: true
         }
-      );
-    }
+      }
+    );
+  });
+
+  page.querySelectorAll('[data-reveal-group]').forEach((group) => {
+    const items = [...group.children];
+    if (!items.length) return;
+
+    gsap.fromTo(
+      items,
+      { y: 38, scale: 0.97, autoAlpha: 0 },
+      {
+        y: 0,
+        scale: 1,
+        autoAlpha: 1,
+        duration: 0.78,
+        stagger: 0.12,
+        ease: 'power3.out',
+        clearProps: 'transform,opacity,visibility',
+        scrollTrigger: {
+          trigger: group,
+          start: 'top 84%',
+          once: true
+        }
+      }
+    );
   });
 
   page.querySelectorAll('.muhurtha-img-main, .muhurtha-img-hover').forEach((image) => {
@@ -192,4 +209,20 @@
       }
     );
   });
+
+  const heroImages = page.querySelectorAll('.hero-slide-bg');
+  if (heroImages.length) {
+    gsap.to(heroImages, {
+      yPercent: 12,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.hero-slider-section',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 0.7
+      }
+    });
+  }
+
+  window.addEventListener('load', () => window.ScrollTrigger.refresh(), { once: true });
 })();
