@@ -161,7 +161,7 @@
     }
   });
 
-  page.querySelectorAll('.ravi-photo-modern img, .muhurtha-img-main, .muhurtha-img-hover').forEach((image) => {
+  page.querySelectorAll('.muhurtha-img-main, .muhurtha-img-hover').forEach((image) => {
     gsap.fromTo(
       image,
       { scale: 1.08 },
