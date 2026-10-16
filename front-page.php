@@ -359,7 +359,7 @@ get_header();
 <!-- Vaastu Panchmahabhootas -->
 <section class="vaastu-panchmaha-section rr-section" data-reveal="scale">
   <div class="rr-section-heading vaastu-panchmaha-heading-wrap">
-    <h2 class="vaastu-panchmaha-heading rr-section-title">Vaastu and the Five Elements</h2>
+    <h2 class="vaastu-panchmaha-heading rr-section-title rr-section-title--start">Vaastu and the Five Elements</h2>
   </div>
   <div class="vaastu-panchmaha-content">
     <h3>Connecting people, spaces and nature</h3>

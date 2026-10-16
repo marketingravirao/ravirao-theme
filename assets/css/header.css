@@ -195,7 +195,7 @@ html {
 .primary-navigation .submenu-toggle {
   color: var(--rr-blue);
   font-family: "Satoshi", Arial, Helvetica, sans-serif !important;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -307,7 +307,7 @@ html {
   border-radius: 0.45rem;
   background: var(--rr-coral);
   color: var(--rr-white) !important;
-  font-size: 0.9rem !important;
+  font-size: 0.95rem !important;
   font-weight: 800 !important;
   line-height: 1.2;
   text-align: center;
@@ -383,13 +383,13 @@ html {
   }
 
   .primary-navigation a {
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
   }
 }
 
 @media (max-width: 900px) {
   .top-header-branded .header-contact {
-    font-size: 0.84rem;
+    font-size: 0.875rem;
   }
 
   .header-inner {
@@ -565,7 +565,7 @@ html {
 
   .top-header-branded .header-contact {
     gap: 0.35rem;
-    font-size: 0.76rem;
+    font-size: 0.8125rem;
   }
 
   .top-header-branded .header-icon img {
