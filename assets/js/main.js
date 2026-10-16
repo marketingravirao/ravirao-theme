@@ -1,6 +1,31 @@
 (() => {
     'use strict';
 
+    const siteHeader = document.querySelector('.site-header');
+
+    if (siteHeader) {
+        const headerDocumentTop = siteHeader.getBoundingClientRect().top + window.scrollY;
+        const revealThreshold = Math.max(180, headerDocumentTop + 120);
+        let scrollFrame = null;
+
+        const updateHeaderVisibility = () => {
+            const scrollPosition = window.scrollY;
+            const isPastHeader = scrollPosition > headerDocumentTop;
+            const shouldShowHeader = scrollPosition >= revealThreshold;
+
+            siteHeader.classList.toggle('is-scroll-hidden', isPastHeader && !shouldShowHeader);
+            scrollFrame = null;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (scrollFrame === null) {
+                scrollFrame = window.requestAnimationFrame(updateHeaderVisibility);
+            }
+        }, { passive: true });
+
+        updateHeaderVisibility();
+    }
+
     const button = document.querySelector('.menu-toggle');
     const navigation = document.querySelector('#primary-navigation');
 

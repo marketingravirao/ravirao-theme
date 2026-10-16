@@ -97,10 +97,17 @@ html {
 }
 
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 20;
   border-bottom: 1px solid rgba(var(--rr-blue-rgb), 0.14);
   background: var(--rr-white);
+  transition: transform 0.32s ease;
+  will-change: transform;
+}
+
+.site-header.is-scroll-hidden {
+  transform: translateY(-100%);
 }
 
 .header-inner {
