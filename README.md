@@ -25,5 +25,5 @@ For development, set `define('RAVIRAO_THEME_DEV_ASSETS', true);` in wp-config.ph
 The homepage sections are rendered by `front-page.php` and its styles/scripts are loaded only on the front page. Set the desired page as the static homepage under Settings → Reading.
 
 Select Landing Page, Full Width, or Blank Page from the WordPress page template selector.
-Configure navigation menus and optional logo in the WordPress dashboard.
+Configure the Main Menu and optional logo in Appearance → Menus or the WordPress Site Editor.
 # ravirao-theme

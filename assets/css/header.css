@@ -1,3 +1,86 @@
+.top-header-branded {
+    position: relative;
+    z-index: 30;
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 4vw 10px;
+    background: #fe4a39;
+    color: #fff;
+    font-family: "Satoshi", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.top-header-branded,
+.top-header-branded *:not(.fa):not(.fas):not(.dashicons):not(.dashicons-before) {
+    font-family: "Satoshi", Arial, Helvetica, sans-serif !important;
+}
+
+.top-header-branded .header-left,
+.top-header-branded .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.top-header-branded .header-left {
+    gap: 38px;
+}
+
+.top-header-branded .header-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.17rem;
+}
+
+.top-header-branded .header-contact a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.17s;
+}
+
+.top-header-branded .header-contact a:hover {
+    color: #243144;
+}
+
+.top-header-branded .header-icon img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.top-header-branded .header-right {
+    gap: 19px;
+}
+
+.top-header-branded .header-social {
+    display: inline-block;
+    border-radius: 50%;
+    transition: transform 0.16s, box-shadow 0.14s;
+}
+
+.top-header-branded .header-social svg {
+    display: block;
+    padding: 4px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.top-header-branded .header-social:hover {
+    transform: scale(1.17);
+    background: #fff2;
+}
+
+.top-header-branded .header-social:hover svg {
+    background: #fff;
+    stroke: #fe4a39;
+}
+
 .site-header {
     border-bottom: 1px solid #e7e9ec;
     background: #ffffff;
@@ -51,6 +134,25 @@
     background: #ffffff;
 }
 
+@media (max-width: 900px) {
+    .top-header-branded .header-left {
+        gap: 14px;
+    }
+
+    .top-header-branded .header-contact {
+        font-size: 0.97rem;
+    }
+
+    .top-header-branded .header-right {
+        gap: 9px;
+    }
+
+    .top-header-branded .header-social svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
 @media (max-width: 768px) {
     .header-inner {
         flex-wrap: wrap;
@@ -77,5 +179,25 @@
         align-items: flex-start;
         gap: 0.75rem;
         padding-block: 0.75rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .top-header-branded {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 2vw 7px;
+    }
+
+    .top-header-branded .header-left,
+    .top-header-branded .header-right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 9px;
+    }
+
+    .top-header-branded .header-contact {
+        font-size: 0.9rem;
     }
 }

@@ -12,7 +12,7 @@ add_action('after_setup_theme', function () {
     add_theme_support('responsive-embeds');
     add_theme_support('align-wide');
     add_theme_support('custom-logo', ['height' => 80, 'width' => 240, 'flex-height' => true, 'flex-width' => true]);
-    register_nav_menus(['primary' => __('Primary Menu', 'ravirao-theme'), 'footer' => __('Footer Menu', 'ravirao-theme')]);
+    register_nav_menus(['primary' => __('Main Menu', 'ravirao-theme'), 'footer' => __('Footer Menu', 'ravirao-theme')]);
 });
 
 function ravirao_theme_asset_version($relative_path) {
