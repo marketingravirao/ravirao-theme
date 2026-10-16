@@ -1,21 +1,52 @@
 (() => {
     'use strict';
 
-    const siteHeader = document.querySelector('.site-header');
+    const headerGroup = document.querySelector('.site-header-group');
+    const headerGroupInner = headerGroup?.querySelector('.site-header-group-inner');
 
-    if (siteHeader) {
-        const headerDocumentTop = siteHeader.getBoundingClientRect().top + window.scrollY;
-        const revealThreshold = Math.max(180, headerDocumentTop + 120);
+    if (headerGroup && headerGroupInner) {
         let scrollFrame = null;
+        let transitionTimer = null;
+
+        const finishHeaderTransition = () => {
+            window.clearTimeout(transitionTimer);
+
+            if (window.scrollY >= window.innerHeight * 0.2) {
+                headerGroup.classList.remove('is-scroll-hidden');
+            } else {
+                headerGroup.classList.remove('is-scrolled', 'is-scroll-hidden');
+            }
+        };
 
         const updateHeaderVisibility = () => {
-            const scrollPosition = window.scrollY;
-            const isPastHeader = scrollPosition > headerDocumentTop;
-            const shouldShowHeader = scrollPosition >= revealThreshold;
+            headerGroup.style.height = `${headerGroupInner.offsetHeight}px`;
+            const shouldShowHeader = window.scrollY >= window.innerHeight * 0.2;
+            const isShown = headerGroup.classList.contains('is-scrolled');
 
-            siteHeader.classList.toggle('is-scroll-hidden', isPastHeader && !shouldShowHeader);
+            if (shouldShowHeader && !isShown) {
+                headerGroup.classList.add('is-scrolled', 'is-scroll-hidden');
+                void headerGroupInner.offsetHeight;
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY >= window.innerHeight * 0.2) {
+                        headerGroup.classList.remove('is-scroll-hidden');
+                    }
+                });
+                transitionTimer = window.setTimeout(finishHeaderTransition, 350);
+            } else if (shouldShowHeader) {
+                headerGroup.classList.remove('is-scroll-hidden');
+            } else if (isShown && !headerGroup.classList.contains('is-scroll-hidden')) {
+                headerGroup.classList.add('is-scroll-hidden');
+                transitionTimer = window.setTimeout(finishHeaderTransition, 350);
+            }
+
             scrollFrame = null;
         };
+
+        headerGroupInner.addEventListener('transitionend', event => {
+            if (event.target === headerGroupInner && event.propertyName === 'transform') {
+                finishHeaderTransition();
+            }
+        });
 
         window.addEventListener('scroll', () => {
             if (scrollFrame === null) {
@@ -23,6 +54,7 @@
             }
         }, { passive: true });
 
+        window.addEventListener('resize', updateHeaderVisibility);
         updateHeaderVisibility();
     }
 
