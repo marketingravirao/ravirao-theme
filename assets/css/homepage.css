@@ -5,7 +5,7 @@ html {
 .ravirao-homepage {
   --rr-page-gutter: clamp(1rem, 2.4vw, 2rem);
   --rr-section-space: clamp(3.75rem, 7vw, 6rem);
-  --rr-section-soft: #edf3fb;
+  --rr-section-soft: linear-gradient(135deg, #eaf1fb 0%, #f7f9fd 52%, #e7effa 100%);
   --rr-radius: 1.1rem;
   --rr-shadow: 0 0.8rem 2rem rgba(var(--rr-blue-rgb), 0.1);
   --rr-text-xs: clamp(0.75rem, 0.85vw, 0.875rem);
@@ -998,7 +998,7 @@ html {
 }
 
 .ravirao-homepage .rr-section--soft {
-  background-color: var(--rr-section-soft);
+  background: var(--rr-section-soft);
 }
 
 .ravirao-homepage .rr-container {
