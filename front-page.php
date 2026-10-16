@@ -1,6 +1,7 @@
 <?php
 /*
- * Front page template for the Ravi Rao homepage sections.
+ * Template Name: Ravi Rao Homepage (Testing)
+ * Template Post Type: page
  */
 if (!defined('ABSPATH')) { exit; }
 get_header();

@@ -22,7 +22,7 @@ Production uses the theme `Version` header in style.css. Bump it for each deploy
 For development, set `define('RAVIRAO_THEME_DEV_ASSETS', true);` in wp-config.php to use file modification timestamps.
 
 ## Templates
-The homepage sections are rendered by `front-page.php` and its styles/scripts are loaded only on the front page. Set the desired page as the static homepage under Settings → Reading.
+The homepage sections are rendered by `front-page.php`, registered as the **Ravi Rao Homepage (Testing)** page template. Select it from the page template selector to test the layout on a regular page, or set the desired page as the static homepage under Settings → Reading. Its styles and scripts load on either use.
 
 Select Landing Page, Full Width, or Blank Page from the WordPress page template selector.
 Configure the Main Menu and optional logo in Appearance → Menus or the WordPress Site Editor.

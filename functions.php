@@ -42,7 +42,7 @@ add_action('wp_enqueue_scripts', function () {
     ravirao_theme_style('ravirao-theme-footer', '/assets/css/footer.css', ['ravirao-theme-base']);
     ravirao_theme_script('ravirao-theme-main', '/assets/js/main.js');
 
-    if (is_front_page()) {
+    if (is_front_page() || is_page_template('front-page.php')) {
         wp_enqueue_style(
             'ravirao-homepage-fonts',
             'https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap'
