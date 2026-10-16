@@ -476,12 +476,17 @@ html {
 }
 
 .infinite-logo-carousel .rr-section-title {
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0;
+}
+
+.infinite-logo-carousel .rr-section-title::after {
+  margin-top: 0.45rem;
 }
 
 .ravirao-homepage .rr-section-support {
   width: min(100%, 48rem);
-  margin: 0 auto clamp(1.5rem, 3vw, 2.25rem);
+  margin: 0 auto 0.9rem;
   color: var(--rr-blue);
   font-size: var(--rr-text-sm);
   text-align: center;
