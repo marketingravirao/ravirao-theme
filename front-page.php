@@ -57,7 +57,7 @@ get_header();
         A man of few words, Dr. Rao is consultant and advisor to many leading industrialists, both in India and abroad. His scientific and logical approach to problem-solving has earned him acceptance worldwide. Globally traveled, Dr. Rao has also authored a book on mundane astrology, serving as a reference for predicting world events.<br><br>
         Dr. Rao believes that humans are a unit of nature and our lives are always closely associated with it. While we may control our homes and workspaces to suit our lifestyles, to truly energize ourselves, these spaces must follow nature’s principles.
       </p>
-      <a class="know-more-btn-modern" href="https://staging.ravirao.com/new-about-dr-ravi-rao/">Know More</a>
+      <a class="rr-button know-more-btn-modern" href="https://staging.ravirao.com/new-about-dr-ravi-rao/">Know More</a>
     </div>
   </div>
 </div>
@@ -155,7 +155,7 @@ get_header();
       </div>
       <!-- Button removed completely -->
     </div>
-    <a href="https://staging.ravirao.com/new-muhurat/" class="muhurtha-cta-btn" data-tooltip="View Calendar – Auspicious Dates Inside!" target="_blank">
+    <a href="https://staging.ravirao.com/new-muhurat/" class="rr-button muhurtha-cta-btn" data-tooltip="View Calendar – Auspicious Dates Inside!" target="_blank">
       Click Here to View Full Calendar
     </a>
   </div>
@@ -407,7 +407,7 @@ get_header();
     </div>
   </div>
   <div class="vaastu-blogs-more">
-    <a class="vaastu-blogs-more-btn" href="https://staging.ravirao.com/category/vaastu/" target="_blank">Read More Blogs</a>
+    <a class="rr-button vaastu-blogs-more-btn" href="https://staging.ravirao.com/category/vaastu/" target="_blank">Read More Blogs</a>
   </div>
 </div>
 

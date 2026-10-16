@@ -27,10 +27,6 @@ html {
   max-width: 100%;
 }
 
-.ravirao-homepage a {
-  color: inherit;
-}
-
 .ravirao-homepage a:focus-visible {
   outline: 2px solid var(--rr-coral);
   outline-offset: 4px;
@@ -233,9 +229,7 @@ html {
   line-height: 1.7;
 }
 
-.ravi-details-modern .know-more-btn-modern,
-.muhurtha-cta-btn,
-.vaastu-blogs-more-btn {
+.ravirao-homepage .rr-button {
   display: inline-flex;
   min-height: 2.875rem;
   align-items: center;
@@ -253,9 +247,7 @@ html {
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.ravi-details-modern .know-more-btn-modern:hover,
-.muhurtha-cta-btn:hover,
-.vaastu-blogs-more-btn:hover {
+.ravirao-homepage .rr-button:hover {
   transform: translateY(-2px);
 }
 
