@@ -11,6 +11,13 @@
   let currentSlide = 0;
   let slideTimer;
 
+  slides.forEach((slide, index) => {
+    const isActive = slide.classList.contains('active');
+    slide.setAttribute('aria-hidden', String(!isActive));
+    slide.inert = !isActive;
+    if (isActive) currentSlide = index;
+  });
+
   function setSlide(index) {
     const previous = slides[currentSlide];
     const next = slides[index];
@@ -18,7 +25,13 @@
     if (!next || index === currentSlide) return;
 
     previous?.classList.remove('active');
+    if (previous) {
+      previous.setAttribute('aria-hidden', 'true');
+      previous.inert = true;
+    }
     next.classList.add('active');
+    next.setAttribute('aria-hidden', 'false');
+    next.inert = false;
     dotsContainer?.querySelectorAll('.hero-slider-dot').forEach((dot, dotIndex) => {
       const isCurrent = dotIndex === index;
       dot.classList.toggle('active', isCurrent);
@@ -112,6 +125,30 @@
     });
 
   page.addEventListener('click', (event) => {
+    if (!(event.target instanceof Element)) return;
+
+    const videoButton = event.target.closest('.vaastu-featured-media-play');
+    if (videoButton) {
+      const videoId = videoButton.dataset.youtubeId;
+      const playlistIndex = videoButton.dataset.youtubeIndex;
+      if (!videoId || !playlistIndex) return;
+
+      const player = document.createElement('iframe');
+      const query = new URLSearchParams({
+        list: 'PL8uXgWnVg5FbRlWvP472cW7qjsW2MsLys',
+        index: playlistIndex,
+        autoplay: '1'
+      });
+      player.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?${query}`;
+      player.title = videoButton.getAttribute('aria-label')?.replace(/^Play /, '') || 'Featured video';
+      player.loading = 'eager';
+      player.referrerPolicy = 'strict-origin-when-cross-origin';
+      player.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      player.allowFullscreen = true;
+      videoButton.replaceWith(player);
+      return;
+    }
+
     const anchor = event.target.closest('a[href^="#"]');
     if (!anchor) return;
 

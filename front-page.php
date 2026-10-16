@@ -16,6 +16,10 @@ get_header();
     <div class="hero-slide-content">
       <div class="hero-title">Align Your Business for Success with India’s Leading Corporate Vaastu Expert</div>
       <div class="hero-subtitle">The Go-To Vaastu Expert for India’s Leading Corporations</div>
+      <div class="hero-actions">
+        <a class="rr-button" href="#business-enquiry">Discuss Your Project</a>
+        <a class="hero-secondary-link" href="#vaastu-services">Explore Services</a>
+      </div>
     </div>
   </div>
   <div class="hero-slide">
@@ -23,6 +27,10 @@ get_header();
     <div class="hero-slide-content">
       <div class="hero-title">Align Your Business for Success with India’s Leading Corporate Vaastu Expert</div>
       <div class="hero-subtitle">The Go-To Vaastu Expert for India’s Leading Corporations</div>
+      <div class="hero-actions">
+        <a class="rr-button" href="#business-enquiry">Discuss Your Project</a>
+        <a class="hero-secondary-link" href="#vaastu-services">Explore Services</a>
+      </div>
     </div>
   </div>
   <div class="hero-slide">
@@ -30,6 +38,10 @@ get_header();
     <div class="hero-slide-content">
       <div class="hero-title">Align Your Business for Success with India’s Leading Corporate Vaastu Expert</div>
       <div class="hero-subtitle">The Go-To Vaastu Expert for India’s Leading Corporations</div>
+      <div class="hero-actions">
+        <a class="rr-button" href="#business-enquiry">Discuss Your Project</a>
+        <a class="hero-secondary-link" href="#vaastu-services">Explore Services</a>
+      </div>
     </div>
   </div>
   <div class="hero-slide">
@@ -37,6 +49,10 @@ get_header();
     <div class="hero-slide-content">
       <div class="hero-title">Align Your Business for Success with India’s Leading Corporate Vaastu Expert</div>
       <div class="hero-subtitle">The Go-To Vaastu Expert for India’s Leading Corporations</div>
+      <div class="hero-actions">
+        <a class="rr-button" href="#business-enquiry">Discuss Your Project</a>
+        <a class="hero-secondary-link" href="#vaastu-services">Explore Services</a>
+      </div>
     </div>
   </div>
   <div class="hero-slider-dots" aria-label="Choose a slide"></div>
@@ -61,6 +77,82 @@ get_header();
       </p>
       <a class="rr-button know-more-btn-modern" href="https://staging.ravirao.com/new-about-dr-ravi-rao/">Know More</a>
     </div>
+  </div>
+</div>
+
+<section class="homepage-proof-strip" aria-label="Dr. Ravi Rao at a glance">
+  <div class="homepage-proof-item">
+    <strong>30+ years</strong>
+    <span>of experience</span>
+  </div>
+  <div class="homepage-proof-item">
+    <strong>Fortune 500</strong>
+    <span>business guidance</span>
+  </div>
+  <div class="homepage-proof-item">
+    <strong>India &amp; abroad</strong>
+    <span>trusted by clients worldwide</span>
+  </div>
+</section>
+
+<!-- Vaastu services -->
+<section class="vaastu-services-section rr-section rr-section--soft" id="vaastu-services" aria-labelledby="vaastu-services-heading">
+  <div class="rr-section-heading" data-reveal>
+    <h2 class="rr-section-title" id="vaastu-services-heading">Vaastu Guidance for Every Kind of Space</h2>
+    <p class="rr-section-tagline">Explore practical guidance for your business, property or personal goals.</p>
+  </div>
+  <div class="vaastu-services-wrapper rr-container" data-reveal-group>
+    <a href="https://staging.ravirao.com/new-astro-guidance-page/" class="vaastu-service-card rr-card" target="_blank">
+      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-4.jpg" alt="Astro Guidance" />
+      <div class="vaastu-card-title-highlight"><span>Astro Guidance</span></div>
+      <p>Personal astrology and Vaastu guidance for important life and business decisions.</p>
+      <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
+    </a>
+    <a href="https://staging.ravirao.com/new-corporate-astro-vaastu/" class="vaastu-service-card rr-card" target="_blank">
+      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/IMG_9336-scaled.jpg" alt="Corporate Astro Vaastu" />
+      <div class="vaastu-card-title-highlight"><span>Corporate Astro Vaastu</span></div>
+      <p>Strategic spatial guidance for offices, organizations and leadership teams.</p>
+      <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
+    </a>
+    <a href="https://staging.ravirao.com/new-industrial-vaastu/" class="vaastu-service-card rr-card" target="_blank">
+      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/WhatsApp-Image-2024-03-22-at-4.17.01-PM-e1751958980581.jpeg" alt="Industrial Vaastu" />
+      <div class="vaastu-card-title-highlight"><span>Industrial Vaastu</span></div>
+      <p>Vaastu guidance for factories, industrial plants and operational spaces.</p>
+      <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
+    </a>
+    <a href="https://staging.ravirao.com/new-commercial-vaastu/" class="vaastu-service-card rr-card" target="_blank">
+      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/2B2A9000-scaled.jpg" alt="Commercial Vaastu" />
+      <div class="vaastu-card-title-highlight"><span>Commercial Vaastu</span></div>
+      <p>Thoughtful spatial recommendations for commercial and customer-facing properties.</p>
+      <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
+    </a>
+  </div>
+</section>
+
+<div class="infinite-logo-carousel rr-section">
+  <div class="rr-section-heading" data-reveal>
+    <h2 class="rr-section-title">Trusted by Leading Brands</h2>
+    <p class="rr-section-tagline">Organizations across industries have placed their trust in Dr. Ravi Rao’s Vaastu expertise.</p>
+  </div>
+  <div class="carousel-track">
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="Adani" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="Arvind" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/CERA-logo.png" alt="CERA" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Havmor-logo.png" alt="Havmor" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/RKumar-logo.png" alt="R Kumar" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Shobha-logo.png" alt="Shobha Asar" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="Sintex" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="Somany" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="Vadilal" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="Adani" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="Arvind" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/CERA-logo.png" alt="CERA" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Havmor-logo.png" alt="Havmor" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/RKumar-logo.png" alt="R Kumar" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Shobha-logo.png" alt="Shobha Asar" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="Sintex" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="Somany" />
+    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="Vadilal" />
   </div>
 </div>
 
@@ -170,67 +262,6 @@ get_header();
 
 
 
-<!-- Vaastu services -->
-<div class="vaastu-services-section rr-section">
-  <div class="vaastu-services-wrapper rr-container" data-reveal-group>
-    <a href="https://staging.ravirao.com/new-astro-guidance-page/" class="vaastu-service-card rr-card" target="_blank">
-      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-4.jpg" alt="Astro Guidance" />
-      <div class="vaastu-card-title-highlight"><span>Astro Guidance</span></div>
-    </a>
-    <a href="https://staging.ravirao.com/new-corporate-astro-vaastu/" class="vaastu-service-card rr-card" target="_blank">
-      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/IMG_9336-scaled.jpg" alt="Corporate Astro Vaastu" />
-      <div class="vaastu-card-title-highlight"><span>Corporate Astro Vaastu</span></div>
-    </a>
-    <a href="https://staging.ravirao.com/new-industrial-vaastu/" class="vaastu-service-card rr-card" target="_blank">
-      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/WhatsApp-Image-2024-03-22-at-4.17.01-PM-e1751958980581.jpeg" alt="Industrial Vaastu" />
-      <div class="vaastu-card-title-highlight"><span>Industrial Vaastu</span></div>
-    </a>
-    <a href="https://staging.ravirao.com/new-commercial-vaastu/" class="vaastu-service-card rr-card" target="_blank">
-      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/2B2A9000-scaled.jpg" alt="Commercial Vaastu" />
-      <div class="vaastu-card-title-highlight"><span>Commercial Vaastu</span></div>
-    </a>
-  </div>
-</div>
-
-
-
-<!-- END Vaastu Services Cards Section (Branded) -->
-
-
-<!-- Infinite Auto-Scroll Logo Carousel (Normal 1x Logos) -->
-<div class="infinite-logo-carousel rr-section rr-section--soft">
-  <div class="rr-section-heading" data-reveal>
-    <h2 class="rr-section-title">Trusted by Leading Brands</h2>
-    <p class="rr-section-tagline">Organizations across industries have placed their trust in Dr. Ravi Rao’s Vaastu expertise.</p>
-  </div>
-  <div class="carousel-track">
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="Adani" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="Arvind" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/CERA-logo.png" alt="CERA" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Havmor-logo.png" alt="Havmor" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/RKumar-logo.png" alt="R Kumar" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Shobha-logo.png" alt="Shobha Asar" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="Sintex" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="Somany" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="Vadilal" />
-    <!-- Repeat for seamless infinite scroll -->
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="Adani" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="Arvind" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/CERA-logo.png" alt="CERA" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Havmor-logo.png" alt="Havmor" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/RKumar-logo.png" alt="R Kumar" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Shobha-logo.png" alt="Shobha Asar" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="Sintex" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="Somany" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="Vadilal" />
-  </div>
-</div>
-
-
-
-<!-- End Infinite Logo Carousel -->
-
-
 <!-- Testimonials -->
 <div class="testimonials-section-handdrawn rr-section">
   <div class="rr-section-heading">
@@ -238,7 +269,7 @@ get_header();
   </div>
   <div class="testimonials-cards-handdrawn rr-container" data-reveal-group>
     <!-- Testimonial 1 -->
-    <div class="testimonial-card-sketch rr-card">
+    <div class="testimonial-card-sketch testimonial-card-sketch--featured rr-card">
       <div class="testimonial-card-heading highlight">Results After Vaastu Correction</div>
       <div class="testimonial-card-quote-block">
         <span class="testimonial-card-text">“Before coming into contact with Dr. Rao our office had few clients and lesser inquiries. After we changed our office as per Dr. Rao’s instructions, we started getting more clients and lots of phone inquiries.”</span>
@@ -356,52 +387,42 @@ get_header();
     <h2 class="vaastu-heading-main rr-section-title">Featured in the Media: Dr. Ravi Rao’s Journey</h2>
   </div>
   <div class="vaastu-featured-media-videos rr-container" data-reveal-group>
-    <div class="vaastu-featured-media-video" data-reveal>
+    <div class="vaastu-featured-media-video vaastu-featured-media-video--featured">
       <div class="vaastu-featured-media-video-frame">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/8o_JVu6ftks?list=PL8uXgWnVg5FbRlWvP472cW7qjsW2MsLys&amp;index=1"
-          title="Dr. Ravi Rao’s Journey - video 1"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+        <button class="vaastu-featured-media-play" type="button" data-youtube-id="8o_JVu6ftks" data-youtube-index="1" aria-label="Play Dr. Ravi Rao’s Journey video">
+          <img src="https://img.youtube.com/vi/8o_JVu6ftks/hqdefault.jpg" alt="" loading="lazy" decoding="async">
+          <span class="vaastu-featured-media-play-icon" aria-hidden="true"></span>
+        </button>
       </div>
+      <p class="vaastu-featured-media-caption">Dr. Ravi Rao’s Journey</p>
     </div>
-    <div class="vaastu-featured-media-video" data-reveal>
-      <div class="vaastu-featured-media-video-frame">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/MvjAWxnYfTY?list=PL8uXgWnVg5FbRlWvP472cW7qjsW2MsLys&amp;index=4"
-          title="Dr. Ravi Rao’s Journey - video 2"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+    <div class="vaastu-featured-media-secondary">
+      <div class="vaastu-featured-media-video">
+        <div class="vaastu-featured-media-video-frame">
+          <button class="vaastu-featured-media-play" type="button" data-youtube-id="MvjAWxnYfTY" data-youtube-index="4" aria-label="Play Dr. Ravi Rao media feature">
+            <img src="https://img.youtube.com/vi/MvjAWxnYfTY/hqdefault.jpg" alt="" loading="lazy" decoding="async">
+            <span class="vaastu-featured-media-play-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <p class="vaastu-featured-media-caption">Featured media appearance</p>
       </div>
-    </div>
-    <div class="vaastu-featured-media-video" data-reveal>
-      <div class="vaastu-featured-media-video-frame">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/6WlCHPfsXa8?list=PL8uXgWnVg5FbRlWvP472cW7qjsW2MsLys&amp;index=5"
-          title="Dr. Ravi Rao’s Journey - video 3"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+      <div class="vaastu-featured-media-video">
+        <div class="vaastu-featured-media-video-frame">
+          <button class="vaastu-featured-media-play" type="button" data-youtube-id="6WlCHPfsXa8" data-youtube-index="5" aria-label="Play Dr. Ravi Rao media feature">
+            <img src="https://img.youtube.com/vi/6WlCHPfsXa8/hqdefault.jpg" alt="" loading="lazy" decoding="async">
+            <span class="vaastu-featured-media-play-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <p class="vaastu-featured-media-caption">Vaastu insights</p>
       </div>
-    </div>
-    <div class="vaastu-featured-media-video" data-reveal>
-      <div class="vaastu-featured-media-video-frame">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/_Ru1pl4Saow?list=PL8uXgWnVg5FbRlWvP472cW7qjsW2MsLys&amp;index=8"
-          title="Dr. Ravi Rao’s Journey - video 4"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+      <div class="vaastu-featured-media-video">
+        <div class="vaastu-featured-media-video-frame">
+          <button class="vaastu-featured-media-play" type="button" data-youtube-id="_Ru1pl4Saow" data-youtube-index="8" aria-label="Play Dr. Ravi Rao media feature">
+            <img src="https://img.youtube.com/vi/_Ru1pl4Saow/hqdefault.jpg" alt="" loading="lazy" decoding="async">
+            <span class="vaastu-featured-media-play-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <p class="vaastu-featured-media-caption">Featured media appearance</p>
       </div>
     </div>
   </div>
@@ -459,16 +480,20 @@ get_header();
 
 
 <!-- Modern Travel Calendar Section (Branded) -->
-<div class="calendar-section rr-section rr-section--soft" data-reveal="scale">
+<section class="calendar-section rr-section rr-section--soft" data-reveal="scale">
   <div class="calendar-content rr-container rr-card">
     <div class="rr-section-heading">
-      <h2 class="calendar-title rr-section-title">Travel Calendar Of Dr. Ravi Rao</h2>
+      <h2 class="calendar-title rr-section-title" id="travel-calendar-heading">Travel Calendar of Dr. Ravi Rao</h2>
+      <p class="rr-section-tagline">Check the calendar for Dr. Rao’s scheduled travel dates.</p>
     </div>
-    <div class="calendar-shortcode-wrap">
-      <?php echo do_shortcode('[my_calendar category="3,1,2" above="nav" below="key" time="month" weekends="true" day="1" format="calendar"]'); ?>
-    </div>
+    <details class="calendar-disclosure">
+      <summary>View travel dates and monthly calendar</summary>
+      <div class="calendar-shortcode-wrap">
+        <?php echo do_shortcode('[my_calendar category="3,1,2" above="nav" below="key" time="month" weekends="true" day="1" format="calendar"]'); ?>
+      </div>
+    </details>
   </div>
-</div>
+</section>
 
 <!-- END Modern Travel Calendar Section -->
 
@@ -476,9 +501,10 @@ get_header();
 <!-- Media mentions and public features -->
 
 
-<section class="business-enquiry-section rr-section" aria-label="Business enquiry">
+<section class="business-enquiry-section rr-section" id="business-enquiry" aria-labelledby="business-enquiry-heading">
   <div class="rr-section-heading" data-reveal>
-    <h2 class="vaastu-heading-main rr-section-title">Business Enquiry</h2>
+    <h2 class="vaastu-heading-main rr-section-title" id="business-enquiry-heading">Let’s Discuss Your Project</h2>
+    <p class="rr-section-tagline">Share a few details about your space or business and what guidance you’re looking for.</p>
   </div>
   <div class="business-enquiry-form rr-card" data-reveal="scale">
     <iframe

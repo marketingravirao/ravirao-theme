@@ -619,7 +619,7 @@ html {
 /* Shared section title banner */
 .vaastu-heading-section {
   position: relative;
-  width: min(100%, var(--rr-content-width));
+  width:100%;
   margin: 0 auto;
   text-align: left;
 }
@@ -1218,6 +1218,347 @@ html {
 
   .ravirao-homepage .rr-section-title {
     font-size: clamp(1.55rem, 7vw, 2rem);
+  }
+}
+
+.ravirao-homepage .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: clamp(1.25rem, 2.5vw, 1.8rem);
+}
+
+.ravirao-homepage .hero-actions .rr-button {
+  min-height: 3.15rem;
+  padding-inline: 1.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(var(--rr-blue-rgb), 0.28);
+}
+
+.ravirao-homepage .hero-secondary-link {
+  padding: 0.7rem 0;
+  color: var(--rr-white);
+  font-size: var(--rr-text-sm);
+  font-weight: 800;
+  text-decoration-color: var(--rr-coral);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3rem;
+}
+
+.ravirao-homepage .hero-secondary-link:hover {
+  color: var(--rr-white);
+  text-decoration-color: var(--rr-white);
+}
+
+.homepage-proof-strip {
+  display: flex;
+  width: min(calc(100% - var(--rr-page-gutter) * 2), var(--rr-content-width));
+  align-items: stretch;
+  justify-content: center;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 2.6vw, 2rem) 0;
+  border-top: 1px solid rgba(var(--rr-blue-rgb), 0.12);
+  border-bottom: 1px solid rgba(var(--rr-blue-rgb), 0.12);
+}
+
+.homepage-proof-item {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.25rem 1rem;
+  text-align: center;
+}
+
+.homepage-proof-item + .homepage-proof-item {
+  border-left: 1px solid rgba(var(--rr-blue-rgb), 0.16);
+}
+
+.homepage-proof-item strong {
+  color: var(--rr-blue);
+  font-size: clamp(1.15rem, 1.7vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.homepage-proof-item span {
+  color: rgba(var(--rr-blue-rgb), 0.82);
+  font-size: var(--rr-text-xs);
+  font-weight: 600;
+}
+
+.ravirao-homepage .vaastu-services-wrapper {
+  align-items: stretch;
+}
+
+.ravirao-homepage .testimonials-cards-handdrawn {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: stretch;
+}
+
+.ravirao-homepage .testimonial-card-sketch--featured {
+  grid-row: span 2;
+  justify-content: center;
+  min-height: 100%;
+  padding: clamp(1.6rem, 3.5vw, 3rem);
+  background: var(--rr-blue);
+  color: var(--rr-white);
+}
+
+.ravirao-homepage .testimonial-card-sketch--featured::before {
+  margin-bottom: 0.5rem;
+  color: var(--rr-coral);
+  content: "“";
+  font-family: Georgia, serif;
+  font-size: clamp(4rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 0.7;
+}
+
+.ravirao-homepage .testimonial-card-sketch--featured .testimonial-card-heading,
+.ravirao-homepage .testimonial-card-sketch--featured .testimonial-card-text,
+.ravirao-homepage .testimonial-card-sketch--featured .testimonial-card-role {
+  color: var(--rr-white);
+}
+
+.ravirao-homepage .testimonial-card-sketch--featured .testimonial-card-heading {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.ravirao-homepage .testimonial-card-sketch--featured .testimonial-card-text {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  line-height: 1.8;
+}
+
+.ravirao-homepage .testimonial-card-sketch:not(.testimonial-card-sketch--featured) {
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.ravirao-homepage .vaastu-service-card {
+  min-height: 100%;
+  padding: 0.8rem 0.8rem 1rem;
+}
+
+.ravirao-homepage .vaastu-service-card img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.ravirao-homepage .vaastu-card-title-highlight {
+  min-height: 4rem;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0.9rem 0.2rem 0.35rem;
+  text-align: left;
+}
+
+.ravirao-homepage .vaastu-service-card > p {
+  margin: 0.35rem 0 1rem;
+  color: rgba(var(--rr-blue-rgb), 0.88);
+  font-size: clamp(0.9rem, 0.95vw, 1rem);
+  line-height: 1.6;
+}
+
+.ravirao-homepage .vaastu-service-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(var(--rr-blue-rgb), 0.12);
+  color: var(--rr-coral);
+  font-size: var(--rr-text-xs);
+  font-weight: 800;
+}
+
+.ravirao-homepage .vaastu-featured-media-videos {
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+  align-items: center;
+}
+
+.ravirao-homepage .vaastu-featured-media-secondary {
+  display: grid;
+  gap: clamp(0.8rem, 1.5vw, 1.2rem);
+}
+
+.ravirao-homepage .vaastu-featured-media-video-frame {
+  border-radius: 0.85rem;
+}
+
+.ravirao-homepage .vaastu-featured-media-play {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: var(--rr-blue);
+  cursor: pointer;
+}
+
+.ravirao-homepage .vaastu-featured-media-play img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.ravirao-homepage .vaastu-featured-media-play:hover img {
+  opacity: 0.78;
+  transform: scale(1.04);
+}
+
+.vaastu-featured-media-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  background: var(--rr-coral);
+  box-shadow: 0 0.4rem 1.4rem rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, -50%);
+  transition: transform 0.25s ease;
+}
+
+.vaastu-featured-media-play-icon::after {
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  width: 0;
+  height: 0;
+  border-top: 0.55rem solid transparent;
+  border-bottom: 0.55rem solid transparent;
+  border-left: 0.8rem solid var(--rr-white);
+  content: "";
+  transform: translate(-35%, -50%);
+}
+
+.ravirao-homepage .vaastu-featured-media-play:hover .vaastu-featured-media-play-icon {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.ravirao-homepage .vaastu-featured-media-caption {
+  margin: 0.55rem 0 0;
+  color: var(--rr-blue);
+  font-size: var(--rr-text-xs);
+  font-weight: 700;
+}
+
+.ravirao-homepage .vaastu-featured-media-secondary .vaastu-featured-media-play-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.ravirao-homepage .vaastu-featured-media-secondary .vaastu-featured-media-play-icon::after {
+  border-top-width: 0.4rem;
+  border-bottom-width: 0.4rem;
+  border-left-width: 0.6rem;
+}
+
+.ravirao-homepage .calendar-disclosure {
+  border: 1px solid rgba(var(--rr-blue-rgb), 0.15);
+  border-radius: 0.7rem;
+  background: var(--rr-white);
+}
+
+.ravirao-homepage .calendar-disclosure summary {
+  position: relative;
+  padding: 1rem 1.25rem;
+  color: var(--rr-blue);
+  font-size: var(--rr-text-sm);
+  font-weight: 800;
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+.ravirao-homepage .calendar-disclosure[open] summary {
+  border-bottom: 1px solid rgba(var(--rr-blue-rgb), 0.12);
+}
+
+.ravirao-homepage .calendar-disclosure .calendar-shortcode-wrap {
+  padding: 1rem;
+}
+
+.ravirao-homepage .business-enquiry-section {
+  scroll-margin-top: 8rem;
+}
+
+.ravirao-homepage .ravi-details-modern > p,
+.ravirao-homepage .vaastu-panchmaha-content p {
+  font-size: clamp(1rem, 1.02vw, 1.1rem);
+  line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+  .ravirao-homepage .testimonials-cards-handdrawn {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ravirao-homepage .testimonial-card-sketch--featured {
+    grid-row: auto;
+    min-height: 0;
+  }
+
+  .ravirao-homepage .vaastu-featured-media-videos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ravirao-homepage .vaastu-featured-media-secondary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ravirao-homepage .vaastu-featured-media-secondary .vaastu-featured-media-video:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 0.4rem);
+    justify-self: center;
+  }
+
+  .homepage-proof-strip {
+    width: calc(100% - 2rem);
+  }
+
+  .homepage-proof-item {
+    padding-inline: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-proof-strip {
+    align-items: flex-start;
+  }
+
+  .homepage-proof-item {
+    padding-inline: 0.35rem;
+  }
+
+  .homepage-proof-item strong {
+    font-size: 1rem;
+  }
+
+  .homepage-proof-item span {
+    font-size: 0.7rem;
+  }
+
+  .ravirao-homepage .hero-actions {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .ravirao-homepage .vaastu-featured-media-secondary {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ravirao-homepage .vaastu-featured-media-secondary .vaastu-featured-media-video:last-child {
+    width: 100%;
   }
 }
 
