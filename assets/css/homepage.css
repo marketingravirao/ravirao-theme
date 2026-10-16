@@ -1332,7 +1332,7 @@ html {
 
 .homepage-proof-strip {
   display: flex;
-  width: min(calc(100% - var(--rr-page-gutter) * 2), var(--rr-content-width));
+  width: 100%;
   align-items: stretch;
   justify-content: center;
   margin: 0 auto;
