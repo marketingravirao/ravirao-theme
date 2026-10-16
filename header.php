@@ -56,7 +56,10 @@
         <a class="site-title" href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(get_bloginfo('name')); ?></a>
       <?php } ?>
     </div>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><?php esc_html_e('Menu', 'ravirao-theme'); ?></button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="menu-toggle-label"><?php esc_html_e('Menu', 'ravirao-theme'); ?></span>
+      <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
     <nav id="primary-navigation" class="primary-navigation" aria-label="<?php esc_attr_e('Main navigation', 'ravirao-theme'); ?>">
       <?php wp_nav_menu(['theme_location' => 'primary', 'container' => false, 'fallback_cb' => false]); ?>
     </nav>
