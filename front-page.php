@@ -156,52 +156,11 @@ get_header();
   </div>
 </div>
 
-<!-- Industries Dr. Ravi Rao serves -->
-
-<section class="industry-section-premium rr-section rr-section--soft">
-  <div class="rr-section-heading industry-heading-bar">
-    <span class="industry-heading-text rr-section-title" data-reveal>Industries Thriving with Vaastu Guidance</span>
-  </div>
-  <div class="industry-glow-bg"></div>
-  <div class="infinite-industry-carousel">
-    <div class="carousel-track">
-      <!-- Repeat icons & names for seamless loop -->
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V5l6 3v13H3Z"/><path d="M7 17h2m3 0h2m3 0h2"/></svg></span> <span class="industry-name">Manufacturing</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V4h16v17M8 8h2m4 0h2M8 12h2m4 0h2M8 16h2m4 0h2M10 21v-3h4v3"/></svg></span> <span class="industry-name">Corporate Office</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V8h18v13M7 8V4h10v4M7 12h2m3 0h2m3 0h1m-11 4h2m3 0h2m3 0h1"/></svg></span> <span class="industry-name">Healthcare</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span> <span class="industry-name">IT / Digital</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-7h6v7M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Finance</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M8 9h2m4 0h2m-8 4h2m4 0h2m-8 4h2m4 0h2"/></svg></span> <span class="industry-name">Hospitality</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16l-1 16H5L4 5Zm-2 0h20M9 9h6m-6 4h6"/></svg></span> <span class="industry-name">Retail</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/></svg></span> <span class="industry-name">Entertainment</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3m-7 12h12"/></svg></span> <span class="industry-name">Pharma</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Logistics</span></div>
-      <!-- Repeat for infinite loop -->
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V5l6 3v13H3Z"/><path d="M7 17h2m3 0h2m3 0h2"/></svg></span> <span class="industry-name">Manufacturing</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V4h16v17M8 8h2m4 0h2M8 12h2m4 0h2M8 16h2m4 0h2M10 21v-3h4v3"/></svg></span> <span class="industry-name">Corporate Office</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V8h18v13M7 8V4h10v4M7 12h2m3 0h2m3 0h1m-11 4h2m3 0h2m3 0h1"/></svg></span> <span class="industry-name">Healthcare</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span> <span class="industry-name">IT / Digital</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-7h6v7M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Finance</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M8 9h2m4 0h2m-8 4h2m4 0h2m-8 4h2m4 0h2"/></svg></span> <span class="industry-name">Hospitality</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16l-1 16H5L4 5Zm-2 0h20M9 9h6m-6 4h6"/></svg></span> <span class="industry-name">Retail</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/></svg></span> <span class="industry-name">Entertainment</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3m-7 12h12"/></svg></span> <span class="industry-name">Pharma</span></div>
-      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Logistics</span></div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- End industries carousel -->
-
-
 <!-- Vaastu across industries -->
 
 
 
-<div class="vaastu-industries-animated-section rr-section">
+<div class="vaastu-industries-animated-section rr-section rr-section--soft">
   <div class="rr-section-heading">
     <h2 class="rr-section-title">Trusted Advisor to Fortune&nbsp;500 Leaders Worldwide</h2>
   </div>
@@ -236,6 +195,42 @@ get_header();
     </div>
   </div>
 </div>
+
+
+<!-- Industries Dr. Ravi Rao serves -->
+<section class="industry-section-premium rr-section">
+  <div class="rr-section-heading industry-heading-bar">
+    <span class="industry-heading-text rr-section-title" data-reveal>Industries Thriving with Vaastu Guidance</span>
+  </div>
+  <div class="industry-glow-bg"></div>
+  <div class="infinite-industry-carousel">
+    <div class="carousel-track">
+      <!-- Repeat icons & names for seamless loop -->
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V5l6 3v13H3Z"/><path d="M7 17h2m3 0h2m3 0h2"/></svg></span> <span class="industry-name">Manufacturing</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V4h16v17M8 8h2m4 0h2M8 12h2m4 0h2M8 16h2m4 0h2M10 21v-3h4v3"/></svg></span> <span class="industry-name">Corporate Office</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V8h18v13M7 8V4h10v4M7 12h2m3 0h2m3 0h1m-11 4h2m3 0h2m3 0h1"/></svg></span> <span class="industry-name">Healthcare</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span> <span class="industry-name">IT / Digital</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-7h6v7M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Finance</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M8 9h2m4 0h2m-8 4h2m4 0h2m-8 4h2m4 0h2"/></svg></span> <span class="industry-name">Hospitality</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16l-1 16H5L4 5Zm-2 0h20M9 9h6m-6 4h6"/></svg></span> <span class="industry-name">Retail</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/></svg></span> <span class="industry-name">Entertainment</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3m-7 12h12"/></svg></span> <span class="industry-name">Pharma</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Logistics</span></div>
+      <!-- Repeat for infinite loop -->
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V5l6 3v13H3Z"/><path d="M7 17h2m3 0h2m3 0h2"/></svg></span> <span class="industry-name">Manufacturing</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V4h16v17M8 8h2m4 0h2M8 12h2m4 0h2M8 16h2m4 0h2M10 21v-3h4v3"/></svg></span> <span class="industry-name">Corporate Office</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V8h18v13M7 8V4h10v4M7 12h2m3 0h2m3 0h1m-11 4h2m3 0h2m3 0h1"/></svg></span> <span class="industry-name">Healthcare</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span> <span class="industry-name">IT / Digital</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-7h6v7M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Finance</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M8 9h2m4 0h2m-8 4h2m4 0h2m-8 4h2m4 0h2"/></svg></span> <span class="industry-name">Hospitality</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16l-1 16H5L4 5Zm-2 0h20M9 9h6m-6 4h6"/></svg></span> <span class="industry-name">Retail</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9Z"/></svg></span> <span class="industry-name">Entertainment</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3m-7 12h12"/></svg></span> <span class="industry-name">Pharma</span></div>
+      <div class="industry-card"><span class="industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h.01M12 10h.01M16 10h.01"/></svg></span> <span class="industry-name">Logistics</span></div>
+    </div>
+  </div>
+</section>
+<!-- End industries carousel -->
 
 
 <!-- Muhurtha feature -->
