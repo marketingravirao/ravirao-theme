@@ -45,7 +45,7 @@ get_header();
 
 
 
-<div class="ravi-section-modern rr-section rr-section--soft">
+<div class="ravi-section-modern rr-section">
   <div class="ravi-content-wrapper-modern rr-container">
     <div class="ravi-photo-modern rr-card" data-reveal="right">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/55-scaled-e1751979726799.jpg" alt="Dr. Ravi Rao">
@@ -66,7 +66,7 @@ get_header();
 
 <!-- Industries Dr. Ravi Rao serves -->
 
-<section class="industry-section-premium rr-section">
+<section class="industry-section-premium rr-section rr-section--soft">
   <div class="rr-section-heading industry-heading-bar">
     <span class="industry-heading-text rr-section-title" data-reveal>Industries Thriving with Vaastu Guidance</span>
   </div>
@@ -109,7 +109,7 @@ get_header();
 
 
 
-<div class="vaastu-industries-animated-section rr-section rr-section--soft">
+<div class="vaastu-industries-animated-section rr-section">
   <div class="rr-section-heading">
     <h2 class="rr-section-title">Trusted Advisor to Fortune&nbsp;500 Leaders Worldwide</h2>
   </div>
@@ -147,7 +147,7 @@ get_header();
 
 
 <!-- Muhurtha feature -->
-<div class="muhurtha-section-brand rr-section">
+<div class="muhurtha-section-brand rr-section rr-section--soft">
   <div class="rr-section-heading" data-reveal>
     <h2 class="muhurtha-section-heading rr-section-title">Explore the Full Muhurat Calendar</h2>
   </div>
@@ -171,7 +171,7 @@ get_header();
 
 
 <!-- Vaastu services -->
-<div class="vaastu-services-section rr-section rr-section--soft">
+<div class="vaastu-services-section rr-section">
   <div class="vaastu-services-wrapper rr-container" data-reveal-group>
     <a href="https://staging.ravirao.com/new-astro-guidance-page/" class="vaastu-service-card rr-card" target="_blank">
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-4.jpg" alt="Astro Guidance" />
@@ -198,7 +198,7 @@ get_header();
 
 
 <!-- Infinite Auto-Scroll Logo Carousel (Normal 1x Logos) -->
-<div class="infinite-logo-carousel rr-section">
+<div class="infinite-logo-carousel rr-section rr-section--soft">
   <div class="rr-section-heading" data-reveal>
     <h2 class="rr-section-title">Trusted by Leading Brands</h2>
     <p class="rr-section-tagline">Organizations across industries have placed their trust in Dr. Ravi Rao’s Vaastu expertise.</p>
@@ -232,7 +232,7 @@ get_header();
 
 
 <!-- Testimonials -->
-<div class="testimonials-section-handdrawn rr-section rr-section--soft">
+<div class="testimonials-section-handdrawn rr-section">
   <div class="rr-section-heading">
     <h2 class="testimonial-section-main-heading rr-section-title">What Industry Leaders Say About Dr. Rao’s Vaastu Expertise</h2>
   </div>
@@ -284,7 +284,7 @@ get_header();
 
 
 <!-- Five elements carousel -->
-<section class="five-elements-carousel-section rr-section" aria-labelledby="five-elements-heading">
+<section class="five-elements-carousel-section rr-section rr-section--soft" aria-labelledby="five-elements-heading">
   <div class="rr-section-heading" data-reveal>
     <h2 id="five-elements-heading" class="five-elements-carousel-heading rr-section-title">The Five Elements of Vaastu Shastra</h2>
   </div>
@@ -325,7 +325,7 @@ get_header();
 
 
 <!-- Vaastu Panchmahabhootas -->
-<section class="vaastu-panchmaha-section rr-section rr-section--soft" data-reveal="scale">
+<section class="vaastu-panchmaha-section rr-section" data-reveal="scale">
   <div class="rr-section-heading vaastu-panchmaha-heading-wrap">
     <h2 class="vaastu-panchmaha-heading rr-section-title">
       <span class="vaastu-heading-highlight">Vaastu : Panchmahabhootas</span>
@@ -351,7 +351,7 @@ get_header();
 <!-- Media mentions and public features -->
 
 
-<section class="vaastu-heading-section rr-section">
+<section class="vaastu-heading-section rr-section rr-section--soft">
   <div class="rr-section-heading" data-reveal>
     <h2 class="vaastu-heading-main rr-section-title">Featured in the Media: Dr. Ravi Rao’s Journey</h2>
   </div>
@@ -360,7 +360,7 @@ get_header();
 
 
 
-<div class="vaastu-blogs-section rr-section rr-section--soft">
+<div class="vaastu-blogs-section rr-section">
   <div class="rr-section-heading" data-reveal>
     <h2 class="vaastu-blogs-title rr-section-title">Dr. Ravi Rao Blogs</h2>
   </div>
@@ -409,7 +409,7 @@ get_header();
 
 
 <!-- Modern Travel Calendar Section (Branded) -->
-<div class="calendar-section rr-section" data-reveal="scale">
+<div class="calendar-section rr-section rr-section--soft" data-reveal="scale">
   <div class="calendar-content rr-container rr-card">
     <div class="rr-section-heading">
       <h2 class="calendar-title rr-section-title">Travel Calendar Of Dr. Ravi Rao</h2>
@@ -426,7 +426,7 @@ get_header();
 <!-- Media mentions and public features -->
 
 
-<section class="business-enquiry-section rr-section rr-section--soft" aria-label="Business enquiry">
+<section class="business-enquiry-section rr-section" aria-label="Business enquiry">
   <div class="rr-section-heading" data-reveal>
     <h2 class="vaastu-heading-main rr-section-title">Business Enquiry</h2>
   </div>
