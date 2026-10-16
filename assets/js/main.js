@@ -15,6 +15,34 @@
         navigation.classList.toggle('is-open', !isOpen);
     });
 
+    navigation.querySelectorAll('li.menu-item-has-children').forEach((item, index) => {
+        const submenu = item.querySelector(':scope > .sub-menu');
+        const link = item.querySelector(':scope > a');
+
+        if (!submenu || !link) {
+            return;
+        }
+
+        if (!submenu.id) {
+            submenu.id = `primary-submenu-${index + 1}`;
+        }
+
+        const submenuButton = document.createElement('button');
+        submenuButton.className = 'submenu-toggle';
+        submenuButton.type = 'button';
+        submenuButton.setAttribute('aria-expanded', 'false');
+        submenuButton.setAttribute('aria-controls', submenu.id);
+        submenuButton.setAttribute('aria-label', `Toggle submenu for ${link.textContent.trim()}`);
+        item.insertBefore(submenuButton, submenu);
+
+        submenuButton.addEventListener('click', () => {
+            const isOpen = submenuButton.getAttribute('aria-expanded') === 'true';
+
+            submenuButton.setAttribute('aria-expanded', String(!isOpen));
+            item.classList.toggle('submenu-open', !isOpen);
+        });
+    });
+
     document.addEventListener('keydown', (event) => {
         const isOpen = button.getAttribute('aria-expanded') === 'true';
 
@@ -22,6 +50,28 @@
             button.setAttribute('aria-expanded', 'false');
             navigation.classList.remove('is-open');
             button.focus();
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            const openSubmenuButton = navigation.querySelector('.submenu-toggle[aria-expanded="true"]');
+
+            if (openSubmenuButton) {
+                openSubmenuButton.setAttribute('aria-expanded', 'false');
+                openSubmenuButton.closest('li').classList.remove('submenu-open');
+                openSubmenuButton.focus();
+            }
+        }
+    });
+
+    navigation.addEventListener('click', (event) => {
+        if (event.target.closest('.submenu-toggle')) {
+            return;
+        }
+
+        if (event.target.closest('a') && window.matchMedia('(max-width: 768px)').matches) {
+            button.setAttribute('aria-expanded', 'false');
+            navigation.classList.remove('is-open');
         }
     });
 })();
