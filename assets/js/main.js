@@ -5,17 +5,18 @@
     const siteHeader = headerGroup?.querySelector('.site-header');
 
     if (headerGroup && siteHeader) {
+        const getHeaderRevealThreshold = () => window.innerHeight;
         let scrollFrame = null;
 
         const finishHeaderTransition = () => {
-            if (window.scrollY < window.innerHeight * 2) {
+            if (window.scrollY < getHeaderRevealThreshold()) {
                 headerGroup.classList.remove('is-fixed', 'is-animated', 'is-visible', 'is-hiding');
                 headerGroup.style.height = '';
             }
         };
 
         const updateHeaderVisibility = () => {
-            const shouldShowHeader = window.scrollY >= window.innerHeight * 0.2;
+            const shouldShowHeader = window.scrollY >= getHeaderRevealThreshold();
             const isFixed = headerGroup.classList.contains('is-fixed');
 
             if (isFixed && window.scrollY <= 1) {
@@ -29,7 +30,7 @@
                 headerGroup.style.height = `${siteHeader.offsetHeight}px`;
                 headerGroup.classList.add('is-fixed');
                 window.requestAnimationFrame(() => {
-                    if (window.scrollY >= window.innerHeight * 0.2) {
+                    if (window.scrollY >= getHeaderRevealThreshold()) {
                         headerGroup.classList.add('is-animated', 'is-visible');
                     } else {
                         finishHeaderTransition();
