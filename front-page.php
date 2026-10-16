@@ -355,6 +355,56 @@ get_header();
   <div class="rr-section-heading" data-reveal>
     <h2 class="vaastu-heading-main rr-section-title">Featured in the Media: Dr. Ravi Rao’s Journey</h2>
   </div>
+  <div class="vaastu-featured-media-videos rr-container" data-reveal-group>
+    <div class="vaastu-featured-media-video" data-reveal>
+      <div class="vaastu-featured-media-video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/8o_JVu6ftks?list=PL8uXgWnVg5FbRlWvP472cW7qjsW2MsLys&amp;index=1"
+          title="Dr. Ravi Rao’s Journey - video 1"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <div class="vaastu-featured-media-video" data-reveal>
+      <div class="vaastu-featured-media-video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/MvjAWxnYfTY?list=PL8uXgWnVg5FbRlWvP472cW7qjsW2MsLys&amp;index=4"
+          title="Dr. Ravi Rao’s Journey - video 2"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <div class="vaastu-featured-media-video" data-reveal>
+      <div class="vaastu-featured-media-video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/6WlCHPfsXa8?list=PL8uXgWnVg5FbRlWvP472cW7qjsW2MsLys&amp;index=5"
+          title="Dr. Ravi Rao’s Journey - video 3"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <div class="vaastu-featured-media-video" data-reveal>
+      <div class="vaastu-featured-media-video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/_Ru1pl4Saow?list=PL8uXgWnVg5FbRlWvP472cW7qjsW2MsLys&amp;index=8"
+          title="Dr. Ravi Rao’s Journey - video 4"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
 </section>
 
 
