@@ -77,17 +77,20 @@
     if (heading.dataset.wordsReady) return;
 
     const text = heading.textContent.trim();
+    const words = text.split(/\s+/);
     heading.setAttribute('aria-label', text);
-    heading.replaceChildren(...text.split(/\s+/).map((word) => {
+    heading.replaceChildren(...words.flatMap((word, index) => {
       const wrapper = document.createElement('span');
       wrapper.className = 'hero-word-wrap';
       wrapper.setAttribute('aria-hidden', 'true');
 
       const wordElement = document.createElement('span');
       wordElement.className = 'hero-word';
-      wordElement.textContent = `${word} `;
+      wordElement.textContent = word;
       wrapper.appendChild(wordElement);
-      return wrapper;
+      return index < words.length - 1
+        ? [wrapper, document.createTextNode(' ')]
+        : [wrapper];
     }));
     heading.dataset.wordsReady = 'true';
   });
