@@ -2,51 +2,14 @@
     'use strict';
 
     const headerGroup = document.querySelector('.site-header-group');
-    const headerGroupInner = headerGroup?.querySelector('.site-header-group-inner');
 
-    if (headerGroup && headerGroupInner) {
+    if (headerGroup) {
         let scrollFrame = null;
-        let transitionTimer = null;
-
-        const finishHeaderTransition = () => {
-            window.clearTimeout(transitionTimer);
-
-            if (window.scrollY >= window.innerHeight * 0.2) {
-                headerGroup.classList.remove('is-scroll-hidden');
-            } else {
-                headerGroup.classList.remove('is-scrolled', 'is-scroll-hidden');
-            }
-        };
 
         const updateHeaderVisibility = () => {
-            headerGroup.style.height = `${headerGroupInner.offsetHeight}px`;
-            const shouldShowHeader = window.scrollY >= window.innerHeight * 0.2;
-            const isShown = headerGroup.classList.contains('is-scrolled');
-
-            if (shouldShowHeader && !isShown) {
-                headerGroup.classList.add('is-scrolled', 'is-scroll-hidden');
-                void headerGroupInner.offsetHeight;
-                window.requestAnimationFrame(() => {
-                    if (window.scrollY >= window.innerHeight * 0.2) {
-                        headerGroup.classList.remove('is-scroll-hidden');
-                    }
-                });
-                transitionTimer = window.setTimeout(finishHeaderTransition, 350);
-            } else if (shouldShowHeader) {
-                headerGroup.classList.remove('is-scroll-hidden');
-            } else if (isShown && !headerGroup.classList.contains('is-scroll-hidden')) {
-                headerGroup.classList.add('is-scroll-hidden');
-                transitionTimer = window.setTimeout(finishHeaderTransition, 350);
-            }
-
+            headerGroup.classList.toggle('is-visible', window.scrollY >= window.innerHeight * 0.2);
             scrollFrame = null;
         };
-
-        headerGroupInner.addEventListener('transitionend', event => {
-            if (event.target === headerGroupInner && event.propertyName === 'transform') {
-                finishHeaderTransition();
-            }
-        });
 
         window.addEventListener('scroll', () => {
             if (scrollFrame === null) {
