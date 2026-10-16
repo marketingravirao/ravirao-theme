@@ -192,7 +192,7 @@ get_header();
 
 
 <!-- Infinite Auto-Scroll Logo Carousel (Normal 1x Logos) -->
-<div class="infinite-logo-carousel">
+<div class="infinite-logo-carousel rr-section">
   <div class="carousel-track">
     <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="Adani" />
     <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="Arvind" />
@@ -272,7 +272,7 @@ get_header();
 
 
 <!-- Five elements carousel -->
-<section class="five-elements-carousel-section rr-section rr-section--soft" aria-labelledby="five-elements-heading">
+<section class="five-elements-carousel-section rr-section" aria-labelledby="five-elements-heading">
   <h2 id="five-elements-heading" class="five-elements-carousel-heading rr-section-title" data-reveal>
     The Five Elements of Vaastu Shastra
   </h2>
@@ -313,7 +313,7 @@ get_header();
 
 
 <!-- Vaastu Panchmahabhootas -->
-<section class="vaastu-panchmaha-section rr-section rr-card" data-reveal="scale">
+<section class="vaastu-panchmaha-section rr-section rr-section--soft" data-reveal="scale">
   <div class="vaastu-panchmaha-heading-wrap">
     <h2 class="vaastu-panchmaha-heading rr-section-title">
       <span class="vaastu-heading-highlight">Vaastu : Panchmahabhootas</span>
@@ -395,10 +395,12 @@ get_header();
 
 
 <!-- Modern Travel Calendar Section (Branded) -->
-<div class="calendar-section rr-section rr-card rr-container" data-reveal="scale">
-  <h2 class="calendar-title rr-section-title">Travel Calendar Of Dr. Ravi Rao</h2>
-  <div class="calendar-shortcode-wrap">
-    <?php echo do_shortcode('[my_calendar category="3,1,2" above="nav" below="key" time="month" weekends="true" day="1" format="calendar"]'); ?>
+<div class="calendar-section rr-section" data-reveal="scale">
+  <div class="calendar-content rr-container rr-card">
+    <h2 class="calendar-title rr-section-title">Travel Calendar Of Dr. Ravi Rao</h2>
+    <div class="calendar-shortcode-wrap">
+      <?php echo do_shortcode('[my_calendar category="3,1,2" above="nav" below="key" time="month" weekends="true" day="1" format="calendar"]'); ?>
+    </div>
   </div>
 </div>
 
@@ -408,29 +410,26 @@ get_header();
 <!-- Media mentions and public features -->
 
 
-<section class="vaastu-heading-section rr-section">
-  <h2 class="vaastu-heading-main rr-section-title" data-reveal>
-    Business Enquiry
-  </h2>
-</section>
-
-<section class="business-enquiry-form rr-card" aria-label="Business enquiry form" data-reveal="scale">
-  <iframe
-    src="https://api.leadconnectorhq.com/widget/form/hkAoJptF0VSu3fKDMUKU"
-    id="inline-hkAoJptF0VSu3fKDMUKU"
-    data-layout="{'id':'INLINE'}"
-    data-trigger-type="alwaysShow"
-    data-trigger-value=""
-    data-activation-type="alwaysActivated"
-    data-activation-value=""
-    data-deactivation-type="neverDeactivate"
-    data-deactivation-value=""
-    data-form-name="RR website form"
-    data-height="459"
-    data-layout-iframe-id="inline-hkAoJptF0VSu3fKDMUKU"
-    data-form-id="hkAoJptF0VSu3fKDMUKU"
-    title="RR website form">
-  </iframe>
+<section class="business-enquiry-section rr-section rr-section--soft" aria-label="Business enquiry">
+  <h2 class="vaastu-heading-main rr-section-title" data-reveal>Business Enquiry</h2>
+  <div class="business-enquiry-form rr-card" data-reveal="scale">
+    <iframe
+      src="https://api.leadconnectorhq.com/widget/form/hkAoJptF0VSu3fKDMUKU"
+      id="inline-hkAoJptF0VSu3fKDMUKU"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="RR website form"
+      data-height="459"
+      data-layout-iframe-id="inline-hkAoJptF0VSu3fKDMUKU"
+      data-form-id="hkAoJptF0VSu3fKDMUKU"
+      title="RR website form">
+    </iframe>
+  </div>
 </section>
 
 <!-- Branded footer -->

@@ -5,6 +5,7 @@ html {
 .ravirao-homepage {
   --rr-page-gutter: clamp(1rem, 2.4vw, 2rem);
   --rr-section-space: clamp(3.75rem, 7vw, 6rem);
+  --rr-section-soft: rgba(var(--rr-blue-rgb), 0.045);
   --rr-radius: 1.1rem;
   --rr-shadow: 0 0.8rem 2rem rgba(var(--rr-blue-rgb), 0.1);
   --rr-text-xs: clamp(0.75rem, 0.85vw, 0.875rem);
@@ -463,8 +464,7 @@ html {
 
 /* Client logos */
 .infinite-logo-carousel {
-  padding: 2.2rem 0;
-  background: var(--rr-white);
+  padding-block: 0;
 }
 
 .infinite-logo-carousel .carousel-track {
@@ -511,17 +511,6 @@ html {
   padding: clamp(1.2rem, 2.4vw, 2rem);
 }
 
-.testimonial-card-sketch::before {
-  position: absolute;
-  top: 0;
-  left: 1.3rem;
-  width: 2.8rem;
-  height: 0.25rem;
-  border-radius: 0 0 0.25rem 0.25rem;
-  background: var(--rr-coral);
-  content: "";
-}
-
 .testimonial-card-heading {
   margin-bottom: 0.8rem;
 }
@@ -562,8 +551,14 @@ html {
 
 /* Vaastu: Panchmahabhootas */
 .vaastu-panchmaha-section {
-  width: min(calc(100% - var(--rr-page-gutter) - var(--rr-page-gutter)), var(--rr-content-width));
-  margin: var(--rr-section-space) auto;
+  width: 100%;
+  margin: 0;
+}
+
+.vaastu-panchmaha-section .vaastu-panchmaha-heading-wrap,
+.vaastu-panchmaha-section .vaastu-panchmaha-content {
+  width: min(100%, var(--rr-content-width));
+  margin-inline: auto;
 }
 
 .vaastu-panchmaha-heading-wrap {
@@ -710,10 +705,13 @@ html {
 
 /* The Travel Calendar shortcode keeps its existing layout and remains independently managed. */
 .calendar-section {
-  margin: 0 auto var(--rr-section-space);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.calendar-content {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .calendar-shortcode-wrap {
@@ -732,7 +730,7 @@ html {
 /* LeadConnector enquiry form */
 .business-enquiry-form {
   width: min(calc(100% - var(--rr-page-gutter) - var(--rr-page-gutter)), 35rem);
-  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  margin: 0 auto;
   overflow: hidden;
   border: 1px solid rgba(var(--rr-blue-rgb), 0.16);
   border-radius: 0.75rem;
@@ -1000,7 +998,7 @@ html {
 }
 
 .ravirao-homepage .rr-section--soft {
-  background: rgba(var(--rr-blue-rgb), 0.045);
+  background: var(--rr-section-soft);
 }
 
 .ravirao-homepage .rr-container {
@@ -1102,18 +1100,6 @@ html {
   counter-increment: rr-element;
 }
 
-.ravirao-homepage .element-item::before {
-  position: absolute;
-  inset: 0 1.2rem auto;
-  height: 0.22rem;
-  border-radius: 0 0 1rem 1rem;
-  background: var(--rr-coral);
-  content: "";
-  transform: scaleX(0.35);
-  transform-origin: center;
-  transition: transform 0.28s ease;
-}
-
 .ravirao-homepage .element-item::after {
   position: absolute;
   top: 0.9rem;
@@ -1123,10 +1109,6 @@ html {
   font-size: var(--rr-text-xs);
   font-weight: 800;
   letter-spacing: 0.08em;
-}
-
-.ravirao-homepage .element-item:hover::before {
-  transform: scaleX(1);
 }
 
 .ravirao-homepage .element-item .element-icon {
