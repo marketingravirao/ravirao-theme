@@ -478,7 +478,7 @@ get_header();
 
 
 <!-- Modern Travel Calendar Section (Branded) -->
-<section class="calendar-section rr-section rr-section--soft" data-reveal="scale">
+<section class="calendar-section rr-section" data-reveal="scale">
   <div class="calendar-content rr-container rr-card">
     <div class="rr-section-heading">
       <h2 class="calendar-title rr-section-title" id="travel-calendar-heading">Travel Calendar of Dr. Ravi Rao</h2>
