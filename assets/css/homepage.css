@@ -257,8 +257,6 @@ html {
 .muhurtha-cta-btn:hover,
 .vaastu-blogs-more-btn:hover {
   transform: translateY(-2px);
-  background: var(--rr-blue);
-  color: var(--rr-white);
 }
 
 /* Industry ticker */
@@ -1182,14 +1180,15 @@ html {
   .page-template-front-page .menu-toggle {
     border: 0;
     border-radius: var(--rr-button-radius);
-    background: var(--rr-blue);
-    color: var(--rr-white);
-    transition: background-color 0.2s ease;
+    background: var(--rr-white);
+    color: var(--rr-blue);
+    transition: color 0.2s ease;
   }
 
   .home .menu-toggle:hover,
   .page-template-front-page .menu-toggle:hover {
-    background: var(--rr-coral);
+    background: var(--rr-white);
+    color: var(--rr-blue);
   }
 
   .ravi-content-wrapper-modern {
