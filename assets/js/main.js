@@ -8,7 +8,7 @@
         let scrollFrame = null;
 
         const finishHeaderTransition = () => {
-            if (window.scrollY < window.innerHeight * 0.2) {
+            if (window.scrollY < window.innerHeight * 0.45) {
                 headerGroup.classList.remove('is-fixed', 'is-animated', 'is-visible', 'is-hiding');
                 headerGroup.style.height = '';
             }
