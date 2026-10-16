@@ -606,7 +606,7 @@ get_header();
     </div>
   </div>
   <div class="footer-bottom-v2">
-    <span>&copy; 2024 Dr. Ravi Rao. All Rights Reserved.</span>
+    <span>&copy; 2026 Dr. Ravi Rao. All Rights Reserved.</span>
   </div>
 </footer>
 

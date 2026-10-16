@@ -290,8 +290,8 @@ html {
 
 .industry-card {
   display: flex;
-  width: 11.5rem;
-  min-width: 11.5rem;
+  width: 10rem;
+  min-width: 10rem;
   min-height: 5.25rem;
   flex-direction: column;
   align-items: center;
@@ -650,6 +650,7 @@ html {
 .vaastu-blogs-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
   gap: 1.2rem;
   margin-bottom: 1.5rem;
 }
@@ -1168,6 +1169,19 @@ html {
   line-height: 1.7;
 }
 
+.ravirao-homepage .testimonial-card-text {
+  line-height: 1.8;
+}
+
+.ravirao-homepage .vaastu-blog-desc {
+  display: -webkit-box !important;
+  overflow: hidden;
+  line-height: 1.7;
+  max-height: calc(1.7em * 3);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .ravirao-homepage :is(.vaastu-industry-title, .vaastu-card-title-highlight span, .testimonial-card-heading, .vaastu-blog-title) {
   color: var(--rr-blue);
   font-size: var(--rr-text-lg);
@@ -1345,7 +1359,7 @@ html {
 
 .homepage-proof-item strong {
   color: var(--rr-blue);
-  font-size: clamp(1.3rem, 2vw, 1.75rem);
+  font-size: clamp(1.4rem, 2.1vw, 1.875rem);
   font-weight: 800;
   letter-spacing: -0.025em;
 }
@@ -1400,7 +1414,7 @@ html {
   margin: 0.35rem 0 1rem;
   color: rgba(var(--rr-blue-rgb), 0.88);
   font-size: clamp(0.9375rem, 1vw, 1rem);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .ravirao-homepage .vaastu-service-action {
@@ -1535,7 +1549,15 @@ html {
 .ravirao-homepage .ravi-details-modern > p,
 .ravirao-homepage .vaastu-panchmaha-content p {
   font-size: clamp(1rem, 1.02vw, 1.1rem);
-  line-height: 1.8;
+  line-height: 1.9;
+}
+
+.ravirao-homepage .ravi-details-modern > p:not(.ravi-credentials) {
+  margin-bottom: 1.6rem;
+}
+
+.ravirao-homepage .vaastu-panchmaha-content p {
+  margin-bottom: 1.5rem;
 }
 
 .ravirao-homepage .vaastu-panchmaha-content {

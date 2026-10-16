@@ -247,19 +247,5 @@
     );
   });
 
-  const heroImages = page.querySelectorAll('.hero-slide-bg');
-  if (heroImages.length) {
-    gsap.to(heroImages, {
-      yPercent: 12,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.hero-slider-section',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 0.7
-      }
-    });
-  }
-
   window.addEventListener('load', () => window.ScrollTrigger.refresh(), { once: true });
 })();
