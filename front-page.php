@@ -193,6 +193,8 @@ get_header();
 
 <!-- Infinite Auto-Scroll Logo Carousel (Normal 1x Logos) -->
 <div class="infinite-logo-carousel rr-section">
+  <h2 class="rr-section-title" data-reveal>Trusted by Leading Brands</h2>
+  <p class="rr-section-support">Organizations across industries have placed their trust in Dr. Ravi Rao’s Vaastu expertise.</p>
   <div class="carousel-track">
     <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="Adani" />
     <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="Arvind" />

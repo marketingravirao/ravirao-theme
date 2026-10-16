@@ -469,7 +469,23 @@ html {
 
 /* Client logos */
 .infinite-logo-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-block: 0;
+}
+
+.infinite-logo-carousel .rr-section-title {
+  margin-bottom: 0.65rem;
+}
+
+.ravirao-homepage .rr-section-support {
+  width: min(100%, 48rem);
+  margin: 0 auto clamp(1.5rem, 3vw, 2.25rem);
+  color: var(--rr-blue);
+  font-size: var(--rr-text-sm);
+  text-align: center;
+  text-wrap: balance;
 }
 
 .infinite-logo-carousel .carousel-track {
