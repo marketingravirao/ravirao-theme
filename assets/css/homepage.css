@@ -165,70 +165,80 @@ html {
   position: relative;
   display: grid;
   place-items: center;
-  padding: clamp(2.5rem, 5vw, 4.5rem) var(--rr-page-gutter);
-  background: linear-gradient(180deg, rgba(var(--rr-blue-rgb), 0.06), var(--rr-white) 78%);
+  padding: clamp(3rem, 6vw, 5rem) var(--rr-page-gutter);
+  background: rgba(var(--rr-blue-rgb), 0.045);
 }
 
 .ravi-content-wrapper-modern {
   display: grid;
   width: min(100%, var(--rr-content-width));
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  align-items: stretch;
-  overflow: hidden;
-  border-radius: 1.25rem;
-  background: var(--rr-white);
-  box-shadow: 0 0.75rem 2rem rgba(var(--rr-blue-rgb), 0.1);
+  grid-template-areas: "details photo";
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
 }
 
 .ravi-photo-modern {
-  display: grid;
+  grid-area: photo;
+  width: 100%;
   min-width: 0;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(0.75rem, 1.5vw, 1.25rem);
-  background: rgba(var(--rr-blue-rgb), 0.035);
+  padding: 0.65rem;
+  border: 1px solid rgba(var(--rr-blue-rgb), 0.1);
+  border-radius: 1.25rem;
+  background: var(--rr-white);
+  box-shadow: 0 1rem 2.5rem rgba(var(--rr-blue-rgb), 0.12);
 }
 
 .ravi-photo-modern img {
   width: 100%;
   height: auto;
+  border-radius: 0.85rem;
   object-fit: contain;
   object-position: center;
 }
 
 .ravi-details-modern {
+  grid-area: details;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  padding: clamp(1.75rem, 3vw, 2.75rem);
-  background: var(--rr-blue);
-  color: var(--rr-white);
+  color: var(--rr-blue);
 }
 
 .ravi-details-modern h2 {
-  margin-bottom: 1rem;
-  color: var(--rr-white);
-  font-size: clamp(1.875rem, 2.8vw, 2.5rem);
+  margin-bottom: 1.25rem;
+  color: var(--rr-blue);
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
   font-weight: 900;
   line-height: 1.15;
 }
 
+.ravi-details-modern h2::before {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--rr-coral);
+  content: "ABOUT DR. RAVI RAO";
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+}
+
 .ravi-details-modern p {
-  margin-bottom: 1rem;
-  color: var(--rr-white);
-  font-size: var(--rr-text-sm);
-  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--rr-blue);
+  font-size: var(--rr-text-base);
+  line-height: 1.7;
 }
 
 .ravi-details-modern .know-more-btn-modern {
   display: inline-flex;
-  min-height: 2.75rem;
+  min-height: 3rem;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border: 0;
-  border-radius: 999px;
+  border-radius: 0.5rem;
   background: var(--rr-coral);
   color: var(--rr-white);
   font-size: var(--rr-text-sm);
@@ -236,7 +246,7 @@ html {
   line-height: 1.3;
   text-align: center;
   text-decoration: none;
-  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .muhurtha-cta-btn,
@@ -267,8 +277,8 @@ html {
 }
 
 .ravi-details-modern .know-more-btn-modern:hover {
-  background: var(--rr-white);
-  color: var(--rr-blue);
+  background: var(--rr-blue);
+  color: var(--rr-white);
 }
 
 /* Industry ticker */
@@ -1214,11 +1224,16 @@ html {
 /* Responsive layout */
 @media (max-width: 900px) {
   .ravi-content-wrapper-modern {
+    grid-template-areas:
+      "photo"
+      "details";
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .ravi-photo-modern img {
+  .ravi-photo-modern {
     width: min(100%, 40rem);
+    justify-self: center;
   }
 
   .vaastu-services-wrapper {
@@ -1254,21 +1269,19 @@ html {
   }
 
   .ravi-content-wrapper-modern {
-    grid-template-columns: 1fr;
-  }
-
-  .ravi-photo-modern {
-    padding: 0.75rem;
-  }
-
-  .ravi-photo-modern img {
-    width: min(100%, 24rem);
-    max-height: none;
-    object-fit: contain;
+    gap: 1.5rem;
   }
 
   .ravi-details-modern {
-    padding: 1.5rem;
+    padding: 0 0.25rem;
+  }
+
+  .ravi-details-modern h2 {
+    margin-bottom: 1rem;
+  }
+
+  .ravi-details-modern p {
+    margin-bottom: 1.15rem;
   }
 
   .vaastu-industries-animated-grid {
