@@ -57,7 +57,7 @@
       <?php } ?>
     </div>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
-      <span class="menu-toggle-label"><?php esc_html_e('Menu', 'ravirao-theme'); ?></span>
+      <span class="screen-reader-text"><?php esc_html_e('Toggle menu', 'ravirao-theme'); ?></span>
       <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
     <nav id="primary-navigation" class="primary-navigation" aria-label="<?php esc_attr_e('Main navigation', 'ravirao-theme'); ?>">
