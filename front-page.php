@@ -51,7 +51,9 @@ get_header();
       <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/55-scaled-e1751979726799.jpg" alt="Dr. Ravi Rao">
     </div>
     <div class="ravi-details-modern" data-reveal="left">
-      <h2 class="rr-section-title rr-section-title--start">Dr. Ravi Rao</h2>
+      <div class="rr-section-heading">
+        <h2 class="rr-section-title rr-section-title--start">Dr. Ravi Rao</h2>
+      </div>
       <p>
         Dr. Ravi Rao, world-renowned vaastu consultant, is known for giving his clients simple yet effective solutions. With over 30 years of vast experience and extensive research, Dr. Rao blends various branches of astrology and vaastu to offer strategies for growth and prosperity.<br><br>
         A man of few words, Dr. Rao is consultant and advisor to many leading industrialists, both in India and abroad. His scientific and logical approach to problem-solving has earned him acceptance worldwide. Globally traveled, Dr. Rao has also authored a book on mundane astrology, serving as a reference for predicting world events.<br><br>
@@ -65,7 +67,7 @@ get_header();
 <!-- Industries Dr. Ravi Rao serves -->
 
 <section class="industry-section-premium rr-section">
-  <div class="industry-heading-bar">
+  <div class="rr-section-heading industry-heading-bar">
     <span class="industry-heading-text rr-section-title" data-reveal>Industries Thriving with Vaastu Guidance</span>
   </div>
   <div class="industry-glow-bg"></div>
@@ -108,7 +110,9 @@ get_header();
 
 
 <div class="vaastu-industries-animated-section rr-section rr-section--soft">
-  <h2 class="rr-section-title">Trusted Advisor to Fortune&nbsp;500 Leaders Worldwide</h2>
+  <div class="rr-section-heading">
+    <h2 class="rr-section-title">Trusted Advisor to Fortune&nbsp;500 Leaders Worldwide</h2>
+  </div>
   <div class="vaastu-industries-animated-grid rr-container" data-reveal-group>
     <!-- Manufacturing & Industrial Plants -->
     <div class="vaastu-industry-card-outer">
@@ -144,7 +148,9 @@ get_header();
 
 <!-- Muhurtha feature -->
 <div class="muhurtha-section-brand rr-section">
-  <h2 class="muhurtha-section-heading rr-section-title" data-reveal>Explore the Full Muhurat Calendar</h2>
+  <div class="rr-section-heading" data-reveal>
+    <h2 class="muhurtha-section-heading rr-section-title">Explore the Full Muhurat Calendar</h2>
+  </div>
   <div class="muhurtha-img-cta-wrap" data-reveal="scale">
     <div class="muhurtha-img-link">
       <div class="muhurtha-img-container rr-card">
@@ -193,8 +199,10 @@ get_header();
 
 <!-- Infinite Auto-Scroll Logo Carousel (Normal 1x Logos) -->
 <div class="infinite-logo-carousel rr-section">
-  <h2 class="rr-section-title" data-reveal>Trusted by Leading Brands</h2>
-  <p class="rr-section-support">Organizations across industries have placed their trust in Dr. Ravi Rao’s Vaastu expertise.</p>
+  <div class="rr-section-heading" data-reveal>
+    <h2 class="rr-section-title">Trusted by Leading Brands</h2>
+    <p class="rr-section-tagline">Organizations across industries have placed their trust in Dr. Ravi Rao’s Vaastu expertise.</p>
+  </div>
   <div class="carousel-track">
     <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="Adani" />
     <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="Arvind" />
@@ -225,7 +233,9 @@ get_header();
 
 <!-- Testimonials -->
 <div class="testimonials-section-handdrawn rr-section rr-section--soft">
-  <h2 class="testimonial-section-main-heading rr-section-title">What Industry Leaders Say About Dr. Rao’s Vaastu Expertise</h2>
+  <div class="rr-section-heading">
+    <h2 class="testimonial-section-main-heading rr-section-title">What Industry Leaders Say About Dr. Rao’s Vaastu Expertise</h2>
+  </div>
   <div class="testimonials-cards-handdrawn rr-container" data-reveal-group>
     <!-- Testimonial 1 -->
     <div class="testimonial-card-sketch rr-card">
@@ -275,9 +285,9 @@ get_header();
 
 <!-- Five elements carousel -->
 <section class="five-elements-carousel-section rr-section" aria-labelledby="five-elements-heading">
-  <h2 id="five-elements-heading" class="five-elements-carousel-heading rr-section-title" data-reveal>
-    The Five Elements of Vaastu Shastra
-  </h2>
+  <div class="rr-section-heading" data-reveal>
+    <h2 id="five-elements-heading" class="five-elements-carousel-heading rr-section-title">The Five Elements of Vaastu Shastra</h2>
+  </div>
   <div class="infinite-elements-carousel rr-container">
     <div class="elements-carousel-track" data-reveal-group>
       <article class="element-item rr-card earth">
@@ -316,7 +326,7 @@ get_header();
 
 <!-- Vaastu Panchmahabhootas -->
 <section class="vaastu-panchmaha-section rr-section rr-section--soft" data-reveal="scale">
-  <div class="vaastu-panchmaha-heading-wrap">
+  <div class="rr-section-heading vaastu-panchmaha-heading-wrap">
     <h2 class="vaastu-panchmaha-heading rr-section-title">
       <span class="vaastu-heading-highlight">Vaastu : Panchmahabhootas</span>
     </h2>
@@ -342,16 +352,18 @@ get_header();
 
 
 <section class="vaastu-heading-section rr-section">
-  <h2 class="vaastu-heading-main rr-section-title" data-reveal>
-    Featured in the Media: Dr. Ravi Rao’s Journey
-  </h2>
+  <div class="rr-section-heading" data-reveal>
+    <h2 class="vaastu-heading-main rr-section-title">Featured in the Media: Dr. Ravi Rao’s Journey</h2>
+  </div>
 </section>
 
 
 
 
 <div class="vaastu-blogs-section rr-section rr-section--soft">
-  <h2 class="vaastu-blogs-title rr-section-title" data-reveal>Dr. Ravi Rao Blogs</h2>
+  <div class="rr-section-heading" data-reveal>
+    <h2 class="vaastu-blogs-title rr-section-title">Dr. Ravi Rao Blogs</h2>
+  </div>
   <div class="vaastu-blogs-cards rr-container" data-reveal-group>
     <!-- Blog Card 1 -->
     <div class="vaastu-blog-card rr-card">
@@ -399,7 +411,9 @@ get_header();
 <!-- Modern Travel Calendar Section (Branded) -->
 <div class="calendar-section rr-section" data-reveal="scale">
   <div class="calendar-content rr-container rr-card">
-    <h2 class="calendar-title rr-section-title">Travel Calendar Of Dr. Ravi Rao</h2>
+    <div class="rr-section-heading">
+      <h2 class="calendar-title rr-section-title">Travel Calendar Of Dr. Ravi Rao</h2>
+    </div>
     <div class="calendar-shortcode-wrap">
       <?php echo do_shortcode('[my_calendar category="3,1,2" above="nav" below="key" time="month" weekends="true" day="1" format="calendar"]'); ?>
     </div>
@@ -413,7 +427,9 @@ get_header();
 
 
 <section class="business-enquiry-section rr-section rr-section--soft" aria-label="Business enquiry">
-  <h2 class="vaastu-heading-main rr-section-title" data-reveal>Business Enquiry</h2>
+  <div class="rr-section-heading" data-reveal>
+    <h2 class="vaastu-heading-main rr-section-title">Business Enquiry</h2>
+  </div>
   <div class="business-enquiry-form rr-card" data-reveal="scale">
     <iframe
       src="https://api.leadconnectorhq.com/widget/form/hkAoJptF0VSu3fKDMUKU"

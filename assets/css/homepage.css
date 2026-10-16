@@ -18,6 +18,9 @@ html {
   --rr-text-base: clamp(1rem, 1.1vw, 1.125rem);
   --rr-text-lg: clamp(1.1875rem, 1.35vw, 1.375rem);
   --rr-section-title-size: clamp(1.75rem, 2.8vw, 2.35rem);
+  --rr-section-heading-gap: clamp(1.5rem, 3vw, 2.25rem);
+  --rr-title-accent-gap: 0.65rem;
+  --rr-title-tagline-gap: 0.65rem;
   --rr-content-width: 75rem;
   --rr-button-radius: 0.5rem;
   --rr-button-padding: 0.8rem 1.5rem;
@@ -242,14 +245,6 @@ html {
 .industry-heading-bar {
   position: relative;
   z-index: 2;
-  display: flex;
-  width: min(calc(100% - var(--rr-page-gutter) - var(--rr-page-gutter)), 66rem);
-  min-height: 0;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem;
-  padding: 0.5rem 1rem;
-  text-align: center;
 }
 
 .industry-glow-bg {
@@ -475,18 +470,9 @@ html {
   padding-block: 0;
 }
 
-.infinite-logo-carousel .rr-section-title {
-  margin-bottom: 0.25rem;
-  padding-bottom: 0;
-}
-
-.infinite-logo-carousel .rr-section-title::after {
-  margin-top: 0.45rem;
-}
-
-.ravirao-homepage .rr-section-support {
+.ravirao-homepage .rr-section-tagline {
   width: min(100%, 48rem);
-  margin: 0 auto 0.9rem;
+  margin: var(--rr-title-accent-gap) auto 0;
   color: var(--rr-blue);
   font-size: var(--rr-text-sm);
   text-align: center;
@@ -585,10 +571,6 @@ html {
 .vaastu-panchmaha-section .vaastu-panchmaha-content {
   width: min(100%, var(--rr-content-width));
   margin-inline: auto;
-}
-
-.vaastu-panchmaha-heading-wrap {
-  margin-bottom: 1.5rem;
 }
 
 .vaastu-heading-highlight {
@@ -1034,9 +1016,9 @@ html {
 
 .ravirao-homepage .rr-section-title {
   position: relative;
-  width: min(100%, var(--rr-content-width));
-  margin: 0 auto clamp(1.5rem, 3vw, 2.25rem);
-  padding: 0 0 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   border: 0;
   color: var(--rr-blue);
   font-size: var(--rr-section-title-size);
@@ -1051,15 +1033,24 @@ html {
   display: block;
   width: 3rem;
   height: 0.2rem;
-  margin: 0.9rem auto 0;
+  margin: 0.65rem auto 0;
   border-radius: 999px;
   background: var(--rr-coral);
   content: "";
 }
 
+.ravirao-homepage .rr-section-heading {
+  width: min(100%, var(--rr-content-width));
+  margin: 0 auto var(--rr-section-heading-gap);
+  text-align: center;
+}
+
+.ravirao-homepage .rr-section-tagline {
+  margin-top: var(--rr-title-tagline-gap);
+  margin-bottom: 0;
+}
+
 .ravirao-homepage .rr-section-title--start {
-  width: 100%;
-  margin-inline: 0;
   text-align: left;
 }
 
