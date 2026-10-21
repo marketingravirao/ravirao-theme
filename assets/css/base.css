@@ -24,15 +24,16 @@
     --font-body: "Satoshi", sans-serif;
     --font-size-base: 16px;
     --line-height-base: 1.6;
-}
-
-.rr-section-soft {
-    background: linear-gradient(
+    --rr-section-soft: linear-gradient(
         120deg,
         rgba(var(--rr-blue-rgb, 54, 99, 171), 0.08) 0%,
         rgba(var(--rr-coral-rgb, 254, 74, 57), 0.055) 52%,
         rgba(var(--rr-blue-rgb, 54, 99, 171), 0.07) 100%
     );
+}
+
+.rr-section-soft {
+    background: var(--rr-section-soft);
 }
 
 *{
@@ -1021,4 +1022,8 @@ body:has(.mc-main .single-event) .mc-main .single-event {
     .mc-main .single-event ul.muhurat-details img {
         height: 38px;
     }
+}
+
+blockquote.testimonial-card-quote-block{
+    margin: 0;
 }

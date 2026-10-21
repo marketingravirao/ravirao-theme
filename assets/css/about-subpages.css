@@ -50,7 +50,7 @@
     text-wrap: balance;
 }
 
-.rr-vaastu-hero-content > p:last-child {
+.rr-vaastu-hero-content>p:last-child {
     max-width: 38rem;
     margin: 1rem 0 0;
     color: rgba(255, 255, 255, 0.92);
@@ -280,7 +280,7 @@
         font-size: 2.5rem;
     }
 
-    .rr-vaastu-hero-content > p:last-child {
+    .rr-vaastu-hero-content>p:last-child {
         font-size: 1.0625rem;
     }
 
@@ -345,5 +345,756 @@
     .rr-vaastu-logo-track:first-child {
         flex-wrap: wrap;
         justify-content: center;
+    }
+}
+
+.rr-about-dr-page {
+    --rr-section-space: 4.5rem;
+    color: var(--rr-blue);
+}
+
+.rr-about-dr-hero {
+    display: grid;
+    min-height: 35rem;
+    grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+    padding: 4rem max(2rem, calc((100vw - 75rem) / 2));
+}
+
+.rr-about-dr-hero-content {
+    max-width: 50rem;
+}
+
+.rr-about-dr-eyebrow {
+    margin: 0 0 1rem;
+    color: var(--rr-coral);
+    font-size: 0.875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.rr-about-dr-hero h1 {
+    margin: 0;
+    color: var(--rr-blue);
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.08;
+    text-wrap: balance;
+}
+
+.rr-about-dr-hero-summary {
+    max-width: 39rem;
+    margin: 1.5rem 0 0;
+    color: #354761;
+    font-size: 1.125rem;
+    line-height: 1.65;
+}
+
+.rr-about-dr-portrait {
+    height: min(32rem, 72vw);
+    min-height: 24rem;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 0.75rem;
+    background: #dce5f2;
+    box-shadow: 0 1.25rem 3rem rgba(29, 52, 84, 0.16);
+}
+
+.rr-about-dr-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.rr-about-dr-biography {
+    position: relative;
+    overflow: hidden;
+    padding: 5.5rem 1.5rem 0;
+    background: var(--rr-section-soft);
+}
+
+.rr-about-dr-biography-inner {
+    width: min(100%, 75rem);
+    margin: 0 auto;
+}
+
+.rr-about-dr-biography-heading {
+    max-width: 52rem;
+    margin-bottom: 3rem;
+}
+
+.rr-about-dr-biography-heading h2 {
+    margin: 0;
+    color: var(--rr-blue);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+.rr-about-dr-biography .rr-about-dr-eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--rr-coral);
+}
+
+.rr-about-dr-biography-copy {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.25rem clamp(2rem, 5vw, 5rem);
+    color: #26364d;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+}
+
+.rr-about-dr-biography-copy p {
+    margin: 0;
+}
+
+.rr-about-dr-bio-lead {
+    grid-column: 1 / -1;
+    max-width: 65rem;
+    padding-left: 1.25rem;
+    border-left: 4px solid var(--rr-coral);
+    color: var(--rr-blue);
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+.rr-about-dr-bio-detail {
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(54, 99, 171, 0.2);
+}
+
+.rr-about-dr-bio-reach {
+    grid-column: 1 / -1;
+    max-width: 65rem;
+    margin-left: auto !important;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(54, 99, 171, 0.2);
+}
+
+.rr-about-dr-biography-copy strong {
+    color: var(--rr-blue);
+    font-weight: 800;
+}
+
+.rr-about-dr-quote {
+    position: relative;
+    width: min(100%, 58rem);
+    margin: 3.5rem auto 0;
+    padding: 0 0 0 2rem;
+    border-left: 3px solid var(--rr-coral);
+    color: var(--rr-blue);
+}
+
+.rr-about-dr-quote::before {
+    position: absolute;
+    top: -0.75rem;
+    left: 0.6rem;
+    color: var(--rr-coral);
+    content: "\201C";
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.rr-about-dr-quote p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.rr-about-dr-quote cite {
+    display: block;
+    margin-top: 0.65rem;
+    color: #53647b;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.rr-publications-books {
+    padding: 4.75rem 1.5rem;
+}
+
+.rr-publications-books-inner {
+    width: min(100%, 75rem);
+    margin: 0 auto;
+}
+
+.rr-publications-books-heading {
+    max-width: 52rem;
+    margin-bottom: 2.5rem;
+}
+
+.rr-publications-books-heading h1 {
+    max-width: 48rem;
+    margin: 0.25rem 0 0;
+    color: var(--rr-blue);
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.12;
+    text-wrap: balance;
+}
+
+.rr-publications-books-heading>p:last-child {
+    max-width: 38rem;
+    margin: 0.85rem 0 0;
+    color: #53647b;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.rr-publications-book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 1.25rem;
+}
+
+.rr-publications-book {
+    display: grid;
+    min-width: 0;
+    grid-template-rows: 16rem minmax(0, 1fr);
+    overflow: hidden;
+    border: 1px solid rgba(var(--rr-blue-rgb, 54, 99, 171), 0.14);
+    border-radius: 0.5rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 1.5rem rgba(var(--rr-blue-rgb, 54, 99, 171), 0.08);
+}
+
+.rr-publications-book-cover {
+    display: grid;
+    min-width: 0;
+    min-height: 0;
+    place-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(var(--rr-blue-rgb, 54, 99, 171), 0.1);
+    background: var(--rr-section-soft);
+}
+
+.rr-publications-book-cover img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 13rem;
+    object-fit: contain;
+}
+
+.rr-publications-book-content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+}
+
+.rr-publications-book-content h2 {
+    margin: 0 0 0.6rem;
+    color: var(--rr-blue);
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.rr-publications-book-content p {
+    flex: 1;
+    margin: 0 0 1.1rem;
+    color: #3d4f67;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.rr-publications-book-content .rr-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+@media (max-width: 1000px) {
+    .rr-publications-book-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rr-publications-book:last-child {
+        grid-column: 1 / -1;
+        width: min(100%, 32rem);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .rr-publications-books {
+        padding: 3.5rem 1rem;
+    }
+
+    .rr-publications-books-heading h1 {
+        font-size: 2.125rem;
+    }
+
+    .rr-publications-book-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .rr-publications-book:last-child {
+        grid-column: auto;
+        width: auto;
+    }
+
+    .rr-publications-book-cover {
+        min-height: 15rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .rr-about-dr-hero {
+        min-height: 0;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+        padding: 4rem 1.5rem;
+    }
+
+    .rr-about-dr-portrait {
+        width: min(100%, 38rem);
+        height: 28rem;
+        min-height: 0;
+    }
+
+    .rr-about-dr-biography-copy {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    .rr-about-dr-quote {
+        margin-top: 2.5rem;
+        padding-left: 1.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .rr-about-dr-hero {
+        gap: 1.5rem;
+        padding: 3.25rem 1rem;
+    }
+
+    .rr-about-dr-hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .rr-about-dr-hero-summary {
+        font-size: 1rem;
+    }
+
+    .rr-about-dr-portrait {
+        height: 22rem;
+    }
+
+    .rr-about-dr-biography {
+        padding: 3.5rem 1.25rem;
+    }
+
+    .rr-about-dr-biography-heading h2 {
+        font-size: 1.875rem;
+    }
+
+    .rr-about-dr-biography-copy {
+        font-size: 0.95rem;
+    }
+
+    .rr-about-dr-quote p {
+        font-size: 1.125rem;
+    }
+
+    .rr-about-dr-quote::before {
+        left: 0.45rem;
+        font-size: 2.5rem;
+    }
+}
+
+.rr-academic-hero {
+    padding: 5.5rem 1.5rem;
+}
+
+.rr-academic-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, 0.45fr);
+    align-items: center;
+    gap: clamp(3rem, 8vw, 8rem);
+    width: min(100%, 75rem);
+    margin: 0 auto;
+}
+
+.rr-academic-hero-copy {
+    max-width: 52rem;
+}
+
+.rr-academic-hero-copy h1 {
+    margin: 0;
+    color: var(--rr-blue);
+    font-size: 3.25rem;
+    font-weight: 800;
+    line-height: 1.08;
+    text-wrap: balance;
+}
+
+.rr-academic-hero-copy>p:last-child {
+    max-width: 43rem;
+    margin: 1.25rem 0 0;
+    color: #354761;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.rr-academic-platform {
+    display: flex;
+    min-height: 10rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(var(--rr-blue-rgb, 54, 99, 171), 0.14);
+    border-radius: 0.5rem;
+    background: #fff;
+    color: var(--rr-blue);
+    font-size: 0.9375rem;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0.75rem 2rem rgba(var(--rr-blue-rgb, 54, 99, 171), 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rr-academic-platform:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2.5rem rgba(var(--rr-blue-rgb, 54, 99, 171), 0.16);
+}
+
+.rr-academic-platform img {
+    display: block;
+    width: min(100%, 13rem);
+    max-height: 5rem;
+    object-fit: contain;
+}
+
+.rr-academic-platform:focus-visible,
+.rr-academic-action:focus-visible {
+    outline: 3px solid var(--rr-coral);
+    outline-offset: 4px;
+}
+
+.rr-academic-programs {
+    padding: 5rem 1.5rem;
+    background: #fff;
+}
+
+.rr-academic-programs-inner {
+    width: min(100%, 75rem);
+    margin: 0 auto;
+}
+
+.rr-academic-programs-heading {
+    max-width: 45rem;
+    margin-bottom: 2.5rem;
+}
+
+.rr-academic-programs-heading h2 {
+    margin: 0;
+    color: var(--rr-blue);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+.rr-academic-program-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.rr-academic-program {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    align-content: start;
+    gap: 0.5rem 1rem;
+    padding: 1.5rem 0;
+    border-top: 2px solid var(--rr-coral);
+}
+
+.rr-academic-program-number {
+    grid-row: span 2;
+    color: var(--rr-coral);
+    font-size: 1.25rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+.rr-academic-program-content h3 {
+    margin: 0;
+    color: var(--rr-blue);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.rr-academic-program-content p {
+    margin: 0.8rem 0 1.25rem;
+    color: #354761;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.rr-academic-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--rr-blue);
+    font-size: 0.9375rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.rr-academic-action .rr-academic-action-label {
+    text-decoration: underline;
+    text-decoration-color: var(--rr-coral);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3em;
+}
+
+.rr-academic-action:hover {
+    color: var(--rr-coral);
+}
+
+@media (max-width: 850px) {
+    .rr-academic-hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+    }
+
+    .rr-academic-platform {
+        width: min(100%, 24rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .rr-academic-hero {
+        padding: 3.5rem 1rem;
+    }
+
+    .rr-academic-hero-copy h1 {
+        font-size: 2.25rem;
+    }
+
+    .rr-academic-hero-copy>p:last-child {
+        font-size: 1rem;
+    }
+
+    .rr-academic-programs {
+        padding: 3.5rem 1rem;
+    }
+
+    .rr-academic-programs-heading h2 {
+        font-size: 1.875rem;
+    }
+
+    .rr-academic-program-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+.rr-workshops-section {
+    padding: 5rem 1.5rem;
+}
+
+.rr-workshops-inner {
+    display: grid;
+    grid-template-columns: minmax(14rem, 0.75fr) minmax(0, 1.25fr);
+    align-items: start;
+    gap: clamp(2.5rem, 6vw, 6rem);
+    width: min(100%, 75rem);
+    margin: 0 auto;
+}
+
+.rr-workshops-heading {
+    position: sticky;
+    top: 2rem;
+}
+
+.rr-workshops-heading h1 {
+    margin: 0;
+    color: var(--rr-blue);
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.12;
+    text-wrap: balance;
+}
+
+.rr-workshops-heading > p:not(.rr-about-dr-eyebrow) {
+    margin: 1rem 0 0;
+    color: #354761;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.rr-workshops-heading .rr-workshops-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 0.8rem;
+    border-top: 2px solid var(--rr-coral);
+    color: var(--rr-blue);
+    font-size: 0.875rem;
+    font-weight: 800;
+}
+
+.rr-workshops-list {
+    border-top: 1px solid rgba(var(--rr-blue-rgb, 54, 99, 171), 0.2);
+}
+
+.rr-workshop-item {
+    border-bottom: 1px solid rgba(var(--rr-blue-rgb, 54, 99, 171), 0.2);
+}
+
+.rr-workshop-item summary {
+    display: grid;
+    min-height: 4.5rem;
+    grid-template-columns: 2.5rem minmax(0, 1fr) 2rem;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    color: var(--rr-blue);
+    cursor: pointer;
+    list-style: none;
+}
+
+.rr-workshop-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.rr-workshop-number {
+    color: var(--rr-coral);
+    font-size: 0.875rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+.rr-workshop-title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.rr-workshop-toggle {
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border: 1px solid rgba(var(--rr-blue-rgb, 54, 99, 171), 0.24);
+    border-radius: 50%;
+    color: var(--rr-coral);
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.rr-workshop-item[open] .rr-workshop-toggle {
+    transform: rotate(45deg);
+    border-color: var(--rr-blue);
+    background: var(--rr-blue);
+    color: #fff;
+}
+
+.rr-workshop-item summary:hover .rr-workshop-title,
+.rr-workshop-item summary:focus-visible .rr-workshop-title {
+    color: var(--rr-coral);
+}
+
+.rr-workshop-description {
+    display: grid;
+    grid-template-rows: 0fr;
+    padding: 0 2.75rem 0 3.25rem;
+    transition: grid-template-rows 0.35s ease, padding-bottom 0.35s ease;
+}
+
+.rr-workshop-item[open] .rr-workshop-description {
+    grid-template-rows: 1fr;
+    padding-bottom: 1.25rem;
+}
+
+.rr-workshop-description p {
+    min-height: 0;
+    overflow: hidden;
+    max-width: 42rem;
+    margin: 0;
+    color: #46566b;
+    font-size: 0.975rem;
+    line-height: 1.7;
+}
+
+.rr-workshop-item summary:focus-visible {
+    outline: 3px solid var(--rr-coral);
+    outline-offset: 4px;
+}
+
+@media (max-width: 850px) {
+    .rr-workshops-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+    }
+
+    .rr-workshops-heading {
+        position: static;
+        max-width: 42rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .rr-workshops-section {
+        padding: 3.5rem 1rem;
+    }
+
+    .rr-workshops-heading h1 {
+        font-size: 2.125rem;
+    }
+
+    .rr-workshop-item summary {
+        min-height: 4rem;
+        grid-template-columns: 2rem minmax(0, 1fr) 1.75rem;
+        gap: 0.5rem;
+    }
+
+    .rr-workshop-title {
+        font-size: 0.975rem;
+    }
+
+    .rr-workshop-toggle {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .rr-workshop-description {
+        padding-right: 0.5rem;
+        padding-left: 2.5rem;
+    }
+
+    .rr-workshop-item[open] .rr-workshop-description {
+        padding-bottom: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rr-workshop-description,
+    .rr-workshop-toggle {
+        transition: none;
     }
 }

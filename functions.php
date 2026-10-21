@@ -67,10 +67,13 @@ add_action('wp_enqueue_scripts', function () {
             true
         );
         ravirao_theme_script('ravirao-theme-homepage', '/assets/js/homepage.js', ['ravirao-scrolltrigger']);
-    } elseif (is_page_template('templates/about-page.php') || is_page_template('templates/about-vaastu.php')) {
+    } elseif (is_page_template('templates/about-page.php') || is_page_template('templates/about-vaastu.php') || is_page_template('templates/about-dr-ravi-rao.php') || is_page_template('templates/about-publications.php') || is_page_template('templates/about-academic-contribution.php') || is_page_template('templates/about-workshops-seminars.php')) {
         ravirao_theme_style('ravirao-theme-about-page', '/assets/css/about-page.css', ['ravirao-theme-base']);
-        if (is_page_template('templates/about-vaastu.php')) {
+        if (is_page_template('templates/about-vaastu.php') || is_page_template('templates/about-dr-ravi-rao.php') || is_page_template('templates/about-publications.php') || is_page_template('templates/about-academic-contribution.php') || is_page_template('templates/about-workshops-seminars.php')) {
             ravirao_theme_style('ravirao-theme-about-subpages', '/assets/css/about-subpages.css', ['ravirao-theme-base', 'ravirao-theme-about-page']);
+        }
+        if (is_page_template('templates/about-dr-ravi-rao.php') || is_page_template('templates/about-publications.php')) {
+            ravirao_theme_style('ravirao-theme-homepage', '/assets/css/homepage.css', ['ravirao-theme-base']);
         }
         wp_enqueue_script(
             'ravirao-gsap',
@@ -87,6 +90,9 @@ add_action('wp_enqueue_scripts', function () {
             true
         );
         ravirao_theme_script('ravirao-theme-generic-animations', '/assets/js/generic-animations.js', ['ravirao-scrolltrigger']);
+        if (is_page_template('templates/about-publications.php')) {
+            ravirao_theme_script('ravirao-theme-homepage', '/assets/js/homepage.js', ['ravirao-scrolltrigger']);
+        }
     } elseif (is_page_template('templates/landing-page.php')) {
         ravirao_theme_style('ravirao-theme-landing', '/assets/css/landing.css', ['ravirao-theme-base']);
         ravirao_theme_script('ravirao-theme-landing', '/assets/js/landing.js');
