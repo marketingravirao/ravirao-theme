@@ -64,21 +64,21 @@
         </address>
         <ul class="footer-social-links-v2">
           <li><a href="https://www.facebook.com/DrRaviRaoOfficial/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <span class="dashicons dashicons-facebook-alt" aria-hidden="true"></span> <span class="footer-link-label">Facebook</span></a>
+            <span class="footer-social-icons dashicons dashicons-facebook-alt" aria-hidden="true"></span> <span class="footer-link-label">Facebook</span></a>
           </li>
           <li><a href="https://x.com/DrRaviRao" target="_blank" rel="noopener noreferrer" aria-label="X">
-            <svg class="footer-x-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <svg class="footer-social-icons footer-x-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg> <span class="footer-link-label">X (Twitter)</span></a>
           </li>
           <li><a href="https://www.instagram.com/drravirao/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <span class="dashicons dashicons-instagram" aria-hidden="true"></span> <span class="footer-link-label">Instagram</span></a>
+            <span class="footer-social-icons dashicons dashicons-instagram" aria-hidden="true"></span> <span class="footer-link-label">Instagram</span></a>
           </li>
           <li><a href="https://www.youtube.com/@DrRaoOfficialVaastuInsights" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <span class="dashicons dashicons-youtube" aria-hidden="true"></span> <span class="footer-link-label">YouTube</span></a>
+            <span class="footer-social-icons dashicons dashicons-youtube" aria-hidden="true"></span> <span class="footer-link-label">YouTube</span></a>
           </li>
           <li><a href="https://www.linkedin.com/in/dr-ravi-rao-a883021a8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <span class="dashicons dashicons-linkedin" aria-hidden="true"></span> <span class="footer-link-label">LinkedIn</span></a>
+            <span class="footer-social-icons dashicons dashicons-linkedin" aria-hidden="true"></span> <span class="footer-link-label">LinkedIn</span></a>
           </li>
         </ul>
       </div>
