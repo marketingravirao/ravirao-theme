@@ -26,7 +26,7 @@ get_header();
       <h2 id="about-destinations-title">Explore the work and ideas</h2>
     </div>
     <div class="about-card-grid rr-about-card-grid rr-reveal-group">
-      <a class="about-card rr-about-card rr-reveal rr-reveal-up" href="<?php echo esc_url(home_url('/new-about-dr-ravi-rao/')); ?>">
+      <a class="about-card rr-about-card rr-reveal rr-reveal-up" href="<?php echo esc_url(home_url('/new-vaastu-about-page/')); ?>">
         <img src="<?php echo esc_url(content_url('/uploads/2025/07/WhatsApp-Image-2025-05-14-at-2.06.43-PM-1.jpeg')); ?>" alt="About Vaastu" loading="lazy">
         <span class="about-card-title rr-about-card-title">About Vaastu</span>
         <span class="about-card-arrow rr-about-card-arrow" aria-hidden="true">&#8599;</span>

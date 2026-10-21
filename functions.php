@@ -67,8 +67,11 @@ add_action('wp_enqueue_scripts', function () {
             true
         );
         ravirao_theme_script('ravirao-theme-homepage', '/assets/js/homepage.js', ['ravirao-scrolltrigger']);
-    } elseif (is_page_template('templates/about-page.php') || is_page_template('templates/about-subpage.php')) {
+    } elseif (is_page_template('templates/about-page.php') || is_page_template('templates/about-subpages/vaastu.php')) {
         ravirao_theme_style('ravirao-theme-about-page', '/assets/css/about-page.css', ['ravirao-theme-base']);
+        if (is_page_template('templates/about-subpages/vaastu.php')) {
+            ravirao_theme_style('ravirao-theme-about-subpages', '/assets/css/about-subpages.css', ['ravirao-theme-base', 'ravirao-theme-about-page']);
+        }
         wp_enqueue_script(
             'ravirao-gsap',
             'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js',
