@@ -98,7 +98,7 @@ get_header();
 </section>
 
 <!-- Vaastu services -->
-<section class="vaastu-services-section rr-section rr-section--soft" id="vaastu-services" aria-labelledby="vaastu-services-heading">
+<section class="vaastu-services-section rr-section rr-section-soft" id="vaastu-services" aria-labelledby="vaastu-services-heading">
   <div class="rr-section-heading" data-reveal>
     <h2 class="rr-section-title" id="vaastu-services-heading">Vaastu Guidance for Every Kind of Space</h2>
     <p class="rr-section-tagline">Explore practical guidance for your business, property or personal goals.</p>
@@ -162,7 +162,7 @@ get_header();
 
 
 
-<div class="vaastu-industries-animated-section rr-section rr-section--soft">
+<div class="vaastu-industries-animated-section rr-section rr-section-soft">
   <div class="rr-section-heading">
     <h2 class="rr-section-title">Corporate Vaastu for Complex Business Environments</h2>
     <p class="rr-section-tagline">Focused guidance for the spaces where organizations work, build and serve their customers.</p>
@@ -240,7 +240,7 @@ get_header();
 
 
 <!-- Muhurtha feature -->
-<div class="muhurtha-section-brand rr-section rr-section--soft">
+<div class="muhurtha-section-brand rr-section rr-section-soft">
   <div class="rr-section-heading" data-reveal>
     <h2 class="muhurtha-section-heading rr-section-title">Explore the Full Muhurat Calendar</h2>
   </div>
@@ -316,7 +316,7 @@ get_header();
 
 
 <!-- Five elements carousel -->
-<section class="five-elements-carousel-section rr-section rr-section--soft" aria-labelledby="five-elements-heading">
+<section class="five-elements-carousel-section rr-section rr-section-soft" aria-labelledby="five-elements-heading">
   <div class="rr-section-heading" data-reveal>
     <h2 id="five-elements-heading" class="five-elements-carousel-heading rr-section-title">The Five Elements of Vaastu Shastra</h2>
   </div>
@@ -380,7 +380,7 @@ get_header();
 <!-- Media mentions and public features -->
 
 
-<section class="vaastu-heading-section rr-section rr-section--soft">
+<section class="vaastu-heading-section rr-section rr-section-soft">
   <div class="rr-section-heading" data-reveal>
     <h2 class="vaastu-heading-main rr-section-title">Featured in the Media: Dr. Ravi Rao’s Journey</h2>
   </div>

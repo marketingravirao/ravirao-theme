@@ -26,6 +26,15 @@
     --line-height-base: 1.6;
 }
 
+.rr-section-soft {
+    background: linear-gradient(
+        120deg,
+        rgba(var(--rr-blue-rgb, 54, 99, 171), 0.08) 0%,
+        rgba(var(--rr-coral-rgb, 254, 74, 57), 0.055) 52%,
+        rgba(var(--rr-blue-rgb, 54, 99, 171), 0.07) 100%
+    );
+}
+
 *{
 	font-family: var(--font-body) !important;
 }

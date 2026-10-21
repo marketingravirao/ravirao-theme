@@ -1,8 +1,4 @@
 <?php
-/*
-Template Name: About Vaastu (New)
-Template Post Type: page
-*/
 if (!defined('ABSPATH')) { exit; }
 get_header();
 ?>
@@ -21,25 +17,44 @@ get_header();
   </section>
 
   <section class="rr-vaastu-introduction" aria-labelledby="rr-vaastu-introduction-title">
-    <div class="rr-vaastu-introduction-heading rr-reveal rr-reveal-up">
-      <p class="about-eyebrow">The foundations</p>
-      <h2 id="rr-vaastu-introduction-title">Balance between people, place and nature</h2>
-    </div>
-    <div class="rr-vaastu-copy rr-reveal rr-reveal-up">
-      <p>Vaastu Shastra is the timeless science of constructing buildings in perfect harmony with nature. Rooted in the Sthapatya Veda, Vaastu evolved during the Vedic era and finds echoes in Buddhist literature as well as in traditions like Feng Shui across Asia.</p>
-      <p>The universe and the human body are both formed by five elements. True harmony—whether in nature or at home—requires a balance of these elements and an understanding of the eight cardinal directions. Each direction has unique qualities and Vaastu teaches how to harness them for health, prosperity, and well-being. The foundation of Vaastu lies in these directions: East, West, North, South, North-East, North-West, South-East, and South-West.</p>
-      <p>History shows that the power of any building grows immensely when built as per Vaastu. From the legendary city of Indraprastha (Delhi) designed by Vishwakarma for the Pandavas, to the great Indus Valley Civilisation—timeless Vaastu principles have shaped the world's most enduring cities.</p>
-      <p>Modern Vaastu goes beyond myth. By correcting subtle imbalances, it can revive failing fortunes, transform homes, and elevate entire companies. With greater awareness, people everywhere are rediscovering how Vaastu brings comfort, happiness, and a positive flow to life and business.</p>
+    <div class="rr-vaastu-introduction-inner">
+      <header class="rr-vaastu-introduction-heading rr-reveal rr-reveal-up">
+        <p class="about-eyebrow">The foundations</p>
+        <h2 id="rr-vaastu-introduction-title">Balance between people, place and nature</h2>
+      </header>
+      <div class="rr-vaastu-principle-list">
+        <article class="rr-vaastu-principle rr-reveal rr-reveal-up">
+          <span class="rr-vaastu-principle-number" aria-hidden="true">01</span>
+          <h3>Ancient roots</h3>
+          <p>Vaastu Shastra is the timeless science of constructing buildings in perfect harmony with nature. Rooted in the Sthapatya Veda, Vaastu evolved during the Vedic era and finds echoes in Buddhist literature as well as in traditions like Feng Shui across Asia.</p>
+        </article>
+        <article class="rr-vaastu-principle rr-reveal rr-reveal-up">
+          <span class="rr-vaastu-principle-number" aria-hidden="true">02</span>
+          <h3>Five elements, eight directions</h3>
+          <p>The universe and the human body are both formed by five elements. True harmony—whether in nature or at home—requires a balance of these elements and an understanding of the eight cardinal directions. Each direction has unique qualities and Vaastu teaches how to harness them for health, prosperity, and well-being. The foundation of Vaastu lies in these directions: East, West, North, South, North-East, North-West, South-East, and South-West.</p>
+        </article>
+        <article class="rr-vaastu-principle rr-reveal rr-reveal-up">
+          <span class="rr-vaastu-principle-number" aria-hidden="true">03</span>
+          <h3>A lasting influence</h3>
+          <p>History shows that the power of any building grows immensely when built as per Vaastu. From the legendary city of Indraprastha (Delhi) designed by Vishwakarma for the Pandavas, to the great Indus Valley Civilisation—timeless Vaastu principles have shaped the world's most enduring cities.</p>
+        </article>
+        <article class="rr-vaastu-principle rr-reveal rr-reveal-up">
+          <span class="rr-vaastu-principle-number" aria-hidden="true">04</span>
+          <h3>Vaastu today</h3>
+          <p>Modern Vaastu goes beyond myth. By correcting subtle imbalances, it can revive failing fortunes, transform homes, and elevate entire companies. With greater awareness, people everywhere are rediscovering how Vaastu brings comfort, happiness, and a positive flow to life and business.</p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="rr-vaastu-clients" aria-labelledby="rr-vaastu-clients-title">
+  <section class="rr-vaastu-clients rr-section-soft" aria-labelledby="rr-vaastu-clients-title">
     <div class="rr-vaastu-section-heading rr-reveal rr-reveal-up">
       <p class="about-eyebrow">Selected clients</p>
       <h2 id="rr-vaastu-clients-title">Experience across leading industries</h2>
     </div>
     <div class="rr-vaastu-logo-window" aria-label="Client organizations">
-      <ul class="rr-vaastu-logo-track">
+      <div class="rr-vaastu-logo-runway">
+       <ul class="rr-vaastu-logo-track">
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/Adani-Logo.png')); ?>" alt="Adani" loading="lazy"></li>
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/Arvind-Logo.png')); ?>" alt="Arvind" loading="lazy"></li>
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/CERA-logo.png')); ?>" alt="CERA" loading="lazy"></li>
@@ -49,8 +64,8 @@ get_header();
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/Sintex-logo.png')); ?>" alt="Sintex" loading="lazy"></li>
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/Somnay-logo.png')); ?>" alt="Somany" loading="lazy"></li>
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/vadilal-logo.png')); ?>" alt="Vadilal" loading="lazy"></li>
-      </ul>
-      <ul class="rr-vaastu-logo-track rr-vaastu-logo-track-duplicate" aria-hidden="true">
+        </ul>
+        <ul class="rr-vaastu-logo-track rr-vaastu-logo-track-duplicate" aria-hidden="true">
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/Adani-Logo.png')); ?>" alt="" loading="lazy"></li>
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/Arvind-Logo.png')); ?>" alt="" loading="lazy"></li>
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/CERA-logo.png')); ?>" alt="" loading="lazy"></li>
@@ -60,7 +75,8 @@ get_header();
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/Sintex-logo.png')); ?>" alt="" loading="lazy"></li>
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/Somnay-logo.png')); ?>" alt="" loading="lazy"></li>
         <li><img src="<?php echo esc_url(content_url('/uploads/2025/07/vadilal-logo.png')); ?>" alt="" loading="lazy"></li>
-      </ul>
+        </ul>
+            </div>
     </div>
   </section>
 

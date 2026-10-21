@@ -58,18 +58,26 @@
     line-height: 1.55;
 }
 
-.rr-vaastu-introduction,
+.rr-vaastu-introduction {
+    padding: 5.5rem 1.5rem;
+    background: #fff;
+}
+
+.rr-vaastu-introduction-inner {
+    width: min(100%, 75rem);
+    margin: 0 auto;
+}
+
 .rr-vaastu-testimonials {
     width: min(100%, 75rem);
     margin: 0 auto;
     padding: 5rem 1.5rem;
 }
 
-.rr-vaastu-introduction {
-    display: grid;
-    grid-template-columns: minmax(14rem, 0.75fr) minmax(0, 1.4fr);
-    align-items: start;
-    gap: clamp(2rem, 6vw, 6rem);
+.rr-vaastu-introduction-heading {
+    max-width: 46rem;
+    margin: 0 auto 3rem;
+    text-align: center;
 }
 
 .rr-vaastu-introduction-heading h2,
@@ -82,24 +90,54 @@
     text-wrap: balance;
 }
 
-.rr-vaastu-copy {
+.rr-vaastu-principle-list {
+    border-top: 1px solid #d9e0eb;
+}
+
+.rr-vaastu-principle {
+    display: grid;
+    grid-template-columns: 4rem minmax(13rem, 0.7fr) minmax(0, 1.3fr);
+    align-items: start;
+    gap: 1.5rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid #d9e0eb;
+}
+
+.rr-vaastu-principle-number {
+    color: var(--vaastu-coral);
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.rr-vaastu-principle h3 {
+    margin: 0;
+    color: var(--vaastu-blue);
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.rr-vaastu-principle p {
+    max-width: 48rem;
+    margin: 0;
     color: var(--vaastu-ink);
-    font-size: 1.0625rem;
+    font-size: 1rem;
     line-height: 1.75;
-}
-
-.rr-vaastu-copy > :first-child {
-    margin-top: 0;
-}
-
-.rr-vaastu-copy > :last-child {
-    margin-bottom: 0;
 }
 
 .rr-vaastu-clients {
     overflow: hidden;
-    padding: 4rem 0;
-    background: #f2f5fa;
+    padding: 4.5rem 0 5rem;
+}
+
+.rr-vaastu-clients .about-eyebrow {
+    color: var(--vaastu-coral);
+}
+
+.rr-vaastu-clients .rr-vaastu-section-heading h2 {
+    color: var(--vaastu-blue);
 }
 
 .rr-vaastu-section-heading {
@@ -112,25 +150,28 @@
 }
 
 .rr-vaastu-logo-window {
-    display: flex;
     width: 100%;
     overflow: hidden;
+}
+
+.rr-vaastu-logo-runway {
+    display: flex;
+    width: max-content;
+    animation: rr-vaastu-logo-scroll 44s linear infinite;
+}
+
+.rr-vaastu-logo-window:hover .rr-vaastu-logo-runway {
+    animation-play-state: paused;
 }
 
 .rr-vaastu-logo-track {
     display: flex;
     flex: 0 0 auto;
     align-items: center;
-    gap: 1.5rem;
-    min-width: 100%;
+    gap: 1.25rem;
     margin: 0;
     padding: 0 0.75rem;
     list-style: none;
-    animation: rr-vaastu-logo-scroll 42s linear infinite;
-}
-
-.rr-vaastu-logo-window:hover .rr-vaastu-logo-track {
-    animation-play-state: paused;
 }
 
 .rr-vaastu-logo-track li {
@@ -154,7 +195,7 @@
 
 @keyframes rr-vaastu-logo-scroll {
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
@@ -212,9 +253,13 @@
 }
 
 @media (max-width: 850px) {
-    .rr-vaastu-introduction {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1.5rem;
+    .rr-vaastu-principle {
+        grid-template-columns: 3.5rem minmax(0, 1fr);
+        gap: 0.75rem 1rem;
+    }
+
+    .rr-vaastu-principle p {
+        grid-column: 2;
     }
 
     .rr-vaastu-testimonial-grid {
@@ -239,7 +284,10 @@
         font-size: 1.0625rem;
     }
 
-    .rr-vaastu-introduction,
+    .rr-vaastu-introduction {
+        padding: 3.5rem 1.25rem;
+    }
+
     .rr-vaastu-testimonials {
         padding: 3.25rem 1rem;
     }
@@ -247,6 +295,29 @@
     .rr-vaastu-introduction-heading h2,
     .rr-vaastu-section-heading h2 {
         font-size: 1.875rem;
+    }
+
+    .rr-vaastu-introduction-heading {
+        margin-bottom: 2rem;
+    }
+
+    .rr-vaastu-principle {
+        grid-template-columns: 2.5rem minmax(0, 1fr);
+        gap: 0.5rem 0.75rem;
+        padding: 1.35rem 0;
+    }
+
+    .rr-vaastu-principle-number {
+        font-size: 1.5rem;
+    }
+
+    .rr-vaastu-principle h3 {
+        font-size: 1.05rem;
+    }
+
+    .rr-vaastu-principle p {
+        grid-column: 2;
+        font-size: 0.95rem;
     }
 
     .rr-vaastu-section-heading {
@@ -263,11 +334,16 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .rr-vaastu-logo-track {
+    .rr-vaastu-logo-runway {
         animation: none;
     }
 
     .rr-vaastu-logo-track-duplicate {
         display: none;
+    }
+
+    .rr-vaastu-logo-track:first-child {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
