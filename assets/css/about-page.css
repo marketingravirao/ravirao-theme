@@ -13,17 +13,19 @@
     max-width: 100%;
 }
 
-.about-hero {
+.about-hero,
+.rr-about-hero {
     position: relative;
     display: flex;
     min-height: 29rem;
-    align-items: flex-end;
+    align-items: center;
     overflow: hidden;
     background: var(--about-blue);
     isolation: isolate;
 }
 
-.about-hero::after {
+.about-hero::after,
+.rr-about-hero::after {
     position: absolute;
     z-index: -1;
     background: linear-gradient(90deg, rgba(18, 35, 59, 0.86), rgba(18, 35, 59, 0.5) 55%, rgba(18, 35, 59, 0.12));
@@ -31,7 +33,8 @@
     inset: 0;
 }
 
-.about-hero-image {
+.about-hero-image,
+.rr-about-hero-image {
     position: absolute;
     z-index: -2;
     width: 100%;
@@ -41,14 +44,16 @@
     inset: 0;
 }
 
-.about-hero-content {
+.about-hero-content,
+.rr-about-hero-content {
     width: min(100%, 75rem);
     margin: 0 auto;
     padding: 5rem 2rem 4.5rem;
     color: #fff;
 }
 
-.about-eyebrow {
+.about-eyebrow,
+.rr-about-eyebrow {
     margin: 0 0 0.8rem;
     color: var(--about-coral);
     font-size: 0.875rem;
@@ -56,7 +61,8 @@
     text-transform: uppercase;
 }
 
-.about-hero h1 {
+.about-hero h1,
+.rr-about-hero h1 {
     max-width: 50rem;
     margin: 0;
     color: #fff;
@@ -66,22 +72,36 @@
     text-wrap: balance;
 }
 
+.rr-hero-word-wrap {
+    display: inline-block;
+    overflow: hidden;
+    padding-bottom: 0.08em;
+    vertical-align: bottom;
+}
+
+.rr-hero-word {
+    display: inline-block;
+}
+
 .about-hero-subtitle {
     margin: 1rem 0 0;
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.25rem;
 }
 
-.about-destinations {
+.about-destinations,
+.rr-about-section {
     padding: 4.5rem 1.5rem 5rem;
 }
 
-.about-section-heading {
+.about-section-heading,
+.rr-about-heading {
     width: min(100%, 75rem);
     margin: 0 auto 2rem;
 }
 
-.about-section-heading h2 {
+.about-section-heading h2,
+.rr-about-heading h2 {
     margin: 0;
     color: var(--about-blue);
     font-size: 2.25rem;
@@ -90,20 +110,23 @@
     text-wrap: balance;
 }
 
-.about-section-heading > p:last-child {
+.about-section-heading > p:last-child,
+.rr-about-heading > p:last-child {
     margin: 0.75rem 0 0;
     color: var(--about-muted);
 }
 
-.about-card-grid {
+.about-card-grid,
+.rr-about-card-grid {
     display: grid;
     width: min(100%, 75rem);
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 2rem;
     margin: 0 auto;
 }
 
-.about-card {
+.about-card,
+.rr-about-card {
     position: relative;
     display: block;
     min-width: 0;
@@ -117,15 +140,18 @@
     text-decoration: none;
 }
 
-.about-card:nth-child(4) {
+.about-card:nth-child(4),
+.rr-about-card:nth-child(4) {
     grid-column: 2 / span 2;
 }
 
-.about-card:nth-child(5) {
+.about-card:nth-child(5),
+.rr-about-card:nth-child(5) {
     grid-column: 4 / span 2;
 }
 
-.about-card::after {
+.about-card::after,
+.rr-about-card::after {
     position: absolute;
     z-index: -1;
     background: linear-gradient(180deg, transparent 34%, rgba(12, 24, 42, 0.76));
@@ -133,7 +159,8 @@
     inset: 0;
 }
 
-.about-card img {
+.about-card img,
+.rr-about-card img {
     position: absolute;
     z-index: -2;
     width: 100%;
@@ -143,7 +170,8 @@
     inset: 0;
 }
 
-.about-card-title {
+.about-card-title,
+.rr-about-card-title {
     position: absolute;
     right: 3.5rem;
     bottom: 1.25rem;
@@ -154,7 +182,8 @@
     text-wrap: balance;
 }
 
-.about-card-arrow {
+.about-card-arrow,
+.rr-about-card-arrow {
     position: absolute;
     right: 1rem;
     bottom: 1rem;
@@ -171,37 +200,48 @@
 }
 
 .about-card:hover img,
-.about-card:focus-visible img {
+.about-card:focus-visible img,
+.rr-about-card:hover img,
+.rr-about-card:focus-visible img {
     transform: scale(1.04);
 }
 
 .about-card:hover .about-card-arrow,
-.about-card:focus-visible .about-card-arrow {
+.about-card:focus-visible .about-card-arrow,
+.rr-about-card:hover .rr-about-card-arrow,
+.rr-about-card:focus-visible .rr-about-card-arrow {
     border-color: #fff;
     background: #fff;
     color: var(--about-blue);
 }
 
-.about-card:focus-visible {
+.about-card:focus-visible,
+.rr-about-card:focus-visible {
     outline: 3px solid var(--about-coral);
     outline-offset: 3px;
 }
 
-.about-calendar {
+.about-calendar,
+.rr-about-calendar {
     padding: 4rem 1.5rem 5rem;
     background: #f2f5fa;
 }
 
-.about-calendar-inner {
+.about-calendar-inner,
+.rr-about-inner {
     width: min(100%, 75rem);
     margin: 0 auto;
 }
 
-.about-calendar .about-section-heading {
+.about-calendar .about-section-heading,
+.about-calendar .rr-about-heading,
+.rr-about-calendar .rr-about-heading,
+.rr-about-calendar .about-section-heading {
     margin-bottom: 1.5rem;
 }
 
-.about-calendar-widget {
+.about-calendar-widget,
+.rr-about-widget {
     min-width: 0;
     overflow-x: auto;
     padding: 1.25rem;
@@ -209,6 +249,62 @@
     border-radius: 0.5rem;
     background: #fff;
     box-shadow: 0 0.6rem 1.8rem rgba(29, 52, 84, 0.07);
+}
+
+.rr-about-content-section {
+    padding: 4.5rem 1.5rem 5rem;
+}
+
+.rr-about-content {
+    width: min(100%, 75rem);
+    margin: 0 auto;
+    color: var(--about-ink);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+}
+
+.rr-about-content > :first-child {
+    margin-top: 0;
+}
+
+.rr-about-content > :last-child {
+    margin-bottom: 0;
+}
+
+.rr-about-content h2,
+.rr-about-content h3,
+.rr-about-content h4 {
+    color: var(--about-blue);
+    font-weight: 800;
+    line-height: 1.2;
+    text-wrap: balance;
+}
+
+.rr-about-content h2 {
+    margin-top: 2.75rem;
+    font-size: 2.25rem;
+}
+
+.rr-about-content h3 {
+    margin-top: 2rem;
+    font-size: 1.65rem;
+}
+
+.rr-about-content a {
+    color: var(--about-blue);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+.rr-about-content img,
+.rr-about-content video,
+.rr-about-content iframe {
+    max-width: 100%;
+}
+
+.rr-about-content figure {
+    margin-right: 0;
+    margin-left: 0;
 }
 
 @media (max-width: 850px) {
@@ -247,8 +343,20 @@
         padding: 3.25rem 1rem;
     }
 
+    .rr-about-content-section {
+        padding: 3.25rem 1rem;
+    }
+
     .about-section-heading h2 {
         font-size: 1.875rem;
+    }
+
+    .rr-about-content h2 {
+        font-size: 1.875rem;
+    }
+
+    .rr-about-content h3 {
+        font-size: 1.4rem;
     }
 
     .about-card-grid {
@@ -278,5 +386,14 @@
     .about-card img,
     .about-card-arrow {
         transition: none;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .rr-reveal,
+    [data-reveal],
+    .rr-reveal-group > *,
+    [data-reveal-group] > * {
+        will-change: transform, opacity;
     }
 }
