@@ -1,4 +1,3 @@
-/* Local font: add NunitoSans-Variable.woff2 to assets/fonts/. */
 /* Satoshi - Normal */
 @font-face {
     font-family: "Satoshi";
@@ -19,9 +18,9 @@
 
 :root {
     --content-width: 1140px;
-    --text-color: #17212b;
+    --text-color: #3663ab;
     --background-color: #ffffff;
-    --accent-color: #2458a6;
+    --accent-color: #fe4a39;
     --font-body: "Satoshi", sans-serif;
     --font-size-base: 16px;
     --line-height-base: 1.6;

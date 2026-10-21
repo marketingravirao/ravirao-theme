@@ -3,16 +3,12 @@
 Classic WordPress theme. Install the ZIP through Appearance → Themes → Add New → Upload Theme.
 
 ## Fonts
-Copy Nunito Sans variable WOFF2 fonts to `assets/fonts/` with these exact filenames:
-- `NunitoSans-Variable.woff2`
-- `NunitoSans-Italic-Variable.woff2`
-
-See `assets/fonts/README.md`. Until installed, Arial is used as a fallback.
-Font sizes and type scale are in `assets/css/base.css`.
+The site uses the locally bundled Satoshi variable font in `assets/fonts/satoshi/TTF/`.
+Font sizes and the type scale are defined in `assets/css/base.css`.
 
 ## Assets
 - Global: base.css, header.css, footer.css, main.js
-- Front page: homepage.css, homepage.js
+- Front page: homepage.css, homepage.js (GSAP and ScrollTrigger loaded from cdnjs)
 - Landing Page: landing.css, landing.js
 - Full Width: full-width.css
 - Blank Page: blank.css (without site header/footer)
@@ -22,8 +18,8 @@ Production uses the theme `Version` header in style.css. Bump it for each deploy
 For development, set `define('RAVIRAO_THEME_DEV_ASSETS', true);` in wp-config.php to use file modification timestamps.
 
 ## Templates
-The homepage sections are rendered by `front-page.php` and its styles/scripts are loaded only on the front page. Set the desired page as the static homepage under Settings → Reading.
+The homepage sections are rendered by `front-page.php`, registered as the **Ravi Rao Homepage (Testing)** page template. Select it from the page template selector to test the layout on a regular page, or set the desired page as the static homepage under Settings → Reading. Its styles, scripts, and GSAP animations load on either use. The Travel Calendar shortcode remains independently styled and managed.
 
 Select Landing Page, Full Width, or Blank Page from the WordPress page template selector.
-Configure navigation menus and optional logo in the WordPress dashboard.
+Configure the Main Menu and optional logo in Appearance → Menus or the WordPress Site Editor.
 # ravirao-theme

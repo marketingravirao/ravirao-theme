@@ -1,5 +1,5 @@
 </main>
-<?php if (!is_front_page()) : ?>
+<?php if (!is_front_page() && !is_page_template('front-page.php')) : ?>
 <footer class="site-footer">
   <div class="container footer-inner">
     <p>&copy; <?php echo esc_html(wp_date('Y')); ?> <?php echo esc_html(get_bloginfo('name')); ?></p>

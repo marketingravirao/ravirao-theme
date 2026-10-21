@@ -12,7 +12,7 @@ add_action('after_setup_theme', function () {
     add_theme_support('responsive-embeds');
     add_theme_support('align-wide');
     add_theme_support('custom-logo', ['height' => 80, 'width' => 240, 'flex-height' => true, 'flex-width' => true]);
-    register_nav_menus(['primary' => __('Primary Menu', 'ravirao-theme'), 'footer' => __('Footer Menu', 'ravirao-theme')]);
+    register_nav_menus(['primary' => __('Main Menu', 'ravirao-theme'), 'footer' => __('Footer Menu', 'ravirao-theme')]);
 });
 
 function ravirao_theme_asset_version($relative_path) {
@@ -37,23 +37,36 @@ function ravirao_theme_script($handle, $relative, $deps = []) {
 }
 
 add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style('dashicons');
     ravirao_theme_style('ravirao-theme-base', '/assets/css/base.css');
     ravirao_theme_style('ravirao-theme-header', '/assets/css/header.css', ['ravirao-theme-base']);
     ravirao_theme_style('ravirao-theme-footer', '/assets/css/footer.css', ['ravirao-theme-base']);
     ravirao_theme_script('ravirao-theme-main', '/assets/js/main.js');
 
-    if (is_front_page()) {
-        wp_enqueue_style(
-            'ravirao-homepage-fonts',
-            'https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap'
+    if (is_front_page() || is_page_template('front-page.php')) {
+        ravirao_theme_style('ravirao-theme-homepage', '/assets/css/homepage.css', ['ravirao-theme-base']);
+        wp_enqueue_script(
+            'ravirao-gsap',
+            'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js',
+            [],
+            '3.13.0',
+            true
         );
-        wp_enqueue_style(
-            'ravirao-homepage-fonts-regular',
-            'https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap',
-            ['ravirao-homepage-fonts']
+        wp_enqueue_script(
+            'ravirao-scrolltrigger',
+            'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js',
+            ['ravirao-gsap'],
+            '3.13.0',
+            true
         );
-        ravirao_theme_style('ravirao-theme-homepage', '/assets/css/homepage.css', ['ravirao-homepage-fonts-regular']);
-        ravirao_theme_script('ravirao-theme-homepage', '/assets/js/homepage.js');
+        ravirao_theme_script('ravirao-theme-homepage', '/assets/js/homepage.js', ['ravirao-scrolltrigger']);
+        wp_enqueue_script(
+            'leadconnector-form-embed',
+            'https://link.msgsndr.com/js/form_embed.js',
+            [],
+            null,
+            true
+        );
     } elseif (is_page_template('templates/landing-page.php')) {
         ravirao_theme_style('ravirao-theme-landing', '/assets/css/landing.css', ['ravirao-theme-base']);
         ravirao_theme_script('ravirao-theme-landing', '/assets/js/landing.js');
