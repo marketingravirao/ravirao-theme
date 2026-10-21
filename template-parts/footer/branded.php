@@ -43,13 +43,13 @@
     <div class="footer-col-v2 links">
       <div class="footer-heading-v2"><span class="footer-bar-v2"></span> <span>Links</span></div>
       <ul>
-        <li><a href="https://staging.ravirao.com/new-homepage/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Home</span></a></li>
-        <li><a href="https://staging.ravirao.com/new-main-about-page/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">About</span></a></li>
-        <li><a href="https://staging.ravirao.com/newclient/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Clients</span></a></li>
-        <li><a href="https://staging.ravirao.com/new-media-page/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Media</span></a></li>
-        <li><a href="https://staging.ravirao.com/new-services-page/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Services</span></a></li>
-        <li><a href="https://staging.ravirao.com/new-contact-us-page/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Contact</span></a></li>
-        <li><a href="https://staging.ravirao.com/new-carrer-page/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Career</span></a></li>
+        <li><a href="https://rrstaging.ravirao.com/new-homepage/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Home</span></a></li>
+        <li><a href="https://rrstaging.ravirao.com/new-main-about-page/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">About</span></a></li>
+        <li><a href="https://rrstaging.ravirao.com/newclient/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Clients</span></a></li>
+        <li><a href="https://rrstaging.ravirao.com/new-media-page/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Media</span></a></li>
+        <li><a href="https://rrstaging.ravirao.com/new-services-page/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Services</span></a></li>
+        <li><a href="https://rrstaging.ravirao.com/new-contact-us-page/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Contact</span></a></li>
+        <li><a href="https://rrstaging.ravirao.com/new-carrer-page/"><span class="footer-link-arrow">&#8250;</span> <span class="footer-link-label">Career</span></a></li>
       </ul>
     </div>
     <div class="footer-col-v2 contact">
@@ -60,7 +60,7 @@
           S. G. Highway, Ahmedabad – 380015,<br>
           Gujarat (India)<br>
           <a href="tel:+919099608886">+91-9099608886</a><br>
-          <a href="mailto:office@staging.ravirao.com">office@staging.ravirao.com</a>
+          <a href="mailto:office@rrstaging.ravirao.com">office@rrstaging.ravirao.com</a>
         </address>
         <ul class="footer-social-links-v2">
           <li><a href="https://www.facebook.com/DrRaviRaoOfficial/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">

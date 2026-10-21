@@ -12,7 +12,7 @@ get_header();
 
 <div class="hero-slider-section" id="heroSlider" role="region" aria-roledescription="carousel" aria-label="Corporate Vaastu highlights">
   <div class="hero-slide active">
-    <img class="hero-slide-bg" src="https://staging.ravirao.com/wp-content/uploads/2025/07/2B2A4121-scaled.jpg" alt="Corporate Vaastu Hero 1">
+    <img class="hero-slide-bg" src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/2B2A4121-scaled.jpg" alt="Corporate Vaastu Hero 1">
     <div class="hero-slide-content">
       <div class="hero-title">Align Your Business for Success with India’s Leading Corporate Vaastu Expert</div>
       <div class="hero-subtitle">The Go-To Vaastu Expert for India’s Leading Corporations</div>
@@ -23,7 +23,7 @@ get_header();
     </div>
   </div>
   <div class="hero-slide">
-    <img class="hero-slide-bg" src="https://staging.ravirao.com/wp-content/uploads/2025/06/27092016_053130.jpg" alt="Corporate Vaastu Hero 2">
+    <img class="hero-slide-bg" src="https://rrstaging.ravirao.com/wp-content/uploads/2025/06/27092016_053130.jpg" alt="Corporate Vaastu Hero 2">
     <div class="hero-slide-content">
       <div class="hero-title">Align Your Business for Success with India’s Leading Corporate Vaastu Expert</div>
       <div class="hero-subtitle">The Go-To Vaastu Expert for India’s Leading Corporations</div>
@@ -34,7 +34,7 @@ get_header();
     </div>
   </div>
   <div class="hero-slide">
-    <img class="hero-slide-bg" src="https://staging.ravirao.com/wp-content/uploads/2025/06/14092016_102154.jpg" alt="Corporate Vaastu Hero 3">
+    <img class="hero-slide-bg" src="https://rrstaging.ravirao.com/wp-content/uploads/2025/06/14092016_102154.jpg" alt="Corporate Vaastu Hero 3">
     <div class="hero-slide-content">
       <div class="hero-title">Align Your Business for Success with India’s Leading Corporate Vaastu Expert</div>
       <div class="hero-subtitle">The Go-To Vaastu Expert for India’s Leading Corporations</div>
@@ -45,7 +45,7 @@ get_header();
     </div>
   </div>
   <div class="hero-slide">
-    <img class="hero-slide-bg" src="https://staging.ravirao.com/wp-content/uploads/2025/06/27092016_053124.jpg" alt="Corporate Vaastu Hero 4">
+    <img class="hero-slide-bg" src="https://rrstaging.ravirao.com/wp-content/uploads/2025/06/27092016_053124.jpg" alt="Corporate Vaastu Hero 4">
     <div class="hero-slide-content">
       <div class="hero-title">Align Your Business for Success with India’s Leading Corporate Vaastu Expert</div>
       <div class="hero-subtitle">The Go-To Vaastu Expert for India’s Leading Corporations</div>
@@ -64,7 +64,7 @@ get_header();
 <div class="ravi-section-modern rr-section">
   <div class="ravi-content-wrapper-modern rr-container">
     <div class="ravi-photo-modern rr-card" data-reveal="right">
-      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/55-scaled-e1751979726799.jpg" alt="Dr. Ravi Rao">
+      <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/55-scaled-e1751979726799.jpg" alt="Dr. Ravi Rao">
     </div>
     <div class="ravi-details-modern" data-reveal="left">
       <div class="rr-section-heading">
@@ -77,7 +77,7 @@ get_header();
       <p>
         His clients include industrialists in India and abroad. His scientific, logical approach focuses on understanding each client’s needs and aligning their surroundings with the principles of nature.
       </p>
-      <a class="rr-button know-more-btn-modern" href="https://staging.ravirao.com/new-about-dr-ravi-rao/">Know More About Dr. Rao</a>
+      <a class="rr-button know-more-btn-modern" href="https://rrstaging.ravirao.com/new-about-dr-ravi-rao/">Know More About Dr. Rao</a>
     </div>
   </div>
 </div>
@@ -104,26 +104,26 @@ get_header();
     <p class="rr-section-tagline">Explore practical guidance for your business, property or personal goals.</p>
   </div>
   <div class="vaastu-services-wrapper rr-container" data-reveal-group>
-    <a href="https://staging.ravirao.com/new-astro-guidance-page/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
-      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-4.jpg" alt="Astro Guidance" />
+    <a href="https://rrstaging.ravirao.com/new-astro-guidance-page/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
+      <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-4.jpg" alt="Astro Guidance" />
       <div class="vaastu-card-title-highlight"><span>Astro Guidance</span></div>
       <p>Personal astrology and Vaastu guidance for important life and business decisions.</p>
       <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
     </a>
-    <a href="https://staging.ravirao.com/new-corporate-astro-vaastu/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
-      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/IMG_9336-scaled.jpg" alt="Corporate Astro Vaastu" />
+    <a href="https://rrstaging.ravirao.com/new-corporate-astro-vaastu/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
+      <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/IMG_9336-scaled.jpg" alt="Corporate Astro Vaastu" />
       <div class="vaastu-card-title-highlight"><span>Corporate Astro Vaastu</span></div>
       <p>Strategic spatial guidance for offices, organizations and leadership teams.</p>
       <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
     </a>
-    <a href="https://staging.ravirao.com/new-industrial-vaastu/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
-      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/WhatsApp-Image-2024-03-22-at-4.17.01-PM-e1751958980581.jpeg" alt="Industrial Vaastu" />
+    <a href="https://rrstaging.ravirao.com/new-industrial-vaastu/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
+      <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/WhatsApp-Image-2024-03-22-at-4.17.01-PM-e1751958980581.jpeg" alt="Industrial Vaastu" />
       <div class="vaastu-card-title-highlight"><span>Industrial Vaastu</span></div>
       <p>Vaastu guidance for factories, industrial plants and operational spaces.</p>
       <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
     </a>
-    <a href="https://staging.ravirao.com/new-commercial-vaastu/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
-      <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/2B2A9000-scaled.jpg" alt="Commercial Vaastu" />
+    <a href="https://rrstaging.ravirao.com/new-commercial-vaastu/" class="vaastu-service-card rr-card" target="_blank" rel="noopener noreferrer">
+      <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/2B2A9000-scaled.jpg" alt="Commercial Vaastu" />
       <div class="vaastu-card-title-highlight"><span>Commercial Vaastu</span></div>
       <p>Thoughtful spatial recommendations for commercial and customer-facing properties.</p>
       <span class="vaastu-service-action">Explore guidance <span aria-hidden="true">→</span></span>
@@ -137,24 +137,24 @@ get_header();
     <p class="rr-section-tagline">Organizations across industries have placed their trust in Dr. Ravi Rao’s Vaastu expertise.</p>
   </div>
   <div class="carousel-track">
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="Adani" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="Arvind" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/CERA-logo.png" alt="CERA" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Havmor-logo.png" alt="Havmor" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/RKumar-logo.png" alt="R Kumar" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Shobha-logo.png" alt="Shobha Asar" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="Sintex" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="Somany" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="Vadilal" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="" aria-hidden="true" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="" aria-hidden="true" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/CERA-logo.png" alt="" aria-hidden="true" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Havmor-logo.png" alt="" aria-hidden="true" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/RKumar-logo.png" alt="" aria-hidden="true" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Shobha-logo.png" alt="" aria-hidden="true" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="" aria-hidden="true" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="" aria-hidden="true" />
-    <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="" aria-hidden="true" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="Adani" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="Arvind" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/CERA-logo.png" alt="CERA" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Havmor-logo.png" alt="Havmor" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/RKumar-logo.png" alt="R Kumar" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Shobha-logo.png" alt="Shobha Asar" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="Sintex" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="Somany" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="Vadilal" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Adani-Logo.png" alt="" aria-hidden="true" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Arvind-Logo.png" alt="" aria-hidden="true" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/CERA-logo.png" alt="" aria-hidden="true" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Havmor-logo.png" alt="" aria-hidden="true" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/RKumar-logo.png" alt="" aria-hidden="true" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Shobha-logo.png" alt="" aria-hidden="true" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Sintex-logo.png" alt="" aria-hidden="true" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Somnay-logo.png" alt="" aria-hidden="true" />
+    <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/vadilal-logo.png" alt="" aria-hidden="true" />
   </div>
 </div>
 
@@ -248,13 +248,13 @@ get_header();
     <div class="muhurtha-img-link">
       <div class="muhurtha-img-container rr-card">
         <!-- Main Image (Default) -->
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/DSCF9710-scaled.jpg" alt="Muhurtha Symbols" class="muhurtha-img-main" />
+        <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/DSCF9710-scaled.jpg" alt="Muhurtha Symbols" class="muhurtha-img-main" />
         <!-- Hover Image (Shows on Hover) -->
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-41-scaled.png" alt="Discover Dates" class="muhurtha-img-hover" />
+        <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-41-scaled.png" alt="Discover Dates" class="muhurtha-img-hover" />
       </div>
       <!-- Button removed completely -->
     </div>
-    <a href="https://staging.ravirao.com/new-muhurat/" class="rr-button muhurtha-cta-btn" data-tooltip="View Calendar – Auspicious Dates Inside!" target="_blank" rel="noopener noreferrer">
+    <a href="https://rrstaging.ravirao.com/new-muhurat/" class="rr-button muhurtha-cta-btn" data-tooltip="View Calendar – Auspicious Dates Inside!" target="_blank" rel="noopener noreferrer">
       Click Here to View Full Calendar
     </a>
   </div>
@@ -441,7 +441,7 @@ get_header();
       </p>
       <div class="vaastu-blog-footer">
         <div class="vaastu-blog-author">Dr. Ravi Rao</div>
-        <a class="vaastu-blog-link" href="https://staging.ravirao.com/from-soil-to-soul-the-untold-power-of-bhoomi-poojan-in-vastu-shastra/" target="_blank" rel="noopener noreferrer">Read More</a>
+        <a class="vaastu-blog-link" href="https://rrstaging.ravirao.com/from-soil-to-soul-the-untold-power-of-bhoomi-poojan-in-vastu-shastra/" target="_blank" rel="noopener noreferrer">Read More</a>
       </div>
     </div>
     <!-- Blog Card 2 -->
@@ -453,7 +453,7 @@ get_header();
       </p>
       <div class="vaastu-blog-footer">
         <div class="vaastu-blog-author">Dr. Ravi Rao</div>
-        <a class="vaastu-blog-link" href="https://staging.ravirao.com/not-your-home-not-a-problem-vastu-hacks-for-rented-spaces-that-actually-work/" target="_blank" rel="noopener noreferrer">Read More</a>
+        <a class="vaastu-blog-link" href="https://rrstaging.ravirao.com/not-your-home-not-a-problem-vastu-hacks-for-rented-spaces-that-actually-work/" target="_blank" rel="noopener noreferrer">Read More</a>
       </div>
     </div>
     <!-- Blog Card 3 -->
@@ -465,12 +465,12 @@ get_header();
       </p>
       <div class="vaastu-blog-footer">
         <div class="vaastu-blog-author">Dr. Ravi Rao</div>
-        <a class="vaastu-blog-link" href="https://staging.ravirao.com/hidden-wealth-how-vastu-compliant-storage-can-boost-factory-output-and-harmony/" target="_blank" rel="noopener noreferrer">Read More</a>
+        <a class="vaastu-blog-link" href="https://rrstaging.ravirao.com/hidden-wealth-how-vastu-compliant-storage-can-boost-factory-output-and-harmony/" target="_blank" rel="noopener noreferrer">Read More</a>
       </div>
     </div>
   </div>
   <div class="vaastu-blogs-more">
-    <a class="rr-button vaastu-blogs-more-btn" href="https://staging.ravirao.com/category/vaastu/" target="_blank" rel="noopener noreferrer">Explore More Vaastu Blogs</a>
+    <a class="rr-button vaastu-blogs-more-btn" href="https://rrstaging.ravirao.com/category/vaastu/" target="_blank" rel="noopener noreferrer">Explore More Vaastu Blogs</a>
   </div>
 </div>
 

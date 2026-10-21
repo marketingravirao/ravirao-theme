@@ -12,13 +12,13 @@
   <div class="header-left">
     <div class="header-contact">
       <span class="header-icon">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-36.png" alt="" width="25" height="25">
+        <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-36.png" alt="" width="25" height="25">
       </span>
-      <a href="mailto:office@staging.ravirao.com">office@staging.ravirao.com</a>
+      <a href="mailto:office@rrstaging.ravirao.com">office@rrstaging.ravirao.com</a>
     </div>
     <div class="header-contact">
       <span class="header-icon">
-        <img src="https://staging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-37.png" alt="" width="25" height="25">
+        <img src="https://rrstaging.ravirao.com/wp-content/uploads/2025/07/Untitled-design-37.png" alt="" width="25" height="25">
       </span>
       <a href="tel:+919099608886">+91-9099608886</a>
     </div>
