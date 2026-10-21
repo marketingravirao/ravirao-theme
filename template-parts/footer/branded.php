@@ -1,3 +1,39 @@
+<section class="business-enquiry-section" id="business-enquiry" aria-labelledby="business-enquiry-heading">
+    <div class="business-enquiry-heading">
+      <h2 class="rr-section-title" id="business-enquiry-heading">Let’s Discuss Your Project</h2>
+      <p class="rr-section-tagline">Tell us about your space and the guidance you’re looking for. We’ll help you find the right next step.</p>
+    </div>
+    <div class="business-enquiry-layout">
+      <div class="business-enquiry-copy">
+        <p class="business-enquiry-eyebrow">Start a conversation</p>
+        <h3>Thoughtful guidance begins with understanding your space.</h3>
+        <p>Whether you’re planning a new project or reviewing an existing workplace, share your goals and our team will guide you toward the appropriate consultation.</p>
+        <a class="business-enquiry-direct-contact" href="tel:+919099608886">Prefer to speak? Call +91-9099608886</a>
+      </div>
+      <div class="business-enquiry-form">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/hkAoJptF0VSu3fKDMUKU"
+          id="inline-hkAoJptF0VSu3fKDMUKU"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="RR website form"
+          data-height="459"
+          data-layout-iframe-id="inline-hkAoJptF0VSu3fKDMUKU"
+          data-form-id="hkAoJptF0VSu3fKDMUKU"
+          title="RR website form">
+        </iframe>
+        <?php $privacy_policy_url = get_privacy_policy_url(); ?>
+        <?php if ($privacy_policy_url) : ?>
+          <p class="business-enquiry-privacy">Your details are handled according to our <a href="<?php echo esc_url($privacy_policy_url); ?>">privacy policy</a>.</p>
+        <?php endif; ?>
+      </div>
+    </div>
+  </section>
 <footer class="main-footer-branded-v2">
   <div class="footer-content-v2">
     <div class="footer-col-v2 about">

@@ -42,6 +42,13 @@ add_action('wp_enqueue_scripts', function () {
     ravirao_theme_style('ravirao-theme-header', '/assets/css/header.css', ['ravirao-theme-base']);
     ravirao_theme_style('ravirao-theme-footer', '/assets/css/footer.css', ['ravirao-theme-base']);
     ravirao_theme_script('ravirao-theme-main', '/assets/js/main.js');
+    wp_enqueue_script(
+        'leadconnector-form-embed',
+        'https://link.msgsndr.com/js/form_embed.js',
+        [],
+        null,
+        true
+    );
 
     if (is_front_page() || is_page_template('front-page.php')) {
         ravirao_theme_style('ravirao-theme-homepage', '/assets/css/homepage.css', ['ravirao-theme-base']);
@@ -60,13 +67,6 @@ add_action('wp_enqueue_scripts', function () {
             true
         );
         ravirao_theme_script('ravirao-theme-homepage', '/assets/js/homepage.js', ['ravirao-scrolltrigger']);
-        wp_enqueue_script(
-            'leadconnector-form-embed',
-            'https://link.msgsndr.com/js/form_embed.js',
-            [],
-            null,
-            true
-        );
     } elseif (is_page_template('templates/landing-page.php')) {
         ravirao_theme_style('ravirao-theme-landing', '/assets/css/landing.css', ['ravirao-theme-base']);
         ravirao_theme_script('ravirao-theme-landing', '/assets/js/landing.js');

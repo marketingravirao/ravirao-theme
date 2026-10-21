@@ -769,89 +769,6 @@ html {
   }
 }
 
-/* LeadConnector enquiry form */
-.business-enquiry-form {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  overflow: hidden;
-}
-
-.business-enquiry-form iframe {
-  display: block;
-  width: 100%;
-  min-height: 459px;
-  border: 0;
-  border-radius: 0.85rem;
-  background: transparent;
-  box-shadow: none;
-  -webkit-mask-image: none;
-  mask-image: none;
-}
-
-.business-enquiry-form iframe[src*="leadconnectorhq"] {
-  background: transparent;
-}
-
-.business-enquiry-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  align-items: start;
-  gap: clamp(2rem, 5vw, 4rem);
-  padding: clamp(1.5rem, 4vw, 3.5rem);
-  border: 1px solid rgba(var(--rr-blue-rgb), 0.1);
-  border-radius: var(--rr-radius);
-  background: var(--rr-white);
-  box-shadow: var(--rr-shadow);
-}
-
-.business-enquiry-copy {
-  max-width: 32rem;
-}
-
-.business-enquiry-copy h3 {
-  margin-bottom: 1rem;
-  color: var(--rr-blue);
-  font-size: clamp(1.65rem, 2.6vw, 2.25rem);
-  letter-spacing: -0.025em;
-  line-height: 1.2;
-  text-wrap: balance;
-}
-
-.business-enquiry-copy p {
-  color: rgba(var(--rr-blue-rgb), 0.86);
-}
-
-.business-enquiry-eyebrow {
-  margin-bottom: 0.75rem;
-  color: var(--rr-coral) !important;
-  font-size: var(--rr-text-xs);
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.business-enquiry-direct-contact {
-  display: inline-flex;
-  margin-top: 0.75rem;
-  color: var(--rr-blue);
-  font-weight: 800;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-}
-
-.business-enquiry-privacy {
-  margin: 0;
-  padding: 0.75rem 1rem;
-  color: rgba(var(--rr-blue-rgb), 0.72);
-  font-size: var(--rr-text-xs);
-}
-
-.business-enquiry-privacy a {
-  color: var(--rr-blue);
-  font-weight: 700;
-}
-
 /* Responsive layout */
 @media (max-width: 900px) {
   .home .menu-toggle,
@@ -1392,10 +1309,6 @@ html {
   padding: 1rem;
 }
 
-.ravirao-homepage .business-enquiry-section {
-  scroll-margin-top: 8rem;
-}
-
 .ravirao-homepage .ravi-details-modern > p,
 .ravirao-homepage .vaastu-panchmaha-content p {
   font-size: clamp(1rem, 1.02vw, 1.1rem);
@@ -1445,13 +1358,6 @@ html {
     padding-inline: 0.5rem;
   }
 
-  .business-enquiry-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .business-enquiry-copy {
-    max-width: 38rem;
-  }
 }
 
 @media (max-width: 480px) {
