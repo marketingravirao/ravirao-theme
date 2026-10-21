@@ -90,6 +90,9 @@ add_action('wp_enqueue_scripts', function () {
             true
         );
         ravirao_theme_script('ravirao-theme-generic-animations', '/assets/js/generic-animations.js', ['ravirao-scrolltrigger']);
+        if (is_page_template('templates/about-workshops-seminars.php')) {
+            ravirao_theme_script('ravirao-about-workshops', '/assets/js/about-workshops.js');
+        }
         if (is_page_template('templates/about-publications.php')) {
             ravirao_theme_script('ravirao-theme-homepage', '/assets/js/homepage.js', ['ravirao-scrolltrigger']);
         }

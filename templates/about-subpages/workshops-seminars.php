@@ -53,16 +53,21 @@ get_header();
       </header>
       <div class="rr-workshops-list" aria-label="Seminars and workshops">
         <?php foreach ($seminars as $index => $seminar) : ?>
-          <details class="rr-workshop-item rr-reveal rr-reveal-up">
-            <summary>
-              <span class="rr-workshop-number" aria-hidden="true"><?php echo esc_html(str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT)); ?></span>
-              <span class="rr-workshop-title"><?php echo esc_html($seminar['title']); ?></span>
-              <span class="rr-workshop-toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="rr-workshop-description">
-              <p><?php echo esc_html($seminar['description']); ?></p>
+          <?php $panel_id = 'rr-workshop-panel-' . ($index + 1); ?>
+          <article class="rr-workshop-item rr-reveal rr-reveal-up">
+            <h2 class="rr-workshop-item-heading">
+              <button class="rr-workshop-trigger" type="button" aria-expanded="false" aria-controls="<?php echo esc_attr($panel_id); ?>">
+                <span class="rr-workshop-number" aria-hidden="true"><?php echo esc_html(str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT)); ?></span>
+                <span class="rr-workshop-title"><?php echo esc_html($seminar['title']); ?></span>
+                <span class="rr-workshop-toggle" aria-hidden="true">+</span>
+              </button>
+            </h2>
+            <div class="rr-workshop-panel" id="<?php echo esc_attr($panel_id); ?>" hidden>
+              <div class="rr-workshop-panel-inner">
+                <p><?php echo esc_html($seminar['description']); ?></p>
+              </div>
             </div>
-          </details>
+          </article>
         <?php endforeach; ?>
       </div>
     </div>
