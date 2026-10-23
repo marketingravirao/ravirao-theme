@@ -159,7 +159,7 @@ html {
 .custom-logo {
   display: block;
   width: auto;
-  max-width: min(20vw, 16rem);
+  max-width: min(20vw, 12rem);
   max-height: 4.5rem;
   object-fit: contain;
 }

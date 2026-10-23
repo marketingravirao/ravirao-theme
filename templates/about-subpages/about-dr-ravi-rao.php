@@ -66,7 +66,7 @@ get_header();
             </div>
             <blockquote class="rr-about-dr-quote rr-reveal rr-reveal-up">
                 <p>“My biggest success is making other people successful.”</p>
-                <cite>Dr. Ravi Rao</cite>
+                <cite>- Dr. Ravi Rao</cite>
             </blockquote>
         </div>
     </section>
