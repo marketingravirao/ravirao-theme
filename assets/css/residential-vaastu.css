@@ -1,0 +1,911 @@
+/* Residential Vaastu page template. The shared enquiry form is restyled below
+   using the page body class; its markup remains in the branded footer. */
+.residential-vaastu {
+  --rv-coral: #e44535;
+  --rv-coral-dark: #d83c30;
+  --rv-coral-light: #ffb2a7;
+  --rv-ink: #172d47;
+  --rv-body: #35495e;
+  --rv-muted: #637384;
+  --rv-line: #cbd2d8;
+  --rv-cream: #f2eee4;
+  color: var(--rv-ink);
+  background: #fff;
+  font: 400 16px/1.7 var(--font-body);
+  overflow: clip;
+}
+
+.residential-vaastu *,
+.residential-vaastu *::before,
+.residential-vaastu *::after {
+  box-sizing: border-box;
+}
+
+.residential-vaastu img {
+  display: block;
+  max-width: 100%;
+}
+
+.residential-vaastu a {
+  color: inherit;
+}
+
+.residential-vaastu__container {
+  width: min(1220px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.residential-vaastu__hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 75vh;
+  align-items: center;
+  overflow: hidden;
+  padding: 72px 0;
+  color: #fff;
+  background: #101d36 url("../images/residential-vaastu/villa-lawn.jpg") 50% 44% / cover no-repeat;
+}
+
+.residential-vaastu__hero::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(90deg, #101d36f2 0%, #101d36c2 40%, #101d3626 100%);
+  content: "";
+}
+
+.residential-vaastu__hero-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 7%;
+}
+
+.residential-vaastu__hero-copy {
+  max-width: 600px;
+}
+
+.residential-vaastu__breadcrumb {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 34px;
+  color: #b9c7d6;
+  font-size: 14px;
+}
+
+.residential-vaastu__breadcrumb a {
+  text-decoration: none;
+}
+
+.residential-vaastu__breadcrumb a:hover,
+.residential-vaastu__breadcrumb a:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.residential-vaastu__eyebrow {
+  margin: 0 0 16px;
+  color: var(--rv-coral);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.residential-vaastu__eyebrow--light {
+  color: #ffd1c9;
+}
+
+.residential-vaastu__eyebrow--inverse {
+  color: #fff;
+}
+
+.residential-vaastu__hero-title,
+.residential-vaastu__title {
+  margin: 0;
+  color: var(--rv-ink);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.residential-vaastu__hero-title {
+  margin: 6px 0 24px;
+  color: #fff;
+  font-size: clamp(42px, 4.5vw, 66px);
+  line-height: 1.02;
+}
+
+.residential-vaastu__hero-title em {
+  color: var(--rv-coral-light);
+}
+
+.residential-vaastu__lead {
+  max-width: 520px;
+  margin: 0 0 16px;
+  color: #fff;
+  font: italic 400 clamp(21px, 2.1vw, 27px)/1.35 var(--font-serif);
+}
+
+.residential-vaastu__text {
+  margin: 0 0 14px;
+  color: var(--rv-body);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.residential-vaastu__text--hero {
+  max-width: 520px;
+  margin-bottom: 28px;
+  color: #e4edf8;
+}
+
+.residential-vaastu__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 4px;
+  padding: 15px 23px;
+  background: var(--rv-coral);
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.residential-vaastu__button:hover {
+  transform: translateY(-2px);
+  background: var(--rv-coral-dark);
+}
+
+.residential-vaastu__button:focus-visible {
+  outline: 3px solid var(--rv-coral-light);
+  outline-offset: 3px;
+}
+
+.residential-vaastu__button--large {
+  border-radius: 8px;
+  padding: 17px 26px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.residential-vaastu__compass {
+  position: relative;
+  width: min(520px, 100%);
+  aspect-ratio: 1;
+  margin-left: auto;
+  animation: residential-vaastu-compass-enter 1.2s ease-out both;
+}
+
+.residential-vaastu__compass-disc {
+  position: absolute;
+  inset: 2%;
+  border-radius: 50%;
+  background: #101d36b8;
+}
+
+.residential-vaastu__compass-photo {
+  position: absolute;
+  inset: 17.5%;
+  border-radius: 50%;
+  background: url("../images/residential-vaastu/house-yellow.jpg") 30% 50% / auto 130% no-repeat;
+  box-shadow: 0 0 0 4px #ffffff40;
+  animation: residential-vaastu-photo-pan 26s ease-in-out infinite alternate;
+}
+
+.residential-vaastu__compass-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.residential-vaastu__compass-ticks,
+.residential-vaastu__compass-dots,
+.residential-vaastu__compass-needle {
+  transform-origin: 250px 250px;
+  animation: residential-vaastu-compass-spin 90s linear infinite;
+}
+
+.residential-vaastu__compass-dots {
+  animation-duration: 140s;
+}
+
+.residential-vaastu__compass-needle {
+  animation-duration: 16s;
+}
+
+.residential-vaastu__compass-pulse {
+  transform-origin: 250px 250px;
+  animation: residential-vaastu-compass-pulse 4.5s ease-out infinite;
+}
+
+.residential-vaastu__compass-label {
+  opacity: 0.6;
+  animation: residential-vaastu-compass-label 16s ease-in-out infinite;
+}
+
+.residential-vaastu__compass-label--north {
+  animation: residential-vaastu-compass-north 16s ease-in-out infinite;
+}
+
+.residential-vaastu__highlights {
+  border-top: 4px solid var(--rv-coral);
+  border-bottom: 1px solid #d9dedf;
+  background: #fff;
+}
+
+.residential-vaastu__highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 28px 0;
+}
+
+.residential-vaastu__highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 6px 30px;
+  border-right: 1px solid #d9dedf;
+}
+
+.residential-vaastu__highlight:first-child {
+  padding-left: 0;
+}
+
+.residential-vaastu__highlight:last-child {
+  border-right: 0;
+}
+
+.residential-vaastu__highlight b,
+.residential-vaastu__highlight span {
+  display: block;
+}
+
+.residential-vaastu__highlight b {
+  color: var(--rv-ink);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.residential-vaastu__highlight span {
+  color: var(--rv-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.residential-vaastu__icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: var(--rv-coral);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+}
+
+.residential-vaastu__icon--small {
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+}
+
+.residential-vaastu__trust {
+  padding: 56px 0;
+  border-top: 1px solid #d9dedf;
+  background: #fff;
+}
+
+.residential-vaastu__trust-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.residential-vaastu__trust-title {
+  margin: 0;
+  color: var(--rv-ink);
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 400;
+}
+
+.residential-vaastu__trust-tagline {
+  margin: 8px 0 0;
+  color: var(--rv-muted);
+}
+
+.residential-vaastu__trust-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 1.25rem;
+  animation: residential-vaastu-logo-marquee 46s linear infinite;
+}
+
+.residential-vaastu__trust-track img {
+  width: 10rem;
+  height: 5.25rem;
+  flex: 0 0 auto;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid rgba(23, 45, 71, 0.1);
+  border-radius: 0.75rem;
+  background: #fff;
+  object-fit: contain;
+}
+
+.residential-vaastu__trust:hover .residential-vaastu__trust-track {
+  animation-play-state: paused;
+}
+
+.residential-vaastu__section {
+  padding: 104px 0;
+}
+
+.residential-vaastu__section--cream {
+  background: var(--rv-cream);
+}
+
+.residential-vaastu__perspective-layout,
+.residential-vaastu__approach-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 7%;
+}
+
+.residential-vaastu__title {
+  font-size: clamp(36px, 4.2vw, 60px);
+  line-height: 1.08;
+}
+
+.residential-vaastu__title em {
+  color: var(--rv-coral);
+}
+
+.residential-vaastu__perspective-copy .residential-vaastu__title {
+  margin-bottom: 20px;
+}
+
+.residential-vaastu__feature {
+  position: relative;
+  height: 460px;
+  margin: 0;
+}
+
+.residential-vaastu__feature img,
+.residential-vaastu__approach-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.residential-vaastu__feature img {
+  object-position: 70% center;
+}
+
+.residential-vaastu__feature figcaption {
+  position: absolute;
+  right: -25px;
+  bottom: 26px;
+  padding: 18px 24px;
+  background: var(--rv-coral);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.residential-vaastu__feature figcaption span {
+  padding: 0 4px;
+}
+
+.residential-vaastu__section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 44px;
+}
+
+.residential-vaastu__section-heading > p {
+  max-width: 390px;
+  margin: 0 0 5px;
+  color: var(--rv-body);
+}
+
+.residential-vaastu__section-heading .residential-vaastu__title {
+  max-width: 720px;
+}
+
+.residential-vaastu__video-section {
+  background: #101d36;
+  color: #fff;
+}
+
+.residential-vaastu__section-heading--dark .residential-vaastu__title {
+  color: #fff;
+}
+
+.residential-vaastu__section-heading--dark > p {
+  color: #c8d0d6;
+}
+
+.residential-vaastu__video {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: 7px;
+  background: #0b1427;
+  box-shadow: 0 30px 70px #0009;
+}
+
+.residential-vaastu__video iframe,
+.residential-vaastu__video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+.residential-vaastu__video--placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.48;
+}
+
+.residential-vaastu__video--placeholder p {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  margin: 0;
+  place-items: center;
+  color: #fff;
+  font: 400 clamp(24px, 4vw, 42px)/1.2 var(--font-serif);
+  text-shadow: 0 2px 18px #000;
+}
+
+.residential-vaastu__video-caption {
+  margin: 16px 0 0;
+  color: #aab4bc;
+  font-size: 14px;
+}
+
+.residential-vaastu__service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rv-line);
+  border-left: 1px solid var(--rv-line);
+}
+
+.residential-vaastu__service-card {
+  padding: 34px 30px 40px;
+  border-right: 1px solid var(--rv-line);
+  border-bottom: 1px solid var(--rv-line);
+  background: #ffffffa8;
+  transition: box-shadow 0.2s ease;
+}
+
+.residential-vaastu__service-card:hover {
+  box-shadow: inset 0 3px 0 var(--rv-coral);
+}
+
+.residential-vaastu__service-card .residential-vaastu__icon {
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 22px;
+}
+
+.residential-vaastu__service-title,
+.residential-vaastu__space-title {
+  margin: 0 0 8px;
+  color: var(--rv-ink);
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+.residential-vaastu__service-title {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.residential-vaastu__service-description,
+.residential-vaastu__space-description {
+  margin: 0;
+  color: var(--rv-body);
+}
+
+.residential-vaastu__service-description {
+  font-size: 15px;
+}
+
+.residential-vaastu__space-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.residential-vaastu__spaces {
+  background: #fff;
+}
+
+.residential-vaastu__space-card {
+  overflow: hidden;
+  border: 1px solid #d9dedf;
+  border-top: 3px solid transparent;
+  border-radius: 7px;
+  background: #f7f4ed;
+  transition: border-color 0.2s ease;
+}
+
+.residential-vaastu__space-card:hover {
+  border-top-color: var(--rv-coral);
+}
+
+.residential-vaastu__space-card > img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.residential-vaastu__space-card > div {
+  padding: 22px 24px 26px;
+}
+
+.residential-vaastu__space-title {
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.residential-vaastu__space-description {
+  font-size: 14px;
+}
+
+.residential-vaastu__planning {
+  position: relative;
+  overflow: hidden;
+  padding: 46px 0;
+  background: linear-gradient(105deg, #d83c30 0%, var(--rv-coral) 57%, #c7352d 100%);
+  color: #fff;
+}
+
+.residential-vaastu__planning::after {
+  position: absolute;
+  top: -130px;
+  right: -55px;
+  width: 270px;
+  height: 270px;
+  border: 1px solid #ffffff30;
+  border-radius: 50%;
+  box-shadow: 0 0 0 55px #ffffff0a, 0 0 0 110px #ffffff08;
+  content: "";
+}
+
+.residential-vaastu__planning-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  align-items: center;
+  gap: 8%;
+}
+
+.residential-vaastu__planning .residential-vaastu__eyebrow {
+  margin-bottom: 10px;
+}
+
+.residential-vaastu__planning .residential-vaastu__title {
+  color: #fff;
+  font-size: clamp(28px, 3.5vw, 45px);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.residential-vaastu__planning-layout > p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.residential-vaastu__steps {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.residential-vaastu__steps li {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 15px;
+  padding: 18px 0;
+  border-top: 1px solid var(--rv-line);
+}
+
+.residential-vaastu__step-number {
+  color: var(--rv-coral);
+  font: 400 25px/1.2 var(--font-serif);
+}
+
+.residential-vaastu__step-title,
+.residential-vaastu__step-description {
+  display: block;
+}
+
+.residential-vaastu__step-title {
+  color: var(--rv-ink);
+  font-weight: 700;
+}
+
+.residential-vaastu__step-description {
+  color: var(--rv-body);
+  font-size: 14px;
+}
+
+.residential-vaastu__expert {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  color: var(--rv-body);
+  font-size: 14px;
+}
+
+.residential-vaastu__expert img {
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.residential-vaastu__expert a {
+  color: var(--rv-coral);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.residential-vaastu__approach-visual {
+  position: relative;
+  height: 540px;
+  margin: 0;
+  border-left: 5px solid var(--rv-coral);
+}
+
+.residential-vaastu__approach-visual figcaption {
+  position: absolute;
+  bottom: 25px;
+  left: -35px;
+  max-width: 285px;
+  padding: 26px;
+  background: var(--rv-ink);
+  color: #fff;
+  font: 25px/1.2 var(--font-serif);
+}
+
+.residential-vaastu__faq {
+  max-width: 820px;
+}
+
+.residential-vaastu__faq-section {
+  background: #fff;
+}
+
+.residential-vaastu__faq > .residential-vaastu__title {
+  margin-bottom: 24px;
+}
+
+.residential-vaastu__faq-item {
+  padding: 18px 0;
+  border-top: 1px solid #d9dedf;
+}
+
+.residential-vaastu__faq-item:last-of-type {
+  border-bottom: 1px solid #d9dedf;
+}
+
+.residential-vaastu__faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--rv-ink);
+  font: 400 22px/1.3 var(--font-serif);
+  cursor: pointer;
+  list-style: none;
+}
+
+.residential-vaastu__faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.residential-vaastu__faq-question::after {
+  color: var(--rv-coral);
+  content: "+";
+  font: 300 30px/1 var(--font-body);
+}
+
+.residential-vaastu__faq-item[open] .residential-vaastu__faq-question::after {
+  content: "−";
+}
+
+.residential-vaastu__faq-answer {
+  margin: 10px 0 0;
+  color: var(--rv-body);
+}
+
+.residential-vaastu__faq-cta {
+  margin: 26px 0 0;
+}
+
+@keyframes residential-vaastu-compass-enter {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes residential-vaastu-photo-pan {
+  from { background-position: 12% 50%; }
+  to { background-position: 88% 50%; }
+}
+
+@keyframes residential-vaastu-compass-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes residential-vaastu-compass-pulse {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.36); }
+}
+
+@keyframes residential-vaastu-compass-label {
+  0%, 10%, 100% { opacity: 0.6; fill: #fff; }
+  5% { opacity: 1; fill: var(--rv-coral-light); }
+}
+
+@keyframes residential-vaastu-compass-north {
+  0%, 10%, 100% { opacity: 0.75; }
+  5% { opacity: 1; }
+}
+
+@keyframes residential-vaastu-logo-marquee {
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 900px) {
+  .residential-vaastu__hero-layout,
+  .residential-vaastu__perspective-layout,
+  .residential-vaastu__approach-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .residential-vaastu__hero {
+    padding: 64px 0;
+  }
+
+  .residential-vaastu__compass {
+    width: min(460px, 100%);
+    margin: 0 auto;
+  }
+
+  .residential-vaastu__highlight-grid,
+  .residential-vaastu__service-grid,
+  .residential-vaastu__space-grid,
+  .residential-vaastu__planning-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .residential-vaastu__highlight-grid {
+    padding: 16px 0;
+  }
+
+  .residential-vaastu__highlight {
+    padding: 18px 0;
+    border-right: 0;
+    border-bottom: 1px solid #d9dedf;
+  }
+
+  .residential-vaastu__highlight:last-child {
+    border-bottom: 0;
+  }
+
+  .residential-vaastu__section-heading {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  .residential-vaastu__section-heading > p {
+    margin-top: 16px;
+  }
+
+  .residential-vaastu__planning-layout {
+    gap: 20px;
+  }
+
+  .residential-vaastu__feature figcaption {
+    right: 0;
+  }
+
+  .residential-vaastu__approach-visual figcaption {
+    left: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .residential-vaastu__container {
+    width: min(100% - 36px, 1220px);
+  }
+
+  .residential-vaastu__hero {
+    padding: 48px 0;
+  }
+
+  .residential-vaastu__hero-title {
+    font-size: clamp(38px, 12vw, 54px);
+  }
+
+  .residential-vaastu__breadcrumb {
+    margin-bottom: 24px;
+  }
+
+  .residential-vaastu__section {
+    padding: 72px 0;
+  }
+
+  .residential-vaastu__title {
+    font-size: clamp(34px, 9vw, 46px);
+  }
+
+  .residential-vaastu__feature {
+    height: 340px;
+  }
+
+  .residential-vaastu__feature figcaption {
+    bottom: 16px;
+    padding: 14px;
+    font-size: 9px;
+  }
+
+  .residential-vaastu__service-card {
+    padding: 28px 22px 32px;
+  }
+
+  .residential-vaastu__approach-visual {
+    height: 360px;
+  }
+
+  .residential-vaastu__approach-visual figcaption {
+    bottom: 16px;
+    max-width: 245px;
+    padding: 18px;
+    font-size: 21px;
+  }
+
+  .residential-vaastu__faq-question {
+    font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .residential-vaastu__compass,
+  .residential-vaastu__compass *,
+  .residential-vaastu__trust-track {
+    animation: none !important;
+  }
+}
+

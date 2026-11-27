@@ -1,0 +1,7 @@
+.landing-page {
+    width: 100%;
+}
+
+.landing-page .wp-block-group.alignfull {
+    margin-inline: 0;
+}

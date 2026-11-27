@@ -1,0 +1,529 @@
+=== My Calendar - Accessible Event Manager ===
+Contributors: joedolson
+Donate link: https://www.joedolson.com/donate/
+Tags: event manager, event calendar, venue, location, accessibility
+Requires at least: 6.5
+Tested up to: 7.1
+Requires PHP: 7.4
+Text domain: my-calendar
+Stable tag: 3.8.14
+License: GPL-2.0+
+
+Accessible WordPress event calendar plugin. Manage single or recurring events, event venues, and display your calendar anywhere on your site.
+
+== Description ==
+
+[My Calendar](https://joedolson.com/my-calendar/) offers easy-to-use WordPress event management with rich options for custom displays. Display individual event calendars in WordPress Multisite, offer multiple views of calendars limited by event categories, locations or author, or show simple text-based lists of your upcoming events.
+
+= Rich Event Calendar Features =
+
+You'll find enormous design flexibility for your custom calendar. With recurring event support, design customization tools, custom templating, and category and venue support out of the box, My Calendar gives you a great feature set to get your calendar set up.
+
+= Built with Accessibility in Mind =
+
+My Calendar is an events calendar focused on holistic accessibility: providing a positive experience for site visitors and administrators who use assistive technology. It includes built-in settings where you can describe the ADA compliance features of your events and venues. Accessibility is a critical part of your website, so your audience can get equal access and experience to the events you list.
+
+Learn about [accessible events](https://docs.joedolson.com/my-calendar/event-accessibility/) or [visit the My Calendar demo](https://demos.joedolson.com/my-calendar/)
+
+= Accessibility-first Software =
+
+While My Calendar has a strong focus on backwards compatibility, it is officially built with an accessibility first mindset. That means that if a choice has to be made between improving accessibility and breaking backwards compatibility, the more accessible choice will always come first.
+
+= Premium Event Management =
+Looking for more? [Buy My Calendar Pro](https://www.joedolson.com/my-calendar/pro/), the premium extension for My Calendar.
+
+My Calendar Pro adds tons of great additional features:
+
+* Support for user-submitted events,
+* Custom field creation and management,
+* integration between posting and event creation,
+* Import events from outside sources, and
+* support for sharing events between multiple sites.
+
+= Sell Event Tickets =
+Do you sell tickets for your events? [Use My Tickets](https://wordpress.org/plugins/my-tickets/) and sell tickets for My Calendar events. Set prices, ticket availability, and sell multiple events at the same time using My Tickets.
+
+= Features: =
+
+*	Calendar grid, card, and list views of events
+*	Month, multi-month, week, or daily view.
+*	Mini-calendar for compact displays (as widget or shortcode)
+*	Widgets: today's events, upcoming events, mini calendar, event search
+*	Customize templates for event output
+*	Limit views by categories, location, author, or host
+*	Extensive support for recurring events.
+*	Edit or add single dates in recurring events
+*	Rich permissions handling to restrict access to parts of My Calendar
+*	Email notifications when events are scheduled or drafted
+*	Post to X, Bluesky, or Mastodon when events are created (using [XPoster](http://wordpress.org/plugins/wp-to-twitter/))
+*	Event location management
+*	Fetch events from a remote database. (Sharing events in a network of sites.)
+*	Multisite-friendly
+*	Integrated help page
+*	Shortcode Generator to create customized views of My Calendar
+*	SEO with JSON-LD structured data for events and venues.
+*	Export or subscribe via iCal or Google Calendar.
+*	Completely responsive events views
+*	Extensive [public documentation](https://docs.joedolson.com/my-calendar/).
+*	Hundreds of [actions and filters for custom development](https://joedolson.github.io/my-calendar/)
+
+= Accessibility =
+
+My Calendar is designed with accessibility in mind. All interfaces - both front and back end - are tested with various assistive technology.
+
+The plugin includes features for showing the accessibility services available for events and at physical venues, as well as providing access to your event information for users with disabilities.
+
+= What's in My Calendar Pro? =
+
+* Let your site visitors submit events to your site (pay to post or free!).
+* Let logged-in users edit their events from the front-end.
+* Custom field creator
+* Create events when you publish a blog post
+* Publish a blog post when you create an event
+* Advanced search features
+* Import events from .ics or .csv formats via file or URL.
+* REST API support for sharing events between multiple sites.
+
+= Translations =
+
+Visit [Wordpress Translations](https://translate.wordpress.org/projects/wp-plugins/my-calendar) to check progress or contribute to your language.
+
+Translating my plugins is always appreciated. Visit <a href="https://translate.wordpress.org/projects/wp-plugins/my-calendar">WordPress translations</a> to help get your language to 100%!
+
+== Installation ==
+
+1. Upload the `/my-calendar/` directory into your WordPress plugins directory.
+
+2. Activate the plugin on your WordPress plugins page
+
+3. Configure My Calendar using the settings pages in the admin panel:
+
+   My Calendar -> Add Event
+   My Calendar -> Events
+   My Calendar -> Add New Location
+   My Calendar -> Locations
+   My Calendar -> Categories
+   My Calendar -> Access Terms
+   My Calendar -> Design
+   My Calendar -> Settings
+   My Calendar -> Shortcodes
+   My Calendar -> Help
+
+4. Visit My Calendar -> Help for assistance with shortcode options or widget configuration.
+
+== Changelog ==
+
+= 3.8.14 =
+
+* Bug fix: Guard against inserting empty locations by omitting event_zoom from empty value test.
+* Bug fix: Guard against non-existing event objects in schema generation.
+* Bug fix: If calendar URI not set, search did not render, though that's not a requirement for search.
+* Change: Remove checks for $_POST data in search. My Calendar search is never submitted via POST.
+* Change: Set up calendar metaboxes on add_meta_box hook instead of admin_menu.
+* Change: Remove jquery.stick library with CSS.
+* Security: Authenticated Stored Cross-Site Scripting via event_post. Props @wordfence and @jiahao.
+* Security: Authenticated Stored Cross-Site Scripting via event_street. Props @wordfence and @jiahao.
+* Security: Authenticated Stored Cross-Site Scripting via event_title. Props @wordfence and @jiahao.
+* Security: Authenticated Stored Cross-Site Scripting via event_title. Props @wordfence and @braintx.
+* Security: Authenticated Stored Cross-Site Scripting via template shortcode parameter. Props @avrlab233.
+* Security: Authenticated Missing Authorization check allowing event deletion. Props @duck4nh.
+* Security: Extensive hardening across entire plugin.
+* Tooling: Expand e2e and PHP unit tests.
+
+= 3.8.13 =
+
+* Bug fix: Used `get_current_screen()` in a context that ran in the front-end on Pro, causing event submission errors.
+
+= 3.8.12 =
+
+* Bug fix: Yoast Schema graph only loaded if mc_id set.
+* Bug fix: Stylesheet previewer didn't pass style class into main container.
+* Bug fix: Category settings should update before rendering the category editing form.
+* Bug fix: Custom icons did not set value.
+* Bug fix: Upcoming events navigation events were set multiple times.
+* Bug fix: Improve error for users when a navigation nonce is expired.
+* Bug fix: Legacy templates regex could miss closing braces, resulting in skipped tags.
+* Bug fix: Make `br` in list presets conditional where possible.
+* Bug fix: Improve consistency of upcoming events navigation, avoiding missed or repeated events.
+* Bug fix: Make navigation buttons in upcoming events nav more predictable.
+* Bug fix: Widget accepted 'event' as a display type, but navigation didn't recognize that.
+* Bug fix: Render 'Untitled Category' for categories with no title.
+* Bug fix: Prevent saving categories with no title.
+* Bug fix: Fix join for access limit queries in upcoming events lists.
+* Bug fix: Default access terms not applied on new events.
+* Bug fix: New location access terms could be assigned to the event access term taxonomy.
+* Bug fix: Don't display a 'success' status when setting import triggers an error.
+* Change: Day view now switches to today's date when on the current date view.
+* Change: Week view now switches to the current week when on the current date view.
+* Change: Add basic styling for filter widget.
+* Change: Minor design change for category colors in admin.
+* Change: Create custom My Calendar Print view template, overridable in themes.
+* Security: Extensive review of nonce handling to meet current PHPCS standards; hardening.
+* Code quality: Update to meet the WordPress Extras PHPCS sniffs.
+* Tooling: Add extensive e2e and additional PHP unit tests.
+* Performance: Remove use of `wp_reset_query()` in URL handler.
+
+= 3.8.11 =
+
+* Bug fix: Extra 'has-modal' class in day view.
+* Bug fix: Remove invalid location filter notice from front-end. It's confusing.
+* Change: Replace manually alternating row classes with `striped` on parent table.
+* Security: Fix reflected shortcode rendering in search results. Props Andres Poulin Mateos — Drakon Tech Solutions (Almería, Spain)
+
+= 3.8.10 =
+
+* Bug fix: Overwrote `$type` variable in template loader, causing templates in some paths to fail to render.
+
+= 3.8.9
+
+* Bug fix: Full $data object passed to two legacy template paths instead of rendered tags. Props @gkmyt
+* Bug fix: If category colors disabled, editing categories failed due to expected field not existing. Props @christopherphillips
+* Bug fix: Clear PHP deprecated notice thrown when sanitizing string runs on empty output parameter in CSV output.
+* Usability: Add better visual affordances for exporting settings packages.
+* Accessibility: Mismatched aria-describedby/aria-labelledby with title ID. Props @mandersen77
+* Privacy: Only disclose host contact information in exported data if permission explicitly granted. Props anonymous reporter.
+
+= 3.8.8 =
+
+* Security: Fixes a severe unauthenticated privilege escalation flaw. Props @daroo and WordFence for responsible disclosure.
+
+= 3.8.7 =
+
+* Bug fix: Ensure plot boundaries are set in Google Maps when map generated from existing lat/lng.
+* Bug fix: Update heading ID selector to prevent duplicate IDs on multi-day events.
+* Bug fix: Search filters shouldn't be triggered by core URL parameters when permalinks disabled in core.
+* Bug fix: `data-clipboard-target` needed to be available in custom KSES filter for Pro.
+* Change: Move My Tickets promo banner from sidebar into event registration section of event editor.
+
+= 3.8.6 =
+
+* Bug fix: Missing location selector broke JS.
+* Bug fix: Use inline-flex on links with icons to prevent injecting unexpected breaks.
+* Added custom JS event `mc_calendar_loaded` executed when calendar is navigated.
+* Support modals that trigger other calendar items than event containers.
+* Add missing ID attributes to calendar grid cells without events.
+* Updates to modal scripts to remove unused parameters.
+* Add filter `mc_inside_table_cell_header` to allow content to be added inside the header.
+* Add filter `mc_api_can_approve_event` to allow the REST API to update event statuses when authenticated.
+* Change: Remove link to add new location if no locations.
+* Design: Minor alignment adjustments to button heights and neighboring fields.
+
+= 3.8.5 =
+
+* Bug fix: One missed instance of the `.button` class switched to `.mc-button`.
+* Bug fix: `ctype_digit` string as an argument deprecated in PHP 8.1+.
+* Bug fix: event count counted the wrong array keys, yielding a count of 0.
+
+= 3.8.4 =
+
+* Bug fix: Changes to support category colors in modal didn't account for differences in class structure between legacy and PHP templates.
+* Bug fix: Exclude direct children of list items in event lists from icon CSS.
+* Security: Sanitizer HTML wrappers passed to instance lists.
+* Security: Sanitize fallback HTML in upcoming and today's events widgets.
+
+= 3.8.3 =
+
+* Change: Add support for category colors inside modal.
+* Bug fix: Incorrect event counts in mini/responsive view.
+* Bug fix: `data-key` attribute needs to be supported by custom KSES attributes on button element for Pro.
+
+= 3.8.2 =
+
+* Bug fix: Accidentally removed the 3.8.0 upgrade cycle for Single Event views in 3.8.1.
+* Bug fix: Template tag previews cannot render with single events view disabled; disable the UI.
+
+= 3.8.1 =
+
+* Bug fix: PHP Fatal error when category color markers enabled on mini calendar view.
+* Bug fix: Incorrect counting when event count markers enabled in mini calendar view.
+* Bug fix: A value of zero for event image shouldn't render img markup.
+* Bug fix: A value of zero for event_tickets URL shouldn't render an invalid URL.
+* Bug fix: Don't run wpautop on empty string in event_registration.
+
+= 3.8.0 =
+
+* Feature: Add option to disable single event view.
+* Feature: Add support for scheduled publication of events.
+* Feature: Add additional display settings panel for list view, so grid and list are not assumed to be the same.
+* Feature: Screen options to hide category, author, and location columns in event manager.
+* Change: Switched front-end input button class from `.button` to `.mc-button`.
+* Change: Removed legacy disclosure widget for grid and mini views.
+* Change: Merge similar admin functions `mc_get_occurrences()` and `mc_get_event_instances()`.
+* Change: Update recurring event calculations to be inclusive of end date chosen.
+* Change: Modernize GMT offset calculations to use `wp_timezone()`.
+* Change: Add check to see whether an import is in progress when calculating event status.
+* Change: Don't run `mc_test_occurrence_overlap()` on front-end.
+* Bug fix: Fix recurring event generation adding duplicate dates on first date matched.
+* Bug fix: Fix location assignment so multiple simultaneous events with a new location all get assigned the new location without duplication.
+* Bug fix: Fix recurring event weekday parsing to improve behavior if start date is a weekend.
+* Bug fix: Reset location count transient when a location is deleted.
+* Bug fix: Ensure terms are deleted from taxonomy when categories are deleted.
+* Bug fix: Convert text tables to utf8mb4 if they were originally created before that core change. Adds emoji support if missing.
+* Bug fix: Fix issue where legacy values in older events could trigger event recurrence recalculation, restoring deleted dates.
+* Bug fix: Only check mc_list_template nonce when editing list template settings.
+* Bug fix: Outlook & Office 365 add to calendar links passed invalid date format.
+* Bug fix: Return an empty state label if value passed not valid.
+* Bug fix: Don't run link or button logic if the title already contains a link.
+* Bug fix: Exit early in post metabox if event ID does not return an event.
+* Bug fix: Only construct mini calendar URLs if option is enabled.
+* Bug fix: Allow `mc_template_settings()` to return a single template.
+* Bug fix: Prevent mc_category_icon()  from returning non-string values from filters.
+* Bug fix: `selected()` set to echo instead of return in shortcode generator.
+* Bug fix: Don't label draft events as private in admin.
+* Bug fix: If autocomplete passes no value while add location panel is open, don't create blank location.
+* Bug fix: Bounds were extended asymmetrically on Google Maps, causing an off-center marker.
+* Bug fix: Fix some cases where post and event statuses weren't synced properly.
+* Bug fix: Navigation didn't always consistently retain existing values.
+* Bug fix: Print view should only support grid.
+* Bug fix: Remove duplicate nonce in event editor.
+* Remove upgrade cycle from < 3.1.13.
+* Design: Variety of front-end changes for consistency and reliability.
+* Accessibility: Focus loss when closing modal.
+* Accessibility: Make control labels visible in event manager.
+* Docs: Misc. function doc parameter and return type fixes.
+
+= 3.7.17 =
+
+* Feature: Add hcard template support for events.
+* Bug fix: Inline template help should always reflect tags, not functions.
+* Bug fix: Admin JS needed to be rebuilt (omitted from 3.7.16).
+
+= 3.7.16 =
+
+* Bug fix: Change '.hide' to '.mc-hide' to reduce collisions with other extensions.
+* Bug fix: Fix variable type passed for recurring event lists.
+* Bug fix: Mark $name as nullable in CustomEvent.
+* Security: Improve privacy checks & prevent private events from appearing in ical exports. Props @jitlada and @d3kc4rt_1 via WordFence.
+
+= 3.7.15 =
+
+* Bug fix: Prevent PHP warning if URL host value not parseable in print view.
+* Bug fix: Replace links to removed template tag help with tag help modal.
+* Bug fix: Fix prev/next event navigation when `mc_id` parameter omitted.
+* Bug fix: Fix hosts callback when hosts post type is enabled. [Pro]
+* Bug fix: Screen options did not account for "administrator view all" disabled.
+* Bug fix: Category colors not re-generated when new categories added, leaving stale cache. Props @mgmax.
+* Bug fix: PHP error thrown when editing categories with category icons disabled.
+* Bug fix: JS error thrown when category icons disabled.
+* Bug fix: Verify country input present before initiating autocompletion.
+* Bug fix: Compensate for DB time offset in upcoming events queries. Props @mgmax.
+* Change: Show category colors in admin selector when set as background.
+* Change: Add class `.event-title-container` on `div` inside event titles.
+* Change: Unset color and background applied to event title div.
+* Change: Add `.event-title` class on list template headings.
+* Change: Remove uses of obsolete 'updated' class.
+* Minor visual tweaks in admin.
+
+= 3.7.14 =
+
+* Bug fix: Removed duplicate array parameters in options installation.
+* Bug fix: Add notice for admins about `recurring` template tag behavior on single events.
+* Bug fix: Remove static data from `wp_update_post`, including not updating the post slug.
+* Bug fix: Output the admin field wrapper around event author input when host and details link hidden.
+* Bug fix: Fix bug where all-day event instances automatically regenerated when event updated.
+* Bug fix: Don't attempt to generate location schema if no location object passed.
+* Bug fix: Fix miscellaneous CSS gaps for RTL display.
+* Bug fix: Fix broken checkboxes in Upcoming Events widget settings.
+* Bug fix: Default mini template contained duplicate h3 heading.
+* Bug fix: Hide the instance modification warning when editing an individual instance.
+* Bug fix: Check location object inside locations loop when checking map type.
+* Code quality: Misc. fixes to inline docs and potentially undefined variables.
+* Change: Use compact button sizing in instance manager.
+* Filter: add filter to enable updating the post slug on save, if desired.
+
+= 3.7.13 =
+
+* Bug fix: Handle an additional case where changes to `wp_kses_hair()` in WordPress 7.0 broke legacy templates.
+
+= 3.7.12 =
+
+* Bug fix: Missing space in two SQL queries broke saving events. Sigh.
+
+= 3.7.11 =
+
+* Bug fix: Accidentally broke ability to set non-published statuses in 3.7.10.
+* Bug fix: Disambiguate category id columns in sql joins.
+* Bug fix: Define some potentially undefined variables.
+* Docs: Change hook doc format & update inaccurate filter and action documentation.
+* Change: mc_custom_sidebar_panels filter is now mc_custom_admin_panels
+* Change: mc_bulk_actions action is now mc_do_bulk_actions
+* Remove plugin update message handler as obsolete.
+
+= 3.7.10 =
+
+* Accessibility: End date error message always announced to screen readers.
+* Accessibility: Increase width of default event title focus outline.
+* Performance: Memoised frequently queried values.
+* Performance: Don't disable category transients in WP_DEBUG.
+* Change: Removed legacy My Calendar Pro support (more than 5 years)
+* Change: Hide 'author' column if only one author.
+* Bug fix: Fixed a handful of potentially undefined variables.
+* Bug fix: Set missing color on modal heading.
+* Bug fix: Remove line breaks from date badge because wpautop.
+* Bug fix: Empty '.recurs' div if not recurring.
+* New action: `mc_before_delete_event`. Needed so actions can have access to event data.
+* Style improvements: Recurring events panel.
+* Remove PHP < 7.4 supports.
+* Security: Missing publication authorization check via `event_approved` parameter. Props type5afe via WordFence.
+
+= 3.7.9 =
+
+* Performance: Category icons always created new instead of fetched from cache.
+* Bug fix: Restore 'initial-hidden' class to fix flash of unstyled content in admin.
+* Bug fix: List events options did not accurately reflect behavior.
+* Bug fix: Date badge template format double-calculated timezone offsets.
+* Bug fix: Missing '.button' classes caused misaligned icons.
+* Bug fix: Default set primary category to a selected category.
+* Bug fix: Reduce h2 opacity as well as content opacity when editing scheduled dates.
+* Bug fix: Fix focus management while editing scheduled dates.
+* Bug fix: Outlook/O365 event links should use ISO 8601 date formats.
+* Bug fix: Duplicate h2 event title should be hidden on singular list view modals.
+* Bug fix: org class indicator missing in location hcard when location title unlinked.
+* Design: Improvements to oft-neglected list view.
+* Change: Add `mc_get_heading_level()` to simplify heading hierarchy management.
+* Change: Shift category key heading to primary.
+* Change: Add image shape classes: 'square', 'landscape', or 'portrait'. Adjust layout if not landscape.
+
+= 3.7.8 =
+
+* Security: Fixes Insecure Direct Object Reference and Denial of Service vulnerabilities in the `mc_ajax_mcjs_action` function. Props @minhi1.
+
+= 3.7.7 =
+
+* Update: Adapt admin CSS for WordPress 7.0 design refresh.
+* Bug fix: Verify that `mc_get_first_event()` returns an object before checking event recurrence.
+* Bug fix: Handle change in `wp_kses_hair` for WordPress 7.0 that normalizes attribute quoting.
+* Bug fix: Pass modal title correctly for Help modals.
+* Bug fix: Change submenu page to non-existent string parent instead of `null`, to prevent PHP warning.
+* Bug fix: Remove duplicate styles from admin CSS.
+* Change: Remove legacy template tag previews.
+* Change: Show template tags with PHP function formatting when PHP templates enabled.
+* Change: Combine Admin disclosures into a single JS function.
+* Change: Switch `event_desc` column from TEXT to MEDIUMTEXT.
+
+= 3.7.6 =
+
+* Bug fix: Returned an empty string for category labels if icon not found, instead of the category name.
+
+= 3.7.5 =
+
+* Bug fix: Add SVG to kses array to allow category icons in templates.
+* Bug fix: Display category icon colors in admin category selection.
+* Change: Add HTML wrappers and styling for category list template output.
+
+= 3.7.4 =
+
+* Security: Fix improper sanitizing of template strings passed to shortcodes. Props WordFence and @mryudha.
+* Bug fix: Replace `stripcslashes` with `wp_unslash`
+* Bug fix: Navigation JS error when navigating to the first or last month with events via AJAX.
+* Docs: Update documentation for upcoming events list `$header` and `$footer` default values. Props @sabernhardt.
+
+= 3.7.3 =
+
+* Bug fix: Incorrect order of operations broke exporting events as CSV.
+* Bug fix: Unverified manipulation of element in navigation JS failed if upcoming events list present.
+* Bug fix: Missing ID on date switcher submit broke JS navigation if used.
+
+= 3.7.2 =
+
+* Bug fix: Broken navigation in mini calendar widgets & admin grid view.
+* Bug fix: PHP warnings thrown when deleting single events.
+
+= 3.7.1 =
+
+* Bug fix: Ability to disable specific time views accidentally disable `month+n` views.
+* Bug fix: Misnamed variable in location controller.
+* Bug fix: Accidentally restored a behavior in fetching permalinks that hasn't been used since before 3.0.0, now removed fully.
+
+= 3.7.0 =
+
+Accessibility-first breaking change: The default navigation has changed from using `a` elements to `button` elements. Custom styles may need to be updated.
+
+* Feature: Migrate accessibility characteristics for locations and events to taxonomies and make editable.
+* Feature: Add API authentication key to allow export of private events.
+* Feature: Ability to disable time formats.
+* Feature: Support custom fields in API & remote database access.
+* Feature: New event type: private to author.
+* Feature: New template tag: `{recurring}` to show a list of recurring event dates. Max limit 50.
+* Change: Simplify event insertion with `mc_insert_event()` function.
+* Change: Make calendar sharing a popup list.
+* Change: Remove mini calendar link targets settings & feature.
+* Change: Sort variables to limit URL permutations generated in navigation.
+* Change: Change calendar navigation from links operated as buttons to use buttons.
+* Change: Added style variables for main background, color, padding, and margin.
+* Change: Default category color from dark blue to light gray.
+* Change: Load Google Maps asynchronously.
+* Change: Update action scheduler and increment required WP version.
+* Change: Rewrite all front-end JS to remove jQuery dependency.
+* Change: If a new event is saved as draft, redirect to the edit screen for that event.
+* Change: Update deprecated Google Maps.marker.
+* Change: Add access terms as classes on event wrapper.
+* Change: Adjust RSS subscription window from 7 days to 90 days.
+* Change: New filter `mc_style_variables` to filter CSS variables.
+* Change: Event editor indicates in heading and title if the event is recurring.
+* Change: Add filters to customize location controls from code.
+* Change: Omit 'description' from template previews.
+* Change: Misc. minor tweaks to default styles.
+* Change: Display notification for admins if location filters use invalid values.
+* Bug fix: iCal subscription link pointed to export URL.
+* Bug fix: Disabling event links on grid/list views should not also disable single event view.
+* Bug fix: Filtering calendars by accessibility characteristics was broken.
+* Bug fix: Don't do preg_match URL check if value is already false.
+* Bug fix: Don't display map requirements if mapping service disabled.
+* Bug fix: Prevent empty notices from showing in responses.
+* Bug fix: If an image URL 404s, delete the internal reference.
+* Bug fix: add srcset and sizes to kses array.
+* Bug fix: Verify that events exists before checking their publication status.
+* Bug fix: Modified dates were not tracked along with deleted and customized dates.
+* Bug fix: Fix migration from Calendar plugin.
+* Bug fix: Handle null values in stored images.
+* Bug fix: Details link didn't return external links.
+* Bug fix: Upcoming events did not consider current time zone when querying.
+* Bug fix: Author & host values not saved correctly in widgets.
+* Bug fix: 'current' keyword ignored if it's the only value passed.
+* Bug fix: prevent rewriting subscribe and export toggles.
+* Bug fix: Misnamed variable in location saving.
+* Bug fix: Only find `[my_calendar **]` when checking for existing calendar page.
+* Bug fix: Check publication status of pages found in calendar page checks.
+* Bug fix: Delete version when deleting plugin.
+* Bug fix: Incorrect data type passed to `mc_category_icon()` in templating.
+* Performance: Don't parse the instance array multiple times in event editing.
+* Performance: Throw 404 error is date queries go outside valid event boundaries.
+* Removed: SVG files, unused since 3.5.
+* Accessibility: Heading hierarchy incorrect in template management.
+* Accessibility: fixes to admin tabs.
+* Accessibility: fix when event date selection triggers errors.
+* Accessibility: Use aria-pressed to indicate currently selected categories.
+
+== Frequently Asked Questions ==
+
+= Where can I find plugin documentation? =
+
+Take a look at my [documentation website for My Calendar](https://docs.joedolson.com/my-calendar/) or the [developer hook documentation](https://joedolson.github.io/my-calendar/). If you're using the free version, please consider [making a donation](https://www.joedolson.com/donate/) or [buying My Calendar Pro](https://www.joedolson.com/my-calendar/pro/) before requesting support.
+
+= How can my visitors or members submit events? =
+
+My Calendar Pro supports a richly featured interface for getting events from the public. You can customize the form to collect exactly the fields you need, and review the events before publishing. [Buy it today](https://www.joedolson.com/my-calendar/pro/)!
+
+= Is there an advanced search feature? =
+
+[Buying My Calendar Pro](https://www.joedolson.com/my-calendar/pro/) gets you a richly featured advanced event search. You can narrow by dates, categories, authors, and more to refine your event search.
+
+= Where can I report issues or request features? =
+
+My Calendar is developed on Github, and I welcome contribution. [Vist the My Calendar repository](https://github.com/joedolson/my-calendar) to make requests.
+
+== Screenshots ==
+
+1. Monthly Grid View
+2. List View
+3. Event management page
+4. Category management page
+5. Settings page
+6. Location management
+7. Style editing
+8. Template editing
+
+= Upgrade Notice =
+
+Version 3.8.14 is a security update. Please update as soon as possible.

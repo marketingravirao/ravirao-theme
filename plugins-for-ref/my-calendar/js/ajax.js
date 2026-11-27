@@ -1,0 +1,228 @@
+(function ($) {
+	$(function () {
+		// Delete single instances of recurring events.
+		$( '.mc_response' ).hide();
+		$('.instance-list').on( 'click', 'button.delete_occurrence', function () {
+			let value  = $(this).attr( 'data-value' );
+			let id     = $(this).attr( 'data-event' );
+			let begin  = $(this).attr( 'data-begin' );
+			let end    = $(this).attr( 'data-end' );
+			const data = {
+				'action': mc_data.action,
+				'occur_id': value,
+				'event_id': id,
+				'occur_begin': begin,
+				'occur_end': end,
+				'security': mc_data.security
+			};
+			$.post( ajaxurl, data, function (response) {
+				if ( response.success == 1 ) {
+					$( "button[data-value='"+value+"']" ).parents( 'li' ).hide();
+				}
+				$('.mc_response').text( response.response ).show( 300 );
+			}, "json" );
+		});
+
+		$( '.mc_add_new' ).hide();
+
+		$( 'button.edit_occurrence').on( 'click', function() {
+			let expanded = $( this ).attr( 'aria-pressed' );
+			let visible  = $( 'button.save-occurrence' ).is( ':visible' );
+			if ( expanded == 'true' ) {
+				$( this ).removeAttr( 'aria-pressed' );
+			} else {
+				$( this ).attr( 'aria-pressed', 'true' );
+				$( 'button.edit_occurrence' ).not( this ).removeAttr( 'aria-pressed' );
+				$( '#r_time' ).trigger( 'focus' );
+				$( '.save-occurrence' ).text( 'Edit Date' );
+				let instance_id = $( this ).data( 'value' );
+				let begin       = $( this ).data( 'begin' ).split(' ');
+				let end         = $( this ).data( 'end' ).split(' ');
+				$( 'input[name="r_instance"]' ).val( instance_id );
+				$( '#r_time' ).val( begin[1] );
+				$( '#r_begin' ).val( begin[0] );
+				$( '#r_endtime' ).val( end[1] );
+				$( '#r_end' ).val( end[0] );
+			}
+			if ( ! visible ) {
+				$( '.mc_add_new' ).toggle();
+			}
+
+		});
+
+		$( 'button.add-occurrence').on( 'click', function() {
+			let expanded = $( this ).attr( 'aria-expanded' );
+			$( 'input[name="r_instance"]' ).val( '' );
+			if ( expanded == 'true' ) {
+				$( this ).attr( 'aria-expanded', 'false' ).find( '.dashicons' ).addClass( 'dashicons-plus' ).removeClass( 'dashicons-minus' );
+				$( this ).attr( 'data-action', 'shiftback' );
+				$( '.save-occurrence' ).text( 'Add Date' );
+			} else {
+				$( this ).attr( 'aria-expanded', 'true' ).find( '.dashicons' ).addClass( 'dashicons-minus' ).removeClass( 'dashicons-plus' );
+				$( this ).attr( 'data-action', '' );
+			}
+			$( '.mc_add_new' ).toggle();
+		});
+
+		/**
+		 * Save additional date.
+		 */
+		$( 'button.save-occurrence').on( 'click', function() {
+			let date        = $( '#r_begin' ).val();
+			let begin       = $( '#r_time' ).val();
+			let end         = $( '#r_endtime' ).val();
+			let enddate     = $( '#r_enddate' ).val();
+			let event_id    = $( 'input[name="event_id"]' ).val();
+			let group_id    = $( 'input[name="event_group_id"]' ).val();
+			let instance_id = $( 'input[name="r_instance"]' ).val();
+
+			const data    = {
+				'action': mc_data.recur,
+				'event_id': event_id,
+				'group_id': group_id,
+				'event_date' : date,
+				'event_time' : begin,
+				'event_endtime' : end,
+				'event_enddate' : enddate,
+				'event_instance' : instance_id,
+				'security': mc_data.security
+			};
+			$.post( ajaxurl, data, function (response) {
+				if ( response.success == 1 ) {
+					let time     = begin.split( ':' );
+					let display  = time[0] + ':' + time[1];
+					let edit_url = mc_data.url + response.id;
+					let dateEnd  = ( typeof( enddate ) === 'undefined' ) ? date : enddate;
+					let li = document.createElement( 'li' );
+					li.className = 'new';
+					let span = document.createElement( 'span' );
+					span.id = 'occur_date_' + response.id;
+					let strong = document.createElement( 'strong' );
+
+					strong.textContent = ( instance_id ) ? 'Edited:' : 'Added:';
+					span.appendChild( strong );
+					span.innerText += ' ' + date + ' @ ' + display;
+					let wrapper = document.createElement( 'p' );
+					wrapper.className = 'instance-wrapper';
+					wrapper.appendChild( span );
+					li.appendChild( wrapper );
+
+					if ( instance_id ) {
+						document.querySelector( '.instance-list' ).insertAdjacentElement( 'beforeend', li );
+					} else {
+						let buttons = document.createElement( 'p' );
+						buttons.className = 'instance-buttons';
+						let deleteButton = document.createElement( 'button' );
+						deleteButton.className = 'button delete_occurrence button-compact';
+						deleteButton.type = 'button';
+						deleteButton.setAttribute( 'data-event', event_id );
+						deleteButton.setAttribute( 'data-begin', date + ' ' + begin );
+						deleteButton.setAttribute( 'data-end', dateEnd + ' ' + end );
+						deleteButton.setAttribute( 'data-value', response.id );
+						deleteButton.setAttribute( 'aria-describedby', 'occur_date_' + response.id );
+						deleteButton.textContent = 'Delete';
+						let editLink = document.createElement( 'a' );
+						editLink.href = edit_url;
+						editLink.className = 'button button-compact';
+						editLink.textContent = 'Edit';
+						buttons.appendChild( deleteButton );
+						buttons.appendChild( editLink );
+						li.appendChild( buttons );
+						document.querySelector( '.instance-list' ).insertAdjacentElement( 'beforeend', li );
+					}
+				}
+				$('.mc_response').text( response.response ).show( 300 );
+			}, "json" );
+		});
+
+		/**
+		 * Display human-readable event repetition pattern when making changes.
+		 */
+		$( '#e_recur, #e_every' ).on( 'change', function() {
+			let recur = $( '#e_recur' ).val();
+			let every = $( '#e_every' ).val();
+			let until = $( 'duet-date-picker[identifier=e_repeats]' ).val();
+
+			const data  = {
+				'action': mc_recur.action,
+				'until' : until,
+				'every' : every,
+				'recur' : recur,
+				'security' : mc_recur.security
+			};
+
+			$.post( ajaxurl, data, function (response) {
+				if ( '' === response.response ) {
+					$( '.mc_recur_string' ).removeClass( 'active' );
+					$('.mc_recur_string p').text( '' );
+				} else {
+					$( '.mc_recur_string' ).addClass( 'active' );
+					$('.mc_recur_string p').text( response.response ).show( 300 );
+				}
+			}, "json" );
+		});
+
+		/**
+		 * Human-readable event repetition for duet date picker.
+		 */
+		const repeats = document.querySelector( 'duet-date-picker[identifier=e_repeats]' );
+		if ( null !== repeats ) {
+			repeats.addEventListener( 'duetChange', function(e) {
+				let until = e.detail.value;
+				let recur = $( '#e_recur' ).val();
+				let every = $( '#e_every' ).val();
+
+				const data  = {
+					'action': mc_recur.action,
+					'until' : until,
+					'every' : every,
+					'recur' : recur,
+					'security' : mc_recur.security
+				};
+
+				$.post( ajaxurl, data, function (response) {
+					$( '.mc_recur_string' ).addClass( 'active' );
+					$('.mc_recur_string p').text( response.response ).show( 300 );
+				}, "json" );
+			});
+		}
+	});
+	$(function () {
+		$( 'button.add-category' ).on( 'click', function() {
+			let category_name = $( '#event_category_name' ).val();
+			if ( '' !== category_name ) {
+				const data = {
+					'action': mc_cats.action,
+					'category_name': category_name,
+					'security': mc_cats.security
+				};
+				$.post( ajaxurl, data, function (response) {
+					if ( response.success == 1 ) {
+						let category_id = response.category_id;
+						$( '#event_category_name' ).val( '' );
+						let li = document.createElement( 'li' );
+						li.className = 'new';
+						let input = document.createElement( 'input' );
+						input.type = 'checkbox';
+						input.name = 'event_category[]';
+						input.id = 'mc_cat_' + category_id;
+						input.value = category_id;
+						input.checked = true;
+						let label = document.createElement( 'label' );
+						label.setAttribute( 'for', 'mc_cat_' + category_id );
+						label.textContent = category_name;
+						li.appendChild( input );
+						li.appendChild( label );
+						document.querySelector( '.categories .event-new-category' ).insertAdjacentElement( 'beforebegin', li );
+						let primary = $( '#e_category' );
+						let el = document.createElement( 'option' );
+						el.value = category_id;
+						el.textContent = category_name;
+						primary.append( el );
+					}
+				}, "json" );
+			}
+		});
+
+	});
+}(jQuery));

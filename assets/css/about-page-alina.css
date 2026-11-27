@@ -1,0 +1,375 @@
+.rr-about-alina {
+    --alina-ink: #172d47;
+    --alina-blue: #3663ab;
+    --alina-accent: #e45b47;
+    --alina-gold: #d6b765;
+    --alina-cream: #f7f5f0;
+    --alina-line: #d9dedf;
+    --alina-muted: #66727b;
+    color: var(--alina-ink);
+    background: #fff;
+}
+
+.rr-about-alina *,
+.rr-about-alina *::before,
+.rr-about-alina *::after {
+    box-sizing: border-box;
+}
+
+.rr-about-alina img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rr-about-alina p {
+    margin: 0 0 1.5rem;
+}
+
+.rr-about-alina-hero {
+    padding: 5.5rem max(5vw, 1.5rem) 4.5rem;
+    background: var(--alina-cream);
+}
+
+.rr-about-alina-eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--alina-accent);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.rr-about-alina-hero > h1,
+.rr-about-alina-chapter h2,
+.rr-about-alina-end h2 {
+    font-weight: 600;
+}
+
+.rr-about-alina-hero > h1 {
+    max-width: 72rem;
+    margin: 1.25rem 0 1.5rem;
+    font-size: clamp(2.4rem, 4.7vw, 5rem);
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    text-wrap: balance;
+}
+
+.rr-about-alina-hero > h1 em,
+.rr-about-alina-end h2 em {
+    color: var(--alina-blue);
+}
+
+.rr-about-alina-subtitle {
+    max-width: 52rem;
+    margin: 0 0 2.25rem !important;
+    font-size: clamp(1.25rem, 2vw, 1.8rem);
+    line-height: 1.2;
+}
+
+.rr-about-alina-intro,
+.rr-about-alina-chapter-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.9fr);
+    align-items: start;
+    gap: 8%;
+}
+
+.rr-about-alina-prose {
+    max-width: 44rem;
+    color: #3c4b59;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.rr-about-alina-prose p:last-child {
+    margin-bottom: 0;
+}
+
+.rr-about-alina-hero-image,
+.rr-about-alina-photo {
+    min-width: 0;
+    margin: 0;
+}
+
+.rr-about-alina-hero-image {
+    height: 24rem;
+    position: relative;
+}
+
+.rr-about-alina-hero-image::after {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    color: #fff;
+    content: "KNOWLEDGE · VISION · SERVICE";
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-shadow: 0 1px 5px #0008;
+}
+
+.rr-about-alina-hero-image img,
+.rr-about-alina-photo img {
+    object-position: center 35%;
+}
+
+.rr-about-alina-hero-image figcaption,
+.rr-about-alina-photo figcaption {
+    margin-top: 0.8rem;
+    color: var(--alina-muted);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.rr-about-alina-jump {
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem max(5vw, 1.5rem);
+    border-bottom: 1px solid var(--alina-line);
+    background: #fffefaed;
+    backdrop-filter: blur(14px);
+    white-space: nowrap;
+}
+
+.rr-about-alina-jump strong {
+    color: var(--alina-accent);
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.rr-about-alina-jump a {
+    color: #435164;
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
+.rr-about-alina-jump a:hover,
+.rr-about-alina-jump a:focus-visible {
+    color: var(--alina-accent);
+}
+
+.rr-about-alina-chapter {
+    padding: 6.5rem max(5vw, 1.5rem);
+    border-bottom: 1px solid var(--alina-line);
+    scroll-margin-top: 4.5rem;
+}
+
+.rr-about-alina-cream {
+    background: white;
+}
+
+.rr-about-alina-gradient {
+    background: linear-gradient(120deg, rgba(54, 99, 171, 0.08), rgba(254, 74, 57, 0.08));
+}
+
+.rr-about-alina-chapter-head {
+    display: grid;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.25rem;
+}
+
+#rr-vaastu-alina-business span.rr-about-alina-number,
+#rr-about-alina-life span.rr-about-alina-number{
+    color:white;
+}
+
+.rr-about-alina-number {
+    color: var(--alina-accent);
+    font-size: 3.25rem;
+    line-height: 1;
+}
+
+.rr-about-alina-chapter h2 {
+    max-width: 58rem;
+    margin: 0;
+    font-size: clamp(2rem, 3.8vw, 3.5rem);
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+.rr-about-alina-photo {
+    min-height: 32rem;
+}
+
+.rr-about-alina-photo img {
+    min-height: 32rem;
+}
+
+.rr-about-alina-books {
+    display: grid;
+    gap: 0.75rem;
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rr-about-alina-books li {
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid var(--alina-accent);
+    background: #fff;
+    color: var(--alina-ink);
+    font-weight: 700;
+}
+
+.rr-about-alina-dark {
+    border-bottom: 0;
+    background: var(--alina-ink);
+    color: #fff;
+}
+
+.rr-about-alina-dark h2 {
+    color: var(--alina-gold);
+}
+
+.rr-about-alina-dark .rr-about-alina-prose {
+    max-width: 55rem;
+    color: #d5dee7;
+}
+
+.rr-about-alina-dark .rr-about-alina-number {
+    color: #ff8877;
+}
+
+.rr-about-alina-business-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 2.5rem;
+    margin-top: 3rem;
+}
+
+.rr-about-alina-business-feature {
+    padding: 2rem 0;
+    border-top: 1px solid rgba(213, 222, 231, 0.35);
+}
+
+.rr-about-alina-business-feature h3 {
+    margin: 0 0 1rem;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.rr-about-alina-business-feature p {
+    margin: 0 0 1rem;
+    color: #d5dee7;
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.rr-about-alina-business-feature p:last-child {
+    margin-bottom: 0;
+}
+
+.rr-about-alina-end {
+    padding: 6rem 1.5rem 7rem;
+    text-align: center;
+}
+
+.rr-about-alina-end h2 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 3.75rem);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+.rr-about-alina-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.75rem;
+    padding: 0.9rem 1.25rem;
+    background: var(--alina-accent);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.rr-about-alina-cta:hover,
+.rr-about-alina-cta:focus-visible {
+    background: var(--alina-ink);
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    .rr-about-alina-hero {
+        padding-top: 3.5rem;
+    }
+
+    .rr-about-alina-intro,
+    .rr-about-alina-chapter-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+    }
+
+    .rr-about-alina-hero-image {
+        height: 18rem;
+    }
+
+    .rr-about-alina-chapter {
+        padding-top: 4.25rem;
+        padding-bottom: 4.25rem;
+    }
+
+    .rr-about-alina-chapter-head {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .rr-about-alina-number {
+        font-size: 2.25rem;
+    }
+
+    .rr-about-alina-photo,
+    .rr-about-alina-photo img {
+        min-height: 20rem;
+    }
+
+    .rr-about-alina-business-grid {
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 2rem;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .rr-about-alina-hero {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .rr-about-alina-jump {
+        gap: 1rem;
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .rr-about-alina-chapter {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .rr-about-alina-hero-image {
+        height: 15rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rr-about-alina {
+        scroll-behavior: auto;
+    }
+}

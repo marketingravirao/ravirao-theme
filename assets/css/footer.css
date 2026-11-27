@@ -1,0 +1,790 @@
+.site-footer {
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(var(--rr-blue-rgb), 0.18);
+    background: var(--rr-blue);
+    color: var(--rr-white);
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-inner p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.site-footer .menu {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer a {
+    display: inline-block;
+    position: relative;
+    color: var(--rr-white);
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.site-footer a::after {
+    position: absolute;
+    right: 0;
+    bottom: -0.15rem;
+    left: 0;
+    height: 1px;
+    background: currentColor;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.18s ease;
+}
+
+.site-footer a:hover::after,
+.site-footer a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.main-footer-branded-v2 {
+    position: relative;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1.15rem, 2.8vw, 2.25rem) 0;
+    background: #10243a;
+    color: #cbd7e3;
+}
+
+.business-enquiry-section {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: clamp(4rem, 7vw, 6rem) clamp(1.15rem, 2.8vw, 2.25rem);
+    border-top: 7px solid var(--rr-coral);
+    scroll-margin-top: 8rem;
+    background: linear-gradient(118deg, #2760c4 0%, #3573d3 100%);
+    color: var(--rr-white);
+}
+
+.business-enquiry-section::before {
+    position: absolute;
+    top: -12.5rem;
+    right: -11.25rem;
+    width: 37.5rem;
+    height: 37.5rem;
+    border: 1px solid rgba(var(--rr-white-rgb), 0.13);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5rem rgba(var(--rr-white-rgb), 0.035), 0 0 0 10rem rgba(var(--rr-white-rgb), 0.025);
+    content: "";
+    pointer-events: none;
+}
+
+.business-enquiry-section .rr-section-title {
+    position: relative;
+    width: 100%;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    border: 0;
+    color: var(--rr-white);
+    font-family: var(--font-serif) !important;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem) !important;
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    text-align: left;
+}
+
+.business-enquiry-layout {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    align-items: flex-start;
+    gap: clamp(2.5rem, 8vw, 7.5rem);
+}
+
+.business-enquiry-copy p {
+    color: rgba(var(--rr-white-rgb), 0.86);
+}
+
+.business-enquiry-eyebrow {
+    margin: 0 0 1rem;
+    color: var(--rr-coral) !important;
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.business-enquiry-copy .business-enquiry-section__description {
+    margin-bottom: 1rem;
+    color: #e1eaf5;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.business-enquiry-copy .business-enquiry-section__services {
+    margin: 0;
+    color: #cfdcec;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+}
+
+.business-enquiry-section__channels {
+    display: grid;
+    max-width: 28.75rem;
+    gap: 0.75rem;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.business-enquiry-section__channels a {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    color: var(--rr-white);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.business-enquiry-section__channels a:focus-visible {
+    outline: 2px solid var(--rr-white);
+    outline-offset: 3px;
+}
+
+.business-enquiry-section__icon {
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex: none;
+    place-items: center;
+    border: 1px solid rgba(var(--rr-white-rgb), 0.3);
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.business-enquiry-section__channels a:hover .business-enquiry-section__icon {
+    background: rgba(var(--rr-white-rgb), 0.12);
+}
+
+.business-enquiry-section__icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.business-enquiry-section__contact small {
+    display: block;
+    margin-top: 0.0625rem;
+    color: rgba(var(--rr-white-rgb), 0.8);
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.business-enquiry-copy .business-enquiry-section__appointment {
+    max-width: 28.75rem;
+    margin: 1.375rem 0 0;
+    color: #cfdcec;
+    font-size: 0.8125rem;
+}
+
+.business-enquiry-form {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    min-height: 80vh;
+    overflow: hidden;
+    border-top: 5px solid var(--rr-coral);
+    padding:30px;
+    background: var(--rr-white);
+}
+
+.business-enquiry-section__form-title {
+    margin: 0 0 1rem;
+    color: var(--rr-blue);
+    font-family: var(--font-serif) !important;
+    font-size: clamp(1.5rem, 2.2vw, 1.75rem);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.business-enquiry-form iframe {
+    display: block;
+    width: 100%;
+    min-height: max(459px, calc(80vh - 7rem));
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.business-enquiry-privacy {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    color: rgba(var(--rr-blue-rgb, 54, 99, 171), 0.72);
+    font-size: 0.875rem;
+}
+
+.business-enquiry-privacy a {
+    color: var(--rr-blue);
+    font-weight: 700;
+}
+
+.footer-content-v2 {
+    display: grid;
+    grid-template-columns: 1.25fr 0.8fr 1.1fr;
+    gap: clamp(2rem, 5vw, 5rem);
+}
+
+.footer-col-v2 {
+    min-width: 0;
+}
+
+.footer-heading-v2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: var(--rr-white);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.footer-bar-v2 {
+    width: 0.25rem;
+    height: 1.4rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: var(--rr-coral);
+}
+
+.footer-col-v2.about p,
+.footer-col-v2.contact address {
+    margin: 0;
+    color: #cbd7e3;
+    font-size: clamp(1rem, 1vw, 1.0625rem);
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.footer-col-v2.links ul,
+.footer-col-v2.contact ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-col-v2.links ul li,
+.footer-col-v2.contact ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col-v2.links ul li a,
+.footer-col-v2.contact ul li a,
+.footer-col-v2.contact address a,
+.footer-social-links-v2 a {
+    display: inline-block;
+    color: #cbd7e3;
+    font-size: clamp(1rem, 1vw, 1.0625rem);
+    text-decoration: none;
+    line-height: 1.35;
+}
+
+.main-footer-branded-v2 .footer-col-v2 a:hover,
+.main-footer-branded-v2 .footer-col-v2 a:focus-visible {
+    color: var(--rr-white);
+}
+
+.footer-col-v2.contact ul:not(.footer-social-links-v2) li a,
+.footer-col-v2.contact address a {
+    position: relative;
+}
+
+.footer-col-v2.contact ul:not(.footer-social-links-v2) li a::after,
+.footer-col-v2.contact address a::after {
+    position: absolute;
+    right: 0;
+    bottom: -0.15rem;
+    left: 0;
+    height: 1px;
+    background: currentColor;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.18s ease;
+}
+
+.footer-col-v2.contact ul:not(.footer-social-links-v2) li a:hover::after,
+.footer-col-v2.contact address a:hover::after,
+.footer-col-v2.contact ul:not(.footer-social-links-v2) li a:focus-visible::after,
+.footer-col-v2.contact address a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.footer-link-label {
+    display: inline-block;
+    position: relative;
+}
+
+.footer-link-label::after {
+    position: absolute;
+    right: 0;
+    bottom: -0.15rem;
+    left: 0;
+    height: 1px;
+    background: currentColor;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.18s ease;
+}
+
+.footer-col-v2.links ul li a:hover .footer-link-label::after,
+.footer-col-v2.links ul li a:focus-visible .footer-link-label::after,
+.footer-social-links-v2 a:hover .footer-link-label::after,
+.footer-social-links-v2 a:focus-visible .footer-link-label::after {
+    transform: scaleX(1);
+}
+
+.footer-link-arrow {
+    margin-right: 0.45rem;
+    color: var(--rr-coral);
+}
+
+.footer-contact-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-social-links-v2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+}
+
+.footer-social-links-v2 a {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+
+.footer-social-links-v2 .footer-social-icons{
+    border:1px solid rgba(var(--rr-white-rgb), 0.7);
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}
+
+.footer-social-links-v2 .dashicons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 1.65rem;
+    height: 1.65rem;
+    flex: 0 0 1.65rem;
+    border-radius: 0.25rem;
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+.footer-social-links-v2 .footer-x-icon {
+    box-sizing: border-box;
+    width: 1.65rem;
+    height: 1.65rem;
+    flex: 0 0 1.65rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.footer-social-links-v2 a {
+    color: var(--rr-white);
+}
+
+.footer-bottom-v2 {
+    margin-top: 2.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(var(--rr-white-rgb), 0.35);
+    color: #cbd7e3;
+    font-size: clamp(0.8125rem, 0.85vw, 0.875rem);
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .business-enquiry-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+
+    .footer-content-v2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-col-v2.about {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .business-enquiry-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .business-enquiry-copy {
+        max-width: 38rem;
+    }
+
+    .footer-content-v2 {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .footer-col-v2.about {
+        grid-column: auto;
+    }
+}
+
+/* Temple contact section follows the page reference while retaining the shared form and footer. */
+.rr-temple-vaastu-page .business-enquiry-section {
+    isolation: isolate;
+    border-top: 0;
+    padding: 92px 0 84px;
+    background: linear-gradient(180deg, #7a130d 0%, #b8231a 46%, #e2492b 100%);
+}
+
+.rr-temple-vaastu-page .business-enquiry-section::before {
+    inset: 0;
+    z-index: -2;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: repeating-conic-gradient(from 0deg at 50% 112%, #ffe6a51a 0 3.5deg, #0000 3.5deg 11.25deg);
+    -webkit-mask: linear-gradient(180deg, #0000 0%, #000 70%);
+    mask: linear-gradient(180deg, #0000 0%, #000 70%);
+}
+
+.rr-temple-vaastu-page .business-enquiry-section::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(ellipse 72% 58% at 50% 112%, #ffd47977, #0000 72%);
+    content: "";
+    pointer-events: none;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__heading {
+    position: relative;
+    z-index: 1;
+    width: min(1220px, calc(100% - 48px));
+    margin: 0 auto 46px;
+    text-align: center;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__eyebrow,
+.rr-temple-vaastu-page .business-enquiry-section__consultation-label {
+    margin: 0 0 16px;
+    color: #ffd479;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.19em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__heading .rr-section-title {
+    margin: 0;
+    color: #fffaf0;
+    font-size: clamp(1.75rem, 3.2vw, 40px) !important;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__ornament {
+    width: min(260px, 100%);
+    height: 30px;
+    margin: 14px auto 0;
+    line-height: 0;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__ornament svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.rr-temple-vaastu-page .business-enquiry-layout--temple {
+    width: min(1220px, calc(100% - 48px));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+    align-items: stretch;
+    gap: 36px;
+    padding: 52px;
+    border: 2px solid #e9a923;
+    border-radius: 6px 6px 16px 16px;
+    outline: 1px solid #ffd47999;
+    outline-offset: 5px;
+    background: #fffaf0;
+    box-shadow: 0 30px 70px #4d0d0988;
+    color: #3a2113;
+}
+
+.rr-temple-vaastu-page .business-enquiry-layout--temple::before {
+    position: absolute;
+    inset: 8px;
+    z-index: 0;
+    border: 1px dashed #c8281e66;
+    border-radius: 3px 3px 11px 11px;
+    content: "";
+    pointer-events: none;
+}
+
+.rr-temple-vaastu-page .business-enquiry-layout--temple > * {
+    position: relative;
+    z-index: 1;
+}
+
+.rr-temple-vaastu-page .business-enquiry-copy {
+    min-width: 0;
+}
+
+.rr-temple-vaastu-page .business-enquiry-copy p,
+.rr-temple-vaastu-page .business-enquiry-copy .business-enquiry-section__description,
+.rr-temple-vaastu-page .business-enquiry-copy .business-enquiry-section__services,
+.rr-temple-vaastu-page .business-enquiry-copy .business-enquiry-section__appointment {
+    color: #5b4332;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__consultation-label {
+    margin-bottom: 10px;
+    color: #c8281e;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__temple-title {
+    margin: 0 0 16px;
+    color: #3a2113;
+    font-family: var(--font-serif) !important;
+    font-size: clamp(30px, 3vw, 46px) !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.1 !important;
+}
+
+.rr-temple-vaastu-page .business-enquiry-copy .business-enquiry-section__description {
+    margin-bottom: 1rem;
+    color: #5b4332;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.rr-temple-vaastu-page .business-enquiry-copy .business-enquiry-section__services {
+    margin: 0;
+    color: #c8281e;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__channels {
+    gap: 0;
+    max-width: none;
+    margin-top: 22px;
+    padding-left: 16px;
+    border-left: 3px solid #e9a923;
+    line-height: 1.9;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__channels a {
+    display: block;
+    width: auto;
+    margin: 0 0 14px;
+    color: #3a2113;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__channels li:last-child a {
+    margin-bottom: 0;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__icon {
+    display: none;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__contact small {
+    margin-top: 0;
+    color: #5b4332;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+.rr-temple-vaastu-page .business-enquiry-copy .business-enquiry-section__appointment {
+    margin-top: 18px;
+    color: #8a6c52;
+    font-size: 14px;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__emblem {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 36px auto 0;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__emblem-icon {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 8px 14px #7a130d55);
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__emblem-halo,
+.rr-temple-vaastu-page .business-enquiry-section__emblem-ring,
+.rr-temple-vaastu-page .business-enquiry-section__emblem-trishula,
+.rr-temple-vaastu-page .business-enquiry-section__emblem-flare {
+    position: absolute;
+    inset: 0;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__emblem-halo {
+    inset: -22%;
+    border-radius: 50%;
+    background: radial-gradient(circle closest-side, #ffd47988 0%, #ffb43a44 46%, #ffb43a00 100%);
+    opacity: 0.45;
+    animation: rr-temple-emblem-breathe 6s ease-in-out infinite;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__emblem-ring {
+    overflow: hidden;
+    -webkit-mask: var(--i-medallion-m-ring) center / 100% 100% no-repeat;
+    mask: var(--i-medallion-m-ring) center / 100% 100% no-repeat;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__emblem-ring i {
+    position: absolute;
+    inset: -8%;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #0000 0deg, #0000 240deg, #fff0b466 300deg, #fffbe6e6 340deg, #fff0b4aa 354deg, #0000 360deg);
+    animation: rr-temple-emblem-rotate 12s linear infinite;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__emblem-trishula {
+    overflow: hidden;
+    -webkit-mask: var(--i-medallion-m-tri) center / 100% 100% no-repeat;
+    mask: var(--i-medallion-m-tri) center / 100% 100% no-repeat;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__emblem-trishula i {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, #0000 36%, #fff0b066 44%, #fff8d4cc 50%, #fff0b066 56%, #0000 64%) 0 0 / 100% 320% no-repeat;
+    opacity: 0;
+    animation: rr-temple-emblem-shine 8s ease-in-out infinite;
+}
+
+.rr-temple-vaastu-page .business-enquiry-section__emblem-flare {
+    left: 50.3%;
+    top: 8.4%;
+    width: 34%;
+    height: 34%;
+    margin: -17% 0 0 -17%;
+    border-radius: 50%;
+    background: radial-gradient(circle closest-side, #fffbe6 0%, #ffe08acc 18%, #ffd47944 46%, #ffd47900 100%);
+    mix-blend-mode: screen;
+    opacity: 0;
+    transform: scale(0.4);
+    animation: rr-temple-emblem-flare 8s ease-in-out infinite;
+}
+
+@keyframes rr-temple-emblem-breathe {
+    0%, 100% { opacity: 0.3; transform: scale(0.92); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes rr-temple-emblem-rotate {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rr-temple-emblem-shine {
+    0%, 100% { background-position: 0 0; opacity: 0; }
+    8% { opacity: 1; }
+    50% { background-position: 0 100%; opacity: 1; }
+    58% { opacity: 0; }
+}
+
+@keyframes rr-temple-emblem-flare {
+    0%, 50% { opacity: 0; transform: scale(0.4); }
+    54% { opacity: 1; transform: scale(1); }
+    64%, 100% { opacity: 0; transform: scale(1.5); }
+}
+
+.rr-temple-vaastu-page .business-enquiry-form {
+    min-height: 80vh;
+    padding: 30px;
+    border-top: 5px solid #c8281e;
+    background: #f7ecd2;
+    box-shadow: 0 0 0 1px #d9a63a;
+}
+
+.rr-temple-vaastu-page .business-enquiry-form iframe {
+    min-height: max(459px, calc(80vh - 7rem));
+}
+
+@media (max-width: 900px) {
+    .rr-temple-vaastu-page .business-enquiry-layout--temple {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .rr-temple-vaastu-page .business-enquiry-section {
+        padding: 72px 0 60px;
+    }
+
+    .rr-temple-vaastu-page .business-enquiry-section__heading {
+        margin-bottom: 34px;
+    }
+
+    .rr-temple-vaastu-page .business-enquiry-layout--temple {
+        width: calc(100% - 32px);
+        gap: 24px;
+        padding: 26px;
+    }
+
+    .rr-temple-vaastu-page .business-enquiry-form {
+        padding: 20px;
+    }
+
+    .rr-temple-vaastu-page .business-enquiry-section__emblem {
+        width: 96px;
+        height: 96px;
+        margin-top: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rr-temple-vaastu-page .business-enquiry-section__emblem * {
+        animation: none !important;
+    }
+}

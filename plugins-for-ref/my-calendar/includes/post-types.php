@@ -1,0 +1,701 @@
+<?php
+/**
+ * Define My Calendar post types.
+ *
+ * @category Posts
+ * @package  My Calendar
+ * @author   Joe Dolson
+ * @license  GPLv2
+ * @link     https://www.joedolson.com/my-calendar/
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Add custom fields to permalinks settings page.
+ */
+function mc_load_permalinks() {
+	$opts = array( 'label_for' => 'mc_cpt_base' );
+	// Add a settings field to the permalink page.
+	add_settings_field( 'mc_cpt_base', __( 'My Calendar Events base', 'my-calendar' ), 'mc_field_callback', 'permalink', 'optional', $opts );
+
+	$opts = array( 'label_for' => 'mc_location_cpt_base' );
+	// Add a settings field to the permalink page.
+	add_settings_field( 'mc_location_cpt_base', __( 'My Calendar Locations base', 'my-calendar' ), 'mc_location_field_callback', 'permalink', 'optional', $opts );
+
+	if ( function_exists( 'mcs_submissions' ) && 'true' === get_option( 'mcs_custom_hosts' ) ) {
+		$opts = array( 'label_for' => 'mc_cpt_base' );
+		// Add a settings field to the permalink page.
+		add_settings_field( 'mc_hosts_cpt_base', __( 'My Calendar Hosts base', 'my-calendar' ), 'mc_hosts_callback', 'permalink', 'optional', $opts );
+	}
+}
+add_action( 'load-options-permalink.php', 'mc_load_permalinks' );
+
+
+/**
+ * Save custom fields to permalinks settings page.
+ */
+function mc_save_permalinks() {
+	if ( ! isset( $_POST['mc_cpt_base'] ) && ! isset( $_POST['mc_location_cpt_base'] ) && ! isset( $_POST['mc_hosts_cpt_base'] ) ) {
+		return;
+	}
+	if ( ! ( current_user_can( 'manage_options' ) ) ) {
+		wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'my-calendar' ) );
+	}
+	check_admin_referer( 'update-permalink' );
+
+	if ( isset( $_POST['mc_cpt_base'] ) ) {
+		mc_update_option( 'cpt_base', sanitize_key( $_POST['mc_cpt_base'] ) );
+	}
+	if ( isset( $_POST['mc_location_cpt_base'] ) ) {
+		mc_update_option( 'location_cpt_base', sanitize_key( $_POST['mc_location_cpt_base'] ) );
+	}
+
+	if ( function_exists( 'mcs_submissions' ) && 'true' === get_option( 'mcs_custom_hosts' ) ) {
+		if ( isset( $_POST['mc_hosts_cpt_base'] ) ) {
+			mc_update_option( 'hosts_cpt_base', sanitize_key( $_POST['mc_hosts_cpt_base'] ) );
+		}
+	}
+}
+add_action( 'admin_init', 'mc_save_permalinks' );
+
+/**
+ * Prevent error if hosts callback doesn't exist.
+ */
+function mc_hosts_callback() {
+	if ( function_exists( 'mcs_hosts_callback' ) ) {
+		mcs_hosts_callback();
+	}
+}
+
+/**
+ * Custom field callback for permalinks settings
+ */
+function mc_field_callback() {
+	$value = ( '' !== mc_get_option( 'cpt_base' ) ) ? mc_get_option( 'cpt_base' ) : 'mc-events';
+	echo '<input type="text" value="' . esc_attr( $value ) . '" name="mc_cpt_base" id="mc_cpt_base" class="regular-text" placeholder="mc-events" />';
+}
+
+/**
+ * Custom field callback for permalinks settings
+ */
+function mc_location_field_callback() {
+	$value = ( '' !== mc_get_option( 'location_cpt_base' ) ) ? mc_get_option( 'location_cpt_base' ) : 'mc-locations';
+	echo '<input type="text" value="' . esc_attr( $value ) . '" name="mc_location_cpt_base" id="mc_location_cpt_base" class="regular-text" placeholder="mc-locations" />';
+}
+
+/**
+ * Generate arguments for My Calendar post types.
+ */
+function mc_post_type() {
+	$arguments = array(
+		'public'              => true,
+		'publicly_queryable'  => true,
+		/**
+		 * Should My Calendar post types be excluded from search. Default false.
+		 *
+		 * Allowing the event post type to be searchable will not provide a true event search, especially with respect to recurring events.
+		 * It will not search recurring events by date, only the post content from each event. See https://github.com/joedolson/my-calendar/issues/23.
+		 *
+		 * @hook mc_event_exclude_from_search
+		 *
+		 * @param bool $show True to exclude from search.
+		 */
+		'exclude_from_search' => apply_filters( 'mc_event_exclude_from_search', true ),
+		'show_ui'             => true,
+		'can_export'          => false,
+		/**
+		 * Should My Calendar post types be shown in admin menus. Default false.
+		 *
+		 * @hook mc_show_custom_posts_in_menu
+		 *
+		 * @param bool $show True to show in menus.
+		 *
+		 * @return bool
+		 */
+		'show_in_menu'        => apply_filters( 'mc_show_custom_posts_in_menu', false ),
+		'menu_icon'           => null,
+		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields' ),
+	);
+
+	$loc_arguments             = $arguments;
+	$loc_arguments['supports'] = array( 'title', 'editor', 'custom-fields', 'thumbnail' );
+	/**
+	 * Should location posts be excluded from search? Default true.
+	 *
+	 * @hook mc_location_exclude_from_search
+	 *
+	 * @param bool $exclude True to exclude.
+	 *
+	 * @return bool
+	 */
+	$loc_arguments['exclude_from_search'] = apply_filters( 'mc_location_exclude_from_search', true );
+
+	$host_arguments                 = $arguments;
+	$host_arguments['show_in_menu'] = true;
+	$host_arguments['menu_icon']    = 'dashicons-superhero';
+
+	/**
+	 * Filter post type arguments for My Calendar events (mc-events).
+	 *
+	 * @hook mc_event_post_type_args
+	 *
+	 * @param array $arguments Post type arguments.
+	 *
+	 * @return array
+	 */
+	$arguments = apply_filters( 'mc_event_post_type_args', $arguments );
+
+	$views = mc_get_option( 'views' );
+	// If single event view is disabled, alter visibility.
+	if ( ! in_array( 'single', $views, true ) ) {
+		$arguments['public']             = false;
+		$arguments['publicly_queryable'] = false;
+	}
+	/**
+	 * Filter post type arguments for My Calendar locations (mc-locations).
+	 *
+	 * @hook mc_location_post_type_args
+	 *
+	 * @param array $loc_arguments Post type arguments.
+	 *
+	 * @return array
+	 */
+	$loc_arguments = apply_filters( 'mc_location_post_type_args', $loc_arguments );
+
+	$types = array(
+		'mc-events'    => array(
+			__( 'event', 'my-calendar' ),
+			__( 'events', 'my-calendar' ),
+			__( 'Event', 'my-calendar' ),
+			__( 'Events', 'my-calendar' ),
+			$arguments,
+		),
+		'mc-locations' => array(
+			__( 'location', 'my-calendar' ),
+			__( 'locations', 'my-calendar' ),
+			__( 'Location', 'my-calendar' ),
+			__( 'Locations', 'my-calendar' ),
+			$loc_arguments,
+		),
+	);
+	if ( function_exists( 'mcs_submissions' ) && 'true' === get_option( 'mcs_custom_hosts' ) ) {
+		$types['mc-hosts'] = array(
+			__( 'event host', 'my-calendar' ),
+			__( 'event hosts', 'my-calendar' ),
+			__( 'Event Host', 'my-calendar' ),
+			__( 'Event Hosts', 'my-calendar' ),
+			$host_arguments,
+		);
+	}
+
+	return $types;
+}
+
+/**
+ * Labels for My Calendar post types.
+ *
+ * @param string $type  Post type key.
+ * @param array  $value Array of post type name variations.
+ *
+ * @return array
+ */
+function mc_post_type_labels( $type, $value ) {
+	$labels = array();
+	switch ( $type ) {
+		case 'mc-events':
+			$labels = array(
+				'name'               => $value[3],
+				'singular_name'      => $value[2],
+				'add_new'            => __( 'Add New Event', 'my-calendar' ),
+				'add_new_item'       => __( 'Create New Event', 'my-calendar' ),
+				'edit_item'          => __( 'Modify Event', 'my-calendar' ),
+				'new_item'           => __( 'New Event', 'my-calendar' ),
+				'view_item'          => __( 'View Event', 'my-calendar' ),
+				'search_items'       => __( 'Search Events', 'my-calendar' ),
+				'not_found'          => __( 'No Event found', 'my-calendar' ),
+				'not_found_in_trash' => __( 'No Events found in Trash', 'my-calendar' ),
+				'parent_item_colon'  => '',
+			);
+			break;
+		case 'mc-locations':
+			$labels = array(
+				'name'               => $value[3],
+				'singular_name'      => $value[2],
+				'add_new'            => __( 'Add New Location', 'my-calendar' ),
+				'add_new_item'       => __( 'Create New Location', 'my-calendar' ),
+				'edit_item'          => __( 'Modify Location', 'my-calendar' ),
+				'new_item'           => __( 'New Location', 'my-calendar' ),
+				'view_item'          => __( 'View Location', 'my-calendar' ),
+				'search_items'       => __( 'Search Locations', 'my-calendar' ),
+				'not_found'          => __( 'No Location found', 'my-calendar' ),
+				'not_found_in_trash' => __( 'No Locations found in Trash', 'my-calendar' ),
+				'parent_item_colon'  => '',
+			);
+			break;
+		case 'mc-hosts':
+			$labels = array(
+				'name'               => $value[3],
+				'singular_name'      => $value[2],
+				'add_new'            => __( 'Add New Host', 'my-calendar' ),
+				'add_new_item'       => __( 'Create New Host', 'my-calendar' ),
+				'edit_item'          => __( 'Modify Host', 'my-calendar' ),
+				'new_item'           => __( 'New Host', 'my-calendar' ),
+				'view_item'          => __( 'View Host', 'my-calendar' ),
+				'search_items'       => __( 'Search Hosts', 'my-calendar' ),
+				'not_found'          => __( 'No Host found', 'my-calendar' ),
+				'not_found_in_trash' => __( 'No Hosts found in Trash', 'my-calendar' ),
+				'parent_item_colon'  => '',
+			);
+			break;
+	}
+
+	return $labels;
+}
+
+/**
+ * Register custom post types for events
+ */
+function mc_posttypes() {
+	$types   = mc_post_type();
+	$enabled = array( 'mc-events', 'mc-locations' );
+	if ( function_exists( 'mcs_submissions' ) && 'true' === get_option( 'mcs_custom_hosts' ) ) {
+		$enabled[] = 'mc-hosts';
+	}
+	foreach ( $enabled as $key ) {
+		$value  =& $types[ $key ];
+		$labels = mc_post_type_labels( $key, $value );
+		$raw    = $value[4];
+		$args   = array(
+			'labels'              => $labels,
+			'public'              => $raw['public'],
+			'publicly_queryable'  => $raw['publicly_queryable'],
+			'exclude_from_search' => $raw['exclude_from_search'],
+			'show_ui'             => $raw['show_ui'],
+			'show_in_menu'        => $raw['show_in_menu'],
+			'menu_icon'           => ( null === $raw['menu_icon'] ) ? plugins_url( 'images', __FILE__ ) . '/icon.png' : $raw['menu_icon'],
+			'query_var'           => true,
+			'can_export'          => $raw['can_export'],
+			'rewrite'             => array(
+				'with_front' => false,
+				/**
+				 * Filter default calendar post type slugs. Default 'mc-events' for events and 'mc-locations' for locations.
+				 *
+				 * @hook mc_event_slug
+				 *
+				 * @param string $key Slug.
+				 *
+				 * @return string
+				 */
+				'slug'       => apply_filters( 'mc_event_slug', $key ),
+				/**
+				 * Enable feeds for My Calendar post types.
+				 *
+				 * @hook mc_has_feeds
+				 *
+				 * @param bool   $enabled Default false.
+				 * @param string $key Post type name.
+				 *
+				 * @return bool
+				 */
+				'feeds'      => apply_filters( 'mc_has_feeds', false, $key ),
+			),
+			'hierarchical'        => false,
+			'menu_position'       => 20,
+			'supports'            => $raw['supports'],
+		);
+		register_post_type( $key, $args );
+	}
+}
+
+/**
+ * Replace the slug with saved option.
+ *
+ * @param string $slug Base post type name.
+ *
+ * @return string New permalink base.
+ */
+function mc_filter_posttype_slug( $slug ) {
+	if ( 'mc-events' === $slug ) {
+		$slug = ( '' !== mc_get_option( 'cpt_base' ) ) ? mc_get_option( 'cpt_base' ) : $slug;
+	}
+	if ( 'mc-locations' === $slug ) {
+		$slug = ( '' !== mc_get_option( 'location_cpt_base' ) ) ? mc_get_option( 'location_cpt_base' ) : $slug;
+	}
+	if ( 'mc-hosts' === $slug ) {
+		$slug = ( '' !== mc_get_option( 'hosts_cpt_base' ) ) ? mc_get_option( 'hosts_cpt_base' ) : $slug;
+	}
+
+	return $slug;
+}
+add_filter( 'mc_event_slug', 'mc_filter_posttype_slug' );
+
+add_filter( 'the_posts', 'mc_close_comments' );
+/**
+ * Most people don't want comments open on events. This will automatically close them.
+ *
+ * @param array $posts Array of WP Post objects.
+ *
+ * @return array $posts
+ */
+function mc_close_comments( $posts ) {
+	if ( is_admin() || ! is_single() || empty( $posts ) ) {
+		return $posts;
+	}
+
+	if ( 'mc-events' === get_post_type( $posts[0]->ID ) ) {
+		$post = $posts[0];
+		/**
+		 * Filter whether event posts should automatically close comments. Default 'true'.
+		 *
+		 * @hook mc_autoclose_comments
+		 *
+		 * @param bool    $close 'true' to close comments.
+		 * @param WP_Post $post Post object.
+		 *
+		 * @return bool
+		 */
+		if ( apply_filters( 'mc_autoclose_comments', true, $post ) && 'closed' !== $post->comment_status ) {
+			$post->comment_status = 'closed';
+			$post->ping_status    = 'closed';
+			wp_update_post( $post );
+		}
+	}
+
+	return $posts;
+}
+
+add_filter( 'default_content', 'mc_posttypes_defaults', 10, 2 );
+/**
+ * By default, disable comments on event posts on save
+ *
+ * @param string $post_content unused.
+ * @param object $post WP Post object.
+ *
+ * @return string $post_content;
+ */
+function mc_posttypes_defaults( $post_content, $post ) {
+	if ( $post->post_type ) {
+		switch ( $post->post_type ) {
+			case 'mc-events':
+				$post->comment_status = 'closed';
+				break;
+		}
+	}
+
+	return $post_content;
+}
+
+/**
+ * Register taxonomies on My Calendar custom post types
+ */
+function mc_taxonomies() {
+	$enabled = array( 'mc-events' );
+	foreach ( $enabled as $key ) {
+		/**
+		 * Filter event category taxonomy slug. Default 'mc-event-category'.
+		 *
+		 * @hook mc_event_category_slug
+		 *
+		 * @param string $slug Default slug.
+		 *
+		 * @return string
+		 */
+		$slug = apply_filters( 'mc_event_category_slug', 'mc-event-category' );
+		register_taxonomy(
+			'mc-event-category',
+			// Internal name = machine-readable taxonomy name.
+			array( $key ),
+			array(
+				'hierarchical' => true,
+				'label'        => __( 'Event Categories', 'my-calendar' ),
+				'query_var'    => true,
+				'rewrite'      => array( 'slug' => $slug ),
+			)
+		);
+		/**
+		 * Filter event access taxonomy slug. Default 'mc-event-access'.
+		 *
+		 * @hook mc_event_access_slug
+		 *
+		 * @param string $slug Default slug.
+		 *
+		 * @return string
+		 */
+		$slug = apply_filters( 'mc_event_access_slug', 'mc-event-access' );
+		register_taxonomy(
+			'mc-event-access',
+			// Internal name = machine-readable taxonomy name.
+			array( $key ),
+			array(
+				'hierarchical' => false,
+				'label'        => __( 'Event Accessibility', 'my-calendar' ),
+				'query_var'    => true,
+				'rewrite'      => array( 'slug' => $slug ),
+			)
+		);
+	}
+	$enabled = array( 'mc-locations' );
+	foreach ( $enabled as $key ) {
+		/**
+		 * Filter location access taxonomy slug. Default 'mc-location-access'.
+		 *
+		 * @hook mc_location_access_slug
+		 *
+		 * @param string $slug Default slug.
+		 *
+		 * @return string
+		 */
+		$slug = apply_filters( 'mc_location_access_slug', 'mc-location-access' );
+		register_taxonomy(
+			'mc-location-access',
+			// Internal name = machine-readable taxonomy name.
+			array( $key ),
+			array(
+				'hierarchical' => false,
+				'label'        => __( 'Location Accessibility', 'my-calendar' ),
+				'query_var'    => true,
+				'rewrite'      => array( 'slug' => $slug ),
+			)
+		);
+	}
+}
+
+/**
+ * Custom post type strings
+ *
+ * @param array $messages default text.
+ *
+ * @return array Modified messages array.
+ */
+function mc_posttypes_messages( $messages ) {
+	global $post, $post_ID;
+	$enabled = array( 'mc-events', 'mc-locations' );
+	if ( function_exists( 'mcs_submissions' ) && 'true' === get_option( 'mcs_custom_hosts' ) ) {
+		$enabled[] = 'mc-hosts';
+	}
+	foreach ( $enabled as $key ) {
+		if ( 'mc-events' === $key ) {
+			$messages[ $key ] = array(
+				0  => '', // Unused. Messages start at index 1.
+				// Translators: URL to view event.
+				1  => sprintf( __( 'Event updated. <a href="%s">View Event</a>', 'my-calendar' ), esc_url( get_permalink( $post_ID ) ) ),
+				2  => __( 'Custom field updated.', 'my-calendar' ),
+				3  => __( 'Custom field deleted.', 'my-calendar' ),
+				4  => __( 'Event updated.', 'my-calendar' ),
+				// Translators: %s: date and time of the revision.
+				5  => isset( $_GET['revision'] ) ? sprintf( __( 'Event restored to revision from %s', 'my-calendar' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false, // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				// Translators: URL to view event.
+				6  => sprintf( __( 'Event published. <a href="%s">View event</a>', 'my-calendar' ), esc_url( get_permalink( $post_ID ) ) ),
+				7  => sprintf( __( 'Event saved.', 'my-calendar' ) ),
+				// Translators: URL to preview event.
+				8  => sprintf( __( 'Event submitted. <a target="_blank" href="%s">Preview Event</a>', 'my-calendar' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
+				// Translators: Date event scheduled to be published, URL to preview event.
+				9  => sprintf( __( 'Event scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview event</a>', 'my-calendar' ), date_i18n( __( 'M j, Y @ G:i', 'my-calendar' ), strtotime( $post->post_date ) ), esc_url( get_permalink( $post_ID ) ) ),
+				// Translators: URL to preview event.
+				10 => sprintf( __( 'Event draft updated. <a target="_blank" href="%s">Preview Event</a>', 'my-calendar' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
+			);
+		}
+		if ( 'mc-locations' === $key ) {
+			$messages[ $key ] = array(
+				0  => '', // Unused. Messages start at index 1.
+				// Translators: URL to view event.
+				1  => sprintf( __( 'Location updated. <a href="%s">View Location</a>', 'my-calendar' ), esc_url( get_permalink( $post_ID ) ) ),
+				2  => __( 'Custom field updated.', 'my-calendar' ),
+				3  => __( 'Custom field deleted.', 'my-calendar' ),
+				4  => __( 'Location updated.', 'my-calendar' ),
+				// Translators: %s: date and time of the revision.
+				5  => isset( $_GET['revision'] ) ? sprintf( __( 'Location restored to revision from %s', 'my-calendar' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false, // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				// Translators: URL to view event.
+				6  => sprintf( __( 'Location published. <a href="%s">View event</a>', 'my-calendar' ), esc_url( get_permalink( $post_ID ) ) ),
+				7  => sprintf( __( 'Location saved.', 'my-calendar' ) ),
+				// Translators: URL to preview event.
+				8  => sprintf( __( 'Location submitted. <a target="_blank" href="%s">Preview Location</a>', 'my-calendar' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
+				// Translators: Date event scheduled to be published, URL to preview event.
+				9  => sprintf( __( 'Location scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview event</a>', 'my-calendar' ), date_i18n( __( 'M j, Y @ G:i', 'my-calendar' ), strtotime( $post->post_date ) ), esc_url( get_permalink( $post_ID ) ) ),
+				// Translators: URL to preview event.
+				10 => sprintf( __( 'Location draft updated. <a target="_blank" href="%s">Preview Location</a>', 'my-calendar' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
+			);
+		}
+		if ( 'mc-hosts' === $key ) {
+			$messages[ $key ] = array(
+				0  => '', // Unused. Messages start at index 1.
+				// Translators: URL to view event.
+				1  => sprintf( __( 'Host updated. <a href="%s">View Host</a>', 'my-calendar' ), esc_url( get_permalink( $post_ID ) ) ),
+				2  => __( 'Custom field updated.', 'my-calendar' ),
+				3  => __( 'Custom field deleted.', 'my-calendar' ),
+				4  => __( 'Host updated.', 'my-calendar' ),
+				// Translators: %s: date and time of the revision.
+				5  => isset( $_GET['revision'] ) ? sprintf( __( 'Host restored to revision from %s', 'my-calendar' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false, // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				// Translators: URL to view event.
+				6  => sprintf( __( 'Host published. <a href="%s">View event</a>', 'my-calendar' ), esc_url( get_permalink( $post_ID ) ) ),
+				7  => sprintf( __( 'Host saved.', 'my-calendar' ) ),
+				// Translators: URL to preview event.
+				8  => sprintf( __( 'Host submitted. <a target="_blank" href="%s">Preview host</a>', 'my-calendar' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
+				// Translators: Date event scheduled to be published, URL to preview event.
+				9  => sprintf( __( 'Host scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview event</a>', 'my-calendar' ), date_i18n( __( 'M j, Y @ G:i', 'my-calendar' ), strtotime( $post->post_date ) ), esc_url( get_permalink( $post_ID ) ) ),
+				// Translators: URL to preview event.
+				10 => sprintf( __( 'Host draft updated. <a target="_blank" href="%s">Preview Host</a>', 'my-calendar' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
+			);
+		}
+	}
+
+	return $messages;
+}
+
+/**
+ * Pass edits to event description or excerpt back to event if edited in editor.
+ *
+ * @param int    $post_id Post ID.
+ * @param object $post Post object.
+ *
+ * @return int Post ID.
+ */
+function mc_save_post( $post_id, $post ) {
+	$autosave   = ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE );
+	$doing_ajax = ( defined( 'DOING_AJAX' ) && DOING_AJAX );
+	$is_event   = ( 'mc-events' === get_post_type( $post_id ) );
+	if ( empty( $_POST ) || $autosave || wp_is_post_revision( $post_id ) || isset( $_POST['_inline_edit'] ) || $doing_ajax || ! $is_event ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
+		return $post_id;
+	}
+	// Don't run this when editing in the event editor.
+	$current_screen = ( is_admin() ) ? get_current_screen() : false;
+	if ( $current_screen && 'toplevel_page_my-calendar' === $current_screen->id ) {
+		return $post_id;
+	}
+	// Copy post content to event.
+	$event_id = get_post_meta( $post_id, '_mc_event_id', true );
+	mc_update_data( $event_id, 'event_desc', $post->post_content, '%s' );
+	mc_update_data( $event_id, 'event_short', $post->post_excerpt, '%s' );
+
+	return $post_id;
+}
+add_action( 'wp_after_insert_post', 'mc_save_post', 10, 2 );
+
+/**
+ * Map event approval status to WordPress post status.
+ *
+ * @param object $event Event object.
+ *
+ * @return string
+ */
+function mc_get_event_post_status( $event ) {
+	if ( ! is_object( $event ) ) {
+		return 'draft';
+	}
+
+	$approval = isset( $event->event_approved ) ? (int) $event->event_approved : 0;
+	switch ( $approval ) {
+		case 0:
+			return 'draft';
+		case 2:
+			return 'trash';
+		case 6:
+			return 'future';
+		default:
+			return ( mc_private_event( $event, false ) ) ? 'private' : 'publish';
+	}
+}
+
+/**
+ * Sync an event post status with current event status.
+ *
+ * @param int $event_id Event ID.
+ *
+ * @return void
+ */
+function mc_sync_event_post_status( $event_id ) {
+	$event_id = absint( $event_id );
+	if ( ! $event_id ) {
+		return;
+	}
+
+	$event   = mc_get_event_core( $event_id );
+	$post_id = (int) mc_get_event_post( $event_id );
+	if ( ! $event || ! $post_id ) {
+		return;
+	}
+	if ( 'hidden' !== mc_event_states_type( (int) $event->event_approved ) ) {
+		mc_publish_event_location( $event_id );
+	}
+
+	$target_status = mc_get_event_post_status( $event );
+	$post_status   = get_post_status( $post_id );
+	if ( ! $post_status || $post_status === $target_status ) {
+		return;
+	}
+
+	$update = array(
+		'ID'          => $post_id,
+		'post_status' => $target_status,
+	);
+	if ( 'future' === $target_status ) {
+		$post_date = get_post_field( 'post_date', $post_id );
+		$post_time = $post_date ? strtotime( $post_date ) : 0;
+		$now       = current_time( 'timestamp' ); // phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested
+		if ( $post_time <= $now ) {
+			$post_date               = mc_date( 'Y-m-d H:i:s', $now + MINUTE_IN_SECONDS, false );
+			$update['post_date']     = $post_date;
+			$update['post_date_gmt'] = get_gmt_from_date( $post_date );
+		}
+	}
+
+	wp_update_post( $update );
+}
+
+/**
+ * Sync post status whenever an event transitions statuses.
+ *
+ * @param int    $prev_status Previous event status.
+ * @param int    $new_status New event status.
+ * @param string $action Action context.
+ * @param array  $update Submitted event data.
+ * @param int    $event_id Event ID.
+ */
+function mc_sync_post_status_on_event_transition( $prev_status, $new_status, $action, $update, $event_id ) {
+	if ( (int) $prev_status === (int) $new_status ) {
+		return;
+	}
+
+	mc_sync_event_post_status( $event_id );
+}
+add_action( 'mc_transition_event', 'mc_sync_post_status_on_event_transition', 20, 5 );
+
+/**
+ * Update event approval when a scheduled event post is published.
+ *
+ * @param string $new_status New post status.
+ * @param string $old_status Previous post status.
+ * @param object $post Post object.
+ */
+function mc_publish_scheduled_event( $new_status, $old_status, $post ) {
+	if ( 'mc-events' !== $post->post_type || 'future' !== $old_status || 'publish' !== $new_status ) {
+		return;
+	}
+	$event_id = (int) get_post_meta( $post->ID, '_mc_event_id', true );
+	if ( ! $event_id ) {
+		return;
+	}
+	$previous_status = (int) mc_get_data( 'event_approved', $event_id );
+	if ( 1 === $previous_status ) {
+		return;
+	}
+	mc_update_data( $event_id, 'event_approved', 1 );
+
+	/**
+	 * Execute an action when an event changes status.
+	 *
+	 * @hook mc_transition_event
+	 *
+	 * @param int    $prev_event_status Previous status.
+	 * @param int    $new_event_status New status.
+	 * @param string $action Action being performed.
+	 * @param array  $update Submitted event data.
+	 * @param int    $event_id Event ID.
+	 */
+	do_action( 'mc_transition_event', $previous_status, 1, 'edit', array(), $event_id );
+	mc_update_count_cache();
+}
+add_action( 'transition_post_status', 'mc_publish_scheduled_event', 10, 3 );

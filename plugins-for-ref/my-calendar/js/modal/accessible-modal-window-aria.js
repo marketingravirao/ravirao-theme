@@ -1,0 +1,441 @@
+/**
+ * ES2015 accessible modal window system, using ARIA
+ *
+ * Forked from van11y.net
+ *
+ * Website: https://van11y.net/accessible-modal/
+ * License MIT: https://github.com/nico3333fr/van11y-accessible-modal-window-aria/blob/master/LICENSE
+ */
+'use strict';
+
+(function (doc) {
+
+  'use strict';
+
+  var MODAL_ID_PREFIX = 'label_modal_';
+  var MODAL_CLASS_SUFFIX = 'modal';
+  var MODAL_PREFIX_CLASS_ATTR = 'data-modal-prefix-class';
+  var MODAL_TEXT_ATTR = 'data-modal-text';
+  var MODAL_CONTENT_ID_ATTR = 'data-modal-content-id';
+  var MODAL_DESCRIBEDBY_ID_ATTR = 'data-modal-describedby-id';
+  var MODAL_TITLE_ATTR = 'data-modal-title';
+  var MODAL_FOCUS_TO_ATTR = 'data-modal-focus-toid';
+  var MODAL_CLOSE_TEXT_ATTR = 'data-modal-close-text';
+
+  var MODAL_BUTTON_CLASS_SUFFIX = 'modal-close';
+  var MODAL_BUTTON_JS_ID = 'mc-modal-close';
+  var MODAL_BUTTON_JS_CLASS = 'mc-modal-close';
+  var MODAL_BUTTON_CONTENT_BACK_ID = 'data-content-back-id';
+  var MODAL_BUTTON_FOCUS_BACK_ID = 'data-focus-back';
+
+  var MODAL_WRAPPER_CLASS_SUFFIX = 'modal__wrapper';
+  var MODAL_CONTENT_CLASS_SUFFIX = 'modal__content';
+  var MODAL_CONTENT_JS_ID = 'mc-modal-content';
+
+  var MODAL_CLOSE_TEXT_CLASS_SUFFIX = 'modal-close__text';
+
+  var MODAL_TITLE_ID = 'modal-title';
+  var MODAL_TITLE_CLASS_SUFFIX = 'modal-title';
+
+  var FOCUSABLE_ELEMENTS_STRING = "a[href], area[href], input:not([type='hidden']):not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
+  var WRAPPER_PAGE_JS = 'mc-modal-page';
+  var MODAL_JS_ID = 'mc-modal';
+  var MODAL_OVERLAY_ID = 'mc-modal-overlay';
+  var MODAL_OVERLAY_CLASS_SUFFIX = 'modal-overlay';
+  var MODAL_OVERLAY_TXT = 'Close modal';
+  var MODAL_OVERLAY_BG_ENABLED_ATTR = 'data-background-click';
+  var NO_SCROLL_CLASS = 'mc-no-scroll';
+  var ATTR_OPEN = 'open';
+
+  var findById = function findById(id) {
+    return doc.getElementById(id);
+  };
+
+  var addClass = function addClass(el, className) {
+    if (el.classList) {
+      el.classList.add(className);
+    }
+  };
+
+  var removeClass = function removeClass(el, className) {
+    if (el.classList) {
+      el.classList.remove(className);
+    }
+  };
+
+  var hasClass = function hasClass(el, className) {
+    if (el.classList) {
+      return el.classList.contains(className);
+    } else {
+		return false;
+	}
+  };
+
+  function wrapInner(parent, wrapper) {
+    if (typeof wrapper === "string") wrapper = document.createElement(wrapper);
+
+    parent.appendChild(wrapper);
+
+    while (parent.firstChild !== wrapper) wrapper.appendChild(parent.firstChild);
+  }
+
+  function remove(el) {
+    /* node.remove() is too modern for IE≤11 */
+    el.parentNode.removeChild(el);
+  }
+
+  /* gets an element el, search if it is child of parent class, returns id of the parent */
+  var searchParent = function searchParent(el, parentClass) {
+    var found = false;
+    var parentElement = el.parentNode;
+    while (parentElement && found === false) {
+      if (hasClass(parentElement, parentClass) === true) {
+        found = true;
+      } else {
+        parentElement = parentElement.parentNode;
+      }
+    }
+    if (found === true) {
+      return parentElement.getAttribute('id');
+    } else {
+      return '';
+    }
+  };
+
+  /**
+   * Create the template for an overlay
+   * @param  {Object} config
+   * @return {Element}
+   */
+  var createOverlay = function createOverlay(config) {
+    var overlay = doc.createElement( 'span' );
+    var overlayText = config.text || MODAL_OVERLAY_TXT;
+    var overlayLabel = doc.createElement( 'span' );
+    var overlayBackgroundEnabled = config.backgroundEnabled === 'disabled' ? 'disabled' : 'enabled';
+    overlay.setAttribute( 'id', MODAL_OVERLAY_ID );
+    overlay.setAttribute( 'class', config.prefixClass + MODAL_OVERLAY_CLASS_SUFFIX );
+    overlay.setAttribute( MODAL_OVERLAY_BG_ENABLED_ATTR, overlayBackgroundEnabled );
+    overlay.setAttribute( 'title', overlayText );
+    overlayLabel.setAttribute( 'class', 'screen-reader-text' );
+    overlayLabel.textContent = overlayText;
+    overlay.appendChild( overlayLabel );
+    return overlay;
+  };
+
+  /**
+   * Create the template for a modal
+   * @param  {Object} config
+   * @return {Element}
+   */
+  var createModal = function createModal(config) {
+	var dialog = doc.createElement( 'dialog' );
+	var outerContent = doc.createElement( 'div' );
+	var innerContent = doc.createElement( 'div' );
+	var contentContainer = doc.createElement( 'div' );
+	var titleContainer = doc.createElement( 'div' );
+	contentContainer.setAttribute( 'id', MODAL_CONTENT_JS_ID );
+	titleContainer.classList.add( 'mc-modal-title-container' );
+
+	var id = MODAL_JS_ID;
+    var modalClassName = config.modalPrefixClass + MODAL_CLASS_SUFFIX;
+    var modalClassWrapper = config.modalPrefixClass + MODAL_WRAPPER_CLASS_SUFFIX;
+    var buttonCloseClassName = config.modalPrefixClass + MODAL_BUTTON_CLASS_SUFFIX;
+    var contentClassName = config.modalPrefixClass + MODAL_CONTENT_CLASS_SUFFIX;
+    var titleClassName = config.modalPrefixClass + MODAL_TITLE_CLASS_SUFFIX;
+    var buttonClose = doc.createElement( 'button' );
+    var closeIcon = doc.createElement( 'span' );
+    var closeText = doc.createElement( 'span' );
+    var content = config.modalText;
+
+    buttonClose.setAttribute( 'type', 'button' );
+    buttonClose.setAttribute( 'class', MODAL_BUTTON_JS_CLASS + ' ' + buttonCloseClassName );
+    buttonClose.setAttribute( 'id', MODAL_BUTTON_JS_ID );
+    buttonClose.setAttribute( MODAL_BUTTON_CONTENT_BACK_ID, config.modalContentId );
+    buttonClose.setAttribute( MODAL_BUTTON_FOCUS_BACK_ID, config.modalFocusBackId );
+    closeIcon.setAttribute( 'class', 'dashicons dashicons-no' );
+    closeIcon.setAttribute( 'aria-hidden', 'true' );
+    closeText.setAttribute( 'class', config.modalPrefixClass + MODAL_CLOSE_TEXT_CLASS_SUFFIX );
+    closeText.textContent = config.modalCloseText;
+    buttonClose.appendChild( closeIcon );
+    buttonClose.appendChild( closeText );
+
+    if ( config.modalTitle !== '' ) {
+      var title = doc.createElement( 'h1' );
+      title.setAttribute( 'id', MODAL_TITLE_ID );
+      title.setAttribute( 'class', titleClassName );
+      title.textContent = config.modalTitle;
+      titleContainer.appendChild( title );
+    }
+
+    // If there is no content but an id we try to fetch content id
+    if (content === '' && config.modalContentId) {
+      var contentFromId = findById(config.modalContentId);
+	  var hasMultipleEvents = contentFromId && contentFromId.classList.contains( 'calendar-events' );
+	  if ( contentFromId && ! hasMultipleEvents ) {
+		// Legacy templates don't have this class inside the content.
+		var event = contentFromId.querySelector( '.mc-event' );
+		var classes;
+		if ( event ) {
+			classes = event.getAttribute( 'class' );
+		}
+		if ( classes ) {
+			dialog.setAttribute('class', classes);
+		}
+	  }
+      if (contentFromId) {
+		contentContainer.insertAdjacentElement( 'beforeEnd', contentFromId );
+      }
+    } else {
+		contentContainer.textContent = content;
+	}
+	dialog.setAttribute( 'id', id );
+	dialog.setAttribute( 'class', [ dialog.getAttribute( 'class' ), modalClassName ].filter( Boolean ).join( ' ' ) );
+	dialog.setAttribute( 'role', 'dialog' );
+	dialog.setAttribute( 'aria-describedby', config.modalDescribedById + ' ' + ATTR_OPEN );
+	dialog.setAttribute( 'aria-labelledby', MODAL_TITLE_ID );
+	outerContent.setAttribute( 'role', 'document' );
+	outerContent.setAttribute( 'class', modalClassWrapper );
+	titleContainer.insertAdjacentElement( 'afterBegin', buttonClose );
+	innerContent.setAttribute( 'class', contentClassName );
+	innerContent.insertAdjacentElement( 'afterbegin', titleContainer );
+	innerContent.insertAdjacentElement( 'beforeEnd', contentContainer );
+	outerContent.insertAdjacentElement( 'afterBegin', innerContent );
+	dialog.insertAdjacentElement( 'afterBegin', outerContent );
+
+	return dialog;
+  };
+
+  var closeModal = function closeModal(config) {
+    if (config.modalFocusBackId !== '') {
+		var modalReturn = findById( config.modalFocusBackId );
+		var modalReturnContainer = modalReturn.closest( '.mc-events' ); // only works when control is inside container.
+		if ( modalReturnContainer && modalReturnContainer.tagName === 'ARTICLE' ) {
+			modalReturnContainer.insertAdjacentElement( 'beforeEnd', config.modalContent.firstChild );
+		} else {
+			modalReturnContainer = modalReturn.closest( '.mc-main' );
+			modalReturnContainer.insertAdjacentElement( 'beforeEnd', config.modalContent.firstChild );
+		}
+	}
+
+	remove(config.modal);
+    remove(config.overlay);
+  };
+
+  /** Find all modals inside a container
+   * @param  {Node} node Default document
+   * @return {Array}
+   */
+  var $listModals = function $listModals() {
+    var node = arguments.length <= 0 || arguments[0] === undefined ? doc : arguments[0];
+    return [].slice.call(node.querySelectorAll('.mc-modal'));
+  };
+
+  /**
+   * Build modals for a container
+   * @param  {Node} node
+   */
+  var attach = function attach(node) {
+    var addListeners = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
+
+    $listModals(node).forEach(function (modal_node) {
+
+      var iLisible = Math.random().toString(32).slice(2, 12);
+      var wrapperBody = findById(WRAPPER_PAGE_JS);
+      var body = doc.querySelector('body');
+
+	  // Only generate an ID if node does not already have one.
+	  if ( modal_node.hasAttribute('id') === false ) {
+      	modal_node.setAttribute('id', MODAL_ID_PREFIX + iLisible);
+	  }
+      modal_node.setAttribute('aria-haspopup', 'dialog');
+
+      if (wrapperBody === null || wrapperBody.length === 0) {
+        var wrapper = doc.createElement('DIV');
+        wrapper.setAttribute('id', WRAPPER_PAGE_JS);
+        wrapInner(body, wrapper);
+		wrapperBody = wrapper;
+      }
+    });
+
+    if (addListeners) {
+
+      /* listeners */
+      ['click', 'keydown'].forEach(function (eventName) {
+
+        doc.body.addEventListener(eventName, function (e) {
+
+          // click on link modal
+          var parentModalLauncher = searchParent(e.target, 'mc-modal');
+          if ((hasClass(e.target, 'mc-modal') === true || parentModalLauncher !== '') && eventName === 'click') {
+            var body = doc.querySelector('body');
+            var modalLauncher = parentModalLauncher !== '' ? findById(parentModalLauncher) : e.target;
+            var modalPrefixClass = modalLauncher.hasAttribute(MODAL_PREFIX_CLASS_ATTR) === true ? modalLauncher.getAttribute(MODAL_PREFIX_CLASS_ATTR) + '-' : '';
+            var modalText = modalLauncher.hasAttribute(MODAL_TEXT_ATTR) === true ? modalLauncher.getAttribute(MODAL_TEXT_ATTR) : '';
+            var modalContentId = modalLauncher.hasAttribute(MODAL_CONTENT_ID_ATTR) === true ? modalLauncher.getAttribute(MODAL_CONTENT_ID_ATTR) : '';
+            var modalDescribedById = modalLauncher.hasAttribute(MODAL_DESCRIBEDBY_ID_ATTR) === true ? modalLauncher.getAttribute(MODAL_DESCRIBEDBY_ID_ATTR) : '';
+            var modalTitle = modalLauncher.hasAttribute(MODAL_TITLE_ATTR) === true ? modalLauncher.getAttribute(MODAL_TITLE_ATTR) : '';
+            var modalCloseText = modalLauncher.hasAttribute(MODAL_CLOSE_TEXT_ATTR) === true ? modalLauncher.getAttribute(MODAL_CLOSE_TEXT_ATTR) : MODAL_OVERLAY_TXT;
+            var modalGiveFocusToId = modalLauncher.hasAttribute(MODAL_FOCUS_TO_ATTR) === true ? modalLauncher.getAttribute(MODAL_FOCUS_TO_ATTR) : '';
+
+            var wrapperBody = findById(WRAPPER_PAGE_JS);
+
+            // insert overlay
+            body.insertAdjacentElement('beforeEnd', createOverlay({
+              text: modalCloseText,
+              backgroundEnabled: '',
+              prefixClass: modalPrefixClass
+            }));
+
+			// insert modal
+            body.insertAdjacentElement('beforeEnd', createModal({
+              modalText: modalText,
+              modalPrefixClass: modalPrefixClass,
+              backgroundEnabled: modalContentId,
+              modalTitle: modalTitle,
+              modalCloseText: modalCloseText,
+              modalCloseTitle: modalCloseText,
+              modalContentId: modalContentId,
+              modalDescribedById: modalDescribedById,
+              modalFocusBackId: modalLauncher.getAttribute('id')
+            }));
+
+            // hide page
+            wrapperBody.setAttribute('inert', '');
+
+            // add class noscroll to body
+            addClass(body, NO_SCROLL_CLASS);
+
+            // give focus to close button or specified element
+            var closeButton = findById(MODAL_BUTTON_JS_ID);
+            if (modalGiveFocusToId !== '') {
+              var focusTo = findById(modalGiveFocusToId);
+              if (focusTo) {
+                focusTo.focus();
+              } else {
+                closeButton.focus();
+              }
+            } else {
+              closeButton.focus();
+            }
+
+            e.preventDefault();
+          }
+
+          // click on close button or on overlay not blocked
+          var parentButton = searchParent(e.target, MODAL_BUTTON_JS_CLASS);
+          if ((e.target.getAttribute('id') === MODAL_BUTTON_JS_ID || parentButton !== '' || e.target.getAttribute('id') === MODAL_OVERLAY_ID || hasClass(e.target, MODAL_BUTTON_JS_CLASS) === true) && eventName === 'click') {
+            var body = doc.querySelector('body');
+            var wrapperBody = findById(WRAPPER_PAGE_JS);
+            var modal = findById(MODAL_JS_ID);
+            var modalContent = findById(MODAL_CONTENT_JS_ID) ? findById(MODAL_CONTENT_JS_ID) : '';
+            var overlay = findById(MODAL_OVERLAY_ID);
+            var modalButtonClose = findById(MODAL_BUTTON_JS_ID);
+            var modalFocusBackId = modalButtonClose.getAttribute(MODAL_BUTTON_FOCUS_BACK_ID);
+            var contentBackId = modalButtonClose.getAttribute(MODAL_BUTTON_CONTENT_BACK_ID);
+            var backgroundEnabled = overlay.getAttribute(MODAL_OVERLAY_BG_ENABLED_ATTR);
+
+            if (!(e.target.getAttribute('id') === MODAL_OVERLAY_ID && backgroundEnabled === 'disabled')) {
+
+              closeModal({
+                modal: modal,
+                modalContent: modalContent,
+                overlay: overlay,
+                modalFocusBackId: modalFocusBackId,
+                contentBackId: contentBackId,
+                backgroundEnabled: backgroundEnabled,
+                fromId: e.target.getAttribute('id')
+              });
+
+              // show back page
+              wrapperBody.removeAttribute('inert');
+
+              // remove class noscroll to body
+              removeClass(body, NO_SCROLL_CLASS);
+
+              if (modalFocusBackId) {
+                var contentFocus = findById(modalFocusBackId);
+                if (contentFocus) {
+                  contentFocus.focus();
+                }
+              }
+            }
+          }
+
+          // strike a key when modal opened
+          if (findById(MODAL_JS_ID) && eventName === 'keydown') {
+            var body = doc.querySelector('body');
+            var wrapperBody = findById(WRAPPER_PAGE_JS);
+            var modal = findById(MODAL_JS_ID);
+            var modalContent = findById(MODAL_CONTENT_JS_ID) ? findById(MODAL_CONTENT_JS_ID) : '';
+            var overlay = findById(MODAL_OVERLAY_ID);
+            var modalButtonClose = findById(MODAL_BUTTON_JS_ID);
+            var modalFocusBackId = modalButtonClose.getAttribute(MODAL_BUTTON_FOCUS_BACK_ID);
+            var contentBackId = modalButtonClose.getAttribute(MODAL_BUTTON_CONTENT_BACK_ID);
+            var listFocusables = [].slice.call(modal.querySelectorAll(FOCUSABLE_ELEMENTS_STRING));
+			listFocusables = listFocusables.filter( checkElementVisibility );
+			function checkElementVisibility(el) {
+				return el.checkVisibility();
+			}
+
+            // esc
+            if (e.keyCode === 27) {
+
+              closeModal({
+                modal: modal,
+                modalContent: modalContent,
+                overlay: overlay,
+                modalFocusBackId: modalFocusBackId,
+                contentBackId: contentBackId
+              });
+
+              // show back page
+              wrapperBody.removeAttribute('inert');
+
+              // remove class noscroll to body
+              removeClass(body, NO_SCROLL_CLASS);
+
+              if (modalFocusBackId) {
+                var contentFocus = findById(modalFocusBackId);
+                if (contentFocus) {
+                  contentFocus.focus();
+                }
+              }
+            }
+
+            // tab or shift tab in modal => capture focus
+            if (e.key === 'Tab' && listFocusables.indexOf(e.target) >= 0) {
+              // shift-tab on first element focusable => focus on last
+              if (e.shiftKey) {
+                if (e.target === listFocusables[0]) {
+                  listFocusables.at(-1).focus();
+                  e.preventDefault();
+                }
+              } else {
+                // tab on last element focusable => focus on first
+                if (e.target === listFocusables.at(-1)) {
+                  listFocusables[0].focus();
+                  e.preventDefault();
+                }
+              }
+            }
+
+            // tab outside modal => put it in focus
+            if (e.keyCode === 9 && listFocusables.indexOf(e.target) === -1) {
+              e.preventDefault();
+              listFocusables[0].focus();
+            }
+          }
+        }, true);
+      });
+    }
+  };
+
+  var onLoad = function onLoad() {
+    attach();
+    document.removeEventListener('DOMContentLoaded', onLoad);
+  };
+
+  document.addEventListener('DOMContentLoaded', onLoad);
+
+  window.accessibleModalWindowAria = attach;
+})(document);

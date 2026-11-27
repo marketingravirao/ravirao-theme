@@ -1,0 +1,53 @@
+:root {
+  --rr-type-display-size: clamp(1.75rem, 4vw, 46px);
+  --rr-type-section-size: clamp(1.5rem, 3.2vw, 36px);
+  --rr-type-subheading-size: clamp(1.125rem, 2.2vw, 28px);
+  --rr-type-eyebrow-size: 12px;
+  --rr-type-copy-size: 16px;
+  --rr-type-copy-line-height: 1.85;
+}
+
+body.page h1,
+body.home h1,
+body.page h2,
+body.home h2,
+body.page h3,
+body.home h3 {
+  font-family: var(--font-serif) !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.02em !important;
+  font-size: var(--rr-type-subheading-size) !important;
+  line-height: 1.2 !important;
+}
+
+body.page h1,
+body.home h1 {
+  font-size: var(--rr-type-display-size) !important;
+  line-height: 1.02 !important;
+}
+
+body.page h2,
+body.home h2 {
+  font-size: var(--rr-type-section-size) !important;
+  line-height: 1.08 !important;
+}
+
+body.page [class*="eyebrow"],
+body.home [class*="eyebrow"] {
+  font-size: var(--rr-type-eyebrow-size) !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.65rem !important;
+}
+
+body.page p[class*="__body-text"],
+body.home p[class*="__body-text"],
+body.page p[class*="__text"]:not([class*="--hero"]),
+body.home p[class*="__text"]:not([class*="--hero"]),
+body.page p.lead,
+body.home p.lead {
+  font-size: var(--rr-type-copy-size) !important;
+  line-height: var(--rr-type-copy-line-height) !important;
+}

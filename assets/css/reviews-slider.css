@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Reviews slider (template-parts/sections/industry-testimonials.php).
+   Swiper handles the sliding; this file only places it inside each page's
+   existing review grid and styles the controls. Colors come from base.css;
+   the controls use currentColor so they suit light and dark sections.
+   ========================================================================== */
+
+.rr-reviews-slider {
+  --swiper-pagination-color: var(--rr-coral);
+  --swiper-pagination-bullet-inactive-color: currentColor;
+  --swiper-pagination-bullet-inactive-opacity: .35;
+  --swiper-pagination-bullet-size: 9px;
+  --swiper-pagination-bullet-horizontal-gap: 5px;
+  /* The section's old grid wrapper stays; the slider spans all of its columns. */
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Room for the cards' hover lift inside Swiper's overflow:hidden. */
+.rr-reviews-slider__viewport {
+  padding: 6px 0 4px;
+}
+
+/* Equal-height cards in a row. */
+.rr-reviews-slider .swiper-slide {
+  height: auto;
+}
+
+.rr-reviews-slider__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.rr-reviews-slider__arrow {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color .2s, border-color .2s, color .2s, opacity .2s;
+}
+
+.rr-reviews-slider__arrow svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.rr-reviews-slider__arrow:hover:not(.swiper-button-disabled) {
+  border-color: var(--rr-coral);
+  background: var(--rr-coral);
+  color: var(--rr-white);
+}
+
+.rr-reviews-slider__arrow:focus-visible {
+  outline: 2px solid var(--rr-coral) !important;
+  outline-offset: 3px;
+}
+
+.rr-reviews-slider__arrow.swiper-button-disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+/* Hidden by Swiper when every review fits on screen. */
+.rr-reviews-slider__arrow.swiper-button-lock,
+.rr-reviews-slider__pagination.swiper-pagination-lock {
+  display: none;
+}
+
+.rr-reviews-slider__pagination {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 12px;
+}
+
+.rr-reviews-slider__pagination .swiper-pagination-bullet {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rr-reviews-slider__arrow {
+    transition: none;
+  }
+}

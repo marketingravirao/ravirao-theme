@@ -1,0 +1,350 @@
+.travel {
+  background: var(--rr-coral-tint);
+}
+
+.tcal {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: start;
+  gap: clamp(24px, 4vw, 56px);
+}
+
+.rrj-calendar-grid > .tcal {
+  grid-column: 1 / -1;
+}
+
+.tc-card {
+  min-width: 0;
+  border: 1px solid var(--rr-coral-line);
+  background: var(--rr-white);
+  box-shadow: 0 16px 40px rgba(var(--rr-coral-rgb), .15);
+}
+
+.tc-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  background: linear-gradient(110deg, var(--rr-coral), var(--rr-coral-dark));
+  color: var(--rr-white);
+}
+
+.tc-month {
+  margin: 0;
+  font: 400 clamp(24px, 2.4vw, 30px)/1.1 Georgia, serif;
+  letter-spacing: -.03em;
+}
+
+.tc-nav {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+}
+
+.tc-nav a {
+  display: inline-flex;
+  min-width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border: 1px solid rgba(var(--rr-white-rgb), .6);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--rr-white);
+  font: 700 12px 'DM Sans', sans-serif;
+  text-decoration: none;
+  transition: background .2s;
+}
+
+.tc-nav a:hover,
+.tc-nav a:focus-visible {
+  background: rgba(var(--rr-white-rgb), .13);
+}
+
+.tc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 22px 6px;
+}
+
+.tc-chips a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid var(--rr-coral-line);
+  border-radius: 99px;
+  background: var(--rr-white);
+  color: var(--rr-navy);
+  font: 700 11px 'DM Sans', sans-serif;
+  letter-spacing: .04em;
+  text-decoration: none;
+  transition: background .2s, border-color .2s, color .2s;
+}
+
+.tc-chips a:hover {
+  border-color: var(--rr-coral);
+}
+
+.tc-chips a[aria-current="true"] {
+  border-color: var(--rr-coral);
+  background: var(--rr-coral);
+  color: var(--rr-white);
+}
+
+.tc-chips a[aria-current="true"] .tc-dot {
+  box-shadow: 0 0 0 2px var(--rr-white);
+}
+
+.tc-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--tc-category-color, var(--rr-muted-light));
+  font-style: normal;
+}
+
+.c-abroad {
+  --tc-category-color: var(--rr-blue);
+  background: var(--tc-category-color);
+}
+
+.c-india {
+  --tc-category-color: var(--rr-coral);
+  background: var(--tc-category-color);
+}
+
+.c-hometown {
+  --tc-category-color: var(--rr-el-earth);
+  background: var(--tc-category-color);
+}
+
+.tc-wk,
+.tc-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  padding: 0 14px;
+}
+
+.tc-wk {
+  margin-top: 10px;
+}
+
+.tc-wk span {
+  padding: 8px 0;
+  color: var(--rr-muted-light);
+  font: 800 10px 'DM Sans', sans-serif;
+  letter-spacing: .12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tc-grid {
+  gap: 4px;
+  padding-bottom: 18px;
+}
+
+.tc-day {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  aspect-ratio: 1/.82;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 6px;
+  color: var(--rr-navy);
+  font-size: 14px;
+  transition: background .2s;
+}
+
+.tc-day b {
+  font-weight: 500;
+}
+
+.tc-day.empty {
+  pointer-events: none;
+}
+
+.tc-day:not(.empty):hover {
+  background: var(--rr-coral-tint);
+}
+
+.tc-day.has {
+  background: var(--rr-coral-tint);
+}
+
+.tc-day.has b {
+  font-weight: 800;
+}
+
+.tc-day.today {
+  box-shadow: inset 0 0 0 2px var(--rr-coral);
+}
+
+.tc-day.today::after {
+  position: absolute;
+  inset: -2px;
+  border: 2px solid var(--rr-coral);
+  border-radius: 8px;
+  animation: tc-ping 2.6s ease-out infinite;
+  content: "";
+  pointer-events: none;
+}
+
+.tc-dots {
+  display: flex;
+  height: 7px;
+  gap: 3px;
+}
+
+.tc-dots .tc-dot {
+  width: 6px;
+  height: 6px;
+}
+
+.tc-side {
+  min-width: 0;
+  padding: 6px 0 0;
+}
+
+.tc-sub {
+  margin: 0 0 18px;
+  color: var(--rr-navy);
+  font: 400 clamp(26px, 2.6vw, 34px)/1.15 Georgia, serif;
+  letter-spacing: -.03em;
+}
+
+.tc-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rr-coral-line);
+  list-style: none;
+}
+
+.tc-ev {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rr-coral-line);
+}
+
+.tc-ev time {
+  color: var(--rr-navy);
+  font: 800 12px 'DM Sans', sans-serif;
+  letter-spacing: .04em;
+}
+
+.tc-ev b {
+  display: block;
+  color: var(--rr-navy);
+  font: 400 19px/1.25 Georgia, serif;
+  letter-spacing: -.02em;
+}
+
+.tc-ev b a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tc-ev b a:hover,
+.tc-ev b a:focus-visible {
+  color: var(--rr-coral);
+}
+
+.tc-ev span {
+  display: block;
+  margin-top: 3px;
+  color: var(--rr-muted);
+  font-size: 13px;
+}
+
+.tc-ev em {
+  padding: 5px 9px;
+  border-radius: 99px;
+  background: var(--tc-category-color, var(--rr-coral));
+  color: var(--rr-white);
+  font: 800 9.5px 'DM Sans', sans-serif;
+  font-style: normal;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.tc-empty {
+  display: none;
+  margin: 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--rr-coral-line);
+  border-bottom: 1px solid var(--rr-coral-line);
+  color: var(--rr-slate);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.tc-empty.show {
+  display: block;
+}
+
+.tc-note {
+  margin: 18px 0 0;
+  color: var(--rr-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.tc-note a {
+  padding-bottom: 1px;
+  border-bottom: 1px solid currentColor;
+  color: var(--rr-coral);
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@keyframes tc-ping {
+  0% { transform: scale(1); opacity: .6; }
+  100% { transform: scale(1.18); opacity: 0; }
+}
+
+@media (max-width: 900px) {
+  .tcal {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .tc-bar {
+    padding: 14px;
+  }
+
+  .tc-chips {
+    padding: 12px 14px 4px;
+  }
+
+  .tc-ev {
+    grid-template-columns: 78px minmax(0, 1fr);
+  }
+
+  .tc-ev em {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .tc-day {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-day.today::after {
+    animation: none;
+  }
+}

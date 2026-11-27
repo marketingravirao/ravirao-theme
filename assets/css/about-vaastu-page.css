@@ -1,0 +1,1059 @@
+.rr-about-vaastu-design {
+    --ab-blue: #3663ab;
+    --ab-blue-deep: #173f7c;
+    --ab-blue-field: #101d36;
+    --ab-red: #e44535;
+    --ab-beige: #efebe1;
+    --ab-text: #35495e;
+    overflow: clip;
+    color: var(--ab-blue-field);
+    background: #fff;
+    font-family: "Satoshi", sans-serif;
+}
+
+.rr-about-vaastu-design .ab-wrap {
+    width: min(1180px, 90%);
+    margin-inline: auto;
+}
+
+.rr-about-vaastu-design .serif {
+    font-family: "Georgia", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    letter-spacing: -0.045em;
+}
+
+.rr-about-vaastu-design .eyebrow {
+    margin: 0 0 1rem;
+    color: var(--ab-red);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+}
+
+.rr-about-vaastu-design .ab-hero {
+    position: relative;
+    min-height: 75vh;
+    overflow: hidden;
+    isolation: isolate;
+    border-bottom: 5px solid var(--ab-red);
+    background: #172d47;
+    color: #fff;
+}
+
+.rr-about-vaastu-design .ab-hero::before {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(23, 45, 71, 0.93) 0%, rgba(23, 45, 71, 0.84) 46%, rgba(23, 45, 71, 0.52) 64%, rgba(23, 45, 71, 0.12) 80%, rgba(23, 45, 71, 0) 100%);
+    content: "";
+    pointer-events: none;
+}
+
+.rr-about-vaastu-design .ab-hero-bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 56%;
+    margin: 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 0.5) 20%, #000 50%);
+    mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 0.5) 20%, #000 50%);
+}
+
+.rr-about-vaastu-design .ab-hero-bg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 35% 42%;
+}
+
+.rr-about-vaastu-design .ab-hero > .rose {
+    position: absolute;
+    z-index: 1;
+    bottom: -28.75rem;
+    left: -20rem;
+    width: 48.75rem;
+    height: 48.75rem;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.rr-about-vaastu-design .ab-hero-grid {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    min-height: 75vh;
+    padding-block: 3.625rem 3.875rem;
+}
+
+.rr-about-vaastu-design .ab-hero-copy {
+    max-width: min(700px, 58%);
+}
+
+.rr-about-vaastu-design .ab-hero .eyebrow {
+    color: #ffd0c8;
+}
+
+.rr-about-vaastu-design .ab-hero h1 {
+    max-width: 760px;
+    margin: 0 0 1.25rem;
+    color: #fff;
+    font-size: clamp(2.25rem, 4.3vw, 3.875rem);
+    line-height: 1.05;
+}
+
+.rr-about-vaastu-design .ab-hero .ab-sub {
+    max-width: none;
+    margin: 0 0 1.125rem;
+    color: #fff;
+    font-family: "Georgia", Georgia, "Times New Roman", serif;
+    font-size: clamp(1.1875rem, 1.8vw, 1.5625rem);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+.rr-about-vaastu-design .ab-hero-copy > p:not(.eyebrow, .ab-sub) {
+    max-width: 680px;
+    margin: 0 0 0.75rem;
+    color: #e9f1fb;
+    font-size: 0.96875rem;
+    line-height: 1.72;
+}
+
+.rr-about-vaastu-design .ab-hero-copy > p.ab-lead {
+    color: #fff;
+    font-size: 1.03125rem;
+    font-weight: 700;
+    line-height: 1.62;
+}
+
+.rr-about-vaastu-design .ab-more {
+    display: none;
+}
+
+.rr-about-vaastu-design .ab-more:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 5px;
+}
+
+.rr-about-vaastu-design .ab-more-chevron {
+    display: inline-block;
+    font-size: 1.125rem;
+    line-height: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.rr-about-vaastu-design .ab-more[aria-expanded="true"] .ab-more-chevron {
+    transform: rotate(180deg);
+}
+
+.rr-about-vaastu-design .ab-hero .chip {
+    position: absolute;
+    right: 0;
+    bottom: 2.125rem;
+    z-index: 3;
+    padding: 0.75rem 1.125rem;
+    background: var(--ab-red);
+    color: #fff;
+    font-size: 0.65625rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.rr-about-vaastu-design .ab-explore {
+    border-bottom: 1px solid #d9dedf;
+    background: #fff;
+}
+
+.rr-about-vaastu-design .ab-explore .ab-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    overflow-x: auto;
+    padding-block: 1rem;
+    scrollbar-width: none;
+    white-space: nowrap;
+}
+
+.rr-about-vaastu-design .ab-explore .ab-wrap::-webkit-scrollbar {
+    display: none;
+}
+
+.rr-about-vaastu-design .ab-explore b {
+    color: var(--ab-red);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.19em;
+}
+
+.rr-about-vaastu-design .ab-explore a {
+    color: #172d47;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.rr-about-vaastu-design .ab-explore a span {
+    margin-right: 0.4375rem;
+    color: var(--ab-red);
+    font-weight: 800;
+}
+
+.rr-about-vaastu-design .ab-explore a:hover {
+    color: var(--ab-red);
+}
+
+.rr-about-vaastu-design .ab-sec {
+    padding-block: 6rem;
+    scroll-margin-top: 6rem;
+}
+
+.rr-about-vaastu-design .ab-sec.be {
+    background: var(--ab-beige);
+}
+
+.rr-about-vaastu-design .ab-sec h2 {
+    max-width: 860px;
+    margin: 0 0 2.875rem;
+    color: #172d47;
+    font-size: clamp(2.125rem, 4vw, 3.5rem);
+    line-height: 1.08;
+}
+
+.rr-about-vaastu-design .ab-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(2.25rem, 6vw, 5.5rem);
+}
+
+.rr-about-vaastu-design .ab-sec.rev .ab-vis {
+    order: -1;
+}
+
+.rr-about-vaastu-design .ab-tx p {
+    margin: 0 0 1.125rem;
+    color: var(--ab-text);
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.rr-about-vaastu-design .ab-vis {
+    position: sticky;
+    top: 6rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rr-about-vaastu-design .av {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-bottom: 5px solid var(--ab-red);
+    background-color: #0b1f3a;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 50% 45%, #172d47 0%, #10294f 58%, #0b1f3a 100%);
+    background-size: 30px 30px, 30px 30px, 100% 100%;
+}
+
+.rr-about-vaastu-design .av svg {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rr-about-vaastu-design .av-cap {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    padding: 0.8125rem 1.125rem;
+    background: var(--ab-red);
+    color: #fff;
+    font-size: 0.65625rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.rr-about-vaastu-design .av-cap.r {
+    right: 0;
+    left: auto;
+}
+
+.rr-about-vaastu-design .d {
+    stroke-dasharray: 1 2;
+    stroke-dashoffset: 0;
+}
+
+.rr-about-vaastu-design .wp {
+    transform: translateX(430px);
+}
+
+html.js .rr-about-vaastu-design :is(.av, .av-i):not(.on) .wp {
+    transform: translateX(-340px);
+}
+
+html.js .rr-about-vaastu-design :is(.av, .av-i).on .wp {
+    animation: avwipe 2.6s ease-in-out 1.2s both;
+}
+
+html.js .rr-about-vaastu-design :is(.av, .av-i):not(.on) .d {
+    stroke-dashoffset: 1;
+}
+
+html.js .rr-about-vaastu-design :is(.av, .av-i):not(.on) .f {
+    opacity: 0;
+}
+
+html.js .rr-about-vaastu-design :is(.av, .av-i).on .d {
+    animation: avdraw var(--dur, 1.3s) cubic-bezier(0.5, 0.1, 0.2, 1) var(--t, 0s) both;
+}
+
+html.js .rr-about-vaastu-design :is(.av, .av-i).on .f {
+    animation: avfade 0.9s ease var(--t, 0s) both;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .lp {
+    animation-play-state: paused;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i).on .lp,
+html:not(.js) .rr-about-vaastu-design :is(.av, .av-i) .lp {
+    animation-play-state: running;
+}
+
+@keyframes avdraw {
+    from {
+        stroke-dashoffset: 1;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes avfade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes avspin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes avlbl {
+    0%,
+    10%,
+    100% {
+        opacity: 0.6;
+        fill: #fff;
+    }
+
+    5% {
+        opacity: 1;
+        fill: #ffb2a7;
+    }
+}
+
+@keyframes avglow {
+    0%,
+    12%,
+    100% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0.85;
+    }
+}
+
+@keyframes avflk {
+    0%,
+    100% {
+        transform: scaleY(1) skewX(0);
+    }
+
+    30% {
+        transform: scaleY(1.08) skewX(-3deg);
+    }
+
+    65% {
+        transform: scaleY(0.94) skewX(3deg);
+    }
+}
+
+@keyframes avwv {
+    from {
+        transform: translateX(-3.5px);
+    }
+
+    to {
+        transform: translateX(3.5px);
+    }
+}
+
+@keyframes avbr {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+}
+
+@keyframes avfl {
+    to {
+        stroke-dashoffset: -21;
+    }
+}
+
+@keyframes avfl3 {
+    to {
+        stroke-dashoffset: -17;
+    }
+}
+
+@keyframes avping {
+    0% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+
+    100% {
+        transform: scale(5.5);
+        opacity: 0;
+    }
+}
+
+@keyframes avping2 {
+    0% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(3.2);
+        opacity: 0;
+    }
+}
+
+@keyframes avtrav {
+    0% {
+        transform: translateY(56px);
+        opacity: 0;
+    }
+
+    8%,
+    92% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(506px);
+        opacity: 0;
+    }
+}
+
+@keyframes avtruck {
+    to {
+        offset-distance: 100%;
+    }
+}
+
+@keyframes avbreath {
+    0%,
+    100% {
+        opacity: 0.9;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes avtwk {
+    0%,
+    100% {
+        transform: scale(0.55) rotate(0);
+    }
+
+    50% {
+        transform: scale(1.25) rotate(45deg);
+    }
+}
+
+@keyframes avwipe {
+    from {
+        transform: translateX(-340px);
+    }
+
+    to {
+        transform: translateX(430px);
+    }
+}
+
+@keyframes avpulse {
+    0%,
+    100% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .lb {
+    font: 800 16px "Satoshi", sans-serif;
+    fill: #fff;
+    opacity: 0.6;
+    animation: avlbl 16s ease-in-out infinite;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .gl {
+    opacity: 0;
+    animation: avglow 16s ease-in-out infinite;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .nd {
+    animation: avspin 16s linear infinite 3s;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .nd2 {
+    animation: avspin 16s linear infinite;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .orb {
+    animation: avspin 9s linear infinite;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .flk {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: avflk 1.8s ease-in-out infinite;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .wv {
+    animation: avwv 2.6s ease-in-out infinite alternate;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .brth {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: avbr 6s ease-in-out infinite;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .fl {
+    stroke-dasharray: 14 7;
+    animation: avfl 1.6s linear infinite;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .fl2 {
+    animation-duration: 2.1s;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .fig {
+    animation: avbreath 6s ease-in-out infinite 7s;
+    filter: drop-shadow(0 8px 10px #08204a99);
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .ping {
+    animation: avping 4.5s ease-out infinite 5s;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .ping2 {
+    animation: avping2 3s ease-out infinite;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .trav {
+    animation: avtrav 9s linear infinite 2.5s;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .truck {
+    offset-path: path("M94,118 H506 V402 H94 Z");
+    offset-rotate: auto;
+    animation: avtruck 16s linear infinite 4s;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .tl {
+    font: 800 15px "Satoshi", sans-serif;
+    fill: #fff;
+    opacity: 0.85;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .tm {
+    font: 800 10.5px "Satoshi", sans-serif;
+    letter-spacing: 0.12em;
+    fill: #cfe0f8;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .tt {
+    font: 800 12.5px "Satoshi", sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .ts {
+    font: 500 12px "Satoshi", sans-serif;
+    fill: #bcd2f1;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .bl {
+    font: 700 9.5px "Satoshi", sans-serif;
+    letter-spacing: 0.12em;
+    fill: #dce8fb;
+    paint-order: stroke;
+    stroke: #173f7c;
+    stroke-width: 4px;
+    stroke-linejoin: round;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .lg {
+    font: 800 9.5px "Satoshi", sans-serif;
+    letter-spacing: 0.1em;
+    fill: #cfe0f8;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .en {
+    font: 800 9.5px "Satoshi", sans-serif;
+    letter-spacing: 0.14em;
+    fill: #fff;
+}
+
+.rr-about-vaastu-design :is(.av, .av-i) .es {
+    font: 700 7.2px "Satoshi", sans-serif;
+    letter-spacing: 0.06em;
+}
+
+.rr-about-vaastu-design .rose-spin {
+    animation: avspin 260s linear infinite;
+}
+
+.rr-about-vaastu-design .av-i .gear1 {
+    animation: avspin 14s linear infinite;
+}
+
+.rr-about-vaastu-design .av-i .gear2 {
+    animation: avspin 9s linear infinite reverse;
+}
+
+.rr-about-vaastu-design .av-i .twk {
+    animation: avtwk 2.4s ease-in-out infinite;
+}
+
+.rr-about-vaastu-design .av-i .fl3 {
+    stroke-dasharray: 5 12;
+    animation: avfl3 2.4s linear infinite;
+}
+
+.rr-about-vaastu-design .av-i .ping3 {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: avping2 2.8s ease-out infinite;
+}
+
+.rr-about-vaastu-design .ab-vis figcaption {
+    margin-top: 0.75rem;
+    color: #637384;
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.rr-about-vaastu-design .ab-biz {
+    background: linear-gradient(118deg, #172d47 0%, #0b1f3a 100%);
+    color: #fff;
+}
+
+.rr-about-vaastu-design .ab-biz .eyebrow {
+    color: #ffd0c8;
+}
+
+.rr-about-vaastu-design .ab-biz h2 {
+    color: #fff;
+}
+
+.rr-about-vaastu-design .ab-biz-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4.5rem);
+    margin-bottom: 3.5rem;
+}
+
+.rr-about-vaastu-design .ab-biz-intro p {
+    margin: 0 0 1.125rem;
+    color: #e6eefa;
+    font-size: 1.03125rem;
+    line-height: 1.85;
+}
+
+.rr-about-vaastu-design .ab-env {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 14 / 9;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #0b1f3a;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.rr-about-vaastu-design .ab-env svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rr-about-vaastu-design .ab-cards {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.rr-about-vaastu-design .ab-card {
+    grid-column: span 2;
+    padding: 1.75rem 1.625rem 1.875rem;
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-top: 3px solid var(--ab-red);
+    background: rgba(255, 255, 255, 0.08);
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.rr-about-vaastu-design .ab-card:nth-child(n + 4) {
+    grid-column: span 3;
+}
+
+.rr-about-vaastu-design .ab-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.rr-about-vaastu-design .ab-card .ico {
+    display: block;
+    width: 3.625rem;
+    height: 3.625rem;
+    margin-bottom: 1.125rem;
+}
+
+.rr-about-vaastu-design .ab-card .ico svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.rr-about-vaastu-design .ab-card h3 {
+    margin: 0 0 0.875rem;
+    color: #fff;
+    font-family: "Georgia", Georgia, "Times New Roman", serif;
+    font-size: clamp(1.3125rem, 1.9vw, 1.625rem);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.rr-about-vaastu-design .ab-card p {
+    margin: 0 0 0.75rem;
+    color: #dbe7f7;
+    font-size: 0.90625rem;
+    line-height: 1.75;
+}
+
+.rr-about-vaastu-design .ab-card p:last-child {
+    margin-bottom: 0;
+}
+
+.rr-about-vaastu-design .ab-biz-cta {
+    margin: 2.25rem 0 0;
+    text-align: center;
+}
+
+.rr-about-vaastu-design .ab-biz-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.9375rem 1.4375rem;
+    border: 0;
+    border-radius: 4px;
+    background: var(--ab-red);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.rr-about-vaastu-design .ab-biz-cta .btn:hover {
+    transform: translateY(-2px);
+}
+
+.rr-about-vaastu-design .ab-cta {
+    position: relative;
+    overflow: hidden;
+    padding-block: 6.75rem;
+    background: var(--ab-beige);
+    text-align: center;
+}
+
+.rr-about-vaastu-design .ab-cta > .rose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48.75rem;
+    height: 48.75rem;
+    margin: -24.375rem 0 0 -24.375rem;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.rr-about-vaastu-design .ab-cta .ab-wrap {
+    position: relative;
+}
+
+.rr-about-vaastu-design .ab-cta .eyebrow {
+    margin-bottom: 1.375rem;
+}
+
+.rr-about-vaastu-design .ab-cta h2 {
+    margin: 0;
+    color: #172d47;
+    font-size: clamp(2.375rem, 5.2vw, 4.75rem);
+    line-height: 1.06;
+}
+
+.rr-about-vaastu-design .ab-cta h2 em {
+    display: block;
+    color: var(--ab-blue);
+    font-style: italic;
+}
+
+@media (max-width: 1000px) {
+    .rr-about-vaastu-design .ab-hero::before {
+        background: linear-gradient(180deg, rgba(23, 45, 71, 0.82), rgba(23, 45, 71, 0.66));
+    }
+
+    .rr-about-vaastu-design .ab-hero-bg {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: clamp(18rem, 72vw, 27rem);
+        opacity: 0.55;
+        -webkit-mask-image: linear-gradient(180deg, #000 58%, transparent 100%);
+        mask-image: linear-gradient(180deg, #000 58%, transparent 100%);
+    }
+
+    .rr-about-vaastu-design .ab-hero-bg img {
+        object-position: 35% 22%;
+        transform: scale(1.2);
+        transform-origin: 36% 22%;
+    }
+
+    .rr-about-vaastu-design .ab-hero-grid {
+        min-height: 0;
+        margin-top: -2.125rem;
+        padding-block: 0 3.25rem;
+    }
+
+    .rr-about-vaastu-design .ab-hero-copy {
+        max-width: none;
+    }
+
+    .rr-about-vaastu-design .ab-hero .chip {
+        top: calc(clamp(18rem, 72vw, 27rem) - 3.875rem);
+        right: 5%;
+        bottom: auto;
+    }
+
+    .rr-about-vaastu-design .ab-hero > .rose {
+        right: -21.25rem;
+        bottom: -30rem;
+        left: auto;
+    }
+
+    .rr-about-vaastu-design .ab-grid,
+    .rr-about-vaastu-design .ab-biz-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .rr-about-vaastu-design .ab-vis,
+    .rr-about-vaastu-design .ab-sec.rev .ab-vis,
+    .rr-about-vaastu-design .ab-biz-intro .ab-env {
+        position: static;
+        order: -1;
+    }
+
+    .rr-about-vaastu-design .ab-vis {
+        max-width: none;
+    }
+
+    .js .rr-about-vaastu-design .ab-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.625rem;
+        margin: 0.375rem 0 0;
+        padding: 0.375rem 0;
+        border: 0;
+        background: none;
+        color: #fff;
+        cursor: pointer;
+        font: 700 0.875rem/1 "Satoshi", sans-serif;
+        letter-spacing: 0.02em;
+        text-decoration: underline;
+        text-decoration-color: var(--ab-red);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 7px;
+    }
+
+    .js .rr-about-vaastu-design .ab-more-wrap {
+        display: grid;
+        grid-template-rows: 0fr;
+        visibility: hidden;
+        transition: grid-template-rows 0.45s ease, visibility 0s 0.45s;
+    }
+
+    .js .rr-about-vaastu-design .ab-more-wrap.open {
+        grid-template-rows: 1fr;
+        visibility: visible;
+        transition: grid-template-rows 0.45s ease, visibility 0s;
+    }
+
+    .rr-about-vaastu-design .ab-more-in {
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .rr-about-vaastu-design .ab-sec {
+        padding-block: 4.25rem;
+    }
+
+    .rr-about-vaastu-design .ab-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rr-about-vaastu-design .ab-card,
+    .rr-about-vaastu-design .ab-card:nth-child(n + 4) {
+        grid-column: auto;
+    }
+
+    .rr-about-vaastu-design .ab-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .rr-about-vaastu-design .ab-cta {
+        padding-block: 4.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .rr-about-vaastu-design .ab-hero h1 {
+        font-size: clamp(2.0625rem, 8.4vw, 3rem);
+    }
+
+    .rr-about-vaastu-design .ab-hero-copy > p:not(.eyebrow, .ab-sub) {
+        font-size: 0.90625rem;
+        line-height: 1.62;
+    }
+
+    .rr-about-vaastu-design .ab-hero-copy > p.ab-lead {
+        font-size: 0.96875rem;
+        line-height: 1.55;
+    }
+
+    .rr-about-vaastu-design .ab-hero .ab-sub {
+        font-size: 1.1875rem;
+    }
+
+    .rr-about-vaastu-design .ab-hero .chip {
+        padding: 0.5625rem 0.75rem;
+        font-size: 0.5625rem;
+    }
+
+    .rr-about-vaastu-design .ab-explore .ab-wrap {
+        gap: 1.25rem;
+    }
+
+    .rr-about-vaastu-design .ab-sec h2 {
+        margin-bottom: 2rem;
+    }
+
+    .rr-about-vaastu-design .ab-tx p {
+        font-size: 0.9375rem;
+    }
+
+    .rr-about-vaastu-design .ab-cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .rr-about-vaastu-design .ab-card,
+    .rr-about-vaastu-design .ab-card:nth-child(n + 4),
+    .rr-about-vaastu-design .ab-card:last-child {
+        grid-column: auto;
+    }
+
+    .rr-about-vaastu-design .ab-cta h2 {
+        font-size: clamp(2.125rem, 9vw, 3rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rr-about-vaastu-design .rose-spin,
+    .rr-about-vaastu-design :is(.av, .av-i) * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    html.js .rr-about-vaastu-design :is(.av, .av-i):not(.on) .d {
+        stroke-dashoffset: 0;
+    }
+
+    html.js .rr-about-vaastu-design :is(.av, .av-i):not(.on) .f {
+        opacity: 1;
+    }
+
+    html.js .rr-about-vaastu-design :is(.av, .av-i):not(.on) .wp {
+        transform: translateX(430px);
+    }
+
+    .rr-about-vaastu-design :is(.av, .av-i) .trav {
+        display: none;
+    }
+
+    .js .rr-about-vaastu-design .ab-more-wrap {
+        transition: none;
+    }
+
+    .rr-about-vaastu-design .ab-more-chevron,
+    .rr-about-vaastu-design .ab-card,
+    .rr-about-vaastu-design .ab-biz-cta .btn {
+        transition: none;
+    }
+}

@@ -1,0 +1,3206 @@
+/* ==========================================================================
+   Temple Vaastu
+   Generated from design/temple-vaastu/ravirao-temples-vaastu-standalone with Shiva final +++.html.
+   Every rule uses the BEM block .temple-vaastu (the template wrapper); :root
+   tokens and image variables live on body.rr-temple-vaastu-page.
+   Images: assets/images/temple-vaastu/. Shared editorial typography is in
+   shared-typography.css; contact copy and form remain in the shared footer.
+   ========================================================================== */
+.rr-temple-vaastu-page {
+  --font-body: "DM Sans", Arial, sans-serif;
+  --i-ceremony-hall: url(../images/temple-vaastu/ceremony-hall.jpg);
+  --i-chhatri: url(../images/temple-vaastu/chhatri.jpg);
+  --i-dr-rao-glow: url(../images/temple-vaastu/dr-rao-glow.jpg);
+  --i-granite-shrine: url(../images/temple-vaastu/granite-shrine.jpg);
+  --i-hero-m-flag: url(../images/temple-vaastu/hero-m-flag.webp);
+  --i-hero-m-gold: url(../images/temple-vaastu/hero-m-gold.webp);
+  --i-hero-m-sun: url(../images/temple-vaastu/hero-m-sun.webp);
+  --i-hero-m-trishula: url(../images/temple-vaastu/hero-m-trishula.webp);
+  --i-hero-scene: url(../images/temple-vaastu/hero-scene.webp);
+  --i-lotus: url(../images/temple-vaastu/lotus.webp);
+  --i-lotus-gold: url(../images/temple-vaastu/lotus-gold.webp);
+  --i-medallion-m-ring: url(../images/temple-vaastu/medallion-m-ring.webp);
+  --i-medallion-m-tri: url(../images/temple-vaastu/medallion-m-tri.webp);
+  --i-rao-ganesha: url(../images/temple-vaastu/rao-ganesha.jpg);
+  --i-rao-orange: url(../images/temple-vaastu/rao-orange.jpg);
+  --i-shrine-ganesha: url(../images/temple-vaastu/shrine-ganesha.jpg);
+  --i-temple-night: url(../images/temple-vaastu/temple-night.jpg);
+  --i-trishula-glow: url(../images/temple-vaastu/trishula-glow.webp);
+  --i-trishula-grain: url(../images/temple-vaastu/trishula-grain.png);
+  --i-trishula-icon-lg: url(../images/temple-vaastu/trishula-icon-lg.webp);
+  --i-trishula-icon-sm: url(../images/temple-vaastu/trishula-icon-sm.webp);
+  --i-trishula-m-bg: url(../images/temple-vaastu/trishula-m-bg.webp);
+  --i-trishula-m-flower: url(../images/temple-vaastu/trishula-m-flower.webp);
+  --i-trishula-m-metal: url(../images/temple-vaastu/trishula-m-metal.webp);
+  --i-trishula-m-sub: url(../images/temple-vaastu/trishula-m-sub.webp);
+  --i-trishula-scene: url(../images/temple-vaastu/trishula-scene.webp);
+  --i-yajna: url(../images/temple-vaastu/yajna.jpg);
+  color: #3a2113;
+  background: #fffaf0;
+  font: 400 16px/1.7 var(--font-body);
+}
+.temple-vaastu,
+.temple-vaastu * {
+  box-sizing: border-box;
+}
+.temple-vaastu {
+  margin: 0;
+  font: 400 16px/1.7 var(--font-body);
+  color: #3a2113;
+  background: #fffaf0;
+}
+.temple-vaastu a {
+  color: inherit;
+  text-decoration: none;
+}
+.temple-vaastu p {
+  margin: 0 0 14px;
+}
+.temple-vaastu .temple-vaastu__container {
+  width: min(1220px, calc(100% - 48px));
+  margin: 0 auto;
+}
+.temple-vaastu .temple-vaastu__title {
+  margin: 0;
+  color: #3a2113;
+}
+.temple-vaastu h2.temple-vaastu__title {
+  margin-bottom: 20px;
+}
+.temple-vaastu h3 {
+  margin: 0 0 8px;
+}
+.temple-vaastu .temple-vaastu__eyebrow {
+  color: #c8281e;
+}
+.temple-vaastu .temple-vaastu__eyebrow.temple-vaastu__eyebrow--light {
+  color: #ffd479;
+}
+.temple-vaastu .temple-vaastu__eyebrow.temple-vaastu__eyebrow--icon:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  vertical-align: -3px;
+  background: var(--i-trishula-icon-sm) center/contain no-repeat;
+}
+.temple-vaastu .temple-vaastu__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  background: #c8281e;
+  color: #fffaf0;
+  padding: 15px 23px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.35;
+  gap: 12px;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.temple-vaastu .temple-vaastu__button:hover {
+  transform: translateY(-2px);
+}
+.temple-vaastu .temple-vaastu__button.temple-vaastu__button--large {
+  background: #d4301f;
+  border-radius: 8px;
+  padding: 17px 26px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.temple-vaastu .temple-vaastu__hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  color: #fffaf0;
+  padding: 72px 0 88px;
+  background: #2b0e0a;
+}
+.temple-vaastu .temple-vaastu__hero:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  z-index: 2;
+  background: var(--frz) 0 0/56px 16px repeat-x;
+}
+.temple-vaastu .temple-vaastu__hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    90deg,
+    #2b0e0af2 0%,
+    #2b0e0acf 34%,
+    #2b0e0a00 72%
+  );
+}
+.temple-vaastu .temple-vaastu__hero-inner {
+  position: relative;
+  z-index: 1;
+}
+.temple-vaastu .temple-vaastu__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7%;
+  align-items: center;
+}
+.temple-vaastu .temple-vaastu__hero h1 {
+  color: #fffaf0;
+  margin: 6px 0 24px;
+}
+.temple-vaastu .temple-vaastu__hero h1 em {
+  color: #ffd479;
+  font-family: var(--font-serif) !important;
+}
+.temple-vaastu .temple-vaastu__lead {
+  font:
+    italic 400 clamp(21px, 2.1vw, 27px)/1.35 Georgia,
+    serif;
+  color: #fff3dc;
+  max-width: 520px;
+  margin-bottom: 16px;
+}
+.temple-vaastu .temple-vaastu__hero .temple-vaastu__text {
+  color: #f3dfc0;
+  max-width: 520px;
+}
+.temple-vaastu .temple-vaastu__breadcrumb {
+  font-size: 14px;
+  color: #e0b98a;
+  margin-bottom: 34px;
+}
+.temple-vaastu .temple-vaastu__photo--ganesha {
+  background-image: var(--i-rao-ganesha);
+  background-position: 50% 7%;
+}
+.temple-vaastu .temple-vaastu__photo--orange {
+  background-image: var(--i-rao-orange);
+  background-position: 50% 22%;
+}
+
+.temple-vaastu .temple-vaastu__section {
+  padding: 104px 0;
+}
+.temple-vaastu .temple-vaastu__section--cream {
+  background: #f7ecd2;
+}
+.temple-vaastu .temple-vaastu__text {
+  color: #5b4332;
+}
+.temple-vaastu .temple-vaastu__arch-photo {
+  height: 540px;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  border-radius: 999px 999px 0 0;
+}
+.temple-vaastu .temple-vaastu__arch-photo:before,
+.temple-vaastu .temple-vaastu__portrait:before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border: 2px solid #d9951c;
+  border-radius: 999px 999px 0 0;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__arch-photo span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #3a2113;
+  color: #fffaf0;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  padding: 16px 22px;
+}
+.temple-vaastu .temple-vaastu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 44px;
+}
+.temple-vaastu .temple-vaastu__header p {
+  max-width: 390px;
+  margin: 0;
+}
+
+.temple-vaastu .temple-vaastu__section--projects {
+  background: #fffaf0;
+  color: #3a2113;
+}
+.temple-vaastu .temple-vaastu__section--projects .temple-vaastu__header p {
+  color: #5b4332;
+}
+.temple-vaastu .temple-vaastu__projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.temple-vaastu .temple-vaastu__project {
+  background: #fffdf7;
+  border: 1px solid #e6d6b8;
+  border-radius: 7px;
+  overflow: hidden;
+  color: #3a2113;
+}
+.temple-vaastu .temple-vaastu__project .temple-vaastu__project-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  filter: none;
+}
+.temple-vaastu .temple-vaastu__project div.temple-vaastu__project-body {
+  padding: 22px 24px 26px;
+}
+.temple-vaastu .temple-vaastu__project h3 {
+  font:
+    400 22px/1.25 Georgia,
+    serif;
+}
+.temple-vaastu .temple-vaastu__project p {
+  font-size: 14px;
+  color: #5b4332;
+  margin: 0;
+}
+.temple-vaastu .temple-vaastu__project-image--shrine-ganesha {
+  background-image: var(--i-shrine-ganesha);
+  background-position: 50% 55%;
+}
+.temple-vaastu .temple-vaastu__project-image--temple-night {
+  background-image: var(--i-temple-night);
+  background-position: 50% 30%;
+}
+.temple-vaastu .temple-vaastu__project-image--chhatri {
+  background-image: var(--i-chhatri);
+  background-position: 50% 24%;
+}
+.temple-vaastu .temple-vaastu__project-image--granite-shrine {
+  background-image: var(--i-granite-shrine);
+  background-position: 50% 30%;
+}
+
+.temple-vaastu .temple-vaastu__project-image--ceremony-hall {
+  background-image: var(--i-ceremony-hall);
+  background-position: 50% 62%;
+}
+
+.temple-vaastu .temple-vaastu__section--video {
+  background: #33100c;
+  color: #fffaf0;
+}
+.temple-vaastu .temple-vaastu__section--video h2 {
+  color: #fffaf0;
+}
+.temple-vaastu .temple-vaastu__section--video .temple-vaastu__header p {
+  color: #e6cfae;
+}
+.temple-vaastu .temple-vaastu__video {
+  position: relative;
+  display: block;
+  aspect-ratio: 16/9;
+  background:
+    var(--i-lotus-gold) 50% 44% / auto 86% no-repeat,
+    radial-gradient(circle at 50% 46%, #ffb43a70 0%, #ffb43a00 34%),
+    radial-gradient(
+      ellipse 78% 90% at 50% 46%,
+      #d02a1c 0%,
+      #9a1d14 48%,
+      #4d0d09 100%
+    );
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px #0009;
+}
+.temple-vaastu .temple-vaastu__video:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #5c0f0b1a 30%, #5c0f0bcc);
+}
+.temple-vaastu .temple-vaastu__video iframe,
+.temple-vaastu .temple-vaastu__video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+.temple-vaastu .temple-vaastu__video-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 96px;
+  height: 96px;
+  margin: -48px 0 0 -48px;
+  border-radius: 50%;
+  background: #c8281e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.temple-vaastu .temple-vaastu__video-icon:after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 2px solid #c8281e;
+  animation: vping 2.4s ease-out infinite;
+}
+@keyframes vping {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+.temple-vaastu .temple-vaastu__video-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: #fffaf0;
+  margin-left: 5px;
+}
+.temple-vaastu .temple-vaastu__video:hover .temple-vaastu__video-icon {
+  background: #c8281e;
+}
+.temple-vaastu .temple-vaastu__video-caption {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fffaf0;
+}
+.temple-vaastu .temple-vaastu__video-title {
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: #cfae85;
+}
+@media (prefers-reduced-motion: reduce) {
+  .temple-vaastu .temple-vaastu__video-icon:after {
+    animation: none;
+  }
+  .temple-vaastu .temple-vaastu__band-emblem,
+  .temple-vaastu .temple-vaastu__band-emblem *,
+  .temple-vaastu .temple-vaastu__hero-rays,
+  .temple-vaastu .temple-vaastu__hero-rays-alt,
+  .temple-vaastu .temple-vaastu__hero-glow {
+    animation: none !important;
+  }
+}
+.temple-vaastu .temple-vaastu__band {
+  background: linear-gradient(105deg, #9c1c13 0%, #c8281e 57%, #8f1a12 100%);
+  color: #fffaf0;
+  padding: 46px 0;
+  position: relative;
+  overflow: hidden;
+}
+.temple-vaastu .temple-vaastu__band:after {
+  content: "";
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border: 1px solid #ffffff30;
+  border-radius: 50%;
+  right: -55px;
+  top: -130px;
+  box-shadow:
+    0 0 0 55px #ffffff0a,
+    0 0 0 110px #ffffff08;
+}
+.temple-vaastu .temple-vaastu__band .temple-vaastu__container {
+  position: relative;
+  z-index: 1;
+}
+.temple-vaastu .temple-vaastu__band-emblem {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 150px;
+  justify-self: end;
+  animation: glow 4.5s ease-in-out infinite;
+}
+.temple-vaastu .temple-vaastu__band-emblem-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.temple-vaastu .temple-vaastu__band-emblem .temple-vaastu__band-emblem-dots {
+  fill: none;
+  stroke: #ffd479;
+  stroke-opacity: 0.75;
+  stroke-width: 1.1;
+  stroke-dasharray: 0.1 3.1;
+  stroke-linecap: round;
+  transform-origin: 50px 50px;
+  animation: spin 90s linear infinite;
+}
+.temple-vaastu .temple-vaastu__band-emblem-icon,
+.temple-vaastu .temple-vaastu__band-emblem-shine {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  aspect-ratio: 320/520;
+  transform: translate(-50%, -50%);
+}
+.temple-vaastu .temple-vaastu__band-emblem-icon {
+  display: block;
+  height: auto;
+}
+.temple-vaastu .temple-vaastu__band-emblem-shine {
+  -webkit-mask: var(--i-trishula-icon-lg) center/100% 100% no-repeat;
+  mask: var(--i-trishula-icon-lg) center/100% 100% no-repeat;
+  background: linear-gradient(to bottom, #0000 42%, #fff3c4 50%, #0000 58%) 0
+    22%/100% 300% no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: tsrun 8s ease-in-out infinite;
+}
+@keyframes tsrun {
+  0% {
+    background-position: 0 22%;
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  46% {
+    background-position: 0 78%;
+    opacity: 1;
+  }
+  52%,
+  100% {
+    background-position: 0 78%;
+    opacity: 0;
+  }
+}
+@keyframes glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 3px #ffd47966);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px #ffd479cc);
+  }
+}
+.temple-vaastu .temple-vaastu__band h2 {
+  color: #fffaf0;
+  font:
+    normal clamp(28px, 3.5vw, 45px)/1.15 Georgia,
+    serif;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+.temple-vaastu .temple-vaastu__band .temple-vaastu__container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 150px;
+  gap: 5%;
+  align-items: center;
+}
+.temple-vaastu .temple-vaastu__band p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0;
+}
+.temple-vaastu .temple-vaastu__step {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 15px;
+  padding: 18px 0;
+  border-top: 1px solid #dcc79f;
+}
+.temple-vaastu .temple-vaastu__step b {
+  font:
+    400 25px Georgia,
+    serif;
+  color: #c47f0e;
+}
+.temple-vaastu .temple-vaastu__step span {
+  font-size: 14px;
+  color: #5b4332;
+  display: block;
+}
+.temple-vaastu .temple-vaastu__portrait {
+  height: 560px;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  border-radius: 999px 999px 0 0;
+}
+.temple-vaastu .temple-vaastu__portrait span {
+  position: absolute;
+  bottom: 25px;
+  left: -35px;
+  background: #3a2113;
+  color: #fffaf0;
+  padding: 26px;
+  max-width: 285px;
+  font:
+    25px/1.2 Georgia,
+    serif;
+}
+.temple-vaastu .temple-vaastu__author {
+  display: block;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #5b4332;
+}
+.temple-vaastu .temple-vaastu__faq {
+  max-width: 820px;
+}
+.temple-vaastu details {
+  border-top: 1px solid #e6d6b8;
+  padding: 18px 0;
+}
+.temple-vaastu details:last-of-type {
+  border-bottom: 1px solid #e6d6b8;
+}
+.temple-vaastu summary {
+  font:
+    400 22px/1.3 Georgia,
+    serif;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.temple-vaastu summary::-webkit-details-marker {
+  display: none;
+}
+.temple-vaastu summary:after {
+  content: "+";
+  font: 300 30px/1 var(--font-body);
+  color: #c8281e;
+}
+.temple-vaastu details[open] summary:after {
+  content: "\2013";
+}
+.temple-vaastu details p {
+  margin: 10px 0 0;
+  color: #5b4332;
+}
+.temple-vaastu .temple-vaastu__section--scope {
+  --m: var(--i-lotus);
+  position: relative;
+  padding: 124px 0 132px;
+  background:
+    var(--m) calc(100% + 190px) -150px/780px 780px no-repeat,
+    var(--m) -250px calc(100% + 170px) / 680px 680px no-repeat,
+    radial-gradient(ellipse 62% 48% at 50% 0%, #fff6dc 0%, #f7ecd2 72%);
+}
+.temple-vaastu .temple-vaastu__section--scope:before,
+.temple-vaastu .temple-vaastu__section--scope:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: var(--frz) 0 0/56px 16px repeat-x;
+}
+.temple-vaastu .temple-vaastu__section--scope:before {
+  top: 0;
+}
+.temple-vaastu .temple-vaastu__section--scope:after {
+  bottom: 0;
+}
+.temple-vaastu .temple-vaastu__header--center {
+  display: block;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 78px;
+}
+.temple-vaastu .temple-vaastu__header--center h2 {
+  margin-bottom: 4px;
+}
+.temple-vaastu .temple-vaastu__header--center .temple-vaastu__ornament {
+  margin: 16px 0 20px;
+  line-height: 0;
+}
+.temple-vaastu .temple-vaastu__header--center .temple-vaastu__text {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.temple-vaastu .temple-vaastu__scope-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px 30px;
+}
+.temple-vaastu .temple-vaastu__break {
+  display: inline;
+}
+.temple-vaastu .temple-vaastu__scope-card {
+  position: relative;
+  background: #fffaf0;
+  border: 1px solid #d9a63a;
+  border-radius: 6px 6px 14px 14px;
+  padding: 62px 28px 38px;
+  text-align: center;
+  box-shadow: 0 14px 32px #7a3b1218;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.temple-vaastu .temple-vaastu__scope-card:before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px dashed #c8281e66;
+  border-radius: 3px 3px 10px 10px;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__scope-card:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  background: #c8281e;
+  border: 2px solid #e9a923;
+  transform: rotate(45deg);
+}
+.temple-vaastu .temple-vaastu__scope-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px #c8281e38;
+}
+.temple-vaastu .temple-vaastu__medallion {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 36% 28%,
+    #f2674a 0%,
+    #c8281e 48%,
+    #7d130c 100%
+  );
+  box-shadow:
+    0 0 0 3px #e9a923,
+    0 0 0 6px #fffaf0,
+    0 0 0 7.5px #e9a923,
+    0 10px 22px #7a1a1255;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.temple-vaastu .temple-vaastu__medallion svg {
+  width: 38px;
+  height: 38px;
+  fill: none;
+  stroke: #ffe9a8;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.temple-vaastu .temple-vaastu__scope-card h3 {
+  font:
+    400 24px/1.25 Georgia,
+    "Times New Roman",
+    serif;
+  letter-spacing: -0.01em;
+  color: #3a2113;
+  margin: 0 0 6px;
+}
+.temple-vaastu .temple-vaastu__scope-card h3 small {
+  display: block;
+  font:
+    italic 400 15px/1.3 Georgia,
+    serif;
+  letter-spacing: 0.03em;
+  color: #c8281e;
+  margin-top: 4px;
+}
+.temple-vaastu .temple-vaastu__scope-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #5b4332;
+  margin: 12px 0 0;
+}
+.temple-vaastu details p .temple-vaastu__link {
+  display: inline;
+  margin: 0;
+  font-size: inherit;
+  padding-bottom: 1px;
+}
+
+@media (max-width: 900px) {
+  .temple-vaastu .temple-vaastu__break {
+    display: none;
+  }
+  .temple-vaastu .temple-vaastu__section--scope {
+    padding: 92px 0 100px;
+    background-size:
+      420px 420px,
+      380px 380px,
+      auto;
+  }
+  .temple-vaastu .temple-vaastu__scope-grid {
+    grid-template-columns: 1fr;
+    gap: 66px;
+  }
+  .temple-vaastu .temple-vaastu__header--center {
+    margin-bottom: 70px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .temple-vaastu .temple-vaastu__scope-card {
+    transition: none;
+  }
+}
+.temple-vaastu .temple-vaastu__section--journal {
+  background: #33100c;
+  color: #fff;
+}
+.temple-vaastu .temple-vaastu__section--journal h2 {
+  color: #fff;
+  font-size: clamp(32px, 3.6vw, 50px);
+}
+.temple-vaastu .temple-vaastu__section--journal .temple-vaastu__text {
+  color: #e6cfae;
+}
+.temple-vaastu .temple-vaastu__journal-photo {
+  position: relative;
+  height: 440px;
+  border-radius: 7px;
+  background: var(--i-dr-rao-glow) 42% 50% / cover no-repeat;
+  outline: 2px solid #d9951c;
+  outline-offset: 12px;
+  margin: 12px;
+}
+.temple-vaastu .temple-vaastu__journal-photo span {
+  position: absolute;
+  left: -12px;
+  bottom: 26px;
+  background: #c8281e;
+  color: #fff;
+  padding: 16px 22px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+}
+.temple-vaastu .temple-vaastu__journal-meta {
+  font-size: 13px;
+  color: #cfae85;
+  letter-spacing: 0.04em;
+  margin: 0 0 26px;
+}
+.temple-vaastu .temple-vaastu__journal-actions {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.temple-vaastu .temple-vaastu__journal-link {
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffd479;
+  border-bottom: 1px solid #ffd47988;
+  padding-bottom: 2px;
+}
+@media (max-width: 900px) {
+  .temple-vaastu .temple-vaastu__journal-photo {
+    height: 300px;
+  }
+  .temple-vaastu .temple-vaastu__journal-photo span {
+    left: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinr {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.temple-vaastu .temple-vaastu__project {
+  border-top: 3px solid transparent;
+  transition: border-color 0.2s;
+}
+.temple-vaastu .temple-vaastu__project:hover {
+  border-top-color: #e0a21c;
+}
+
+.temple-vaastu .temple-vaastu__portrait {
+  margin: 12px;
+}
+.temple-vaastu .temple-vaastu__arch-photo span {
+  position: absolute;
+  right: -25px;
+  left: auto;
+  bottom: 26px;
+  background: #c8281e;
+  color: #fffaf0;
+  padding: 18px 24px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+}
+.temple-vaastu .temple-vaastu__portrait span {
+  background: #3a2113;
+}
+
+.temple-vaastu .temple-vaastu__arch-photo span {
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .temple-vaastu .temple-vaastu__split,
+  .temple-vaastu .temple-vaastu__projects,
+  .temple-vaastu .temple-vaastu__band .temple-vaastu__container {
+    grid-template-columns: 1fr;
+  }
+  .temple-vaastu .temple-vaastu__split {
+    gap: 36px;
+  }
+
+  .temple-vaastu .temple-vaastu__arch-photo span {
+    right: 0;
+  }
+
+  .temple-vaastu .temple-vaastu__band-emblem {
+    width: 110px;
+    height: 110px;
+    justify-self: center;
+  }
+  .temple-vaastu .temple-vaastu__portrait {
+    margin: 12px 12px 12px;
+  }
+  .temple-vaastu .temple-vaastu__hero {
+    min-height: 75vh;
+  }
+
+  .temple-vaastu .temple-vaastu__section {
+    padding: 64px 0;
+  }
+  .temple-vaastu .temple-vaastu__hero {
+    padding: 56px 0;
+  }
+  .temple-vaastu .temple-vaastu__header {
+    display: block;
+  }
+  .temple-vaastu .temple-vaastu__band .temple-vaastu__container {
+    gap: 20px;
+  }
+  .temple-vaastu .temple-vaastu__portrait span {
+    left: 10px;
+  }
+  .temple-vaastu .temple-vaastu__video-icon {
+    width: 68px;
+    height: 68px;
+    margin: -34px 0 0 -34px;
+  }
+  .temple-vaastu .temple-vaastu__video-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  .temple-vaastu .temple-vaastu__video-caption {
+    left: 14px;
+    bottom: 12px;
+    font-size: 11px;
+  }
+}
+.rr-temple-vaastu-page {
+  --m: var(--i-lotus);
+}
+.rr-temple-vaastu-page {
+  --frz: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 16'%3E%3Cg fill='none' stroke='%23e9a923' stroke-width='1' stroke-linecap='square' stroke-opacity='.55'%3E%3Cpath d='M0 8H15M41 8H56'/%3E%3C/g%3E%3Cimage href='data:image/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAnCAYAAAAVW4iAAAAGXUlEQVR42rWXWWxU1xnH/%2BfeO3PvzJ1989hm8AoOriG0FEgwpjU4UvtQoSQiaZ3YtCUQJNQ%2BNH1In1pVVUgVKVWTVl1waQsOWUiQIqUIRAUlBGEQwrTGTjx4ATwe7NnXO3c/fUC4juokOLLP4/2W3z3n%2B46%2B/wEWsZKnelZf%2BeX6tsXEcItxFnzB7aqU4AHceNAYZjEARnB0Ur2ybVExD%2Bp4%2BVd%2BQjjrNpbo7e93gywK8P12Bz58uePJ4pUfd4z%2BYeOCjuHaujUW0RtkQAPVVWzLQj6J47tQvrBn64WXNu38VA3%2BdrGERzwDp41y%2Bf31OzZYs%2B8Yvd6nrk3OD3YF2XbY/KAmhWCjHQA%2BmW%2BXL%2Byply3hIwMfnFTHrw3t/L8j2v8PrZQc/893B0%2BebWFd3vN3DzVE5iewOF1bQRioGmC3Y%2Bt8m/TRcxHqbzl/6Z13W/Lj/35630m9vGANnjqmJ%2B3m5OFsmtTw1uKh6Cs8AODjV4NgBWErzAJ0jYCAbrn64r0GvHXsYbA%2BX9/Q%2Beu1TCHa98SbZvpzi%2Byr9l7mKrdgMs4up8uzCQBsVlrP8Hwd9CR0k8CgaGANoxYA/B7SLknKjvjgOQQC7OUv7CJXdZD1fGUDbkXLkLL57wCA22m2MzYLMrEYGIYDywCEwRYAIMXpnXevXYHPZYCzEvYLAWJ15NHZXB1UTUAqoT0EAITVt4NjkRqdhsBzYDhAEMk2AJBShVajkINbpLALZPPnAu72r3VzgqcnEx1CoaihXDaZwV/w4DzB7UoljNzYHeicC3a3CIcbXQM/ZZGe1Ri9VIJF9CIUCfSOHKx1fibA89CWX2dKNb7SzBgACtFBosH65g15%2BrXI4ImrUHUKmTowGotAczat8oUcbeUyHa6UyyhWOCi2%2BtCKr696aX7OuRtZGf5Nr8qFDg8dfx1aKQczPQrOis2Dw8xw0GMeEH2Bg7V1IUbRCLKzKSplZ18s5MjvmhqxviAxH4VWRghjc2PtY/VQS%2Bpub9fJN%2BYApYv7N1vqus4OvtXHq7kJzM5U4Kaxf772If3WBzfv/cCZveTvFnvVM6rOgTem3/zGH2kPABx7goPfa57RuECnpyoAUWTR2hmWS9PF7f7HB64w46%2BvsDH6eH/0zHs8KY5Blgwo6Rh4G%2Bm7nxwAVjbxZ6vCFIJVg8NJzt3/3n1CRzDM/TnsSkOXipBzGUxevCNoM3f6r//cY%2BPUfHpPPpZqiI9MQ3QH4eQm4awjYEX3FJCdA/gf7ghUMhIUaRIOhxAApDmbzd8Sa9zowtilDFIVH2JTM8ig2GhQeS9TkoVdEzcp7E4ntFIaJhg0r3WjeXPLjvsJpvs2OcSmb%2B/LJDkYrAOhtuYf3jjYONctka5nO5nmHyCT0WDqEgSXGxrrg6mz3eS9XscBQynbKzJeqKkPB2weD6oaa1Hf3qrpt4d/rxWVsU9uqvssgn9dORGHoVM4Qm5IufiNNc2WPznatjWyNZ0/%2BvjUOU4aO41CxYZCfDRpYfEqbxO0uS469TzTrijcv6rCfpIrmhDDjXCIBhjeicRUCmpqFB5vADrrQCk5ASrWYeXqAEywyCYU6OnbEL0eFJJTVOTlb3a8Ri9%2Bqk0B4NwB5khe9nevaKiGpBLAYsNsLAtD0UHlLNrWmCiXGEQnKAR3AAwx4a92g7XwYDkWpZlJ%2BIT4GxtfobsXnMnTSTxfE0znlHTmWZhWPj4tX1YUHOJYotlCkWM02MowogwmPkTlxHi3aVLGyOG5cI3lUbC67LPh6Ng4frbgRZu/jj5NYGqU7D4BCgCn97t6Nd532FfXCrmQRu5OFKwu7d15RPkrABzdBcKwoM%2B89YCqoudtCuBecgCgBkqmKkHJJaDJZRi6AUYz54ZKz/H/%2BX6poR/0q9elXHEknshidiYJTSqPhEPGtSVTFRteliecFuUn61ZxaKgGBGK88MhvzbEllS2hpuCTmvur4KrWobbRtmvJld3VgVR/1epLe6VcHuW7cv%2BSAyJhc2bdpgZIqdu4OVBI4LPr%2BuWOqKKQIiEEDCEwQUtLLh1lheYNw6DUNJErLQPA4WEVaiiybuiGlSeFJQc8/hcdMLUMTD33vXepuSzvA0q1WV01bMv2ADFUZUZTdWHZAJSaU9TQ7cu3A027TSmEZQToUV3D8u0gn5VHVNnkFxPzX2Bx01G7R1C/AAAAAElFTkSuQmCC' x='24' y='1.5' width='8' height='13'/%3E%3Ccircle cx='19' cy='8' r='1.3' fill='%23e9a923'/%3E%3Ccircle cx='37' cy='8' r='1.3' fill='%23e9a923'/%3E%3C/svg%3E");
+  --frzr: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 16'%3E%3Cg fill='none' stroke='%23b0231a' stroke-width='1' stroke-linecap='square' stroke-opacity='.55'%3E%3Cpath d='M0 8H15M41 8H56'/%3E%3C/g%3E%3Cimage href='data:image/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAnCAYAAAAVW4iAAAAF2klEQVR42rVXW2xU1xVd53Efc%2BfOjD1%2B1G9sF4MJYIqqQsAObQxSVCkoUiKUNEotNVUq9a9NlaoflZpKVaWqf1W/GpT%2BRFUfH/2qGirUFKK0SYDUItjFBEiwDcYwnvfcuY9zzu5HCHUIELvC%2B/fstZe29jpnr8Oe812sNb479sUtpz66bp%2BuNs6tFSOxjshk/cmq0g6ANRPw9RDYjnw0ITqwHsyaO9id8ZgQ4gADGAMYAbSuDh7O%2BU%2B9NDH2yOGOlrsmbk6ntrkpp4MB7QOuvfVuOd8a6cf3926f2JNNP/EZgrcr9WN/nf7g5aFNXW9ODfcO3QnOtfjjjDEYAGkhHrnz/MWHtw%2B2d7aePHbu8svvVhvH7zaD%2Brl685m/zHy41Uu7J57sbO1fXSDluRMAEBkDX/CJO4r3Z3L%2BiT%2BcOb91ttF8GkDjXkO%2BaYBXq%2BV6j5TilYkWHwDw1dYMbMeaAIDYEMCwf4v3sbyf6e2An/GOnjkz11tK1FEAK/dV0YBrvxNFMTjnh9osaw8ApDgflJbcBACaCIYwZEC9AJDJpcfDZnTwzXIN3Y79zufKtMf3xKbhHsyUaygkyWEAyDnWuG1buHF9BYIxCAZwsP0A0AyiJ87PzSNvSTicic8laGvP7WvUm4gNYTGMRwGAMTbJOcfi/DI8wSEZQ0byAwBQqjcfqiiNnBRIC7H3vgTf6OvMOa79zctLBZSUQk1pPuankM54k0opzNUCSMbQZkm0SnloKOVgMYp5TWlkpcBQxpva3%2BJn7kkwMNT9i2Yzys83YwBAVooLoxnvywzoP3b6PGJjYIhwKYiQlWKk17F3VJWeqSiNutKwHatz10DXz1fXFGP2x5f5J4/tnXIc%2B6dvnL2I0BAqSoOAF9%2BtNGbeK1QqFaUPdjs2E4xhMYppuhb8aD6MX2dAcTlOnm%2BxJCs3I2zuaf/K7rbcpVPLxfdvE/xg3469uZbMn/721llZVhqLUQwAx0tK/xKAAvAvT/DNytBYTRsw4PeBMS8B0KGhq2nBDwTaDKUFx0qxisGe9q%2BPppzj08XqVf5YWy6VxOq1M2/POGWlUdcadW3gCXF0dasPpVN/73dtuJwhJ8Ubq8/6Xfs3eUuirg0KicL03LxbLNde25XxUrKYqG8XbpSGTlfqaLckHM7R79rICLGwHCe3i%2Bzs62ivVQM0yga%2B4O2XmtH/pO3Yi9uHezB96SpqSuNiEIIBw4rwAg%2B0OTJbrqFVClSUBkDYk01jX1/HwU8KHOlq8/sGur5TCJoQALZ1tz%2B/Wi37dm95tKevE8tRgoQIrZaEYAya6FkxwFn6WpScXIqTL7mceVkp0JlyMDK6aWJHxmvd2eIPXynXf728VNi2FCWIiaDCOF9K1OMHO/Ps8O4tT2dz/g//feo/vBgnaGiD843wZk3rnzHGzrJPVmZOivHQmH8Mug4rKYUB10FGCKQEw8UgwrUoRpdjQYBhMYqRFQK7Mh4IwLUoxo1YocOWWAxjSgn%2BtaUoeetTMo0MLeSlHCkqtXMk7SI0BgrA2VqAlUQhMIRB10FoDJZjBQKwEMbgYLA4Q96WWIoSZKX43UIY/%2Boz9wAAAmNez0nREhraGmiDuSD8Z2jox4rwx5wUT%2B7wPeYIjithTAnRszHRn28mKg%2Bgu6FNPSX4K5eb0fduSRsAwO7jKhhurcW8Jaccxl4dTbsoJhoXghCa6IWY6Ld35q5nJ98GaKJ6SIRCotDQBgkRNFHjbrn/l6vosq3pktKzHzUjfNiMoIhmex37vbVgPzWDe8VKokoOYx/syfnPScZQVHqqqvXpB%2BqLtvmpp/KWRJ9rY8RzjqwVx9ZhHcc7bXmiECsYYBLAyQfagcvZ9UNfaMNkPgsO3Hjg1jE0VGMM4IyBgPpGeNOK1oY00cYQuJxFxphQEWkA1QdufkNDMIaKmuACMBvyPzBEy5ExqQ2x77de3OuRMe6GERjQgiJ4G0YQG7pCIHcjCS7Ehjaug5tJMhsY46wH819Ng6LfZZPwPQAAAABJRU5ErkJggg==' x='24' y='1.5' width='8' height='13'/%3E%3Ccircle cx='19' cy='8' r='1.3' fill='%23b0231a'/%3E%3Ccircle cx='37' cy='8' r='1.3' fill='%23b0231a'/%3E%3C/svg%3E");
+}
+.temple-vaastu .temple-vaastu__ornament {
+  line-height: 0;
+}
+.temple-vaastu .temple-vaastu__ornament.temple-vaastu__ornament--left {
+  text-align: left;
+  margin: 4px 0 26px;
+}
+.temple-vaastu .temple-vaastu__link {
+  display: inline-block;
+  margin-top: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #c8281e;
+  border-bottom: 2px solid #e9a923;
+  padding-bottom: 2px;
+}
+.temple-vaastu .temple-vaastu__link:hover {
+  color: #8f1a12;
+}
+
+.temple-vaastu .temple-vaastu__section--perspective h2 {
+  text-wrap: balance;
+}
+.temple-vaastu .temple-vaastu__section--muhurta {
+  position: relative;
+  padding: 112px 0 124px;
+  background:
+    var(--m) -240px calc(100% + 150px) / 700px 700px no-repeat,
+    radial-gradient(ellipse 60% 55% at 50% 0%, #fff0c4 0%, #0000 72%),
+    #fffaf0;
+}
+.temple-vaastu .temple-vaastu__section--muhurta .temple-vaastu__header--center {
+  margin-bottom: 62px;
+}
+.temple-vaastu .temple-vaastu__timeline {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1120px;
+}
+.temple-vaastu .temple-vaastu__timeline li {
+  position: relative;
+  text-align: center;
+  padding: 0 12px;
+}
+.temple-vaastu .temple-vaastu__timeline li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 29px;
+  left: calc(50% + 42px);
+  right: calc(-50% + 42px);
+  border-top: 2px dashed #d9a63a;
+}
+.temple-vaastu .temple-vaastu__timeline b {
+  display: block;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 36% 28%,
+    #f2674a 0%,
+    #c8281e 48%,
+    #7d130c 100%
+  );
+  color: #ffe9a8;
+  font:
+    400 22px/58px Georgia,
+    serif;
+  text-align: center;
+  box-shadow:
+    0 0 0 2.5px #e9a923,
+    0 0 0 5px #fffaf0,
+    0 0 0 6.5px #e9a923;
+}
+.temple-vaastu .temple-vaastu__timeline span {
+  display: block;
+  font:
+    400 21px/1.3 Georgia,
+    "Times New Roman",
+    serif;
+  color: #3a2113;
+}
+.temple-vaastu .temple-vaastu__timeline small {
+  display: block;
+  margin-top: 6px;
+  font:
+    italic 400 15px/1.3 Georgia,
+    serif;
+  color: #c8281e;
+}
+.temple-vaastu .temple-vaastu__timeline-link {
+  text-align: center;
+  margin: 58px 0 0;
+}
+.temple-vaastu .temple-vaastu__section--rituals {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 128px 0 124px;
+  background:
+    var(--frz) 0 0/56px 16px repeat-x,
+    var(--frz) 0 100%/56px 16px repeat-x,
+    radial-gradient(
+      ellipse 80% 70% at 24% 30%,
+      #d83a26 0%,
+      #a8231a 50%,
+      #5a100b 100%
+    );
+}
+.temple-vaastu .temple-vaastu__section--rituals:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -16%;
+  top: 6%;
+  width: 1100px;
+  height: 1100px;
+  background: repeating-conic-gradient(#ffe6a52a 0 3deg, #0000 3deg 10deg);
+  -webkit-mask: radial-gradient(circle closest-side, #000 6%, #0000 80%);
+  mask: radial-gradient(circle closest-side, #000 6%, #0000 80%);
+}
+.temple-vaastu .temple-vaastu__section--rituals h2 {
+  color: #fff;
+  font-size: clamp(32px, 3.6vw, 50px);
+}
+.temple-vaastu .temple-vaastu__section--rituals .temple-vaastu__text {
+  color: #ffe9c6;
+}
+.temple-vaastu .temple-vaastu__rituals-intro {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 76px;
+  align-items: center;
+}
+.temple-vaastu .temple-vaastu__rituals-photo {
+  position: relative;
+  height: 500px;
+  border-radius: 300px 300px 8px 8px;
+  background: var(--i-yajna) 17% / cover no-repeat;
+  outline: 2px solid #e9a923;
+  outline-offset: 12px;
+  margin: 26px 26px 26px 14px;
+}
+.temple-vaastu .temple-vaastu__rituals-photo:after {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  border: 1px dashed #ffd47999;
+  border-radius: 324px 324px 14px 14px;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__rituals-photo span {
+  position: absolute;
+  left: -12px;
+  bottom: 26px;
+  background: #ffd479;
+  color: #6e130d;
+  padding: 16px 22px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+}
+.temple-vaastu .temple-vaastu__rituals-grid {
+  list-style: none;
+  margin: 112px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 26px;
+}
+.temple-vaastu .temple-vaastu__rituals-grid li {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff1f, #ffffff08), #52090599;
+  border: 1px solid #e9a923;
+  border-radius: 6px 6px 14px 14px;
+  padding: 60px 26px 38px;
+  text-align: center;
+  color: #ffe3bd;
+  font-size: 15px;
+  line-height: 1.7;
+  box-shadow: 0 14px 32px #2e05043d;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.temple-vaastu .temple-vaastu__rituals-grid li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px #2e050466;
+}
+.temple-vaastu .temple-vaastu__rituals-grid li:before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px dashed #ffd47966;
+  border-radius: 3px 3px 10px 10px;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__rituals-grid li:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  background: #c8281e;
+  border: 2px solid #e9a923;
+  transform: rotate(45deg);
+}
+.temple-vaastu .temple-vaastu__section--rituals .temple-vaastu__medallion {
+  background: radial-gradient(
+    circle at 36% 28%,
+    #fff1b8 0%,
+    #f6c545 52%,
+    #c98a12 100%
+  );
+  box-shadow:
+    0 0 0 3px #e9a923,
+    0 0 0 6px #6b130e,
+    0 0 0 7.5px #e9a923,
+    0 10px 22px #2e050466;
+}
+.temple-vaastu .temple-vaastu__section--rituals .temple-vaastu__medallion svg {
+  stroke: #7d130c;
+  stroke-width: 1.6;
+}
+.temple-vaastu .temple-vaastu__rituals-grid b {
+  display: block;
+  font:
+    400 24px/1.25 Georgia,
+    "Times New Roman",
+    serif;
+  color: #fff4d6;
+  margin-bottom: 8px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .temple-vaastu .temple-vaastu__rituals-grid li {
+    transition: none;
+  }
+}
+.temple-vaastu .temple-vaastu__rituals-note {
+  position: relative;
+  margin: 72px auto 0;
+  max-width: 880px;
+  text-align: center;
+  border: 1px solid #e9a923;
+  border-radius: 6px 6px 14px 14px;
+  padding: 40px 44px 44px;
+  background: #ffffff14;
+}
+.temple-vaastu .temple-vaastu__rituals-note:before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px dashed #ffd47966;
+  border-radius: 3px 3px 10px 10px;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__rituals-note p {
+  margin: 0 0 24px;
+  color: #ffe9c6;
+  font-size: 17px;
+  line-height: 1.75;
+}
+.temple-vaastu
+  .temple-vaastu__section--rituals
+  .temple-vaastu__button.temple-vaastu__button--large {
+  background: linear-gradient(180deg, #ffe08a, #f1b02f);
+  color: #5c0f0b;
+  box-shadow:
+    0 0 0 2px #a8231a,
+    0 0 0 3.5px #ffd479;
+}
+@media (min-width: 901px) {
+  .temple-vaastu .temple-vaastu__section--projects .temple-vaastu__projects {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .temple-vaastu .temple-vaastu__section--projects .temple-vaastu__project {
+    grid-column: span 2;
+  }
+  .temple-vaastu
+    .temple-vaastu__section--projects
+    .temple-vaastu__project:nth-child(4) {
+    grid-column: 2/4;
+  }
+  .temple-vaastu
+    .temple-vaastu__section--projects
+    .temple-vaastu__project:nth-child(5) {
+    grid-column: 4/6;
+  }
+}
+@media (max-width: 900px) {
+  .temple-vaastu .temple-vaastu__section--muhurta {
+    padding: 84px 0 92px;
+  }
+  .temple-vaastu
+    .temple-vaastu__section--muhurta
+    .temple-vaastu__header--center {
+    margin-bottom: 46px;
+  }
+  .temple-vaastu .temple-vaastu__timeline {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 420px;
+  }
+  .temple-vaastu .temple-vaastu__timeline li {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+    padding: 0;
+  }
+  .temple-vaastu .temple-vaastu__timeline b {
+    margin: 0;
+  }
+  .temple-vaastu .temple-vaastu__timeline li:not(:last-child):after {
+    top: 64px;
+    left: 28px;
+    right: auto;
+    height: calc(100% - 58px + 24px);
+    border-top: 0;
+    border-left: 2px dashed #d9a63a;
+  }
+  .temple-vaastu .temple-vaastu__timeline-link {
+    margin-top: 44px;
+  }
+  .temple-vaastu .temple-vaastu__section--rituals {
+    padding: 92px 0 88px;
+  }
+  .temple-vaastu .temple-vaastu__rituals-intro {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .temple-vaastu .temple-vaastu__rituals-photo {
+    height: 340px;
+    width: calc(100% - 36px);
+    max-width: 420px;
+    margin: 18px auto;
+    border-radius: 999px 999px 40px 40px;
+  }
+  .temple-vaastu .temple-vaastu__rituals-photo:after {
+    border-radius: 999px 999px 70px 70px;
+  }
+  .temple-vaastu .temple-vaastu__rituals-photo span {
+    left: 0;
+  }
+  .temple-vaastu .temple-vaastu__rituals-grid {
+    grid-template-columns: 1fr;
+    gap: 64px;
+    margin-top: 70px;
+  }
+  .temple-vaastu .temple-vaastu__rituals-note {
+    padding: 30px 22px 34px;
+    margin-top: 48px;
+  }
+}
+.temple-vaastu .temple-vaastu__section--gallery {
+  position: relative;
+  padding: 116px 0 124px;
+  background:
+    var(--m) calc(100% + 200px) -140px/720px 720px no-repeat,
+    var(--m) -260px calc(100% + 160px) / 660px 660px no-repeat,
+    radial-gradient(ellipse 60% 50% at 50% 0%, #fff3cf 0%, #0000 72%),
+    #fffaf0;
+}
+.temple-vaastu .temple-vaastu__section--gallery .temple-vaastu__header--center {
+  margin-bottom: 64px;
+}
+.temple-vaastu .temple-vaastu__section--gallery h2 {
+  text-wrap: balance;
+}
+.temple-vaastu .temple-vaastu__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 44px 28px;
+  align-items: stretch;
+}
+.temple-vaastu .temple-vaastu__gallery-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: linear-gradient(180deg, #fbe9b6 0%, #f4d68a 100%);
+  border: 2px solid #e9a923;
+  border-radius: 6px 6px 14px 14px;
+  padding: 14px 14px 0;
+  box-shadow: 0 14px 30px #7a3b1228;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.temple-vaastu .temple-vaastu__gallery-item:before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed #c8281e80;
+  border-radius: 3px 3px 10px 10px;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__gallery-item:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  background: #c8281e;
+  border: 2px solid #e9a923;
+  transform: rotate(45deg);
+}
+.temple-vaastu .temple-vaastu__gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px #c8281e33;
+}
+.temple-vaastu .temple-vaastu__gallery-open {
+  display: block;
+  cursor: zoom-in;
+}
+.temple-vaastu .temple-vaastu__gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 3px;
+  box-shadow:
+    0 0 0 2px #fff4cf,
+    0 0 0 3.5px #c8281e;
+}
+.temple-vaastu .temple-vaastu__gallery-item figcaption {
+  padding: 18px 8px 24px;
+  text-align: center;
+  margin-top: auto;
+}
+.temple-vaastu .temple-vaastu__gallery-item figcaption b {
+  display: block;
+  font:
+    400 21px/1.25 Georgia,
+    "Times New Roman",
+    serif;
+  color: #3a2113;
+}
+.temple-vaastu .temple-vaastu__gallery-item figcaption span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b513d;
+}
+.temple-vaastu .temple-vaastu__gallery-close,
+.temple-vaastu .temple-vaastu__gallery-backdrop {
+  display: none;
+}
+.temple-vaastu .temple-vaastu__gallery-item:target {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  margin: 0;
+  padding: 56px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #1c0806fa;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+  break-inside: auto;
+}
+.temple-vaastu
+  .temple-vaastu__gallery-item:target
+  .temple-vaastu__gallery-backdrop {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.temple-vaastu
+  .temple-vaastu__gallery-item:target
+  .temple-vaastu__gallery-open {
+  position: relative;
+  z-index: 1;
+  cursor: default;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__gallery-item:target:before,
+.temple-vaastu .temple-vaastu__gallery-item:target:after {
+  display: none;
+}
+.temple-vaastu .temple-vaastu__gallery-item:target img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  width: auto;
+  max-width: min(94vw, 1200px);
+  max-height: 76vh;
+  box-shadow:
+    0 0 0 2px #e9a923,
+    0 20px 60px #000a;
+}
+.temple-vaastu .temple-vaastu__gallery-item:target figcaption {
+  position: relative;
+  z-index: 1;
+}
+.temple-vaastu .temple-vaastu__gallery-item:target figcaption b {
+  color: #fff;
+}
+.temple-vaastu .temple-vaastu__gallery-item:target figcaption span {
+  color: #ffd9a0;
+}
+.temple-vaastu
+  .temple-vaastu__gallery-item:target
+  .temple-vaastu__gallery-close {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  right: 18px;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 36% 28%,
+    #f2674a 0%,
+    #c8281e 48%,
+    #7d130c 100%
+  );
+  color: #ffe9a8;
+  border: 2px solid #e9a923;
+  font:
+    400 28px/1 Georgia,
+    serif;
+}
+@media (max-width: 1000px) {
+  .temple-vaastu .temple-vaastu__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .temple-vaastu .temple-vaastu__section--gallery {
+    padding: 84px 0 92px;
+  }
+  .temple-vaastu
+    .temple-vaastu__section--gallery
+    .temple-vaastu__header--center {
+    margin-bottom: 46px;
+  }
+  .temple-vaastu .temple-vaastu__gallery {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .temple-vaastu .temple-vaastu__gallery-item:target {
+    padding: 60px 14px 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .temple-vaastu .temple-vaastu__gallery-item {
+    transition: none;
+  }
+}
+.temple-vaastu .temple-vaastu__band p + p {
+  margin-top: 16px;
+}
+.temple-vaastu .temple-vaastu__author + .temple-vaastu__text {
+  margin-top: 24px;
+}
+.temple-vaastu
+  .temple-vaastu__header.temple-vaastu__header--center
+  .temple-vaastu__eyebrow,
+.temple-vaastu
+  .temple-vaastu__section--video
+  .temple-vaastu__header
+  .temple-vaastu__eyebrow {
+  max-width: none;
+  margin: 0 0 16px;
+}
+
+.temple-vaastu .temple-vaastu__section--perspective {
+  overflow: hidden;
+  background:
+    var(--m) 97% 50%/780px 780px no-repeat,
+    radial-gradient(ellipse 55% 80% at 92% 50%, #ffe9a8b0, #0000 70%),
+    #fffaf0;
+}
+.temple-vaastu .temple-vaastu__arch-photo,
+.temple-vaastu .temple-vaastu__portrait {
+  margin: 26px;
+}
+.temple-vaastu .temple-vaastu__arch-photo:after,
+.temple-vaastu .temple-vaastu__portrait:after {
+  content: "";
+  position: absolute;
+  inset: -22px;
+  border: 1px dashed #c8281e99;
+  border-radius: 999px 999px 0 0;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__arch-photo span,
+.temple-vaastu .temple-vaastu__portrait span {
+  background: linear-gradient(90deg, #8f1a12, #c8281e);
+  color: #ffe9a8;
+  border: 1px solid #e9a923;
+}
+.temple-vaastu .temple-vaastu__section--approach {
+  overflow: hidden;
+  background:
+    var(--m) calc(100% + 120px) 50%/780px 780px no-repeat,
+    radial-gradient(ellipse 60% 70% at 8% 0%, #fff4cc 0%, #0000 70%),
+    #f8e8bb;
+}
+.temple-vaastu .temple-vaastu__step {
+  grid-template-columns: 58px 1fr;
+  gap: 16px;
+  align-items: center;
+  border-top: 1px dashed #d9a63a;
+}
+.temple-vaastu .temple-vaastu__step b {
+  display: block;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 36% 28%,
+    #f2674a 0%,
+    #c8281e 48%,
+    #7d130c 100%
+  );
+  color: #ffe9a8;
+  font:
+    400 19px/46px Georgia,
+    serif;
+  text-align: center;
+  box-shadow:
+    0 0 0 2px #e9a923,
+    0 0 0 4px #f8e8bb,
+    0 0 0 5.5px #e9a923;
+}
+.temple-vaastu .temple-vaastu__section--video {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 128px 0 120px;
+  background:
+    var(--frz) 0 0/56px 16px repeat-x,
+    radial-gradient(
+      ellipse 80% 70% at 50% 42%,
+      #c8281e 0%,
+      #8f1a12 52%,
+      #4d0d09 100%
+    );
+}
+.temple-vaastu .temple-vaastu__section--video:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: repeating-conic-gradient(
+    from 0deg at 50% 60%,
+    #ffe6a522 0 3deg,
+    #0000 3deg 10deg
+  );
+  -webkit-mask: radial-gradient(
+    ellipse 62% 72% at 50% 60%,
+    #000 18%,
+    #0000 80%
+  );
+  mask: radial-gradient(ellipse 62% 72% at 50% 60%, #000 18%, #0000 80%);
+}
+.temple-vaastu .temple-vaastu__section--video .temple-vaastu__header {
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.temple-vaastu
+  .temple-vaastu__section--video
+  .temple-vaastu__header
+  .temple-vaastu__ornament {
+  margin: 14px 0 18px;
+}
+.temple-vaastu
+  .temple-vaastu__section--video
+  .temple-vaastu__header
+  .temple-vaastu__eyebrow {
+  color: #ffd479;
+}
+.temple-vaastu
+  .temple-vaastu__section--video
+  .temple-vaastu__header
+  p.temple-vaastu__subtitle {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #ffe9c6;
+}
+.temple-vaastu .temple-vaastu__video {
+  border: 2px solid #e9a923;
+  border-radius: 6px;
+  box-shadow:
+    0 0 0 7px #7a130d,
+    0 0 0 9px #e9a923,
+    0 30px 70px #000a;
+}
+.temple-vaastu .temple-vaastu__video-title {
+  text-align: center;
+  margin-top: 32px;
+  color: #ffd9a0;
+}
+.temple-vaastu .temple-vaastu__video-icon,
+.temple-vaastu .temple-vaastu__video:hover .temple-vaastu__video-icon {
+  background: radial-gradient(
+    circle at 36% 28%,
+    #f2674a 0%,
+    #c8281e 48%,
+    #7d130c 100%
+  );
+  box-shadow:
+    0 0 0 3px #e9a923,
+    0 0 0 7px #ffffff2a;
+}
+.temple-vaastu .temple-vaastu__video-icon:after {
+  border-color: #ffd479;
+}
+.temple-vaastu .temple-vaastu__section--projects {
+  position: relative;
+  padding: 128px 0 140px;
+  background:
+    var(--m) -250px -170px/760px 760px no-repeat,
+    var(--m) calc(100% + 250px) calc(100% + 190px) / 700px 700px no-repeat,
+    radial-gradient(ellipse 70% 50% at 50% 0%, #fff3c4 0%, #0000 75%),
+    linear-gradient(180deg, #f9dd86 0%, #f4cb5c 100%);
+}
+.temple-vaastu .temple-vaastu__section--projects:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  background: var(--frzr) 0 0/56px 16px repeat-x;
+}
+.temple-vaastu
+  .temple-vaastu__section--projects
+  .temple-vaastu__header--center {
+  margin-bottom: 70px;
+}
+.temple-vaastu
+  .temple-vaastu__section--projects
+  .temple-vaastu__header--center
+  .temple-vaastu__text {
+  color: #4a3022;
+}
+.temple-vaastu .temple-vaastu__section--projects .temple-vaastu__projects {
+  gap: 60px 28px;
+}
+.temple-vaastu .temple-vaastu__section--projects .temple-vaastu__project {
+  position: relative;
+  overflow: visible;
+  background:
+    radial-gradient(ellipse 85% 36% at 50% 100%, #fff3d2 0%, #fff3d200 80%),
+    linear-gradient(180deg, #f8ecd4 0%, #f1deb6 100%);
+  border: 2px solid #e9a923;
+  border-radius: 999px 999px 72px 72px;
+  padding: 16px 16px 0;
+  text-align: center;
+  box-shadow:
+    0 0 0 1px #c98a12,
+    0 16px 34px #7a3b1238;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.temple-vaastu
+  .temple-vaastu__section--projects
+  .temple-vaastu__project:before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed #c8281e88;
+  border-radius: 999px 999px 56px 56px;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__section--projects .temple-vaastu__project:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  background: #c8281e;
+  border: 2px solid #e9a923;
+  transform: rotate(45deg);
+}
+.temple-vaastu .temple-vaastu__section--projects .temple-vaastu__project:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 1px #c98a12,
+    0 24px 46px #c8281e44;
+}
+.temple-vaastu
+  .temple-vaastu__section--projects
+  .temple-vaastu__project
+  .temple-vaastu__project-image {
+  height: 250px;
+  border-radius: 999px 999px 24px 24px;
+  box-shadow:
+    0 0 0 2px #fbefd2,
+    0 0 0 3.5px #c8281e,
+    0 0 0 5px #e9a923;
+}
+.temple-vaastu
+  .temple-vaastu__section--projects
+  .temple-vaastu__project
+  div.temple-vaastu__project-body:before {
+  content: "";
+  display: block;
+  height: 20px;
+  margin: -4px auto 14px;
+  background:
+    var(--i-trishula-icon-sm) 50% 50% / auto 20px no-repeat,
+    linear-gradient(90deg, #c98a1200, #c98a12) 0 50% / calc(50% - 22px) 1px
+      no-repeat,
+    linear-gradient(90deg, #c98a12, #c98a1200) 100% 50% / calc(50% - 22px) 1px
+      no-repeat;
+}
+.temple-vaastu
+  .temple-vaastu__section--projects
+  .temple-vaastu__project
+  div.temple-vaastu__project-body {
+  padding: 30px 18px 40px;
+}
+.temple-vaastu .temple-vaastu__section--projects .temple-vaastu__project h3 {
+  color: #3a2113;
+  margin: 0 0 8px;
+}
+.temple-vaastu .temple-vaastu__band {
+  padding: 66px 0 72px;
+  background:
+    var(--frz) 0 100%/56px 16px repeat-x,
+    linear-gradient(105deg, #9c1c13 0%, #d8301f 57%, #9c1c13 100%);
+}
+.temple-vaastu .temple-vaastu__band:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(
+    from 0deg at 86% 50%,
+    #ffe6a526 0 3deg,
+    #0000 3deg 10deg
+  );
+  -webkit-mask: radial-gradient(circle at 86% 50%, #000 0%, #0000 58%);
+  mask: radial-gradient(circle at 86% 50%, #000 0%, #0000 58%);
+}
+.temple-vaastu .temple-vaastu__section--journal {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 128px 0;
+  background:
+    var(--frz) 0 0/56px 16px repeat-x,
+    var(--frz) 0 100%/56px 16px repeat-x,
+    radial-gradient(
+      ellipse 70% 100% at 22% 50%,
+      #d83a26 0%,
+      #a8231a 52%,
+      #6e130d 100%
+    );
+}
+.temple-vaastu .temple-vaastu__section--journal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -14%;
+  top: 50%;
+  width: 1100px;
+  height: 1100px;
+  margin-top: -550px;
+  background: repeating-conic-gradient(#ffe6a52e 0 3deg, #0000 3deg 10deg);
+  -webkit-mask: radial-gradient(circle closest-side, #000 6%, #0000 80%);
+  mask: radial-gradient(circle closest-side, #000 6%, #0000 80%);
+}
+.temple-vaastu .temple-vaastu__journal-photo {
+  border-radius: 300px 300px 8px 8px;
+  outline: 2px solid #e9a923;
+  outline-offset: 12px;
+  margin: 26px 26px 26px 14px;
+}
+.temple-vaastu .temple-vaastu__journal-photo:after {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  border: 1px dashed #ffd47999;
+  border-radius: 324px 324px 14px 14px;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__journal-photo span {
+  background: #ffd479;
+  color: #6e130d;
+}
+.temple-vaastu .temple-vaastu__section--journal .temple-vaastu__text {
+  color: #ffe9c6;
+}
+.temple-vaastu .temple-vaastu__journal-meta {
+  color: #ffd9a0;
+}
+.temple-vaastu
+  .temple-vaastu__section--journal
+  .temple-vaastu__button.temple-vaastu__button--large {
+  background: linear-gradient(180deg, #ffe08a, #f1b02f);
+  color: #5c0f0b;
+  box-shadow:
+    0 0 0 2px #a8231a,
+    0 0 0 3.5px #ffd479;
+}
+.temple-vaastu .temple-vaastu__section--faq {
+  position: relative;
+  padding: 124px 0 128px;
+  background:
+    radial-gradient(ellipse 60% 60% at 50% 0%, #fff6d4 0%, #0000 75%),
+    linear-gradient(180deg, #fbe8ae 0%, #f6d676 100%);
+}
+.temple-vaastu .temple-vaastu__section--faq:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  background: var(--frzr) 0 0/56px 16px repeat-x;
+}
+.temple-vaastu .temple-vaastu__header--faq {
+  margin-bottom: 46px;
+}
+.temple-vaastu .temple-vaastu__section--faq details,
+.temple-vaastu .temple-vaastu__section--faq details:last-of-type {
+  border: 1px solid #c98a12;
+  border-radius: 6px 6px 14px 14px;
+  background: #fffaf0;
+  padding: 0;
+  margin: 0 0 16px;
+  box-shadow: 0 8px 20px #7a3b1220;
+}
+.temple-vaastu .temple-vaastu__section--faq details[open] {
+  box-shadow: 0 14px 30px #c8281e33;
+}
+.temple-vaastu .temple-vaastu__section--faq summary {
+  padding: 20px 22px 20px 26px;
+  gap: 16px;
+  justify-content: flex-start;
+}
+.temple-vaastu .temple-vaastu__section--faq summary:before {
+  content: "";
+  flex: none;
+  width: 11px;
+  height: 11px;
+  background: #c8281e;
+  border: 2px solid #e9a923;
+  transform: rotate(45deg);
+}
+.temple-vaastu .temple-vaastu__section--faq summary:after {
+  margin-left: auto;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 36% 28%,
+    #f2674a 0%,
+    #c8281e 48%,
+    #7d130c 100%
+  );
+  color: #ffe9a8;
+  font: 300 24px/33px var(--font-body);
+  text-align: center;
+  box-shadow: 0 0 0 2px #e9a923;
+}
+.temple-vaastu .temple-vaastu__section--faq details p {
+  margin: 0 26px;
+  padding: 16px 0 22px;
+  border-top: 1px dashed #c8281e66;
+}
+
+@keyframes mdlb {
+  0%,
+  100% {
+    opacity: 0.32;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.62;
+    transform: scale(1.05);
+  }
+}
+@keyframes mdlr {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes mdlt {
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  44% {
+    background-position: 0 100%;
+    opacity: 1;
+  }
+  50%,
+  100% {
+    background-position: 0 100%;
+    opacity: 0;
+  }
+}
+@keyframes mdlf {
+  0%,
+  40% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  46% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  58%,
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+@media (max-width: 900px) {
+  .temple-vaastu .temple-vaastu__section--perspective {
+    background:
+      var(--m) 50% 100%/420px 420px no-repeat,
+      #fffaf0;
+  }
+  .temple-vaastu .temple-vaastu__section--approach {
+    background:
+      var(--m) 50% 100%/420px 420px no-repeat,
+      radial-gradient(ellipse 90% 40% at 10% 0%, #fff4cc 0%, #0000 70%),
+      #f8e8bb;
+  }
+  .temple-vaastu .temple-vaastu__arch-photo,
+  .temple-vaastu .temple-vaastu__portrait {
+    margin: 24px 18px;
+  }
+  .temple-vaastu .temple-vaastu__section--video {
+    padding: 92px 0 84px;
+  }
+  .temple-vaastu .temple-vaastu__section--journal {
+    padding: 92px 0;
+  }
+  .temple-vaastu .temple-vaastu__section--projects {
+    padding: 92px 0 104px;
+    background-size:
+      420px 420px,
+      380px 380px,
+      auto,
+      auto;
+  }
+  .temple-vaastu .temple-vaastu__section--projects {
+    background-position:
+      -270px -250px,
+      calc(100% + 230px) calc(100% + 150px),
+      0 0,
+      0 0;
+  }
+  .temple-vaastu .temple-vaastu__section--scope {
+    background-size:
+      440px 440px,
+      400px 400px,
+      auto,
+      auto;
+    background-position:
+      calc(100% + 300px) -290px,
+      -250px calc(100% + 150px),
+      0 0,
+      0 0;
+  }
+  .temple-vaastu .temple-vaastu__section--gallery {
+    background-size:
+      420px 420px,
+      400px 400px,
+      auto,
+      auto;
+    background-position:
+      calc(100% + 300px) -280px,
+      -250px calc(100% + 150px),
+      0 0,
+      0 0;
+  }
+  .temple-vaastu .temple-vaastu__section--muhurta {
+    background-size:
+      420px 420px,
+      auto,
+      auto;
+    background-position:
+      -300px calc(100% + 120px),
+      0 0,
+      0 0;
+  }
+  .temple-vaastu .temple-vaastu__section--projects .temple-vaastu__projects {
+    gap: 56px;
+  }
+  .temple-vaastu .temple-vaastu__section--projects .temple-vaastu__project {
+    width: 100%;
+    max-width: 420px;
+    justify-self: center;
+  }
+  .temple-vaastu
+    .temple-vaastu__section--projects
+    .temple-vaastu__header--center {
+    margin-bottom: 56px;
+  }
+  .temple-vaastu .temple-vaastu__section--faq {
+    padding: 88px 0 104px;
+  }
+  .temple-vaastu .temple-vaastu__band {
+    padding: 56px 0 64px;
+  }
+  .temple-vaastu .temple-vaastu__band:before {
+    background: repeating-conic-gradient(
+      from 0deg at 50% 88%,
+      #ffe6a526 0 3deg,
+      #0000 3deg 10deg
+    );
+    -webkit-mask: radial-gradient(circle at 50% 88%, #000 0%, #0000 60%);
+    mask: radial-gradient(circle at 50% 88%, #000 0%, #0000 60%);
+  }
+  .temple-vaastu .temple-vaastu__journal-photo {
+    height: 300px;
+    width: calc(100% - 36px);
+    max-width: 420px;
+    border-radius: 999px 999px 52px 52px;
+    margin: 24px auto;
+  }
+  .temple-vaastu .temple-vaastu__journal-photo:after {
+    border-radius: 999px 999px 92px 92px;
+  }
+  .temple-vaastu .temple-vaastu__video {
+    box-shadow:
+      0 0 0 5px #7a130d,
+      0 0 0 7px #e9a923,
+      0 24px 50px #000a;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .temple-vaastu .temple-vaastu__section--projects .temple-vaastu__project {
+    transition: none;
+  }
+}
+
+/* ---- hero scene (Nandi, linga, trishula, temples): the whole picture is shown, nothing is cropped ----
+   1em = 1/11 of the picture width, so flare, gems, glints, dust and blur scale with the picture */
+.rr-temple-vaastu-page {
+  --hs-img: var(--i-hero-scene);
+  --hs-mt: var(--i-hero-m-trishula);
+  --hs-mf: var(--i-hero-m-flag);
+  --hs-mg: var(--i-hero-m-gold);
+  --hs-ms: var(--i-hero-m-sun);
+}
+.temple-vaastu .temple-vaastu__hero .temple-vaastu__hero-inner {
+  position: static;
+  z-index: auto;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.15fr);
+  gap: 0;
+  align-items: center;
+}
+.temple-vaastu .temple-vaastu__hero-text {
+  position: relative;
+  z-index: 1;
+}
+.temple-vaastu .temple-vaastu__scene {
+  align-self: end;
+  margin-bottom: -0.05em;
+  --ov: clamp(0px, 50vw - 630px, 80px);
+  --w: calc(min(1220px, 100vw - 48px) * 0.5227 + var(--ov));
+  position: relative;
+  justify-self: end;
+  width: var(--w);
+  margin-right: calc(-1 * var(--ov));
+  aspect-ratio: 1536/1024;
+  font-size: calc(var(--w) / 11);
+  --cx: 50.1%;
+  --cy: 27%;
+}
+.temple-vaastu .temple-vaastu__scene > * {
+  position: absolute;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__scene > .temple-vaastu__scene-layer {
+  inset: 0;
+}
+/* sunburst centred on the sun in the picture (the layers sit behind the dark overlay of the hero) */
+.temple-vaastu .temple-vaastu__hero-sun {
+  z-index: -3;
+  left: var(--cx);
+  top: var(--cy);
+  width: 26em;
+  height: 26em;
+  margin: -13em 0 0 -13em;
+  background: radial-gradient(
+    circle closest-side,
+    #fff3b0 0%,
+    #ffd45a 6%,
+    #fba72d 12%,
+    #ee5b22 22%,
+    #cf2a1d 36%,
+    #8a1511 52%,
+    #2b0e0a 82%
+  );
+}
+.temple-vaastu .temple-vaastu__hero-rays {
+  z-index: -2;
+  left: var(--cx);
+  top: var(--cy);
+  width: 19em;
+  height: 19em;
+  margin: -9.5em 0 0 -9.5em;
+  background: repeating-conic-gradient(
+    #fff0b45c 0 3.5deg,
+    #0000 3.5deg 11.25deg
+  );
+  -webkit-mask: radial-gradient(circle closest-side, #000 6%, #0000 82%);
+  mask: radial-gradient(circle closest-side, #000 6%, #0000 82%);
+  animation: hs-spin 180s linear infinite;
+}
+.temple-vaastu .temple-vaastu__hero-rays-alt {
+  z-index: -2;
+  left: var(--cx);
+  top: var(--cy);
+  width: 21em;
+  height: 21em;
+  margin: -10.5em 0 0 -10.5em;
+  background: repeating-conic-gradient(
+    from 5deg,
+    #ff4a2a40 0 6deg,
+    #0000 6deg 22.5deg
+  );
+  -webkit-mask: radial-gradient(circle closest-side, #000 10%, #0000 84%);
+  mask: radial-gradient(circle closest-side, #000 10%, #0000 84%);
+  animation: hs-spin2 260s linear infinite;
+}
+.temple-vaastu .temple-vaastu__hero-glow {
+  z-index: -3;
+  left: var(--cx);
+  top: var(--cy);
+  width: 11em;
+  height: 11em;
+  margin: -5.5em 0 0 -5.5em;
+  background: radial-gradient(
+    circle closest-side,
+    #fff3b0 0%,
+    #ffd45acc 16%,
+    #ff8a2e88 38%,
+    #e0342466 58%,
+    #0000 82%
+  );
+  mix-blend-mode: screen;
+  animation: hs-gp 5s ease-in-out infinite;
+}
+@keyframes hs-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hs-spin2 {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes hs-gp {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+.temple-vaastu .temple-vaastu__scene-picture {
+  background: var(--hs-img) center/100% 100% no-repeat;
+  animation: hs-in 2.4s ease both;
+}
+@keyframes hs-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* masks cut from the picture itself, so light only falls on the right objects */
+.temple-vaastu .temple-vaastu__scene-layer--mask-trishula,
+.temple-vaastu .temple-vaastu__scene-layer--mask-flag,
+.temple-vaastu .temple-vaastu__scene-layer--mask-gold,
+.temple-vaastu .temple-vaastu__scene-layer--mask-sun {
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.temple-vaastu .temple-vaastu__scene-layer--mask-trishula {
+  -webkit-mask-image: var(--hs-mt);
+  mask-image: var(--hs-mt);
+}
+.temple-vaastu .temple-vaastu__scene-layer--mask-flag {
+  -webkit-mask-image: var(--hs-mf);
+  mask-image: var(--hs-mf);
+}
+.temple-vaastu .temple-vaastu__scene-layer--mask-gold {
+  -webkit-mask-image: var(--hs-mg);
+  mask-image: var(--hs-mg);
+}
+.temple-vaastu .temple-vaastu__scene-layer--mask-sun {
+  -webkit-mask-image: var(--hs-ms);
+  mask-image: var(--hs-ms);
+}
+/* sun: rays and disc breathe */
+.temple-vaastu .temple-vaastu__scene-sun-pulse {
+  background: radial-gradient(
+    circle at 50.1% 27%,
+    #fff6c8 0,
+    #ffd45a99 14%,
+    #ff9a3a55 28%,
+    #0000 46%
+  );
+  mix-blend-mode: screen;
+  animation: hs-sunp 6s ease-in-out infinite;
+}
+@keyframes hs-sunp {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+/* trishula: soft aura, slow warming of the metal, a band of light climbing from the base to the tip */
+.temple-vaastu .temple-vaastu__scene-aura {
+  filter: blur(0.12em);
+  mix-blend-mode: screen;
+  animation: hs-aura 6s ease-in-out infinite;
+}
+.temple-vaastu .temple-vaastu__scene-aura::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffc94d;
+  -webkit-mask: var(--hs-mt) 0 0/100% 100% no-repeat;
+  mask: var(--hs-mt) 0 0/100% 100% no-repeat;
+}
+@keyframes hs-aura {
+  0%,
+  100% {
+    opacity: 0.28;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+.temple-vaastu .temple-vaastu__scene-gleam {
+  background: linear-gradient(#ffe7a0, #ffcf6a);
+  mix-blend-mode: soft-light;
+  animation: hs-gleam 6s ease-in-out infinite;
+}
+@keyframes hs-gleam {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.temple-vaastu .temple-vaastu__scene-run {
+  background: linear-gradient(
+      to bottom,
+      #0000 46.5%,
+      #ffd97a55 48.6%,
+      #fff3c4 49.6%,
+      #fff 50%,
+      #fff3c4 50.4%,
+      #ffd97a55 51.4%,
+      #0000 53.5%
+    )
+    0 30%/100% 300% no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: hs-run 9s linear infinite;
+}
+@keyframes hs-run {
+  0% {
+    background-position: 0 30%;
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  52% {
+    background-position: 0 74%;
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    background-position: 0 74%;
+    opacity: 0;
+  }
+}
+/* flare at the spear tip, flashes on the gems */
+.temple-vaastu .temple-vaastu__scene-flare {
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  margin: -0.6em 0 0 -0.6em;
+  background: radial-gradient(
+    circle,
+    #fffdf0 0,
+    #ffe9a0cc 10%,
+    #ffb43a44 30%,
+    #0000 62%
+  );
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: hs-fl 9s ease-out infinite;
+}
+.temple-vaastu .temple-vaastu__scene-flare::before,
+.temple-vaastu .temple-vaastu__scene-flare::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: linear-gradient(90deg, #0000, #fff6cf, #0000);
+  transform: translate(-50%, -50%);
+}
+.temple-vaastu .temple-vaastu__scene-flare::before {
+  width: 1.5em;
+  height: max(1px, 0.02em);
+}
+.temple-vaastu .temple-vaastu__scene-flare::after {
+  width: max(1px, 0.02em);
+  height: 1.5em;
+  background: linear-gradient(#0000, #fff6cf, #0000);
+}
+@keyframes hs-fl {
+  0%,
+  48% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  53% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+.temple-vaastu .temple-vaastu__scene-gem {
+  z-index: 2;
+  animation-duration: 9s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  width: 0.46em;
+  height: 0.46em;
+  margin: -0.23em 0 0 -0.23em;
+  background: radial-gradient(
+    circle,
+    #fff4c8 0,
+    #ff6a4acc 18%,
+    #ff3a2055 40%,
+    #0000 66%
+  );
+  mix-blend-mode: screen;
+  opacity: 0;
+}
+@keyframes hs-gem1 {
+  0%,
+  39.1% {
+    opacity: 0;
+  }
+  41.1% {
+    opacity: 1;
+  }
+  53.1%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hs-gem2 {
+  0%,
+  33.9% {
+    opacity: 0;
+  }
+  35.9% {
+    opacity: 1;
+  }
+  47.9%,
+  100% {
+    opacity: 0;
+  }
+}
+/* flag: light slides along the cloth */
+.temple-vaastu .temple-vaastu__scene-flag {
+  background: linear-gradient(
+      100deg,
+      #0000 38%,
+      #ffffffaa 48%,
+      #fff 50%,
+      #ffffffaa 52%,
+      #0000 62%
+    )
+    100% 0/300% 100% no-repeat;
+  mix-blend-mode: overlay;
+  animation: hs-flag 7s ease-in-out infinite;
+}
+@keyframes hs-flag {
+  0% {
+    background-position: 100% 0;
+  }
+  60%,
+  100% {
+    background-position: 0 0;
+  }
+}
+.temple-vaastu .temple-vaastu__scene-flag-alt {
+  background: linear-gradient(100deg, #0000 40%, #ff9a6a66 50%, #0000 60%) 0
+    0/260% 100% no-repeat;
+  mix-blend-mode: screen;
+  animation: hs-flag2 7s ease-in-out 1.1s infinite;
+  opacity: 0.8;
+}
+@keyframes hs-flag2 {
+  0% {
+    background-position: 100% 0;
+  }
+  60%,
+  100% {
+    background-position: 0 0;
+  }
+}
+/* gold of the temples, pavilion, platform and Nandi's jewellery: a slow band of light and a soft breathing */
+.temple-vaastu .temple-vaastu__scene-gold-sweep {
+  background: linear-gradient(
+      112deg,
+      #0000 36%,
+      #ffffff77 47%,
+      #ffffffdd 50%,
+      #ffffff77 53%,
+      #0000 64%
+    )
+    100% 0/320% 100% no-repeat;
+  mix-blend-mode: overlay;
+  animation: hs-sw 12s ease-in-out 1s infinite;
+}
+@keyframes hs-sw {
+  0% {
+    background-position: 100% 0;
+  }
+  45%,
+  100% {
+    background-position: 0 0;
+  }
+}
+.temple-vaastu .temple-vaastu__scene-gold-breath {
+  background: radial-gradient(
+    circle at 55% 60%,
+    #ffe9a0 0,
+    #ffc24a 40%,
+    #ff9a3a 100%
+  );
+  mix-blend-mode: soft-light;
+  animation: hs-gb 8s ease-in-out infinite;
+}
+@keyframes hs-gb {
+  0%,
+  100% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+/* red tilak on the linga */
+.temple-vaastu .temple-vaastu__scene-bindu {
+  background: radial-gradient(
+    circle at 47.1% 44%,
+    #ff5a3acc 0,
+    #ff3a2044 2.2%,
+    #0000 4.6%
+  );
+  mix-blend-mode: screen;
+  animation: hs-bd 3.4s ease-in-out infinite;
+}
+@keyframes hs-bd {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+/* glints and gold dust */
+.temple-vaastu .temple-vaastu__scene-glint {
+  position: absolute;
+  width: 0.3em;
+  height: 0.3em;
+  margin: -0.15em 0 0 -0.15em;
+  background: radial-gradient(circle, #fffbe6 0, #ffe39a 16%, #0000 46%);
+  opacity: 0;
+  transform: scale(0.2) rotate(0);
+  animation: hs-gt 8s ease-in-out infinite;
+  animation-delay: var(--d);
+  mix-blend-mode: screen;
+}
+.temple-vaastu .temple-vaastu__scene-glint::before,
+.temple-vaastu .temple-vaastu__scene-glint::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #fff6cf;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.temple-vaastu .temple-vaastu__scene-glint::before {
+  width: 0.36em;
+  height: max(1px, 0.02em);
+}
+.temple-vaastu .temple-vaastu__scene-glint::after {
+  width: max(1px, 0.02em);
+  height: 0.36em;
+}
+@keyframes hs-gt {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+    transform: scale(0.2) rotate(0);
+  }
+  89% {
+    opacity: 1;
+    transform: scale(1) rotate(30deg);
+  }
+}
+.temple-vaastu .temple-vaastu__scene-dust {
+  position: absolute;
+  display: block;
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff6c8, #ffd06a 55%, #0000 72%);
+  opacity: 0;
+  animation: hs-du var(--t) linear var(--d) infinite;
+  mix-blend-mode: screen;
+}
+@keyframes hs-du {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  12% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), -2.1em);
+  }
+}
+/* hero overlay: only the text column is darkened */
+.temple-vaastu .temple-vaastu__hero:before {
+  background: linear-gradient(
+    90deg,
+    #2b0e0af0 0%,
+    #2b0e0abf 30%,
+    #2b0e0a00 50%
+  );
+}
+@media (max-width: 900px) {
+  .temple-vaastu .temple-vaastu__hero .temple-vaastu__hero-inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .temple-vaastu .temple-vaastu__scene {
+    --ov: 0px;
+    --w: 100vw;
+    align-self: auto;
+    justify-self: center;
+    width: calc(100% + 48px);
+    margin: 0 -24px;
+    font-size: calc(100vw / 11);
+  }
+  .temple-vaastu .temple-vaastu__hero:before {
+    background: linear-gradient(
+      180deg,
+      #2b0e0af0 0%,
+      #2b0e0acc 46%,
+      #2b0e0a00 78%
+    );
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .temple-vaastu .temple-vaastu__scene *,
+  .temple-vaastu .temple-vaastu__hero-rays,
+  .temple-vaastu .temple-vaastu__hero-rays-alt,
+  .temple-vaastu .temple-vaastu__hero-glow {
+    animation: none !important;
+  }
+  .temple-vaastu .temple-vaastu__scene-picture {
+    opacity: 1;
+  }
+  .temple-vaastu .temple-vaastu__scene-glint,
+  .temple-vaastu .temple-vaastu__scene-flare,
+  .temple-vaastu .temple-vaastu__scene-gem,
+  .temple-vaastu .temple-vaastu__scene-run {
+    opacity: 0;
+  }
+  .temple-vaastu .temple-vaastu__scene-dust {
+    display: none;
+  }
+}
+
+/* 05: large animated trishula panel (same gold frame as the video in 02) */
+.temple-vaastu .temple-vaastu__trishula {
+  position: relative;
+  margin: 92px 0 0;
+  border: 2px solid #e9a923;
+  border-radius: 6px;
+  background: #c9531a;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 7px #7a130d,
+    0 0 0 9px #e9a923,
+    0 30px 70px #000a;
+}
+.temple-vaastu
+  .temple-vaastu__section--rituals
+  .temple-vaastu__trishula
+  + .temple-vaastu__rituals-grid {
+  margin-top: 104px;
+}
+@media (max-width: 900px) {
+  .temple-vaastu .temple-vaastu__trishula {
+    margin: 64px 0 0;
+  }
+  .temple-vaastu
+    .temple-vaastu__section--rituals
+    .temple-vaastu__trishula
+    + .temple-vaastu__rituals-grid {
+    margin-top: 84px;
+  }
+}
+.temple-vaastu .temple-vaastu__trishula-view {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1672/941;
+  overflow: hidden;
+  container-type: inline-size;
+  --u: calc(100cqw/1672);
+  isolation: isolate;
+}
+.temple-vaastu .temple-vaastu__trishula-scene {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.temple-vaastu .temple-vaastu__trishula-scene > * {
+  position: absolute;
+  pointer-events: none;
+}
+.temple-vaastu .temple-vaastu__trishula-scene > .temple-vaastu__trishula-layer {
+  inset: 0;
+}
+.temple-vaastu .temple-vaastu__trishula-picture {
+  background: var(--img) 0 0/100% 100% no-repeat;
+}
+.temple-vaastu .temple-vaastu__trishula-layer--mask-bg {
+  -webkit-mask: var(--mbg) 0 0/100% 100% no-repeat;
+  mask: var(--mbg) 0 0/100% 100% no-repeat;
+}
+.temple-vaastu .temple-vaastu__trishula-subject {
+  -webkit-mask: var(--msub) 0 0/100% 100% no-repeat;
+  mask: var(--msub) 0 0/100% 100% no-repeat;
+}
+.temple-vaastu .temple-vaastu__trishula-layer--mask-metal {
+  -webkit-mask: var(--mmet) 0 0/100% 100% no-repeat;
+  mask: var(--mmet) 0 0/100% 100% no-repeat;
+}
+.temple-vaastu .temple-vaastu__trishula-layer--mask-flowers {
+  -webkit-mask: var(--mfl) 0 0/100% 100% no-repeat;
+  mask: var(--mfl) 0 0/100% 100% no-repeat;
+}
+/* ---------- the sun behind the trishula: disc + two layers of slowly turning rays (only drawn in the background) ---------- */
+.temple-vaastu .temple-vaastu__trishula-disc {
+  background: radial-gradient(
+    circle calc(380 * var(--u)) at 836px 300px,
+    #fff6c8e6 0,
+    #ffd45aa6 14%,
+    #ff9a3a66 38%,
+    #ff6a1a22 62%,
+    #0000 82%
+  );
+  background-position: 0 0;
+  mix-blend-mode: screen;
+  animation: ts-sunp 6s ease-in-out infinite;
+}
+.temple-vaastu .temple-vaastu__trishula-disc {
+  background: radial-gradient(
+    circle calc(380 * var(--u)) at 49.9% 31.9%,
+    #fff6c8e6 0,
+    #ffd45aa6 14%,
+    #ff9a3a66 38%,
+    #ff6a1a22 62%,
+    #0000 82%
+  );
+}
+@keyframes ts-sunp {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.temple-vaastu .temple-vaastu__trishula-rays {
+  overflow: hidden;
+  mix-blend-mode: screen;
+}
+.temple-vaastu .temple-vaastu__trishula-rays i {
+  position: absolute;
+  left: 49.9%;
+  top: 31.9%;
+  display: block;
+  border-radius: 50%;
+}
+.temple-vaastu .temple-vaastu__trishula-ray-ring {
+  width: calc(2700 * var(--u));
+  height: calc(2700 * var(--u));
+  margin: calc(-1350 * var(--u)) 0 0 calc(-1350 * var(--u));
+  background: repeating-conic-gradient(
+    #0000 0deg,
+    #ffe6a0d9 2.6deg,
+    #0000 5.4deg,
+    #0000 11.25deg
+  );
+  -webkit-mask: radial-gradient(circle closest-side, #000 7%, #0000 74%);
+  mask: radial-gradient(circle closest-side, #000 7%, #0000 74%);
+  opacity: 0.55;
+  animation: ts-spin 220s linear infinite;
+}
+.temple-vaastu .temple-vaastu__trishula-ray-ring--outer {
+  width: calc(3000 * var(--u));
+  height: calc(3000 * var(--u));
+  margin: calc(-1500 * var(--u)) 0 0 calc(-1500 * var(--u));
+  background: repeating-conic-gradient(
+    from 7deg,
+    #0000 0deg,
+    #ffd060d0 3.6deg,
+    #0000 7.4deg,
+    #0000 17deg
+  );
+  -webkit-mask: radial-gradient(circle closest-side, #000 9%, #0000 78%);
+  mask: radial-gradient(circle closest-side, #000 9%, #0000 78%);
+  opacity: 0.42;
+  animation: ts-spinr 300s linear infinite;
+}
+@keyframes ts-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ts-spinr {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+/* soft halo hugging the silhouette, outside only */
+.temple-vaastu .temple-vaastu__trishula-aura {
+  mix-blend-mode: screen;
+  animation: ts-aura 6.5s ease-in-out infinite;
+}
+.temple-vaastu .temple-vaastu__trishula-aura i {
+  position: absolute;
+  inset: 0;
+  background: #ffd24d;
+  filter: blur(calc(18 * var(--u)));
+}
+@keyframes ts-aura {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+/* ---------- light on the gold: slow warm breathing + the band of light that climbs from the damaru to the tips ---------- */
+.temple-vaastu .temple-vaastu__trishula-gleam {
+  background: linear-gradient(#ffeaa8, #ffc860);
+  mix-blend-mode: soft-light;
+  animation: ts-gleam 7s ease-in-out infinite;
+}
+@keyframes ts-gleam {
+  0%,
+  100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.temple-vaastu .temple-vaastu__trishula-run {
+  background: linear-gradient(
+      to bottom,
+      #0000 46.8%,
+      #ffd97a55 48.8%,
+      #ffe8a0 49.6%,
+      #fff2c2 50%,
+      #ffe8a0 50.4%,
+      #ffd97a55 51.2%,
+      #0000 53.2%
+    )
+    0 34.1%/100% 300% no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: ts-run 9s linear infinite;
+}
+@keyframes ts-run {
+  0% {
+    background-position: 0 34.1%;
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  52% {
+    background-position: 0 74.5%;
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    background-position: 0 74.5%;
+    opacity: 0;
+  }
+}
+.temple-vaastu .temple-vaastu__trishula-flare {
+  width: calc(130 * var(--u));
+  height: calc(130 * var(--u));
+  margin: calc(-65 * var(--u)) 0 0 calc(-65 * var(--u));
+  background: radial-gradient(
+    circle,
+    #fffdf0 0,
+    #ffe9a0cc 10%,
+    #ffb43a44 30%,
+    #0000 62%
+  );
+  mix-blend-mode: screen;
+  opacity: 0;
+}
+.temple-vaastu .temple-vaastu__trishula-flare::before,
+.temple-vaastu .temple-vaastu__trishula-flare::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.temple-vaastu .temple-vaastu__trishula-flare::before {
+  width: 120%;
+  height: 2px;
+  background: linear-gradient(90deg, #0000, #fff6cf, #0000);
+}
+.temple-vaastu .temple-vaastu__trishula-flare::after {
+  width: 2px;
+  height: 120%;
+  background: linear-gradient(#0000, #fff6cf, #0000);
+}
+.temple-vaastu .temple-vaastu__trishula-flare--a {
+  animation: ts-ff-a 9s ease-out infinite;
+}
+.temple-vaastu .temple-vaastu__trishula-flare--b {
+  animation: ts-ff-b 9s ease-out infinite;
+}
+.temple-vaastu .temple-vaastu__trishula-flare--c {
+  animation: ts-ff-c 9s ease-out infinite;
+}
+.temple-vaastu .temple-vaastu__trishula-flare--d {
+  animation: ts-ff-d 9s ease-out infinite;
+}
+@keyframes ts-ff-a {
+  0%,
+  49.3% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  52.3% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  62.3%,
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@keyframes ts-ff-b {
+  0%,
+  46.0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  49.0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  59.0%,
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@keyframes ts-ff-c {
+  0%,
+  24.2% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  27.2% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  37.2%,
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@keyframes ts-ff-d {
+  0%,
+  12.3% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  15.3% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25.3%,
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+/* ---------- flowers: a slow sheen sweeps over the petals, the hibiscus breathes ---------- */
+.temple-vaastu .temple-vaastu__trishula-sheen {
+  background: linear-gradient(
+      105deg,
+      #0000 36%,
+      #fff2c855 47%,
+      #fffbe8cc 50%,
+      #fff2c855 53%,
+      #0000 64%
+    )
+    100% 0/320% 100% no-repeat;
+  mix-blend-mode: soft-light;
+  animation: ts-fsw 12s ease-in-out 1.5s infinite;
+}
+@keyframes ts-fsw {
+  0% {
+    background-position: 100% 0;
+  }
+  48%,
+  100% {
+    background-position: 0 0;
+  }
+}
+.temple-vaastu .temple-vaastu__trishula-hibiscus {
+  background: radial-gradient(
+    ellipse calc(190 * var(--u)) calc(150 * var(--u)) at 52% 46.8%,
+    #ff4a2a99 0,
+    #ff3a2044 55%,
+    #0000 100%
+  );
+  mix-blend-mode: screen;
+  animation: ts-hib 5.5s ease-in-out infinite;
+}
+.temple-vaastu .temple-vaastu__trishula-lotus {
+  background: radial-gradient(
+    ellipse calc(210 * var(--u)) calc(120 * var(--u)) at 49.9% 62.9%,
+    #fff6c8cc 0,
+    #ffe9a066 50%,
+    #0000 100%
+  );
+  mix-blend-mode: screen;
+  animation: ts-lot 6s ease-in-out 1.2s infinite;
+}
+@keyframes ts-lot {
+  0%,
+  100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+@keyframes ts-hib {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+.temple-vaastu .temple-vaastu__trishula-highlight {
+  inset: 0;
+  mix-blend-mode: screen;
+  background: var(--glow) 0 0/100% 100% no-repeat;
+  opacity: 0.3;
+  animation: ts-hb 8s ease-in-out infinite;
+}
+@keyframes ts-hb {
+  0%,
+  100% {
+    opacity: 0.16;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.temple-vaastu .temple-vaastu__trishula-grain {
+  background: var(--grain) 0 0/256px 256px;
+  mix-blend-mode: overlay;
+  opacity: 0.08;
+}
+/* glints + dust */
+.temple-vaastu .temple-vaastu__trishula-glint {
+  width: calc(44 * var(--u));
+  height: calc(44 * var(--u));
+  margin: calc(-22 * var(--u)) 0 0 calc(-22 * var(--u));
+  background: radial-gradient(circle, #fffbe6 0, #ffe39a 16%, #0000 46%);
+  opacity: 0;
+  transform: scale(0.2);
+  animation: ts-gt 8s ease-in-out infinite;
+  animation-delay: var(--d);
+  mix-blend-mode: screen;
+}
+.temple-vaastu .temple-vaastu__trishula-glint::before,
+.temple-vaastu .temple-vaastu__trishula-glint::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #fff6cf;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.temple-vaastu .temple-vaastu__trishula-glint::before {
+  width: 110%;
+  height: 2px;
+}
+.temple-vaastu .temple-vaastu__trishula-glint::after {
+  width: 2px;
+  height: 110%;
+}
+@keyframes ts-gt {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+    transform: scale(0.2) rotate(0);
+  }
+  89% {
+    opacity: 1;
+    transform: scale(1) rotate(30deg);
+  }
+}
+.temple-vaastu .temple-vaastu__trishula-dust {
+  display: block;
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff6c8, #ffd06a 55%, #0000 72%);
+  opacity: 0;
+  animation: ts-du var(--t) linear var(--d) infinite;
+  mix-blend-mode: screen;
+}
+@keyframes ts-du {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  12% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), calc(-210 * var(--u)));
+  }
+}
+/* phones: the picture is cropped equally left and right, the trishula stays in the middle */
+@media (max-width: 760px) {
+  .temple-vaastu .temple-vaastu__trishula-view {
+    aspect-ratio: 1/1.2;
+    container-type: normal;
+    --u: calc((100vw - 52px) * 1.2/941);
+  }
+  .temple-vaastu .temple-vaastu__trishula-scene {
+    width: calc(1672 * var(--u));
+    height: calc(941 * var(--u));
+    left: 50%;
+    margin-left: calc(-836 * var(--u));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .temple-vaastu .temple-vaastu__trishula-scene * {
+    animation: none !important;
+  }
+  .temple-vaastu .temple-vaastu__trishula-glint,
+  .temple-vaastu .temple-vaastu__trishula-flare,
+  .temple-vaastu .temple-vaastu__trishula-run,
+  .temple-vaastu .temple-vaastu__trishula-dust {
+    opacity: 0;
+  }
+}
+
+/* Video poster button (click loads the YouTube player, see temple-vaastu.js) */
+.temple-vaastu .temple-vaastu__video-play {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+.temple-vaastu .temple-vaastu__video-play:focus-visible {
+  outline: 3px solid #ffd479;
+  outline-offset: -6px;
+}

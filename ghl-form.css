@@ -1,0 +1,182 @@
+@import url("https://api.fontshare.com/v2/css?f%5B%5D=satoshi%40400%2C500%2C700&display=swap");
+
+#form-builder {
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+#form-builder .ghl-form-wrap,
+#form-builder div#_builder-form {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+#form-builder div#_builder-form {
+  --rr-form-blue: #3663ab;
+  --rr-form-coral: #fe4a39;
+  --rr-form-white: #fff;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--rr-form-blue) !important;
+  box-shadow: none !important;
+}
+
+div#_builder-form *,
+div#_builder-form *::before,
+div#_builder-form *::after {
+  box-sizing: border-box;
+}
+
+div#_builder-form .form-side {
+  width: 100% !important;
+}
+
+div#_builder-form .fields-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+div#_builder-form .fields-container > .form-field-wrapper {
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+div#_builder-form .fields-container > .form-field-wrapper.col-12 {
+  grid-column: 1 / -1;
+}
+
+div#_builder-form .form-field-container,
+div#_builder-form .field-container,
+div#_builder-form .form-builder--item,
+div#_builder-form .flex-col {
+  width: 100%;
+  min-width: 0;
+}
+
+div#_builder-form label {
+  display: block;
+  margin: 0 0 7px !important;
+  color: #172D47FF !important;
+  font-family: Satoshi, Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+div#_builder-form label span {
+  color: #fe4a39 !important;
+}
+
+div#_builder-form .form-builder--item input[type=text][class=form-control],
+div#_builder-form select.form-control,
+div#_builder-form input[type=tel][class=form-control],
+div#_builder-form textarea.form-control,
+div#_builder-form input[type=email] {
+  display: block;
+  width: 100% !important;
+  min-width: 0;
+  min-height: 48px;
+  padding: 12px 14px !important;
+  border: 1px solid rgba(54, 99, 171, 0.3) !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  color: #3663ab !important;
+  font-family: Satoshi, Arial, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  box-shadow: none !important;
+}
+
+div#_builder-form input.form-control::placeholder,
+div#_builder-form textarea.form-control::placeholder {
+  color: rgba(54, 99, 171, 0.62) !important;
+  opacity: 1;
+}
+
+div#_builder-form input.form-control:focus,
+div#_builder-form select.form-control:focus,
+div#_builder-form textarea.form-control:focus {
+  border-color: #fe4a39 !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 3px rgba(254, 74, 57, 0.16) !important;
+}
+
+div#_builder-form textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+div#_builder-form .email-input-wrapper .input-icon {
+  color: #3663ab !important;
+}
+
+div#_builder-form .form-builder--btn-submit {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+div#_builder-form .form-builder--btn-submit > div {
+  width: 100% !important;
+}
+
+div#_builder-form .button-element {
+  width: 100% !important;
+  min-height: 48px;
+  padding: 12px 24px !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  background: #fe4a39 !important;
+  color: #fff !important;
+  font-family: Satoshi, Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  box-shadow: none !important;
+  transition: filter 0.2s ease;
+}
+
+div#_builder-form .button-element:hover {
+  filter: brightness(0.94);
+}
+
+div#_builder-form .button-element p {
+  margin: 0 !important;
+}
+
+div#_builder-form .button-element .button-text,
+div#_builder-form .button-element .button-text * {
+  color: #fff !important;
+  font-family: Satoshi, Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 600px) {
+  div#_builder-form .fields-container {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  div#_builder-form .fields-container > .form-field-wrapper.col-12 {
+    grid-column: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  div#_builder-form .button-element {
+    transition: none;
+  }
+}
+
+:where([data-ghl-form-element]) .input-icon{
+  height:20px !important;
+}

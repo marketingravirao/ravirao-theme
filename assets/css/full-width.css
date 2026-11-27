@@ -1,0 +1,8 @@
+.full-width-page {
+    width: 100%;
+    padding: 2rem;
+}
+
+.full-width-page > .entry {
+    max-width: none;
+}
